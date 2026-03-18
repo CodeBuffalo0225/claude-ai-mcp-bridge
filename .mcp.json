@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "premiere-live": {
+      "command": "node",
+      "args": ["src/mcp-servers/premiere-server.js"],
+      "cwd": "/Users/teambuffalooutdoors/Documents/Adobe AI Editor",
+      "env": {
+        "PREMIERE_BRIDGE_PORT": "8081",
+        "LOG_LEVEL": "info"
+      }
+    }
+  }
+}

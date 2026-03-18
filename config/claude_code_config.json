@@ -1,0 +1,24 @@
+{
+  "mcpServers": {
+    "premiere-pro": {
+      "command": "node",
+      "args": ["src/mcp-servers/premiere-server.js"],
+      "cwd": "/Users/teambuffalooutdoors/Documents/Adobe AI Editor",
+      "env": {
+        "PREMIERE_BRIDGE_PORT": "8081",
+        "LOG_LEVEL": "info"
+      },
+      "description": "AI Video Editor for Adobe Premiere Pro — 40+ tools for editing, color grading, sound engineering, and shorts creation"
+    },
+    "after-effects": {
+      "command": "node",
+      "args": ["src/mcp-servers/aftereffects-server.js"],
+      "cwd": "/Users/teambuffalooutdoors/Documents/Adobe AI Editor",
+      "env": {
+        "AE_BRIDGE_PORT": "8082",
+        "LOG_LEVEL": "info"
+      },
+      "description": "AI Motion Graphics & VFX for Adobe After Effects — intros, titles, animations, compositing, dynamic link"
+    }
+  }
+}

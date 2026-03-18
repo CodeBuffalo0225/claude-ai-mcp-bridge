@@ -1,0 +1,53 @@
+{
+  "name": "@claude-ai/adobe-mcp-editor",
+  "version": "1.0.0",
+  "description": "Claude Code AI Video Editor — MCP Bridge to Adobe Premiere Pro & After Effects with AI-powered editing, color grading, and sound engineering",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "adobe-mcp-premiere": "./src/mcp-servers/premiere-server.js",
+    "adobe-mcp-aftereffects": "./src/mcp-servers/aftereffects-server.js",
+    "adobe-mcp-all": "./src/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "start:premiere": "node src/mcp-servers/premiere-server.js",
+    "start:aftereffects": "node src/mcp-servers/aftereffects-server.js",
+    "start:dashboard": "node dashboard/server.js",
+    "bridge:install": "node scripts/install-bridge.js",
+    "bridge:test": "node scripts/test-connection.js",
+    "dev": "node --watch src/index.js",
+    "lint": "eslint src/",
+    "test": "node --test tests/"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "ws": "^8.18.0",
+    "express": "^4.21.0",
+    "fluent-ffmpeg": "^2.1.3",
+    "sharp": "^0.33.0",
+    "chokidar": "^3.6.0",
+    "chalk": "^5.3.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "mcp",
+    "adobe",
+    "premiere-pro",
+    "after-effects",
+    "video-editing",
+    "claude-code",
+    "ai-editor",
+    "color-grading",
+    "sound-engineering"
+  ],
+  "license": "MIT",
+  "author": "Claude AI Editor"
+}

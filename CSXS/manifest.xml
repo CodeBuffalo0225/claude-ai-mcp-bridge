@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionManifest Version="12.0" ExtensionBundleId="com.claude.ai.editor" ExtensionBundleVersion="1.0.0"
+  ExtensionBundleName="Claude AI Editor Bridge"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <ExtensionList>
+    <Extension Id="com.claude.ai.editor.panel" Version="1.0.0" />
+  </ExtensionList>
+
+  <ExecutionEnvironment>
+    <HostList>
+      <!-- Premiere Pro -->
+      <Host Name="PPRO" Version="[24.0,99.9]" />
+      <!-- After Effects -->
+      <Host Name="AEFT" Version="[24.0,99.9]" />
+    </HostList>
+    <LocaleList>
+      <Locale Code="All" />
+    </LocaleList>
+    <RequiredRuntimeList>
+      <RequiredRuntime Name="CSXS" Version="12.0" />
+    </RequiredRuntimeList>
+  </ExecutionEnvironment>
+
+  <DispatchInfoList>
+    <Extension Id="com.claude.ai.editor.panel">
+      <DispatchInfo>
+        <Resources>
+          <MainPath>./src/bridge/cep-panel.html</MainPath>
+          <ScriptPath>./src/extendscript/premiere/premiere-bridge.jsx</ScriptPath>
+          <CEFCommandLine>
+            <Parameter>--enable-nodejs</Parameter>
+            <Parameter>--mixed-context</Parameter>
+          </CEFCommandLine>
+        </Resources>
+        <Lifecycle>
+          <AutoVisible>true</AutoVisible>
+        </Lifecycle>
+        <UI>
+          <Type>Panel</Type>
+          <Menu>Claude AI Editor Bridge</Menu>
+          <Geometry>
+            <Size>
+              <Height>400</Height>
+              <Width>320</Width>
+            </Size>
+            <MinSize>
+              <Height>300</Height>
+              <Width>280</Width>
+            </MinSize>
+          </Geometry>
+        </UI>
+      </DispatchInfo>
+    </Extension>
+  </DispatchInfoList>
+</ExtensionManifest>

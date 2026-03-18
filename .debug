@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionList>
+  <Extension Id="com.claude.ai.editor.panel">
+    <HostList>
+      <!-- Premiere Pro debug port -->
+      <Host Name="PPRO" Port="7741" />
+      <!-- After Effects debug port -->
+      <Host Name="AEFT" Port="7742" />
+    </HostList>
+  </Extension>
+</ExtensionList>
