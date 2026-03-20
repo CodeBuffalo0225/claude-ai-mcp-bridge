@@ -1,37 +1,7 @@
-# Dependencies
 node_modules/
-npm-debug.log*
-
-# Build artifacts
-dist/
-build/
 *.zip
-
-# Adobe files (large binaries)
-Adobe files/
-Adobe files.zip
-
-# Environment / secrets
-.env
-.env.*
-*.key
-*.pem
-
-# macOS
-.DS_Store
-.AppleDouble
-.LSOverride
-Thumbs.db
-
-# Logs
-logs/
 *.log
-
-# Editor
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# Premiere project files (large, user-specific)
-*.prproj
+.DS_Store
+config/secrets.*
+config/*.local.*
+Adobe files/
