@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "linkedin",
+  "generatedAt": "2026-04-20T13:04:47.037Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "72f1f654c84f",
+      "platform": "linkedin",
+      "trend": "outdoor brand founder story 30-60s LinkedIn video",
+      "evidence": "\"Founder content is gaining traction, with founders and CEOs sharing personal insights, industry perspectives, and company news, adding a human touch to the corporate image and building trust with the audience.\" — Gain Blog Top LinkedIn Trends 2026.",
+      "source": "https://blog.gainapp.com/top-linkedin-trends/",
+      "firstSeen": "2026-04-20T13:04:47.037Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "e2790f78bc49",
+      "platform": "linkedin",
+      "trend": "edutainment hunting gear explainer short LinkedIn",
+      "evidence": "\"The content that's winning right now is 'edutainment': educational video that uses humor, storytelling, and strong visuals to make product info genuinely interesting.\" — Shootsta LinkedIn Video Strategy 2026.",
+      "source": "https://shootsta.com/blog/linkedin-video-strategy-in-2026-the-ultimate-b2b-guide",
+      "firstSeen": "2026-04-20T13:04:47.037Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "LinkedIn video outdoor gear small business founder story short-form 2026"
+    },
+    {
+      "id": "9d8181132803",
+      "platform": "linkedin",
+      "trend": "comment-bait outdoor brand LinkedIn post",
+      "evidence": "\"Comments matter more than likes, and meaningful conversation is what drives distribution — when a post creates back-and-forth discussion, LinkedIn pushes it to a wider audience.\" — The Media Socialites LinkedIn Trends 2026.",
+      "source": "https://www.themediasocialites.com/blog/linkedintrends2026",
+      "firstSeen": "2026-04-20T13:04:47.037Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "d5cb887d924b",
+      "platform": "linkedin",
+      "trend": "employee generated content outdoor brand LinkedIn 2026",
+      "evidence": "\"Short-form videos under 60 seconds, employee-generated content, and executive thought leadership videos consistently drive the highest organic engagement.\" — Shootsta LinkedIn Video Strategy 2026.",
+      "source": "https://shootsta.com/blog/linkedin-video-strategy-in-2026-the-ultimate-b2b-guide",
+      "firstSeen": "2026-04-20T13:04:47.037Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "LinkedIn video outdoor gear small business founder story short-form 2026"
+    },
+    {
+      "id": "0b0004608666",
+      "platform": "linkedin",
+      "trend": "raw authentic outdoor founder video LinkedIn 2026",
+      "evidence": "\"Winning brands are moving away from overly polished social content, with imperfections and natural pacing signaling authenticity, even when AI is at work behind the scenes.\" — The Media Socialites LinkedIn Trends 2026.",
+      "source": "https://www.themediasocialites.com/blog/linkedintrends2026",
+      "firstSeen": "2026-04-20T13:04:47.037Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_natural_pacing",
+      "rawQuery": "LinkedIn video outdoor gear small business founder story short-form 2026"
+    }
+  ]
+}

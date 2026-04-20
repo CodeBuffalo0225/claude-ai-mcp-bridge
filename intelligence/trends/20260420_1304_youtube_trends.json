@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "youtube",
+  "generatedAt": "2026-04-20T13:04:47.037Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "a34a27feec55",
+      "platform": "youtube",
+      "trend": "SHOT Show 2026 suppressor showcase shorts",
+      "evidence": "\"Nothing is HOTTER than a suppressor at Shot Show 2026\" — YouTube Shorts title with high engagement; SHOT Show 2026 may be remembered as the year of the suppressor, with legacy manufacturers updating their lines and newcomers pushing design boundaries, from ultralight 3D-printed titanium models to purpose-built hunting cans.",
+      "source": "https://www.youtube.com/shorts/4CfXyvSZGWM",
+      "firstSeen": "2026-04-20T13:04:47.037Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "63d4a56bce95",
+      "platform": "youtube",
+      "trend": "long-range precision hunting rifle reveal shorts",
+      "evidence": "\"The two big trends in rifles at SHOT Show 2026 are that manufacturers are building new rifles to enhance performance at distance\" — The Avid Outdoorsman; multiple Shorts creators are running spec-callout reveal formats over slow-mo B-roll.",
+      "source": "https://theavidoutdoorsman.com/shot-show-2026-reveals-the-gear-trends-hunters-will-see-everywhere-this-fall/",
+      "firstSeen": "2026-04-20T13:04:47.037Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_spec_text_overlay",
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "0b42e954bd0c",
+      "platform": "youtube",
+      "trend": "optics full hunting setup gear reveal shorts",
+      "evidence": "\"Notice how aggressively optics are expanding, especially on the hunting side, with many companies wanting to be part of a hunter's full setup instead of just one piece of it\" — The Avid Outdoorsman.",
+      "source": "https://theavidoutdoorsman.com/shot-show-2026-reveals-the-gear-trends-hunters-will-see-everywhere-this-fall/",
+      "firstSeen": "2026-04-20T13:04:47.037Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "SHOT Show 2026 viral hunting content suppressor friendly rifles YouTube Shorts creators"
+    },
+    {
+      "id": "100b442432d1",
+      "platform": "youtube",
+      "trend": "quick hunting tip tutorial format YouTube Shorts",
+      "evidence": "\"In 2026, the biggest hits mix quick entertainment with real value, with short tutorials, lessons...viewers want something that either teaches them a little, makes them laugh, or shows them something beautiful in less than a minute.\" — Veefly blog.",
+      "source": "https://blog.veefly.com/youtube-marketing/30-viral-youtube-shorts-ideas-for-your-next-video-in-2026/",
+      "firstSeen": "2026-04-20T13:04:47.037Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "67bbdf1c3bc7",
+      "platform": "youtube",
+      "trend": "threaded barrel hunting rifle unboxing shorts",
+      "evidence": "\"Henry announced Protector Series carbines...with shorter 16.5 in. barrels and threaded muzzles for use with a suppressor\" — Silencer Central; Hottest New Rifles from SHOT 2026 features threaded/suppressor-ready rifles dominating unboxing Shorts.",
+      "source": "https://www.silencercentral.com/blog/shot-show-new-products/",
+      "firstSeen": "2026-04-20T13:04:47.037Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "SHOT Show 2026 viral hunting content suppressor friendly rifles YouTube Shorts creators"
+    }
+  ]
+}

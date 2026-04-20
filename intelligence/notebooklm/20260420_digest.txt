@@ -1,0 +1,149 @@
+CutPilot Viral Intelligence — Weekly Digest
+Generated: 2026-04-20T13:04:47.037Z
+Niche: Hunting / Outdoors / Firearms / Outdoor Lifestyle
+================================================================================
+
+YOUTUBE
+-------
+
+• SHOT Show 2026 suppressor showcase shorts
+  Evidence: "Nothing is HOTTER than a suppressor at Shot Show 2026" — SHOT Show 2026 may be
+  remembered as the year of the suppressor, with legacy manufacturers updating their lines and
+  newcomers pushing design boundaries, from ultralight 3D-printed titanium models to
+  purpose-built hunting cans.
+  Source: https://www.youtube.com/shorts/4CfXyvSZGWM
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: false
+
+• Long-range precision hunting rifle reveal shorts
+  Evidence: "The two big trends in rifles at SHOT Show 2026 are that manufacturers are building
+  new rifles to enhance performance at distance" — multiple Shorts creators running spec-callout
+  reveal formats over slow-mo B-roll.
+  Source: https://theavidoutdoorsman.com/shot-show-2026-reveals-the-gear-trends-hunters-will-see-everywhere-this-fall/
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: TRUE → edit_spec_text_overlay
+
+• Optics full hunting setup gear reveal shorts
+  Evidence: "Notice how aggressively optics are expanding, especially on the hunting side, with
+  many companies wanting to be part of a hunter's full setup instead of just one piece of it."
+  Source: https://theavidoutdoorsman.com/shot-show-2026-reveals-the-gear-trends-hunters-will-see-everywhere-this-fall/
+  Confidence: MEDIUM | cutpilotRelevant: true | bridgeRelevant: false
+
+• Quick hunting tip tutorial format YouTube Shorts
+  Evidence: "In 2026, the biggest hits mix quick entertainment with real value, with short
+  tutorials, lessons...viewers want something that either teaches them a little, makes them
+  laugh, or shows them something beautiful in less than a minute."
+  Source: https://blog.veefly.com/youtube-marketing/30-viral-youtube-shorts-ideas-for-your-next-video-in-2026/
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: false
+
+• Threaded barrel hunting rifle unboxing shorts
+  Evidence: "Henry announced Protector Series carbines...with shorter 16.5 in. barrels and
+  threaded muzzles for use with a suppressor" — suppressor-ready rifles dominating unboxing Shorts.
+  Source: https://www.silencercentral.com/blog/shot-show-new-products/
+  Confidence: HIGH | cutpilotRelevant: false | bridgeRelevant: false
+
+
+TIKTOK
+------
+
+• Field to table wild game recipe short
+  Evidence: "Cooking wild game has become particularly appealing on TikTok because it has the
+  broadest appeal outside of the hunting community."
+  Source: https://www.guidefitter.com/blog/hunters-on-tiktok-by-fisher-neal
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: TRUE → edit_recipe_caption_overlay
+
+• Hunting color challenge camo edition TikTok
+  Evidence: "A color hunting challenge where creators assign themselves a color, photograph
+  everything they spot in that hue throughout the day, and reveal a final collage grid."
+  Source: https://newengen.com/insights/april-2026-tiktok-trends/
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: TRUE → edit_grid_collage
+
+• FB Mom Photos hunting field photo caption trend
+  Evidence: "The FB Mom Photos trend featuring candid shots of people with the caption 'me when
+  I take FB mom photos of my ___'" — hunting creators adapting to field/camp candids.
+  Source: https://newengen.com/insights/april-2026-tiktok-trends/
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: false
+
+• Spring turkey season countdown TikTok
+  Evidence: "Spring content — seasonal transitions, outdoor walks, color-themed shoots — is also
+  picking up as the weather shifts."
+  Source: https://later.com/blog/tiktok-trends/
+  Confidence: MEDIUM | cutpilotRelevant: false | bridgeRelevant: false
+
+• Hunting fail comedy skit format TikTok
+  Evidence: "The most-watched hunting videos usually involve attractive women or comedic bits" —
+  comedy/fail skits bypass TikTok hunting content filters and reach broad audiences.
+  Source: https://www.guidefitter.com/blog/hunters-on-tiktok-by-fisher-neal
+  Confidence: MEDIUM | cutpilotRelevant: true | bridgeRelevant: false
+
+
+INSTAGRAM
+---------
+
+• World Stop hunting camp before after transformation Reels
+  Evidence: "The 'World Stop!' trend being the breakout format heading into the month — a
+  one-take before-and-after that works across beauty, fashion, fitness, and home content."
+  Source: https://newengen.com/insights/instagram-trends/
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: false
+
+• Split-screen hunter vs non-hunter carousel Reels
+  Evidence: "Split-screen carousels contrasting adult mindsets with childhood simplicity are
+  driving some of the highest save rates on the platform."
+  Source: https://newengen.com/insights/instagram-trends/
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: TRUE → edit_split_screen
+
+• First 3 seconds hook technique outdoor Reels 2026
+  Evidence: "The first three seconds determine distribution; hooks matter more than editing
+  polish. The hook decides whether the reel survives."
+  Source: https://invideo.io/blog/instagram-reels-guide/
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: false
+
+• Spring outdoor nature walk aesthetic Reel
+  Evidence: "Spring content — seasonal transitions, outdoor walks, color-themed shoots — is also
+  picking up as the weather shifts."
+  Source: https://newengen.com/insights/instagram-trends/
+  Confidence: MEDIUM | cutpilotRelevant: false | bridgeRelevant: false
+
+• Motivational hunter lifestyle hook format Reels
+  Evidence: "Motivational hooks like 'Brainwash You' and 'Girl to Girl' still have momentum,
+  and gamified Reels that turn viewers into participants continue to outperform passive formats."
+  Source: https://newengen.com/insights/instagram-trends/
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: false
+
+
+LINKEDIN
+--------
+
+• Outdoor brand founder story 30-60s LinkedIn video
+  Evidence: "Founder content is gaining traction, with founders and CEOs sharing personal
+  insights, industry perspectives, and company news, adding a human touch to the corporate
+  image and building trust with the audience."
+  Source: https://blog.gainapp.com/top-linkedin-trends/
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: false
+
+• Edutainment hunting gear explainer short LinkedIn
+  Evidence: "The content that's winning right now is 'edutainment': educational video that uses
+  humor, storytelling, and strong visuals to make product info genuinely interesting."
+  Source: https://shootsta.com/blog/linkedin-video-strategy-in-2026-the-ultimate-b2b-guide
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: false
+
+• Comment-bait outdoor brand LinkedIn post
+  Evidence: "Comments matter more than likes, and meaningful conversation is what drives
+  distribution — when a post creates back-and-forth discussion, LinkedIn pushes it to a wider
+  audience."
+  Source: https://www.themediasocialites.com/blog/linkedintrends2026
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: false
+
+• Employee generated content outdoor brand LinkedIn 2026
+  Evidence: "Short-form videos under 60 seconds, employee-generated content, and executive
+  thought leadership videos consistently drive the highest organic engagement."
+  Source: https://shootsta.com/blog/linkedin-video-strategy-in-2026-the-ultimate-b2b-guide
+  Confidence: HIGH | cutpilotRelevant: false | bridgeRelevant: false
+
+• Raw authentic outdoor founder video LinkedIn 2026
+  Evidence: "Winning brands are moving away from overly polished social content, with
+  imperfections and natural pacing signaling authenticity, even when AI is at work behind
+  the scenes."
+  Source: https://www.themediasocialites.com/blog/linkedintrends2026
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: TRUE → edit_natural_pacing
+
+================================================================================
+END OF DIGEST

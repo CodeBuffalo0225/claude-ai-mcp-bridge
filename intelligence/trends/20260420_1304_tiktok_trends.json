@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "tiktok",
+  "generatedAt": "2026-04-20T13:04:47.037Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "f2053e56a94a",
+      "platform": "tiktok",
+      "trend": "field to table wild game recipe short",
+      "evidence": "\"Cooking wild game has become particularly appealing on TikTok because it has the broadest appeal outside of the hunting community.\" — Guidefitter; TikTok food trends 2026 show recipe shorts dominating with fast-cut cooking tutorials.",
+      "source": "https://www.guidefitter.com/blog/hunters-on-tiktok-by-fisher-neal",
+      "firstSeen": "2026-04-20T13:04:47.037Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_recipe_caption_overlay",
+      "rawQuery": "hunting TikTok viral 2026 field to table wild game cooking shorts trend"
+    },
+    {
+      "id": "ab77f1360651",
+      "platform": "tiktok",
+      "trend": "hunting color challenge camo edition TikTok",
+      "evidence": "\"A color hunting challenge where creators assign themselves a color, photograph everything they spot in that hue throughout the day, and reveal a final collage grid\" — Newengen April 2026 TikTok Trends.",
+      "source": "https://newengen.com/insights/april-2026-tiktok-trends/",
+      "firstSeen": "2026-04-20T13:04:47.037Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_grid_collage",
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "4cf5db1e7d81",
+      "platform": "tiktok",
+      "trend": "FB Mom Photos hunting field photo caption trend",
+      "evidence": "\"The FB Mom Photos trend featuring candid shots of people with the caption 'me when I take FB mom photos of my ___'\" — Newengen April 2026 TikTok Trends; hunting creators adapting it to field/camp candids.",
+      "source": "https://newengen.com/insights/april-2026-tiktok-trends/",
+      "firstSeen": "2026-04-20T13:04:47.037Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "aaa0071c4ed7",
+      "platform": "tiktok",
+      "trend": "spring turkey season countdown TikTok",
+      "evidence": "\"Spring content — seasonal transitions, outdoor walks, color-themed shoots — is also picking up as the weather shifts.\" — Later TikTok Trends 2026; turkey season openers are driving countdown-format Shorts.",
+      "source": "https://later.com/blog/tiktok-trends/",
+      "firstSeen": "2026-04-20T13:04:47.037Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "b20f202c142c",
+      "platform": "tiktok",
+      "trend": "hunting fail comedy skit format TikTok",
+      "evidence": "\"The most-watched hunting videos usually involve attractive women or comedic bits\" — Guidefitter; comedy/fail skits bypass TikTok's hunting content filters and reach broad audiences.",
+      "source": "https://www.guidefitter.com/blog/hunters-on-tiktok-by-fisher-neal",
+      "firstSeen": "2026-04-20T13:04:47.037Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "hunting TikTok viral 2026 field to table wild game cooking shorts trend"
+    }
+  ]
+}

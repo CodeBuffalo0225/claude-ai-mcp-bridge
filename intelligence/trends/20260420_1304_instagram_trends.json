@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "instagram",
+  "generatedAt": "2026-04-20T13:04:47.037Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "0b6d318ef49b",
+      "platform": "instagram",
+      "trend": "World Stop hunting camp before after transformation Reels",
+      "evidence": "\"The 'World Stop!' trend being the breakout format heading into the month — a one-take before-and-after that works across beauty, fashion, fitness, and home content.\" — Newengen Instagram Trends April 2026; outdoor creators applying it to camp/hunt setups.",
+      "source": "https://newengen.com/insights/instagram-trends/",
+      "firstSeen": "2026-04-20T13:04:47.037Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "f16d3644b996",
+      "platform": "instagram",
+      "trend": "split-screen hunter vs non-hunter carousel Reels",
+      "evidence": "\"Split-screen carousels contrasting adult mindsets with childhood simplicity are driving some of the highest save rates on the platform.\" — Newengen Instagram Trends April 2026; hunting creators contrast hunter vs non-hunter morning routines.",
+      "source": "https://newengen.com/insights/instagram-trends/",
+      "firstSeen": "2026-04-20T13:04:47.037Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_split_screen",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "85feb567b63c",
+      "platform": "instagram",
+      "trend": "first 3 seconds hook technique outdoor Reels 2026",
+      "evidence": "\"The first three seconds determine distribution; hooks matter more than editing polish. The hook decides whether the reel survives. Viewers scroll quickly and decide instantly.\" — InVideo Instagram Reels Guide 2026.",
+      "source": "https://invideo.io/blog/instagram-reels-guide/",
+      "firstSeen": "2026-04-20T13:04:47.037Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "Instagram Reels hunting outdoor lifestyle before after transformation hook 2026"
+    },
+    {
+      "id": "2893dec31563",
+      "platform": "instagram",
+      "trend": "spring outdoor nature walk aesthetic Reel",
+      "evidence": "\"Spring content — seasonal transitions, outdoor walks, color-themed shoots — is also picking up as the weather shifts.\" — Newengen Instagram Trends April 2026.",
+      "source": "https://newengen.com/insights/instagram-trends/",
+      "firstSeen": "2026-04-20T13:04:47.037Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "cffc73382a5a",
+      "platform": "instagram",
+      "trend": "motivational hunter lifestyle hook format Reels",
+      "evidence": "\"Motivational hooks like 'Brainwash You' and 'Girl to Girl' still have momentum, and gamified Reels that turn viewers into participants continue to outperform passive formats.\" — Newengen Instagram Trends April 2026.",
+      "source": "https://newengen.com/insights/instagram-trends/",
+      "firstSeen": "2026-04-20T13:04:47.037Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "Instagram Reels hunting outdoor lifestyle before after transformation hook 2026"
+    }
+  ]
+}
