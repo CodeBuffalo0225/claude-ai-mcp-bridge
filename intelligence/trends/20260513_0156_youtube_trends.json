@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "youtube",
+  "generatedAt": "2026-05-13T01:56:00.175Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "842d9e52804e",
+      "platform": "youtube",
+      "trend": "hunting smart scope AI rangefinder unboxing Shorts 2026",
+      "evidence": "\"The newest smart scopes and rangefinding binoculars combine laser rangefinding, ballistic calculation, and Bluetooth connectivity into one seamless unit\" — Houston Safari Club; unboxing-format Shorts revealing AI-enabled optics are driving high engagement among hunting gear audiences.",
+      "source": "https://hscfdn.org/the-5-hottest-hunting-gear-trends-to-see-in-person-in-2026/",
+      "firstSeen": "2026-05-13T01:56:00.175Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_spec_text_overlay",
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "2616a53a7850",
+      "platform": "youtube",
+      "trend": "quick hunting how-to tutorial YouTube Shorts 2026",
+      "evidence": "\"In 2026, the biggest hits mix quick entertainment with real value — short tutorials, lessons, and tips viewers want something that either teaches them a little, makes them laugh, or shows them something beautiful in less than a minute\" — Veefly blog; educational how-to format is one of the five dominant viral Shorts formats this year.",
+      "source": "https://blog.veefly.com/youtube-marketing/30-viral-youtube-shorts-ideas-for-your-next-video-in-2026/",
+      "firstSeen": "2026-05-13T01:56:00.175Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "5b7dbf5ed78c",
+      "platform": "youtube",
+      "trend": "before-and-after hunting camp transformation Shorts",
+      "evidence": "\"Before-and-after transformations\" listed as one of the five dominant viral Shorts formats in 2026 — Deeka AI Blog; outdoor creators are applying this format to camp setups, deer stand builds, and kit layouts for high save-rate performance.",
+      "source": "https://deeka.ai/blog/trending-videos-2026",
+      "firstSeen": "2026-05-13T01:56:00.175Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "1a500d2af734",
+      "platform": "youtube",
+      "trend": "hunting gear ranking compilation Shorts format 2026",
+      "evidence": "\"Ranking compilations\" named among the five dominant viral YouTube Shorts formats for 2026 — Deeka AI Blog; hunting channels using tier-list ranking of rifles, optics, and camo brands see outsized share rates versus single-item reviews.",
+      "source": "https://deeka.ai/blog/trending-videos-2026",
+      "firstSeen": "2026-05-13T01:56:00.175Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_tier_list_graphic",
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "97006cd1b91b",
+      "platform": "youtube",
+      "trend": "threaded barrel suppressor-ready rifle reveal Shorts",
+      "evidence": "\"The hunting market is leaning harder into quieter rifles, more threaded barrels, more optics choices, more adjustable fit, and more crossover gear\" — Houston Safari Club 2026 Hunting Gear Trends; suppressor-ready rifle reveal Shorts dominating SHOT Show search results.",
+      "source": "https://hscfdn.org/the-5-hottest-hunting-gear-trends-to-see-in-person-in-2026/",
+      "firstSeen": "2026-05-13T01:56:00.175Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    }
+  ]
+}

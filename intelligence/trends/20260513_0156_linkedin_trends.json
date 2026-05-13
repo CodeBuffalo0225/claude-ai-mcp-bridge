@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "linkedin",
+  "generatedAt": "2026-05-13T01:56:00.175Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "8805d9fbd4b4",
+      "platform": "linkedin",
+      "trend": "founder CEO outdoor brand 30-90s short video LinkedIn 2026",
+      "evidence": "\"In 2026, we can expect to see more founders, CEOs, and brand leaders using short-form videos on LinkedIn to connect directly with audiences. This format offers a way to share quick updates, insights, and glimpses into company culture, creating a more personal and approachable experience\" — Visla Blog, LinkedIn Video in 2026.",
+      "source": "https://www.visla.us/blog/guides/linkedin-video-in-2026-whats-working-and-how-to-make-it/",
+      "firstSeen": "2026-05-13T01:56:00.175Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "201ceea3522f",
+      "platform": "linkedin",
+      "trend": "edutainment hunting gear explainer LinkedIn short-form 2026",
+      "evidence": "\"The content type getting the best results right now is what researchers call 'edutainment': educational content that's also genuinely engaging, using humor, storytelling, or strong visuals to make product information interesting instead of preachy\" — Shootsta LinkedIn Video Strategy 2026 Ultimate B2B Guide.",
+      "source": "https://shootsta.com/blog/linkedin-video-strategy-in-2026-the-ultimate-b2b-guide",
+      "firstSeen": "2026-05-13T01:56:00.175Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "LinkedIn outdoor brand founder video edutainment short-form 2026 small business hunting"
+    },
+    {
+      "id": "9d5d91a5c9f1",
+      "platform": "linkedin",
+      "trend": "employee generated content outdoor hunting brand LinkedIn",
+      "evidence": "\"Short-form videos under 60 seconds, employee-generated content, and executive thought leadership videos consistently drive the highest organic engagement\" — Shootsta LinkedIn Video Strategy 2026; outdoor and hunting brands whose field staff post authentic 'day in the life' content outperform polished corporate video.",
+      "source": "https://shootsta.com/blog/linkedin-video-strategy-in-2026-the-ultimate-b2b-guide",
+      "firstSeen": "2026-05-13T01:56:00.175Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "LinkedIn outdoor brand founder video edutainment short-form 2026 small business hunting"
+    },
+    {
+      "id": "9e2dea93666e",
+      "platform": "linkedin",
+      "trend": "micro-influencer tight outdoor community LinkedIn video 2026",
+      "evidence": "\"Audiences trust relatable voices over celebrities, and micro-influencers with tight communities are driving higher engagement and conversions than macro names\" — IQfluence Social Media Trends 2026; LinkedIn's algorithm is surfacing hunting-adjacent micro-influencers (guides, gear reviewers, conservation advocates) to niche professional audiences.",
+      "source": "https://iqfluence.io/public/blog/social-trends",
+      "firstSeen": "2026-05-13T01:56:00.175Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "dacbeddf9682",
+      "platform": "linkedin",
+      "trend": "authentic natural pacing imperfection outdoor brand LinkedIn video",
+      "evidence": "\"Winning brands are intentionally moving away from overly polished social content, with imperfections and natural pacing signaling authenticity, even when AI is at work behind the scenes, while over-editing is out and the occasional stutter or flub is in\" — Social Media Trends 2026 (corroborated by Metricool LinkedIn Trends 2026: video engagement up 34% YoY).",
+      "source": "https://metricool.com/linkedin-trends/",
+      "firstSeen": "2026-05-13T01:56:00.175Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_natural_pacing",
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    }
+  ]
+}

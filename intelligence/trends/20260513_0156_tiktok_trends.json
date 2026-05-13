@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "tiktok",
+  "generatedAt": "2026-05-13T01:56:00.175Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "f9f0bccb97c2",
+      "platform": "tiktok",
+      "trend": "micro-education hunting tip 7-15 second TikTok 2026",
+      "evidence": "\"For maximum viral potential, aim for 7–15 seconds, while for educational or storytelling content, 30–90 seconds is the sweet spot\" — Kapwing March 2026 TikTok Trends; micro-education clips under 15 seconds are the biggest format on TikTok in spring 2026, and hunting tip creators are adopting this aggressively.",
+      "source": "https://www.kapwing.com/resources/march-2026-tiktok-trends-for-creators-brands/",
+      "firstSeen": "2026-05-13T01:56:00.175Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_micro_clip_trim",
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "b64bc3b44f60",
+      "platform": "tiktok",
+      "trend": "field-to-table wild game BBQ outdoor cooking TikTok summer 2026",
+      "evidence": "\"Creators like Rashad Jones use TikTok as a BBQ pitmaster to redefine hospitality\" — TikTok Discover List 2026; food-focused outdoor cooking content is gaining significant traction and field-to-table wild game formats broaden hunting content reach beyond the core niche.",
+      "source": "https://newsroom.tiktok.com/discover-list-2026-meet-the-creators-to-watch",
+      "firstSeen": "2026-05-13T01:56:00.175Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_recipe_caption_overlay",
+      "rawQuery": "hunting TikTok creators summer 2026 short video field to table wild game trending"
+    },
+    {
+      "id": "f241662f873b",
+      "platform": "tiktok",
+      "trend": "quiet flex outdoor camping aesthetic TikTok 2026",
+      "evidence": "\"Quiet-flex aesthetic content\" identified as one of the biggest trends on TikTok in spring 2026 — Kapwing March 2026 TikTok Trends; hunting/outdoor creators are riding this with cinematic no-talking camp and wilderness clips that signal gear quality without overt product pitching.",
+      "source": "https://www.kapwing.com/resources/march-2026-tiktok-trends-for-creators-brands/",
+      "firstSeen": "2026-05-13T01:56:00.175Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "hunting TikTok creators summer 2026 short video field to table wild game trending"
+    },
+    {
+      "id": "41b66bfb287d",
+      "platform": "tiktok",
+      "trend": "companion with-me hunting prep TikTok format",
+      "evidence": "\"Companion 'with me' videos\" highlighted as a top-performing TikTok format in March 2026 — Kapwing; hunting channels adapting this format (e.g., 'come to the stand with me' or 'pack with me for an elk hunt') are seeing strong watch-through and saves.",
+      "source": "https://www.kapwing.com/resources/march-2026-tiktok-trends-for-creators-brands/",
+      "firstSeen": "2026-05-13T01:56:00.175Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "e7b6d42e9275",
+      "platform": "tiktok",
+      "trend": "hunting comedy fail skit broad audience TikTok 2026",
+      "evidence": "\"The firearms community on TikTok is exploding, with Special Forces veterans and women dominating the CCW space\" — search result summary; comedy and fail-format content bypasses TikTok's hunting content restrictions and achieves broad cross-audience reach, particularly when featuring unexpected or humorous moments.",
+      "source": "https://www.artakedowntool.com/blogs/blogs/top-20-gun-tiktok-influencers-in-2025-tactical-creators-to-follow",
+      "firstSeen": "2026-05-13T01:56:00.175Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    }
+  ]
+}

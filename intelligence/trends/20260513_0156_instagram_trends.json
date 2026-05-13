@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "instagram",
+  "generatedAt": "2026-05-13T01:56:00.175Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "a58ebbbc8e22",
+      "platform": "instagram",
+      "trend": "horror movie list hunting title Reels May 2026",
+      "evidence": "\"Instagram's top Reels trends for May 2026 include comedic list-style 'horror movie' titles\" — MSN / Instagram Reels Trends May 2026 spotlight; hunting creators are adapting this format to things like 'A Horror Movie Called: First Day of Deer Season' for high-share comedic clips.",
+      "source": "https://www.msn.com/en-us/news/other/instagram-reels-trends-for-may-2026-spotlight-list-mood-and-film-inspired-formats/gm-GMA9456222",
+      "firstSeen": "2026-05-13T01:56:00.175Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "2bfbc955c817",
+      "platform": "instagram",
+      "trend": "wait this looks so cool outdoor hunting hook Reels",
+      "evidence": "\"The hook — 'wait this looks so cool I have to capture it' — appears as large text over an opening selfie or person-forward shot, then cuts to a supercut of whatever you're about to show off\" — Instagram Reels Hook Formulas, OpusClip Blog; outdoor and hunting creators use this to front-load stunning nature or kill-shot footage.",
+      "source": "https://www.opus.pro/blog/instagram-reels-hook-formulas",
+      "firstSeen": "2026-05-13T01:56:00.175Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_hook_text_burn",
+      "rawQuery": "Instagram Reels outdoor hunting split-screen hook 3 seconds trending May 2026"
+    },
+    {
+      "id": "eb083adb7d20",
+      "platform": "instagram",
+      "trend": "3-second hold hook 60 percent retention outdoor Reels 2026",
+      "evidence": "\"Instagram Reels demand attention in under 3 seconds, or the scroll wins. A strong hook should achieve a 3-second hold rate of at least 60%, with top-performing hooks reaching 70–80%\" — TrueFuture Media Instagram Reels Reach 2026 Guide; hook engineering is the primary editing lever for outdoor/hunting Reels distribution.",
+      "source": "https://www.truefuturemedia.com/articles/instagram-reels-reach-2026-business-growth-guide",
+      "firstSeen": "2026-05-13T01:56:00.175Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "Instagram Reels outdoor hunting split-screen hook 3 seconds trending May 2026"
+    },
+    {
+      "id": "550069f74967",
+      "platform": "instagram",
+      "trend": "mood board compilation outdoor hunting Reels May 2026",
+      "evidence": "\"Scrollable mood board compilations\" listed as a top trending Reels format for May 2026 — MSN / Instagram Reels Trends May 2026 spotlight; outdoor-lifestyle hunting creators are compiling cinematic nature shots, camp setups, and gear flats into aesthetic mood boards driving high save rates.",
+      "source": "https://www.msn.com/en-us/news/other/instagram-reels-trends-for-may-2026-spotlight-list-mood-and-film-inspired-formats/gm-GMA9456222",
+      "firstSeen": "2026-05-13T01:56:00.175Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_grid_collage",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "2f4ac4f90807",
+      "platform": "instagram",
+      "trend": "I Have Therapy outdoor restoration hunting lifestyle Reels",
+      "evidence": "\"The 'I Have Therapy' format is everywhere, with creators cutting from 'sorry I can't today, I have therapy' to whatever they actually find restorative\" — Newengen Instagram Trends May 2026; hunting and outdoor creators are adapting this to 'I have a tree stand' or 'I have a turkey blind,' generating strong engagement from the hunting community.",
+      "source": "https://newengen.com/insights/instagram-trends/",
+      "firstSeen": "2026-05-13T01:56:00.175Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    }
+  ]
+}
