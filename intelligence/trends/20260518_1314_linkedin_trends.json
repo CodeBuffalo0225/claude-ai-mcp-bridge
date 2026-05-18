@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "linkedin",
+  "generatedAt": "2026-05-18T13:14:26.000Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "25ab55cfcf22",
+      "platform": "linkedin",
+      "trend": "LinkedIn beats YouTube B2B video short-form vertical outdoor brand 2026",
+      "evidence": "\"LinkedIn has just surpassed YouTube as the top B2B video channel. 81% of businesses now name LinkedIn as their primary video channel, up more than 33 percentage points in just two years. Short-form vertical video on LinkedIn earns 34% higher dwell time compared to traditional square-format content\" — QD-Up LinkedIn Video Marketing for Small Business 2026; outdoor and firearms brands gaining significant B2B and dealer reach by posting 9:16 vertical short-form clips natively on LinkedIn.",
+      "source": "https://qd-up.com/linkedin-video-marketing-small-business-2026/",
+      "firstSeen": "2026-05-18T13:14:26.000Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_vertical_reframe_linkedin",
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "4039f2d193d3",
+      "platform": "linkedin",
+      "trend": "native silent-autoplay captioned video outdoor firearms LinkedIn 2026",
+      "evidence": "\"Native video uploads — files uploaded directly to LinkedIn — stay in the feed, autoplay silently, and accumulate engagement signals the algorithm rewards. LinkedIn autoplay is muted by default, so captions are not an accessibility feature but a conversion tool, with every word needing to appear on screen\" — QD-Up LinkedIn Video Marketing for Small Business 2026; outdoor and firearms brands whose LinkedIn videos include burned-in captions see significantly higher completion and click-through rates.",
+      "source": "https://qd-up.com/linkedin-video-marketing-small-business-2026/",
+      "firstSeen": "2026-05-18T13:14:26.000Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_burned_captions_linkedin",
+      "rawQuery": "LinkedIn outdoor brand short video hunting firearms small business engagement 2026"
+    },
+    {
+      "id": "ff13dc05cb43",
+      "platform": "linkedin",
+      "trend": "user-generated content short-form video outdoor firearms LinkedIn brand 2026",
+      "evidence": "\"User-generated content (34%) and short-form video (27%) are popular content formats on LinkedIn\" for outdoor, adventure, and firearms brands generating $1–3M annually — Garrison Everest outdoor industry marketing 2026; UGC-style field footage from pro staff, guides, and brand ambassadors posted on LinkedIn drives dealer and distributor engagement more cost-effectively than produced brand video.",
+      "source": "https://www.garrisoneverest.com/",
+      "firstSeen": "2026-05-18T13:14:26.000Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "LinkedIn outdoor brand short video hunting firearms small business engagement 2026"
+    },
+    {
+      "id": "3524b8787fb6",
+      "platform": "linkedin",
+      "trend": "founder CEO outdoor hunting brand authentic short video LinkedIn 2026",
+      "evidence": "\"In 2026, we can expect to see more founders, CEOs, and brand leaders using short-form videos on LinkedIn to connect directly with audiences. This format offers a way to share quick updates, insights, and glimpses into company culture, creating a more personal and approachable experience\" — Visla Blog LinkedIn Video 2026 (corroborated by Shootsta LinkedIn Video Strategy 2026 B2B Guide); hunting and outdoor brand founders posting personal, unscripted field clips on LinkedIn outperform polished corporate posts by 4–5×.",
+      "source": "https://www.visla.us/blog/guides/linkedin-video-in-2026-whats-working-and-how-to-make-it/",
+      "firstSeen": "2026-05-18T13:14:26.000Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "ef5c9222943e",
+      "platform": "linkedin",
+      "trend": "micro-influencer tight community hunting outdoor LinkedIn video 2026",
+      "evidence": "\"Audiences trust relatable voices over celebrities, and micro-influencers with tight communities are driving higher engagement and conversions than macro names\" — IQfluence Social Media Trends 2026; LinkedIn's algorithm is surfacing hunting-adjacent micro-influencers (guides, gear reviewers, conservation advocates) to niche professional audiences including retailers, distributors, and land managers.",
+      "source": "https://iqfluence.io/public/blog/social-trends",
+      "firstSeen": "2026-05-18T13:14:26.000Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    }
+  ]
+}

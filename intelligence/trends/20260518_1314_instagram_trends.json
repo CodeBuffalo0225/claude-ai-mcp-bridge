@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "instagram",
+  "generatedAt": "2026-05-18T13:14:26.000Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "d673fd54070c",
+      "platform": "instagram",
+      "trend": "wait this looks so cool hunting outdoor hook Reels format 2026",
+      "evidence": "\"'Wait this looks so cool I have to capture it' — this hook appears as large text over an opening selfie or person-forward shot, then cuts to a supercut of whatever you're about to show off. Keep the Reel under 20 seconds. @yogiiibean used it for PNW trail footage and pulled 16.5K likes and 897 shares\" — The Social Snippet Instagram Hook Ideas for Reels 2026; outdoor and hunting creators are front-loading stunning harvest or nature shots using this hook to maximize 3-second hold rate.",
+      "source": "https://www.thesocialsnippet.com/blog/instagram-hook-ideas-for-reels-in-2026",
+      "firstSeen": "2026-05-18T13:14:26.000Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_hook_burn_text_open",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "1ca1ff32dd60",
+      "platform": "instagram",
+      "trend": "I Have Therapy I have a tree stand hunting restoration Reels 2026",
+      "evidence": "\"The 'I Have Therapy' format is everywhere, with creators cutting from 'sorry I can't today, I have therapy' to whatever they actually find restorative — coffee with friends, solo walks, bookstore browsing\" — Newengen Instagram Trends May 2026 (updated weekly); hunting creators are adapting this to 'I have a tree stand / a turkey blind / an elk tag' to comedic effect with broad cross-niche reach.",
+      "source": "https://newengen.com/insights/instagram-trends/",
+      "firstSeen": "2026-05-18T13:14:26.000Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "0996f4e836d5",
+      "platform": "instagram",
+      "trend": "raw authentic phone-shot outdoor hunting Reels outperform polished 2026",
+      "evidence": "\"Users and the algorithm both favor raw, authentic content over polished productions, with phone-shot videos, casual talking-to-camera content, and 'real life' moments consistently outperforming studio-quality content\" — Turrboo How to Go Viral on Instagram 2026; corroborated by Metricool Instagram Trends 2026 noting a 34% video engagement jump; hunting creators posting unedited field footage on phone outperform heavily colour-graded productions.",
+      "source": "https://turrboo.com/blog/how-to-go-viral-on-instagram",
+      "firstSeen": "2026-05-18T13:14:26.000Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "Instagram Reels hunting outdoor lifestyle firearms creator trending format hook 2026"
+    },
+    {
+      "id": "96d3765bfa00",
+      "platform": "instagram",
+      "trend": "Bleeding Love confessional gear obsession hunting Reels audio 2026",
+      "evidence": "\"'Bleeding Love' is back on Reels as the soundtrack for a confessional bit about loving something a little too much, with creators opening with a hook then lip-syncing while staring lovingly at the offending object\" — SocialPilot Instagram Reels Trends May 2026; hunting and firearms creators are adapting this audio trend to gear obsession content (optics, new rifles, camo collections) driving shares into non-hunting audiences.",
+      "source": "https://www.socialpilot.co/blog/instagram-reels-trends",
+      "firstSeen": "2026-05-18T13:14:26.000Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "a2b962055361",
+      "platform": "instagram",
+      "trend": "Top 5 list format hunting gear ranking trending audio Reels 2026",
+      "evidence": "\"Katy Perry's 'The One That Got Away' fueled viral 'Top 5' list formats across niches\" — SocialPilot Instagram Reels Trends May 2026 (corroborated by Later Top Instagram Reels Trends 2026); hunting creators using numbered list Reels (Top 5 rifles under $1K, Top 5 must-have pack items) with trending audio see outsized share rates vs single-product content.",
+      "source": "https://www.socialpilot.co/blog/instagram-reels-trends",
+      "firstSeen": "2026-05-18T13:14:26.000Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_numbered_list_countdown",
+      "rawQuery": "Instagram Reels hunting outdoor lifestyle firearms creator trending format hook 2026"
+    }
+  ]
+}

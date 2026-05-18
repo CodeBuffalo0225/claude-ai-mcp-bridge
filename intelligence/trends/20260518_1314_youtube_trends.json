@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "youtube",
+  "generatedAt": "2026-05-18T13:14:26.000Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "3fba25d498a5",
+      "platform": "youtube",
+      "trend": "SHOT Show 2026 suppressor-ready rifle reveal Shorts",
+      "evidence": "\"The two big trends in rifles at this year's SHOT show are manufacturers building new rifles to enhance performance at distance and to be suppressor friendly\" — The Avid Outdoorsman SHOT Show 2026 gear preview; reveal-format Shorts showing threaded barrels and suppressor-compatible builds are driving high engagement on hunting channels this week.",
+      "source": "https://theavidoutdoorsman.com/shot-show-2026-reveals-the-gear-trends-hunters-will-see-everywhere-this-fall/",
+      "firstSeen": "2026-05-18T13:14:26.000Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_product_spec_overlay",
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "e1d54d6322ad",
+      "platform": "youtube",
+      "trend": "MeatEater-style ethical hunting conservation storytelling Shorts 2026",
+      "evidence": "\"Steven Rinella is the creator and host of MeatEater, one of the most influential hunting brands in the world, introducing millions to ethical hunting, wild food, and conservation, covering everything from whitetail deer to Western elk\" — SocialBook top hunting influencers 2026; story-driven conservation shorts in the MeatEater narrative style are outperforming pure gear content in saves and shares.",
+      "source": "https://socialbook.io/blog/top-15-hunting-influencers-to-follow-for-outdoor-skills-and-gear-reviews/",
+      "firstSeen": "2026-05-18T13:14:26.000Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "YouTube Shorts hunting outdoor gear SHOT Show 2026 viral content creators week"
+    },
+    {
+      "id": "adf5894c764c",
+      "platform": "youtube",
+      "trend": "Wildest Hunting Finds SHOT 2026 new-product highlight Shorts format",
+      "evidence": "\"This year's SHOT Show was a reminder that creativity and innovation within the hunting world are alive and well, with ten items that caused notable attention on the show floor\" — NRA American Hunter Wildest Hunting Finds of SHOT 2026; product-highlight Shorts using rapid-cut new-gear reveal format are seeing strong CTR from the SHOT Show post-show buzz cycle.",
+      "source": "https://www.americanhunter.org/content/wildest-hunting-finds-of-shot-2026/",
+      "firstSeen": "2026-05-18T13:14:26.000Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_rapid_product_cut",
+      "rawQuery": "YouTube Shorts hunting outdoor gear SHOT Show 2026 viral content creators week"
+    },
+    {
+      "id": "41d1fdabe736",
+      "platform": "youtube",
+      "trend": "quick educational hunting how-to Shorts under 60 seconds 2026",
+      "evidence": "\"Viral YouTube Shorts formats dominating feeds in 2026 include AI tool demos, quick educational how-tos, before-and-after transformations, ranking compilations, and podcast or interview clip snippets\" — multiple sources corroborated by NexLev YouTube Shorts Niches 2026 and JoinBrands YouTube Shorts Best Practices 2026; hunting channels posting sub-60s skill tips (knot tying, field dressing, range zeroing) are the fastest-growing Shorts sub-format.",
+      "source": "https://www.nexlev.io/youtube-shorts-niches",
+      "firstSeen": "2026-05-18T13:14:26.000Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "29102ddac9ab",
+      "platform": "youtube",
+      "trend": "fast-cut treestand elk hunting cinematic clip Shorts 2026",
+      "evidence": "\"Fast-cut treestand clips on TikTok, epic ten-day elk hunting films on YouTube, and detailed gear showcases on Instagram are common formats in the hunting content space\" — SocialBook top hunting influencers 2026; cinematic fast-cut treestand/elk harvest Shorts under 60 seconds are surfacing as the high-reach anchor format on YouTube hunting channels in spring 2026.",
+      "source": "https://socialbook.io/blog/top-15-hunting-influencers-to-follow-for-outdoor-skills-and-gear-reviews/",
+      "firstSeen": "2026-05-18T13:14:26.000Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_cinematic_fast_cut",
+      "rawQuery": "YouTube Shorts hunting outdoor gear SHOT Show 2026 viral content creators week"
+    }
+  ]
+}

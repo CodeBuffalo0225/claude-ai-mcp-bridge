@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "tiktok",
+  "generatedAt": "2026-05-18T13:14:26.000Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "17e8c990ed3f",
+      "platform": "tiktok",
+      "trend": "fishing hunting unexpected catch reaction TikTok format 2026",
+      "evidence": "\"Common themes include unexpected catches and fishing surprises, bass fishing adventures and techniques, and offshore and deep sea fishing experiences\" — Hooked AI TikTok Fishing & Hunting Trends 2026; the 'unexpected catch' reaction-cam format (creator face + monster fish/animal reveal split) is the top-performing hunting/fishing TikTok sub-format by engagement rate.",
+      "source": "https://www.tryhooked.ai/trends/tiktok/fishing_hunting",
+      "firstSeen": "2026-05-18T13:14:26.000Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_reaction_split_screen",
+      "rawQuery": "TikTok hunting fishing outdoor content trends May 2026 creators viral format"
+    },
+    {
+      "id": "9a04a416efde",
+      "platform": "tiktok",
+      "trend": "outdoor gear emotional ROI verification before-buy TikTok 2026",
+      "evidence": "\"Audiences moving away from fantasy toward realism... 'Emotional ROI' where buyers use TikTok as a verification hub before purchasing\" — TikTok Trends 2026 (Metricool); hunting and firearms gear creators who post real-world field tests and honest 'is it worth it' verdicts are driving purchase conversions as viewers use TikTok as a pre-buy research channel.",
+      "source": "https://metricool.com/tiktok-trends/",
+      "firstSeen": "2026-05-18T13:14:26.000Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "24d61badf277",
+      "platform": "tiktok",
+      "trend": "women who hunt fish girls outdoors TikTok community content 2026",
+      "evidence": "\"'Girls who fish' content showing women's participation in the sport\" — Hooked AI TikTok Fishing & Hunting Trends 2026; women-led hunting and outdoor TikTok accounts are among the fastest-growing sub-niches in 2026, with participation-focused content reaching significantly broader audiences beyond the traditional hunting demographic.",
+      "source": "https://www.tryhooked.ai/trends/tiktok/fishing_hunting",
+      "firstSeen": "2026-05-18T13:14:26.000Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "TikTok hunting fishing outdoor content trends May 2026 creators viral format"
+    },
+    {
+      "id": "eb3a604b1176",
+      "platform": "tiktok",
+      "trend": "authentic realism outdoor hunting anti-fantasy micro-clip TikTok 2026",
+      "evidence": "\"Audiences moving away from fantasy toward realism, curiosity-driven discovery\" — TikTok 2026 Biggest Trends (Turrboo / Clipchamp); outdoor and hunting creators leaning into unpolished, warts-and-all clips (missed shots, bad weather, gear failures) outperform aspirational fantasy-hunting content across saves and comments.",
+      "source": "https://turrboo.com/blog/latest-tiktok-trends",
+      "firstSeen": "2026-05-18T13:14:26.000Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "13394ebd8ed1",
+      "platform": "tiktok",
+      "trend": "repeatable niche hunting outdoor content format TikTok algorithm 2026",
+      "evidence": "\"Repeatable formats work especially well right now, along with clear niches and content that's easy to categorize so the algorithm shows you to the right people\" — TikTok Creator Search Insights 2026 / Metricool TikTok Trends 2026; hunting creators who lock in a weekly repeatable format (e.g., 'Saturday morning stand sit,' '60-second field tip') see compounding algorithmic reach.",
+      "source": "https://metricool.com/tiktok-trends/",
+      "firstSeen": "2026-05-18T13:14:26.000Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_series_format_template",
+      "rawQuery": "TikTok hunting fishing outdoor content trends May 2026 creators viral format"
+    }
+  ]
+}
