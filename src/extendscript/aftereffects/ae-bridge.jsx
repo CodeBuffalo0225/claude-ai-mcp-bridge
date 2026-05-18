@@ -45,7 +45,15 @@ var AEBridge = {
       params.duration || 10,
       params.frameRate || 30
     );
-    return { name: comp.name, id: comp.id };
+    if (params.backgroundColor) {
+      var bg = params.backgroundColor.replace("#", "");
+      comp.bgColor = [
+        parseInt(bg.substring(0, 2), 16) / 255,
+        parseInt(bg.substring(2, 4), 16) / 255,
+        parseInt(bg.substring(4, 6), 16) / 255
+      ];
+    }
+    return { name: comp.name };
   },
 
   "comp.getInfo": function(params) {
@@ -446,7 +454,7 @@ function executeCommand(commandStr) {
       return JSON.stringify({ id: parsed.id, error: "Unknown command: " + parsed.command });
     }
   } catch (e) {
-    app.endUndoGroup();
-    return JSON.stringify({ id: 0, error: "AE ExtendScript Error: " + e.message });
+    try { app.endUndoGroup(); } catch (e2) {}
+    return JSON.stringify({ id: 0, error: "AE ExtendScript Error: " + (e.message || e.toString()) + " (line " + (e.line || "?") + ")" });
   }
 }
