@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "youtube",
+  "generatedAt": "2026-05-25T13:06:00.000Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "2f7e7aea0d81",
+      "platform": "youtube",
+      "trend": "3-second visual hook pattern-interrupt Shorts outperform talking-head openers for hunting content 2026",
+      "evidence": "\"Within the first 1-3 seconds, viewers make a split-second choice: keep watching or swipe away. A hook that triggers curiosity, creates urgency, or breaks expected patterns will capture attention and hold it\" — Praper Media / VidIQ Viral YouTube Shorts Hooks 2026; hunting creators who open with a dramatic shot, animal encounter, or gear failure instead of a talking-head intro are seeing completion rates above 70%, which drives Shorts algorithm distribution.",
+      "source": "https://prapermedia.com/blog/make-viral-youtube-shorts/",
+      "firstSeen": "2026-05-25T13:06:00.000Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_pattern_interrupt_hook_cut",
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "318d1f183d21",
+      "platform": "youtube",
+      "trend": "rapid-cut sub-60s hunting gear reveal Shorts dominate YouTube hunting channel reach 2026",
+      "evidence": "\"The viral YouTube Shorts formats dominating feeds in 2026 include AI tool demos, quick educational how-tos, before-and-after transformations, ranking compilations, and podcast or interview clip snippets\" — NexLev YouTube Shorts Niches 2026 (corroborated by Veefly 30 Viral YouTube Shorts Ideas 2026); hunting channels applying rapid-cut gear-reveal and quick-tip formats under 60 seconds are the fastest-growing hunting Shorts sub-format by view velocity.",
+      "source": "https://www.nexlev.io/youtube-shorts-niches",
+      "firstSeen": "2026-05-25T13:06:00.000Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_rapid_gear_reveal_cut",
+      "rawQuery": "hunting fishing outdoor creators YouTube Shorts format hook style 2026 viral"
+    },
+    {
+      "id": "bb3726319288",
+      "platform": "youtube",
+      "trend": "SHOT Show 2026 suppressor-ready rifle threaded-muzzle reveal Shorts hunting",
+      "evidence": "\"The two big trends in rifles at this year's SHOT show are manufacturers building new rifles to enhance performance at distance and to be suppressor friendly\" — The Avid Outdoorsman SHOT Show 2026 gear preview; the 5 Hottest Hunting Gear Trends 2026 from Houston Safari Club corroborates; threaded-muzzle and suppressor-ready rifle reveal Shorts continue driving strong engagement in May 2026 as post-SHOT buzz sustains through summer pre-season.",
+      "source": "https://theavidoutdoorsman.com/shot-show-2026-reveals-the-gear-trends-hunters-will-see-everywhere-this-fall/",
+      "firstSeen": "2026-05-25T13:06:00.000Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_product_spec_overlay",
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "01da7261a2d8",
+      "platform": "youtube",
+      "trend": "burned-in captions essential for Shorts hook delivery 85 percent watched muted 2026",
+      "evidence": "\"In 2026, 85% of Shorts are watched without sound initially. Captions aren't optional; they're essential for hook delivery and retention\" — Praper Media Viral YouTube Shorts 2026 (corroborated by JoinBrands How to Create YouTube Shorts 2026); outdoor and hunting creators who burn in large, on-screen caption text synced to speech see significantly higher watch-through rates in the algorithm's muted-autoplay state.",
+      "source": "https://joinbrands.com/blog/how-to-create-youtube-shorts/",
+      "firstSeen": "2026-05-25T13:06:00.000Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_burned_captions_shorts",
+      "rawQuery": "hunting fishing outdoor creators YouTube Shorts format hook style 2026 viral"
+    },
+    {
+      "id": "cfea4c1b8df4",
+      "platform": "youtube",
+      "trend": "before-and-after transformation format hunting gear setup Shorts drives completion 2026",
+      "evidence": "\"Trending videos in 2026: before-and-after transformations in short-form video are a dominant viral format across YouTube Shorts, TikTok, and Reels — the format drives completions because viewers stay to see the payoff\" — Deeka AI Trending Videos 2026 (corroborated by Veefly 30 Viral YouTube Shorts Ideas 2026); hunting creators applying before/after to gear setups, camo patterns, rifle optic changes, and camp builds see outsized completion-driven reach.",
+      "source": "https://deeka.ai/blog/trending-videos-2026",
+      "firstSeen": "2026-05-25T13:06:00.000Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "hunting fishing outdoor creators YouTube Shorts format hook style 2026 viral"
+    }
+  ]
+}

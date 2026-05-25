@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "instagram",
+  "generatedAt": "2026-05-25T13:06:00.000Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "02cc45611d9e",
+      "platform": "instagram",
+      "trend": "them X is bad for you I dont care Im in love with it confessional gear obsession Reels 2026",
+      "evidence": "\"A trending format uses 'Them: [something is bad for you]' followed by staring lovingly at the offending thing while lip-syncing 'I don't care what they say, I'm in love with you' — brands are using for any 'guilty pleasure' confession\" — Scott Social Marketing Trending Reels Audio May 2026 (corroborated by SocialPilot Instagram Reels Trends 2026); hunting creators are applying this to gear obsession (new optics, custom rifles, over-the-top camo loadouts) generating strong cross-niche reach and comment engagement from non-hunting audiences.",
+      "source": "https://www.scottsocialmarketing.com/blog/trending-reels-audio-this-week-on-instagram",
+      "firstSeen": "2026-05-25T13:06:00.000Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "ba4002e8ec53",
+      "platform": "instagram",
+      "trend": "horror movie title list format hunting outdoor Reels May 2026",
+      "evidence": "\"Instagram's top Reels trends for May 2026 include comedic list-style 'horror movie' titles\" — MSN / Ramdam Instagram Trends May 2026; outdoor and hunting creators are adapting this format by framing missed shots, tag draws, or gear failures as 'horror movie' titles (e.g., 'The Rut That Didn't Come: A Deer Hunter's Horror Story') generating high share and comment rates from the hunting community.",
+      "source": "https://www.ramd.am/blog/trends-instagram",
+      "firstSeen": "2026-05-25T13:06:00.000Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_horror_title_card_intro",
+      "rawQuery": "Instagram Reels outdoor hunting gear brand trending audio hooks May 2026"
+    },
+    {
+      "id": "66546e53b0cc",
+      "platform": "instagram",
+      "trend": "spotlight list mood board hunting landscape compilation Reels May 2026",
+      "evidence": "\"Instagram Reels trends for May 2026 spotlight list, mood, and film-inspired formats\" — MSN / Newengen Instagram Trends May 2026 (updated weekly); outdoor and hunting creators are assembling scrollable mood-board compilations of landscape, sunrise treestand, and field shots set to ambient audio, generating high save rates and 'inspo' traction with viewers planning upcoming seasons.",
+      "source": "https://newengen.com/insights/instagram-trends/",
+      "firstSeen": "2026-05-25T13:06:00.000Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_mood_board_compilation",
+      "rawQuery": "Instagram Reels outdoor hunting gear brand trending audio hooks May 2026"
+    },
+    {
+      "id": "f80111c67b93",
+      "platform": "instagram",
+      "trend": "color walk color hunt outdoor nature Reels trending format May 2026",
+      "evidence": "\"Color walk trends work particularly well for outdoor brands\" — MSN Instagram Reels Trends May 2026 analysis; the 'color hunting' format where creators spend a day photographing and filming everything in a chosen color is being adapted by outdoor creators to showcase camo patterns, blaze orange season, or single-species habitat — generating high saves and shares with nature-adjacent audiences beyond the traditional hunting niche.",
+      "source": "https://www.msn.com/en-us/news/other/instagram-reels-trends-for-may-2026-spotlight-list-mood-and-film-inspired-formats/gm-GMA9456222",
+      "firstSeen": "2026-05-25T13:06:00.000Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "668ff948b7c1",
+      "platform": "instagram",
+      "trend": "Slayyyter audio outdoor gear confessional beat-drop reveal Reels May 2026",
+      "evidence": "\"A trending song from Slayyyter features people pretending to be sick and saying they need something, then hitting a pose when the beat drops to reveal what that thing is\" — Scott Social Marketing Trending Reels Audio May 2026; hunting and firearms gear creators are adapting this as a comedic confessional — 'I need [new rifle / new optic / new hunting rig]' — with the beat-drop reveal of the actual purchase, driving high engagement from the hunting community.",
+      "source": "https://www.scottsocialmarketing.com/blog/trending-reels-audio-this-week-on-instagram",
+      "firstSeen": "2026-05-25T13:06:00.000Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_beat_drop_reveal_cut",
+      "rawQuery": "Instagram Reels outdoor hunting gear brand trending audio hooks May 2026"
+    }
+  ]
+}

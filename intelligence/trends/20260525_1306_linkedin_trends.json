@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "linkedin",
+  "generatedAt": "2026-05-25T13:06:00.000Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "908823e73e0c",
+      "platform": "linkedin",
+      "trend": "LinkedIn TikTok-style short-form video feed vertical 1080x1920 distribution boost 2026",
+      "evidence": "\"LinkedIn has expanded its short-form video feed with a 'Videos For You' tab and native CapCut integration. Vertical video (1080×1920) is currently getting a distribution boost, while square and horizontal formats are getting slightly deprioritized in the feed\" — Virlan LinkedIn Marketing Strategy 2026 (corroborated by Heropost LinkedIn B2B Marketing Strategy 2026); outdoor and firearms brands repurposing 9:16 field footage natively to LinkedIn are gaining B2B reach among dealers, distributors, and land managers with near-zero additional production cost.",
+      "source": "https://www.virlan.co/digital-marketing/linkedin-marketing-strategy/",
+      "firstSeen": "2026-05-25T13:06:00.000Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_vertical_reframe_linkedin",
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "236d3aa6faab",
+      "platform": "linkedin",
+      "trend": "7-15 second LinkedIn short-form video outdoor brand authority format 2026",
+      "evidence": "\"Short-form video (between 7-15 seconds) is becoming increasingly important on LinkedIn, even though it's not the platform's traditional strength\" — Heropost LinkedIn B2B Marketing Guide 2026; outdoor and firearms brands that post punchy 7-15s clips (one product feature, one field tip, one conservation fact) are establishing thought-leadership authority in the B2B dealer/distributor channel more efficiently than long-form posts.",
+      "source": "https://heropost.io/linkedin-marketing-guide-2026/",
+      "firstSeen": "2026-05-25T13:06:00.000Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_linkedin_micro_clip_trim",
+      "rawQuery": "LinkedIn video outdoor hunting firearms brand B2B short-form strategy 2026"
+    },
+    {
+      "id": "6fecb1775916",
+      "platform": "linkedin",
+      "trend": "serialized behind-the-scenes brand video series LinkedIn outdoor hunting 2026",
+      "evidence": "\"Many businesses are shifting toward publishing video series that give viewers a quick, behind-the-scenes look at the people behind the brand to showcase day-to-day operations and workplace culture\" — Slate Teams Social Media Trends 2026 (corroborated by Teleprompter Pro 2026 Content Trends); outdoor industry brands (outfitters, gear makers, guided hunt operations) publishing serialized LinkedIn video series — manufacturing floor, pro staff field days, conservation projects — see higher dwell time and connection request rates from trade buyers.",
+      "source": "https://slateteams.com/blog/social-media-trends-2026",
+      "firstSeen": "2026-05-25T13:06:00.000Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "bbe72f61f7d1",
+      "platform": "linkedin",
+      "trend": "78 percent B2B buyers prefer video firearms outdoor brand dealer messaging LinkedIn 2026",
+      "evidence": "\"78% of B2B buyers prefer a message delivered via video compared to just 9% via text, making video critical for B2B engagement\" — Heropost LinkedIn B2B Marketing Strategy 2026; for firearms and outdoor brands whose sales flow through dealer and distributor networks, short LinkedIn video demonstrating product reliability, field performance, and dealer support programs outperforms spec-sheet posts for generating inbound dealer inquiries.",
+      "source": "https://heropost.io/linkedin-b2b-marketing-strategy-2026/",
+      "firstSeen": "2026-05-25T13:06:00.000Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "LinkedIn video outdoor hunting firearms brand B2B short-form strategy 2026"
+    },
+    {
+      "id": "c026b7bb9113",
+      "platform": "linkedin",
+      "trend": "outdoor hunting brand founder authentic unscripted LinkedIn video outperforms polished 2026",
+      "evidence": "\"In 2026, founders, CEOs, and brand leaders using short-form videos on LinkedIn to connect directly with audiences see higher engagement than polished corporate posts\" — Visla Blog LinkedIn Video 2026 (corroborated by Hootsuite Social Trends 2026 noting community-over-virality shift); outdoor and hunting brand owners who post unscripted, personal field clips on LinkedIn — even from their phones — are outperforming polished brand video by 4-5× in comments and DM-driven lead generation.",
+      "source": "https://www.visla.us/blog/guides/linkedin-video-in-2026-whats-working-and-how-to-make-it/",
+      "firstSeen": "2026-05-25T13:06:00.000Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "LinkedIn video outdoor hunting firearms brand B2B short-form strategy 2026"
+    }
+  ]
+}

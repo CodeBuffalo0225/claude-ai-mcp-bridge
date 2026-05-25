@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "tiktok",
+  "generatedAt": "2026-05-25T13:06:00.000Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "13bdaee64cb1",
+      "platform": "tiktok",
+      "trend": "TikTok niche community hunting fishing algorithm discovery drives tight community reach 2026",
+      "evidence": "\"Tight-knit, interest-driven groups where passion runs high make powerful accelerators for awareness, affinity, and audience growth. TikTok discovery is shifting toward search-driven intent and niche communities, which puts more pressure on retention and relevance\" — TikTok Next 2026 Trend Forecast (TikTok Newsroom) corroborated by Metricool TikTok Trends 2026; hunting and fishing creators who consistently serve a tight niche community see compounding algorithmic distribution as TikTok's For You Page increasingly routes interest-specific content.",
+      "source": "https://newsroom.tiktok.com/introducing-tiktok-next-2026-our-trend-forecast-for-marketers-for-the-year-ahead",
+      "firstSeen": "2026-05-25T13:06:00.000Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "1030a28ce599",
+      "platform": "tiktok",
+      "trend": "fishing hunting unexpected catch reaction split-screen format top engagement TikTok 2026",
+      "evidence": "\"Common themes include unexpected catches and fishing surprises, bass fishing adventures and techniques, and offshore and deep sea fishing experiences\" — Hooked AI TikTok Fishing & Hunting Trends & Top Creators 2026; the reaction split-screen format pairing creator face-cam with the raw moment (monster catch, close-range buck encounter, unexpected flush) remains the top engagement-per-view format in the hunting/fishing TikTok vertical in spring 2026.",
+      "source": "https://www.tryhooked.ai/trends/tiktok/fishing_hunting",
+      "firstSeen": "2026-05-25T13:06:00.000Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_reaction_split_screen",
+      "rawQuery": "TikTok hunting fishing outdoor niche content trends engagement 2026"
+    },
+    {
+      "id": "207ade9422da",
+      "platform": "tiktok",
+      "trend": "TikTok search-driven intent hunting creators optimizing titles captions in-app search 2026",
+      "evidence": "\"If you want your strategy to work in 2026, focus on content that's specific to a niche, easy to understand, and built around what the TikTok algorithm is looking to distribute to new users\" — Metricool TikTok Trends 2026; TikTok Creator Search Insights 2026 confirms search-intent discovery is a primary growth vector; hunting creators who front-load searchable keywords (species, state, season, technique) in titles and on-screen text are seeing expanded reach beyond existing followers.",
+      "source": "https://metricool.com/tiktok-trends/",
+      "firstSeen": "2026-05-25T13:06:00.000Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_keyword_title_card_overlay",
+      "rawQuery": "TikTok hunting fishing outdoor niche content trends engagement 2026"
+    },
+    {
+      "id": "0b351115ff65",
+      "platform": "tiktok",
+      "trend": "serialized behind-the-scenes hunt follow-along format TikTok algorithm 2026",
+      "evidence": "\"Users will see a new video trend gain momentum in 2026: serialized content. Many businesses are shifting toward publishing video series that give viewers a quick, behind-the-scenes look at the people behind the brand\" — Slate Teams Social Media Trends 2026 (corroborated by InfluenceFlow TikTok Content Ideas Guide 2026); hunting creators who publish multi-episode follow-alongs (e.g., 'Day 1 of 10-day elk hunt') see dramatically higher follower growth and return-viewer rates than one-off clips.",
+      "source": "https://slateteams.com/blog/social-media-trends-2026",
+      "firstSeen": "2026-05-25T13:06:00.000Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_series_episode_template",
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "df014fc870af",
+      "platform": "tiktok",
+      "trend": "watch time 75 percent benchmark pacing-optimized hunting clips under 45s outperform TikTok 2026",
+      "evidence": "\"ICUC recommends optimizing for watch time around 75% of video duration as a directional benchmark for stronger performance\" — ICUC TikTok Statistics and Trends 2026; for hunting content, clips under 45 seconds with rapid pacing (cut every 1-2 seconds), on-screen text, and a payoff in the final 5 seconds are consistently hitting the 75% watch-time threshold that pushes content to broader FYP audiences.",
+      "source": "https://www.icuc.social/resources/blog/tiktok-statistics-and-benchmarks-to-track",
+      "firstSeen": "2026-05-25T13:06:00.000Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "TikTok hunting fishing outdoor niche content trends engagement 2026"
+    }
+  ]
+}
