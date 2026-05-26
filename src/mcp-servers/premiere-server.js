@@ -163,6 +163,21 @@ class PremiereProMCPServer {
     );
 
     this.server.tool(
+      'timeline_duplicate',
+      'Clone an existing sequence — preserves ALL effects, color grades, transitions, markers, and clip arrangement. Use this BEFORE editing when the source has color grading you want to keep. Then use edit_delete_clip to carve down to the desired range. This is the only reliable way to keep grade work intact (timeline_add_clip pulls raw project items and bypasses grades).',
+      {
+        sourceName: z.string().describe('Name of the sequence to clone'),
+        destName: z.string().optional().describe('Name for the new sequence (default: source name + " Copy")'),
+        activate: z.boolean().default(true).describe('Make the new sequence active so subsequent edits target it'),
+      },
+      async (params) => {
+        const result = await this.bridge.send('premiere', 'timeline.duplicate', params);
+        if (result.error) throw new Error(result.error);
+        return { content: [{ type: 'text', text: `Duplicated "${result.sourceName}" → "${result.destName}"${result.activated ? ' (now active)' : ''}` }] };
+      }
+    );
+
+    this.server.tool(
       'timeline_add_clip',
       'Add a clip from project media to the timeline at a specific position. Set audioOnly=true to add only audio.',
       {
@@ -260,6 +275,37 @@ class PremiereProMCPServer {
       async (params) => {
         await this.bridge.send('premiere', 'edit.deleteClip', params);
         return { content: [{ type: 'text', text: `Deleted clip ${params.clipIndex} on V${params.trackIndex + 1} (ripple: ${params.ripple})` }] };
+      }
+    );
+
+    this.server.tool(
+      'multicam_sync',
+      'Synchronize 2+ clips on the timeline using audio waveform, timecode, markers, or in/out points. Built for boat fishing footage where GoPro + phone + drone need to be aligned. Uses Premiere QE DOM synchronize() with fallback to menu command dialog. Default method = audio waveform.',
+      {
+        clipNames: z.array(z.string()).describe('Names of clips to synchronize (must be on the specified track)'),
+        trackIndex: z.number().default(0).describe('Video track to find clips on (0 = V1)'),
+        method: z.enum(['audio', 'timecode', 'markers', 'in_points', 'out_points']).default('audio').describe('Sync method. audio=waveform (best for boat footage), timecode=GoPro+phone if both have it, markers=manual marker alignment'),
+        syncTrackChannel: z.number().default(1).describe('Audio track channel for waveform sync (default 1)'),
+      },
+      async (params) => {
+        const result = await this.bridge.send('premiere', 'multicam.sync', params);
+        return { content: [{ type: 'text', text: JSON.stringify(result) }] };
+      }
+    );
+
+    this.server.tool(
+      'export_clip_audio',
+      'Export a sequence range to an audio-only WAV file. Use when you need to transcribe what was said in a clip range. Writes to a sandbox-accessible path so external tools (whisper/Python) can read it even when source media is on a restricted volume. Pair with the transcribe_wav.py helper at ~/.local/bin/.',
+      {
+        sequenceName: z.string().optional().describe('Sequence to export (default: active)'),
+        startSec: z.number().describe('Start time in sequence seconds'),
+        endSec: z.number().describe('End time in sequence seconds'),
+        outputPath: z.string().describe('Absolute WAV path. Use /tmp/ or ~/Downloads/cache/ — must be sandbox-writable'),
+        preset: z.enum(['wav_48k_16bit', 'aac_48k_128', 'aiff_48k']).default('wav_48k_16bit').describe('Audio export preset. wav_48k_16bit is whisper-optimal.'),
+      },
+      async (params) => {
+        const result = await this.bridge.send('premiere', 'export.clipAudio', params);
+        return { content: [{ type: 'text', text: JSON.stringify(result) }] };
       }
     );
 

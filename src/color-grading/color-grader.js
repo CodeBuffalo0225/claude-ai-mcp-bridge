@@ -46,6 +46,43 @@ const COLOR_PRESETS = {
     colorWheels: { shadowsTint: '#0E2F44', highlightsTint: '#E8A835' },
     vignette: { amount: -2.5, midpoint: 35, feather: 50 },
   },
+  fishing_coastal_outdoor_natural: {
+    // Travis's signature fishing look (2026-05-22 spec).
+    // Clean water, natural skin tones, richer blues/greens, deck detail preserved.
+    // Deliberately NOT teal-orange travel-vlog. NOT over-saturated.
+    name: 'Fishing / Coastal Outdoor Natural',
+    basic: {
+      temperature: -2,      // very slight cool — water reads cleaner, no warm cast
+      tint: 2,              // tiny magenta lift to keep skin away from green
+      exposure: 0.05,       // barely lifted; preserve deck/highlight detail
+      contrast: 8,          // gentle pop, not crushed
+      highlights: -18,      // pull water sparkle / sky back so they hold detail
+      shadows: 12,          // open the boat / deck shadows
+      whites: -8,           // pull white deck/glare in
+      blacks: -5            // light black floor for color richness
+    },
+    creative: {
+      vibrance: 22,         // richer blues + greens without making skin orange
+      saturation: 2,        // micro saturation; vibrance does the heavy lift
+      sharpen: 15,          // GoPro footage benefits from a touch
+      fadeAmount: 0         // no faded look — this is a clean grade
+    },
+    // HSL targeted saturation pumps for water + foliage, without touching skin tones
+    hsl: {
+      blues:   { saturation: 18, luminance: -4 },   // ocean / bay water
+      cyans:   { saturation: 22, luminance: -2 },   // shallows
+      greens:  { saturation: 14, luminance: 0 },    // mangroves / vegetation
+      oranges: { saturation: -4, luminance: 2 },    // skin — stay natural, no over-cook
+      reds:    { saturation: -2 }                   // skin reds — stay natural
+    },
+    colorWheels: {
+      shadowsTint:    '#0A1E3A',  // subtle cool-blue shadow bias (oceanic)
+      midtonesTint:   '#1A4A5C',  // very gentle teal pull in midtones
+      highlightsTint: '#FFF5E8'   // warm white highlights — sun on deck, not orange
+    },
+    vignette: { amount: -0.8, midpoint: 55, feather: 65 },  // barely-there, keeps focus on subject without cinema-bars
+    notes: 'Use for: bridge fishing, boat days, kayak, beach. Skip for: sunset/golden hour (use cinematic_warm) or low-light (use youtube_dark_moody).'
+  },
   indie_film: {
     name: 'Indie Film',
     basic: { temperature: 5, contrast: -5, highlights: -20, shadows: 15 },
