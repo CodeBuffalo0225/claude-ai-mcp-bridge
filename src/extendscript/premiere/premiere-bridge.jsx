@@ -430,18 +430,62 @@ var PremiereBridge = {
     var src = _findSequence(params.sourceName);
     if (!src) return { error: "Source sequence not found: " + params.sourceName };
 
-    var dupe;
-    try { dupe = src.clone(); }
-    catch(e) { return { error: "Sequence.clone() failed: " + e.message }; }
-    if (!dupe) return { error: "Sequence.clone() returned null" };
+    // IMPORTANT: Sequence.clone() in Premiere's ExtendScript API returns a
+    // BOOLEAN success flag (not a Sequence object). The newly created
+    // sequence appears in app.project.sequences with " Copy" auto-suffixed
+    // on the source name. We must locate it by diffing the sequence list
+    // before/after the clone() call. (Codex PR #2 review caught the prior
+    // bug where we treated the return value as a sequence.)
 
-    if (params.destName) {
-      try { dupe.name = params.destName; } catch(e) {}
+    // Snapshot existing sequence IDs so we can identify the new one
+    var beforeIds = {};
+    for (var bi = 0; bi < app.project.sequences.numSequences; bi++) {
+      beforeIds[app.project.sequences[bi].id] = true;
     }
 
-    // Make the new sequence active so subsequent edits target it
+    var cloneResult;
+    try { cloneResult = src.clone(); }
+    catch(e) { return { error: "Sequence.clone() threw: " + e.message }; }
+
+    // Find the newly created sequence (id not in beforeIds)
+    var dupe = null;
+    for (var ai = 0; ai < app.project.sequences.numSequences; ai++) {
+      var candidate = app.project.sequences[ai];
+      if (!beforeIds[candidate.id]) { dupe = candidate; break; }
+    }
+
+    if (!dupe) {
+      return {
+        error: "clone() returned " + String(cloneResult) + " but no new sequence appeared in app.project.sequences. " +
+               "Possible causes: clone silently failed, or this Premiere version requires a different duplication API.",
+        cloneReturnValue: String(cloneResult)
+      };
+    }
+
+    if (params.destName) {
+      try { dupe.name = params.destName; } catch(e) {
+        return {
+          duplicated: true,
+          activated: false,
+          warning: "Created duplicate but failed to rename to '" + params.destName + "': " + e.message,
+          sourceName: src.name,
+          destName: dupe.name,
+          id: dupe.id
+        };
+      }
+    }
+
     if (params.activate !== false) {
-      try { app.project.activeSequence = dupe; } catch(e) {}
+      try { app.project.activeSequence = dupe; } catch(e) {
+        return {
+          duplicated: true,
+          activated: false,
+          warning: "Renamed but failed to activate: " + e.message,
+          sourceName: src.name,
+          destName: dupe.name,
+          id: dupe.id
+        };
+      }
     }
 
     return {
@@ -449,7 +493,8 @@ var PremiereBridge = {
       destName: dupe.name,
       id: dupe.id,
       duplicated: true,
-      activated: params.activate !== false
+      activated: params.activate !== false,
+      cloneReturnValue: String(cloneResult)
     };
   },
 
@@ -766,17 +811,60 @@ var PremiereBridge = {
     }
     if (!params.outputPath) return { error: "outputPath required" };
 
-    var presetMap = {
-      'wav_48k_16bit': '/Applications/Adobe Media Encoder 2026/Adobe Media Encoder 2026.app/Contents/MediaIO/systempresets/3F3F3F3F_57415645/Waveform Audio 48kHz 16-bit.epr',
-      'aac_48k_128':   '/Applications/Adobe Media Encoder 2026/Adobe Media Encoder 2026.app/Contents/MediaIO/systempresets/3F3F3F3F_574D5620/Audio Only, 48kHz 128kbps.epr',
-      'aiff_48k':      '/Applications/Adobe Media Encoder 2026/Adobe Media Encoder 2026.app/Contents/MediaIO/systempresets/3F3F3F3F_41494646/AIFF 48kHz.epr'
+    // Preset filename map (resolved cross-version against candidate AME roots
+    // below — fixes Codex PR #2 review #2: don't hard-code AME 2026 paths).
+    var presetFiles = {
+      'wav_48k_16bit': { folder: '3F3F3F3F_57415645', file: 'Waveform Audio 48kHz 16-bit.epr' },
+      'aac_48k_128':   { folder: '3F3F3F3F_574D5620', file: 'Audio Only, 48kHz 128kbps.epr' },
+      'aiff_48k':      { folder: '3F3F3F3F_41494646', file: 'AIFF 48kHz.epr' }
     };
     var presetName = params.preset || 'wav_48k_16bit';
-    var presetPath = presetMap[presetName];
-    if (!presetPath) return { error: "Unknown preset: " + presetName + " (use one of " + Object.keys(presetMap).join(", ") + ")" };
+    var presetSpec = presetFiles[presetName];
+    if (!presetSpec) return { error: "Unknown preset: " + presetName + " (use one of " + Object.keys(presetFiles).join(", ") + ")" };
 
-    var presetFile = new File(presetPath);
-    if (!presetFile.exists) return { error: "Preset .epr not found on disk: " + presetPath };
+    // Resolve preset path. Priority:
+    //   1. Caller-provided absolute presetPath override (any version/platform)
+    //   2. Probe known AME install locations across versions + macOS/Windows
+    //   3. Probe user's custom AME preset dir (~/Documents/Adobe/...)
+    var presetPath = null;
+    var probed = [];
+    if (params.presetPath) {
+      probed.push(params.presetPath);
+      if ((new File(params.presetPath)).exists) presetPath = params.presetPath;
+    }
+    if (!presetPath) {
+      // Candidate AME install roots, newest first. Add new years here as Adobe releases.
+      var ameRoots = [
+        '/Applications/Adobe Media Encoder 2026/Adobe Media Encoder 2026.app/Contents/MediaIO/systempresets/',
+        '/Applications/Adobe Media Encoder 2025/Adobe Media Encoder 2025.app/Contents/MediaIO/systempresets/',
+        '/Applications/Adobe Media Encoder 2024/Adobe Media Encoder 2024.app/Contents/MediaIO/systempresets/',
+        '/Applications/Adobe Media Encoder 2023/Adobe Media Encoder 2023.app/Contents/MediaIO/systempresets/',
+        // Windows install locations (ExtendScript on Windows uses forward slashes too)
+        'C:/Program Files/Adobe/Adobe Media Encoder 2026/MediaIO/systempresets/',
+        'C:/Program Files/Adobe/Adobe Media Encoder 2025/MediaIO/systempresets/',
+        'C:/Program Files/Adobe/Adobe Media Encoder 2024/MediaIO/systempresets/',
+        // User-custom preset dirs
+        '~/Documents/Adobe/Adobe Media Encoder/26.0/Presets/',
+        '~/Documents/Adobe/Adobe Media Encoder/25.0/Presets/',
+        '~/Documents/Adobe/Adobe Media Encoder/24.0/Presets/'
+      ];
+      for (var r = 0; r < ameRoots.length; r++) {
+        var candidate = ameRoots[r] + presetSpec.folder + '/' + presetSpec.file;
+        probed.push(candidate);
+        if ((new File(candidate)).exists) { presetPath = candidate; break; }
+        // Some user dirs lack the folder hash — try flat path too
+        var flatCandidate = ameRoots[r] + presetSpec.file;
+        probed.push(flatCandidate);
+        if ((new File(flatCandidate)).exists) { presetPath = flatCandidate; break; }
+      }
+    }
+    if (!presetPath) {
+      return {
+        error: "No AME audio preset found for '" + presetName + "'. Searched " + probed.length + " candidate paths across AME 2023-2026 (macOS + Windows) and user preset dirs.",
+        probedPaths: probed,
+        hint: "Pass an explicit `presetPath` param pointing to your Waveform Audio preset .epr file, or install Adobe Media Encoder."
+      };
+    }
 
     // Save existing in/out so we can restore after export
     var origIn = null, origOut = null;
@@ -785,19 +873,34 @@ var PremiereBridge = {
       if (seq.getOutPointAsTime) origOut = seq.getOutPointAsTime().ticks;
     } catch(e) {}
 
+    // Helper: restore in/out then return the supplied error object.
+    // Used by every early-return path AFTER in/out mutation so sequence state
+    // is never left dirty (fixes Codex PR #2 review #3).
+    function _restoreAndReturn(errObj) {
+      if (origIn !== null) { try { seq.setInPoint(origIn); } catch(e) {} }
+      if (origOut !== null) { try { seq.setOutPoint(origOut); } catch(e) {} }
+      return errObj;
+    }
+
     // Set work area to requested range
     try {
       seq.setInPoint(_secondsToTicks(params.startSec));
       seq.setOutPoint(_secondsToTicks(params.endSec));
     } catch(e) {
-      return { error: "Failed to set in/out points: " + e.message };
+      // In/out may have been partially mutated — restore defensively
+      return _restoreAndReturn({ error: "Failed to set in/out points: " + e.message });
     }
 
     // Ensure output dir exists
     var outFile = new File(params.outputPath);
     var outDir = outFile.parent;
     if (!outDir.exists) {
-      try { outDir.create(); } catch(e) { return { error: "Cannot create output dir: " + outDir.fsName }; }
+      try { outDir.create(); }
+      catch(e) { return _restoreAndReturn({ error: "Cannot create output dir: " + outDir.fsName + " (" + e.message + ")" }); }
+    }
+    if (!outDir.exists) {
+      // create() can return without throwing yet still fail (permissions, etc.)
+      return _restoreAndReturn({ error: "Output dir does not exist after create(): " + outDir.fsName });
     }
 
     // Export via exportAsMediaDirect — work area mode (1)
