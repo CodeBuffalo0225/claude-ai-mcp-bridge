@@ -14,7 +14,7 @@ YOUTUBE
   instead of a talking-head intro are seeing completion rates above 70%, driving Shorts algorithm
   distribution.
   Source: https://prapermedia.com/blog/make-viral-youtube-shorts/
-  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: TRUE → edit_pattern_interrupt_hook_cut
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: false (covered by ai_generate_hook · hookStyle=cold_open)
 
 • Rapid-cut sub-60s hunting gear reveal Shorts dominate YouTube hunting channel reach 2026
   Evidence: "The viral YouTube Shorts formats dominating feeds in 2026 include AI tool demos, quick
@@ -23,7 +23,7 @@ YOUTUBE
   YouTube Shorts Ideas 2026); hunting channels applying rapid-cut gear-reveal and quick-tip formats
   under 60 seconds are the fastest-growing hunting Shorts sub-format by view velocity.
   Source: https://www.nexlev.io/youtube-shorts-niches
-  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: TRUE → edit_rapid_gear_reveal_cut
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: false (covered by ai_auto_edit + ai_detect_highlights)
 
 • SHOT Show 2026 suppressor-ready rifle threaded-muzzle reveal Shorts hunting
   Evidence: "The two big trends in rifles at this year's SHOT show are manufacturers building new
@@ -32,7 +32,7 @@ YOUTUBE
   ready rifle reveal Shorts continue driving strong engagement in May 2026 as post-SHOT buzz
   sustains through summer pre-season.
   Source: https://theavidoutdoorsman.com/shot-show-2026-reveals-the-gear-trends-hunters-will-see-everywhere-this-fall/
-  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: TRUE → edit_product_spec_overlay
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: false (covered by edit_add_text · position=lower_third)
 
 • Burned-in captions essential for Shorts hook delivery 85% watched muted 2026
   Evidence: "In 2026, 85% of Shorts are watched without sound initially. Captions aren't optional;
@@ -41,7 +41,7 @@ YOUTUBE
   burn in large, on-screen caption text synced to speech see significantly higher watch-through rates
   in the algorithm's muted-autoplay state.
   Source: https://joinbrands.com/blog/how-to-create-youtube-shorts/
-  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: TRUE → edit_burned_captions_shorts
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: false (covered by shorts_add_captions)
 
 • Before-and-after transformation format hunting gear setup Shorts drives completion 2026
   Evidence: "Trending videos in 2026: before-and-after transformations in short-form video are a
@@ -73,7 +73,7 @@ TIKTOK
   the raw moment (monster catch, close-range buck encounter, unexpected flush) remains the top
   engagement-per-view format in the hunting/fishing TikTok vertical in spring 2026.
   Source: https://www.tryhooked.ai/trends/tiktok/fishing_hunting
-  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: TRUE → edit_reaction_split_screen
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: TRUE → edit_split_screen (GAP: no two-source reaction/PiP layout; shorts_create split_screen reframes a single source only)
 
 • TikTok search-driven intent hunting creators optimizing titles captions in-app search 2026
   Evidence: "If you want your strategy to work in 2026, focus on content that's specific to a niche,
@@ -82,7 +82,7 @@ TIKTOK
   discovery is a primary growth vector; hunting creators who front-load searchable keywords (species,
   state, season, technique) in titles and on-screen text are seeing expanded reach beyond followers.
   Source: https://metricool.com/tiktok-trends/
-  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: TRUE → edit_keyword_title_card_overlay
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: false (covered by edit_add_text)
 
 • Serialized behind-the-scenes hunt follow-along format TikTok algorithm 2026
   Evidence: "Users will see a new video trend gain momentum in 2026: serialized content. Many
@@ -92,7 +92,7 @@ TIKTOK
   follow-alongs (e.g., 'Day 1 of 10-day elk hunt') see dramatically higher follower growth and
   return-viewer rates than one-off clips.
   Source: https://slateteams.com/blog/social-media-trends-2026
-  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: TRUE → edit_series_episode_template
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: TRUE → edit_series_template (GAP: shorts_batch_create does batch output, not reusable branded intro/outro/lower-third continuity)
 
 • Watch time 75% benchmark pacing-optimized hunting clips under 45s outperform TikTok 2026
   Evidence: "ICUC recommends optimizing for watch time around 75% of video duration as a directional
@@ -123,7 +123,7 @@ INSTAGRAM
   by framing missed shots, tag draws, or gear failures as 'horror movie' titles (e.g., 'The Rut
   That Didn't Come: A Deer Hunter's Horror Story') generating high share and comment rates.
   Source: https://www.ramd.am/blog/trends-instagram
-  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: TRUE → edit_horror_title_card_intro
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: false (covered by edit_add_text)
 
 • Spotlight list mood board hunting landscape compilation Reels May 2026
   Evidence: "Instagram Reels trends for May 2026 spotlight list, mood, and film-inspired formats" —
@@ -131,7 +131,7 @@ INSTAGRAM
   scrollable mood-board compilations of landscape, sunrise treestand, and field shots set to ambient
   audio generate high save rates and 'inspo' traction with viewers planning upcoming seasons.
   Source: https://newengen.com/insights/instagram-trends/
-  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: TRUE → edit_mood_board_compilation
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: TRUE → edit_grid_montage (GAP: no multi-panel grid compositing; ai_auto_edit produces a linear edit only)
 
 • Color walk / color hunt outdoor nature Reels trending format May 2026
   Evidence: "Color walk trends work particularly well for outdoor brands" — MSN Instagram Reels
@@ -148,7 +148,7 @@ INSTAGRAM
   this as a comedic confessional — 'I need [new rifle / new optic / new hunting rig]' — with the
   beat-drop reveal of the actual purchase, driving high engagement.
   Source: https://www.scottsocialmarketing.com/blog/trending-reels-audio-this-week-on-instagram
-  Confidence: MEDIUM | cutpilotRelevant: true | bridgeRelevant: TRUE → edit_beat_drop_reveal_cut
+  Confidence: MEDIUM | cutpilotRelevant: true | bridgeRelevant: false (covered by ai_beat_sync)
 
 
 LINKEDIN
@@ -162,7 +162,7 @@ LINKEDIN
   and firearms brands repurposing 9:16 field footage natively to LinkedIn are gaining B2B reach
   among dealers, distributors, and land managers with near-zero additional production cost.
   Source: https://www.virlan.co/digital-marketing/linkedin-marketing-strategy/
-  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: TRUE → edit_vertical_reframe_linkedin
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: false (covered by shorts_create · reframeMode auto_face_track/smart_crop)
 
 • 7-15 second LinkedIn short-form video outdoor brand authority format 2026
   Evidence: "Short-form video (between 7-15 seconds) is becoming increasingly important on LinkedIn,
@@ -171,7 +171,7 @@ LINKEDIN
   one conservation fact) establish thought-leadership authority in the B2B dealer/distributor channel
   more efficiently than long-form posts.
   Source: https://heropost.io/linkedin-marketing-guide-2026/
-  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: TRUE → edit_linkedin_micro_clip_trim
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: false (covered by edit_trim / edit_cut)
 
 • Serialized behind-the-scenes brand video series LinkedIn outdoor hunting 2026
   Evidence: "Many businesses are shifting toward publishing video series that give viewers a quick,
@@ -200,6 +200,38 @@ LINKEDIN
   phones — outperform polished brand video by 4-5× in comments and DM-driven lead generation.
   Source: https://www.visla.us/blog/guides/linkedin-video-in-2026-whats-working-and-how-to-make-it/
   Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: false
+
+================================================================================
+
+BRIDGE GAP ANALYSIS (reconciled against live premiere-live MCP tool inventory)
+-----------------------------------------------------------------------------
+20 signals surfaced this week. Each bridgeRelevant candidate was checked against
+the editor capabilities the Bridge ALREADY ships. Only capabilities with no
+existing tool are flagged as genuine gaps worth scaffolding.
+
+GENUINE GAPS — candidates to scaffold (do NOT auto-scaffold; flagged only):
+  • edit_split_screen   (tiktok)    Two-source reaction / picture-in-picture layout
+                                     (creator face-cam over the action). Existing
+                                     shorts_create reframeMode=split_screen reframes
+                                     ONE source; there is no two-source compositor.
+  • edit_series_template (tiktok)    Reusable branded series template (consistent
+                                     intro/outro/lower-thirds across episodes).
+                                     shorts_batch_create batches output but carries
+                                     no persistent branding template.
+  • edit_grid_montage   (instagram) Multi-panel grid / mood-board compositing.
+                                     ai_auto_edit yields a LINEAR edit only; no
+                                     grid-layout primitive exists.
+
+ALREADY COVERED BY EXISTING BRIDGE TOOLS (no scaffolding needed):
+  • 3-sec pattern-interrupt hook        → ai_generate_hook (hookStyle=cold_open)
+  • rapid gear-reveal montage           → ai_auto_edit + ai_detect_highlights
+  • product spec lower-third            → edit_add_text (position=lower_third)
+  • burned-in Shorts captions           → shorts_add_captions / shorts_create.addCaptions
+  • searchable keyword title card       → edit_add_text
+  • horror-movie title card intro       → edit_add_text
+  • beat-drop reveal cut                → ai_beat_sync
+  • LinkedIn 9:16 vertical reframe      → shorts_create (reframeMode auto_face_track/smart_crop)
+  • LinkedIn micro-clip trim            → edit_trim / edit_cut
 
 ================================================================================
 END OF DIGEST

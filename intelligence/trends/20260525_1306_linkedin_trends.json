@@ -13,8 +13,7 @@
       "firstSeen": "2026-05-25T13:06:00.000Z",
       "confidence": "HIGH",
       "cutpilotRelevant": true,
-      "bridgeRelevant": true,
-      "suggestedBridgeTool": "edit_vertical_reframe_linkedin",
+      "bridgeRelevant": false,
       "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
     },
     {
@@ -26,8 +25,7 @@
       "firstSeen": "2026-05-25T13:06:00.000Z",
       "confidence": "HIGH",
       "cutpilotRelevant": true,
-      "bridgeRelevant": true,
-      "suggestedBridgeTool": "edit_linkedin_micro_clip_trim",
+      "bridgeRelevant": false,
       "rawQuery": "LinkedIn video outdoor hunting firearms brand B2B short-form strategy 2026"
     },
     {

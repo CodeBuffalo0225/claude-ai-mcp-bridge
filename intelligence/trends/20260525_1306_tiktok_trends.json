@@ -26,7 +26,7 @@
       "confidence": "HIGH",
       "cutpilotRelevant": true,
       "bridgeRelevant": true,
-      "suggestedBridgeTool": "edit_reaction_split_screen",
+      "suggestedBridgeTool": "edit_split_screen",
       "rawQuery": "TikTok hunting fishing outdoor niche content trends engagement 2026"
     },
     {
@@ -38,8 +38,7 @@
       "firstSeen": "2026-05-25T13:06:00.000Z",
       "confidence": "HIGH",
       "cutpilotRelevant": true,
-      "bridgeRelevant": true,
-      "suggestedBridgeTool": "edit_keyword_title_card_overlay",
+      "bridgeRelevant": false,
       "rawQuery": "TikTok hunting fishing outdoor niche content trends engagement 2026"
     },
     {
@@ -52,7 +51,7 @@
       "confidence": "HIGH",
       "cutpilotRelevant": true,
       "bridgeRelevant": true,
-      "suggestedBridgeTool": "edit_series_episode_template",
+      "suggestedBridgeTool": "edit_series_template",
       "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
     },
     {

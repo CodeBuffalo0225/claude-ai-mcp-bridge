@@ -13,8 +13,7 @@
       "firstSeen": "2026-05-25T13:06:00.000Z",
       "confidence": "HIGH",
       "cutpilotRelevant": true,
-      "bridgeRelevant": true,
-      "suggestedBridgeTool": "edit_pattern_interrupt_hook_cut",
+      "bridgeRelevant": false,
       "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
     },
     {
@@ -26,8 +25,7 @@
       "firstSeen": "2026-05-25T13:06:00.000Z",
       "confidence": "HIGH",
       "cutpilotRelevant": true,
-      "bridgeRelevant": true,
-      "suggestedBridgeTool": "edit_rapid_gear_reveal_cut",
+      "bridgeRelevant": false,
       "rawQuery": "hunting fishing outdoor creators YouTube Shorts format hook style 2026 viral"
     },
     {
@@ -39,8 +37,7 @@
       "firstSeen": "2026-05-25T13:06:00.000Z",
       "confidence": "HIGH",
       "cutpilotRelevant": true,
-      "bridgeRelevant": true,
-      "suggestedBridgeTool": "edit_product_spec_overlay",
+      "bridgeRelevant": false,
       "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
     },
     {
@@ -52,8 +49,7 @@
       "firstSeen": "2026-05-25T13:06:00.000Z",
       "confidence": "HIGH",
       "cutpilotRelevant": true,
-      "bridgeRelevant": true,
-      "suggestedBridgeTool": "edit_burned_captions_shorts",
+      "bridgeRelevant": false,
       "rawQuery": "hunting fishing outdoor creators YouTube Shorts format hook style 2026 viral"
     },
     {
