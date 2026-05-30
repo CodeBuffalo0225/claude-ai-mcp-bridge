@@ -6,6 +6,9 @@
 
 import WebSocket from 'ws';
 import { Logger } from '../utils/logger.js';
+import { harvestDirectory } from '../style-learning/project-harvester.js';
+import { analyzeStyle } from '../style-learning/style-analyzer.js';
+import { saveProfile, loadProfile, clearProfile } from '../style-learning/style-profile-store.js';
 
 const logger = new Logger('AdobeBridge');
 
@@ -98,6 +101,20 @@ class AdobeBridge {
       try {
         const message = JSON.parse(data.toString());
 
+        // Handle style-learning commands from CEP panel
+        if (message.command === 'ANALYZE_STYLE_DIR') {
+          this._handleAnalyzeStyleDir(ws, message);
+          return;
+        }
+        if (message.command === 'GET_STYLE_PROFILE') {
+          this._handleGetStyleProfile(ws, message);
+          return;
+        }
+        if (message.command === 'CLEAR_STYLE_PROFILE') {
+          this._handleClearStyleProfile(ws, message);
+          return;
+        }
+
         // Handle responses to pending requests
         if (message.id && this.pendingRequests.has(message.id)) {
           const { resolve, reject, timeout } = this.pendingRequests.get(message.id);
@@ -153,9 +170,17 @@ class AdobeBridge {
     const ws = this.connections[app];
 
     if (!ws || ws.readyState !== WebSocket.OPEN) {
-      // In development/simulation mode, return simulated responses
-      logger.warn(`No connection to ${app} — running in simulation mode`);
-      return this._simulateResponse(app, command, params);
+      // HARD FAIL on disconnect — never simulate. Silent simulation returns
+      // fake data and destroys the ML decision log. The skill's #1 rule.
+      // The bridge auto-reconnects (see _scheduleReconnect); wait or reload panel.
+      const reconnectState = this.connections[app] === null
+        ? `disconnected (reconnect attempt ${this.reconnectAttempts[app]}/${MAX_RECONNECT_ATTEMPTS})`
+        : `readyState=${ws ? ws.readyState : 'no-ws'}`;
+      throw new Error(
+        `Bridge not connected to ${app} (${reconnectState}). ` +
+        `Open the Claude AI Editor panel in ${app} (Window → Extensions). ` +
+        `Auto-reconnect retries every ${RECONNECT_INTERVAL / 1000}s for ${MAX_RECONNECT_ATTEMPTS} attempts.`
+      );
     }
 
     const id = ++this.requestId;
@@ -246,6 +271,64 @@ class AdobeBridge {
       }
     }
     this.pendingRequests.clear();
+  }
+
+  // ── STYLE LEARNING HANDLERS ──────────────────────────────────────────
+
+  _handleAnalyzeStyleDir(ws, message) {
+    const { dirPath } = message.params || {};
+    if (!dirPath) {
+      this._sendToWs(ws, { id: message.id, event: 'STYLE_ANALYSIS_ERROR', data: { message: 'No dirPath provided' } });
+      return;
+    }
+
+    // Run asynchronously so the bridge stays responsive
+    (async () => {
+      try {
+        logger.info(`Style analysis started for: ${dirPath}`);
+        const analyses = await harvestDirectory(dirPath);
+        if (analyses.length === 0) {
+          this._sendToWs(ws, { id: message.id, event: 'STYLE_ANALYSIS_ERROR', data: { message: 'No sequences found in directory' } });
+          return;
+        }
+        const profile = await analyzeStyle(analyses);
+        saveProfile(profile);
+        this._sendToWs(ws, {
+          id: message.id,
+          event: 'STYLE_ANALYSIS_COMPLETE',
+          data: {
+            profile_name: profile.profile_name,
+            style_summary: profile.style_summary,
+            analyzed_project_count: profile.analyzed_project_count,
+            analyzed_sequence_count: profile.analyzed_sequence_count,
+            generated_at: profile.generated_at,
+          },
+        });
+      } catch (err) {
+        logger.error(`Style analysis failed: ${err.message}`);
+        this._sendToWs(ws, { id: message.id, event: 'STYLE_ANALYSIS_ERROR', data: { message: err.message } });
+      }
+    })();
+  }
+
+  _handleGetStyleProfile(ws, message) {
+    const profile = loadProfile();
+    this._sendToWs(ws, { id: message.id, result: profile });
+  }
+
+  _handleClearStyleProfile(ws, message) {
+    clearProfile();
+    this._sendToWs(ws, { id: message.id, result: { success: true } });
+  }
+
+  _sendToWs(ws, payload) {
+    if (ws && ws.readyState === WebSocket.OPEN) {
+      try {
+        ws.send(JSON.stringify(payload));
+      } catch (err) {
+        logger.error(`Failed to send WS message: ${err.message}`);
+      }
+    }
   }
 
   // ── STATUS ─────────────────────────────────────────────────────────────

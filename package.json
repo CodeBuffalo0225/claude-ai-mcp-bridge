@@ -16,6 +16,7 @@
     "start:dashboard": "node dashboard/server.js",
     "bridge:install": "node scripts/install-bridge.js",
     "bridge:test": "node scripts/test-connection.js",
+    "learn-style": "node src/style-learning/learn-style-cli.js",
     "dev": "node --watch src/index.js",
     "lint": "eslint src/",
     "test": "node --test tests/"
@@ -29,6 +30,8 @@
     "sharp": "^0.33.0",
     "chokidar": "^3.6.0",
     "chalk": "^5.3.0",
+    "fast-xml-parser": "^4.5.0",
+    "ora": "^8.1.0",
     "zod": "^3.23.0"
   },
   "devDependencies": {

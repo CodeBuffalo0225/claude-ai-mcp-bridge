@@ -1438,6 +1438,56 @@ CSInterface.prototype.getWindowTitle = function()
     #script-status.loaded { color: var(--success); border-color: #2d5a2d; background: #1a2e1a; }
     #script-status.error  { color: var(--error);   border-color: #5a1a1a; background: #2e1a1a; }
 
+    /* ── Style Profile ──────────────────────── */
+    #style-profile-section {
+      margin-top: 6px;
+      padding: 8px 10px;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+    }
+    #style-profile-header {
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+    #style-profile-status {
+      font-size: 11px;
+      color: var(--text);
+      line-height: 1.4;
+      margin-bottom: 6px;
+    }
+    #style-profile-meta {
+      font-size: 10px;
+      color: var(--text-dim);
+      margin-bottom: 6px;
+    }
+    #style-profile-actions {
+      display: flex;
+      gap: 6px;
+    }
+    #style-profile-actions button {
+      padding: 3px 8px;
+      font-size: 10px;
+      background: var(--bg3);
+      color: var(--text-dim);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    #style-profile-actions button:hover {
+      color: var(--text);
+      background: var(--bg);
+    }
+    #style-spinner {
+      font-size: 10px;
+      color: var(--accent);
+      margin-top: 4px;
+    }
+
     /* ── Log ────────────────────────────────── */
     #log-header {
       display: flex;
@@ -1538,6 +1588,18 @@ CSInterface.prototype.getWindowTitle = function()
 
   <div id="script-status">ExtendScript: waiting...</div>
 
+  <!-- ── Style Profile Section ──────────────────────────────────────── -->
+  <div id="style-profile-section">
+    <div id="style-profile-header">Style Profile</div>
+    <div id="style-profile-status">No style profile — click Analyze to learn from your existing work</div>
+    <div id="style-profile-meta" style="display:none"></div>
+    <div id="style-profile-actions">
+      <button id="analyze-btn">📂 Analyze Projects</button>
+      <button id="reanalyze-btn" style="display:none">🔄 Re-analyze</button>
+    </div>
+    <div id="style-spinner" style="display:none">Analyzing...</div>
+  </div>
+
   <div id="log-header">
     <span id="log-label">Command Log</span>
     <button id="clear-btn">Clear</button>
@@ -1584,6 +1646,13 @@ CSInterface.prototype.getWindowTitle = function()
   const $scriptSt   = document.getElementById('script-status');
   const $log        = document.getElementById('log');
   const $clearBtn   = document.getElementById('clear-btn');
+
+  // Style profile DOM refs
+  const $spStatus    = document.getElementById('style-profile-status');
+  const $spMeta      = document.getElementById('style-profile-meta');
+  const $analyzeBtn  = document.getElementById('analyze-btn');
+  const $reanalyzeBtn = document.getElementById('reanalyze-btn');
+  const $spSpinner   = document.getElementById('style-spinner');
 
   // ── State ──────────────────────────────────────────────────────────────
   let cmdTotal = 0;
@@ -1828,6 +1897,86 @@ CSInterface.prototype.getWindowTitle = function()
     $errCount.textContent = '0';
     $errCount.style.color = 'var(--text-dim)';
   });
+
+  // ── Style Profile Logic ─────────────────────────────────────────────
+  function requestStyleProfile() {
+    if (!ws || ws.readyState !== WebSocket.OPEN) return;
+    sendWS(ws, WebSocket, { command: 'GET_STYLE_PROFILE', params: {} });
+  }
+
+  function updateStyleProfileUI(profile) {
+    if (!profile) {
+      $spStatus.textContent = 'No style profile \u2014 click Analyze to learn from your existing work';
+      $spMeta.style.display = 'none';
+      $reanalyzeBtn.style.display = 'none';
+      return;
+    }
+    $spStatus.textContent = (profile.profile_name || 'Unnamed') + ' \u2014 ' + (profile.style_summary || '');
+    var date = profile.generated_at || profile._savedAt || '';
+    if (date) date = new Date(date).toLocaleDateString();
+    $spMeta.textContent = 'Last analyzed: ' + date +
+      ' \u2022 ' + (profile.analyzed_project_count || '?') + ' projects' +
+      ' \u2022 ' + (profile.analyzed_sequence_count || '?') + ' sequences';
+    $spMeta.style.display = 'block';
+    if (profile.stale) {
+      $reanalyzeBtn.style.display = 'inline-block';
+    }
+  }
+
+  $analyzeBtn.addEventListener('click', function () {
+    // Use CEP folder picker if available, else prompt
+    var dirPath;
+    if (window.cep && window.cep.fs && window.cep.fs.showOpenDialog) {
+      var result = window.cep.fs.showOpenDialog(false, true, 'Select project folder', '');
+      if (result && result.data && result.data.length > 0) {
+        dirPath = result.data[0];
+      }
+    } else {
+      dirPath = prompt('Enter path to folder with .prproj files:');
+    }
+    if (!dirPath) return;
+
+    $spSpinner.style.display = 'block';
+    $spStatus.textContent = 'Analyzing projects...';
+    log('Style analysis started: ' + dirPath, 'info');
+    sendWS(ws, WebSocket, { command: 'ANALYZE_STYLE_DIR', params: { dirPath: dirPath } });
+  });
+
+  $reanalyzeBtn.addEventListener('click', function () {
+    $analyzeBtn.click();
+  });
+
+  // Listen for style analysis responses in the main message handler
+  var _origOnMessage = ws ? ws.onmessage : null;
+  function hookStyleMessages(wsRef) {
+    var prevHandler = wsRef.onmessage;
+    wsRef.addEventListener('message', function (evt) {
+      try {
+        var msg = JSON.parse(evt.data);
+        if (msg.event === 'STYLE_ANALYSIS_COMPLETE') {
+          $spSpinner.style.display = 'none';
+          updateStyleProfileUI(msg.data);
+          log('\u2713 Style profile saved: ' + (msg.data.profile_name || ''), 'success');
+        } else if (msg.event === 'STYLE_ANALYSIS_ERROR') {
+          $spSpinner.style.display = 'none';
+          $spStatus.textContent = 'Analysis failed: ' + (msg.data && msg.data.message || 'Unknown error');
+          log('\u2717 Style analysis error: ' + (msg.data && msg.data.message || ''), 'error');
+        } else if (msg.result && msg.result.profile_name) {
+          // Response from GET_STYLE_PROFILE
+          updateStyleProfileUI(msg.result);
+        }
+      } catch (e) { /* ignore parse errors for non-style messages */ }
+    });
+  }
+
+  // Hook after WS is connected (deferred check)
+  var _spInterval = setInterval(function () {
+    if (ws && ws.readyState === WebSocket.OPEN) {
+      hookStyleMessages(ws);
+      requestStyleProfile();
+      clearInterval(_spInterval);
+    }
+  }, 500);
 
 })();
 </script>
