@@ -368,6 +368,7 @@ class PremiereProMCPServer {
         trackIndex: z.number().default(1),
         startTime: z.number(),
         duration: z.number().default(3),
+        mogrtPath: z.string().optional().describe('Path to a .mogrt template. Premiere 2024+ requires this for reliable scripted titles/captions — the text is written into the template\'s Source Text property.'),
         style: z.object({
           fontFamily: z.string().default('Arial Bold'),
           fontSize: z.number().default(72),
@@ -380,8 +381,26 @@ class PremiereProMCPServer {
         }).optional(),
       },
       async (params) => {
-        await this.bridge.send('premiere', 'edit.addText', params);
-        return { content: [{ type: 'text', text: `Added text "${params.text}" at ${params.startTime}s (${params.duration}s)` }] };
+        // FIX 2026-05-29: this used to print "Added text..." unconditionally,
+        // even when the bridge reported {added:false}. Now surface the truth.
+        const result = await this.bridge.send('premiere', 'edit.addText', params);
+        if (result && result.added) {
+          return { content: [{ type: 'text', text: `Added text "${params.text}" at ${params.startTime}s (${params.duration}s) via ${result.method}` }] };
+        }
+        const diag = result || {};
+        return {
+          content: [{
+            type: 'text',
+            text: `FAILED to add text "${params.text}". The bridge could not insert a title in this Premiere version.\n` +
+              `error: ${diag.error || 'unknown'}\n` +
+              `method0 (MOGRT): ${diag.method0Error || 'n/a'}\n` +
+              `method1 (native): ${diag.method1Error || 'n/a'}\n` +
+              `method2 (QE): ${diag.method2Error || 'n/a'}\n` +
+              `premiereVersion: ${diag.premiereVersion || 'unknown'}\n` +
+              (diag.hint ? `hint: ${diag.hint}` : ''),
+          }],
+          isError: true,
+        };
       }
     );
 
@@ -666,14 +685,13 @@ class PremiereProMCPServer {
       },
       async (params) => {
         const result = await this.colorGrader.applyPreset(params);
-        return {
-          content: [{
-            type: 'text',
-            text: `Color grade "${params.preset}" applied at ${params.intensity}%\n` +
-              `Scope: ${params.scope}\n` +
-              `Clips affected: ${result.clipsAffected}`,
-          }],
-        };
+        let text = `Color grade "${params.preset}" applied at ${params.intensity}%\n` +
+          `Scope: ${params.scope}\n` +
+          `Clips affected: ${result.clipsAffected}`;
+        if (result.failures && result.failures.length) {
+          text += `\nFailures (${result.failures.length}): ${result.failures.join('; ')}`;
+        }
+        return { content: [{ type: 'text', text }] };
       }
     );
 

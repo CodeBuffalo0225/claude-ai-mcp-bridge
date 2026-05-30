@@ -661,6 +661,54 @@ var PremiereBridge = {
 
     var beforeCount = track.clips.numItems;
 
+    // ── Method 0: MOGRT import (most reliable in Premiere 2024-2026) ──
+    // sequence.importMGT(path, ticks, vidTrackOffset, audTrackOffset) inserts
+    // a Motion Graphics template and returns its trackItem. We then write the
+    // caption text into its "Source Text" / first editable property. This is
+    // the only path Adobe officially supports for scripted titles in recent
+    // versions, so it's tried first whenever a template path is supplied.
+    var method0Err = null;
+    var mogrtPath = params.mogrtPath || null;
+    if (mogrtPath) {
+      try {
+        var startTicks = Math.round(startSec * 254016000000);
+        var mItem = seq.importMGT(mogrtPath, String(startTicks), trackIdx, 0);
+        if (mItem) {
+          // Set duration
+          try {
+            var endT = new Time(); endT.seconds = startSec + durSec;
+            mItem.end = endT;
+          } catch(eDur) {}
+          // Write the text into the MOGRT's editable component(s)
+          try {
+            if (mItem.components) {
+              for (var mc = 0; mc < mItem.components.numItems; mc++) {
+                var mComp = mItem.components[mc];
+                for (var mp = 0; mp < mComp.properties.numItems; mp++) {
+                  var mProp = mComp.properties[mp];
+                  if (mProp.displayName === 'Source Text' ||
+                      mProp.displayName === 'Text' ||
+                      mProp.displayName === 'Caption') {
+                    try { mProp.setValue(text, true); } catch(eSet) {}
+                  }
+                }
+              }
+            }
+          } catch(eTxt) {}
+          if (track.clips.numItems > beforeCount) {
+            return { added: true, method: 'importMGT', text: text, trackIndex: trackIdx, startTime: startSec, duration: durSec };
+          }
+          method0Err = "importMGT ran but track.clips count unchanged";
+        } else {
+          method0Err = "importMGT returned null";
+        }
+      } catch(e) {
+        method0Err = "importMGT threw: " + e.message;
+      }
+    } else {
+      method0Err = "no mogrtPath supplied (recommended path for reliable titles)";
+    }
+
     // ── Method 1: native addTextClip (Premiere 2023+) ─────────────
     var method1Err = null;
     if (typeof track.addTextClip === 'function') {
@@ -725,13 +773,17 @@ var PremiereBridge = {
       method2Err = "QE not initialized (app.enableQE failed)";
     }
 
-    // Both methods failed — return the diagnostic instead of lying
+    // All methods failed — return the diagnostic instead of lying
     return {
       added: false,
-      error: "Both text insertion methods failed. Use manual Essential Graphics in Premiere.",
+      error: "Text insertion failed. addTextClip is unavailable in this Premiere build.",
+      method0Error: method0Err,
       method1Error: method1Err,
       method2Error: method2Err,
-      premiereVersion: app.version
+      premiereVersion: app.version,
+      hint: "Premiere 2024+ removed scripted plain-text titles. Pass mogrtPath " +
+            "(a .mogrt template exported from Essential Graphics) to edit_add_text " +
+            "for reliable burned-in captions."
     };
   },
 
@@ -951,100 +1003,65 @@ var PremiereBridge = {
   },
 
   // ── COLOR GRADING ─────────────────────────────────────────────
+  // Single-clip Lumetri grade. Accepts settings either flattened on params
+  // (params.basic / params.creative) OR nested under params.settings — the
+  // MCP color-grader sends { settings: {...} }, older callers send flat.
   "color.applyLumetri": function(params) {
     var seq = app.project.activeSequence;
     if (!seq) return { error: "No active sequence" };
 
     var trackIdx = (params.trackIndex !== undefined) ? params.trackIndex : 0;
     var clipIdx  = (params.clipIndex !== undefined) ? params.clipIndex : 0;
-    var track = seq.videoTracks[trackIdx];
-    if (!track || clipIdx >= track.clips.numItems) {
-      return { error: "Clip not found at V" + trackIdx + ":" + clipIdx };
+    var settings = params.settings ? params.settings : params;
+
+    var qeSeq = null;
+    try { qeSeq = QEApplication.project.getActiveSequence(); } catch(e) {}
+
+    var r = _applyLumetriToClip(seq, qeSeq, trackIdx, clipIdx, settings);
+    if (r.error) return r;
+    return { applied: r.applied, clipIndex: clipIdx };
+  },
+
+  // FIX 2026-05-29: full-timeline grading used to loop in the MCP server,
+  // firing one WebSocket round-trip PER clip. On 14-16 4K clips that blew
+  // past the MCP tool-call timeout every time. This handler does the whole
+  // loop inside ExtendScript in a SINGLE round-trip so it returns once, fast.
+  // Applies the same Lumetri grade to every clip on every video track (or a
+  // specific track if params.trackIndex is given).
+  "color.applyTimelineGrade": function(params) {
+    var seq = app.project.activeSequence;
+    if (!seq) return { error: "No active sequence" };
+
+    var settings = params.settings ? params.settings : params;
+
+    var qeSeq = null;
+    try { qeSeq = QEApplication.project.getActiveSequence(); } catch(e) {}
+
+    var tracksToDo = [];
+    if (params.trackIndex !== undefined) {
+      tracksToDo.push(params.trackIndex);
+    } else {
+      for (var t = 0; t < seq.videoTracks.numTracks; t++) tracksToDo.push(t);
     }
 
-    var clip = track.clips[clipIdx];
-
-    // Add Lumetri Color via QE DOM if not already present
-    try {
-      var qeSeq = QEApplication.project.getActiveSequence();
-      var qeTrack = qeSeq.getVideoTrackAt(trackIdx);
-      var qeClip = qeTrack.getItemAt(clipIdx);
-      qeClip.addVideoEffect(
-        QEApplication.project.getVideoEffectByName("Lumetri Color")
-      );
-    } catch(e) { /* may already have it */ }
-
-    // Map of Lumetri property names
-    var basicMap = {
-      "temperature": "Color Temperature",
-      "tint": "Tint",
-      "exposure": "Exposure",
-      "contrast": "Contrast",
-      "highlights": "Highlight",
-      "shadows": "Shadow",
-      "whites": "White",
-      "blacks": "Black"
-    };
-    var creativeMap = {
-      "vibrance": "Vibrance",
-      "saturation": "Saturation"
-    };
-
-    // Find Lumetri component on the clip
-    var components = clip.components;
-    var lumetri = null;
-    for (var ci = 0; ci < components.numItems; ci++) {
-      if (components[ci].displayName === "Lumetri Color") {
-        lumetri = components[ci];
-        break;
-      }
-    }
-
-    if (!lumetri) return { error: "Lumetri Color effect not found on clip" };
-
-    var applied = [];
-
-    // Apply basic settings
-    if (params.basic) {
-      for (var key in params.basic) {
-        var propName = basicMap[key];
-        if (!propName) continue;
-        for (var pi = 0; pi < lumetri.properties.numItems; pi++) {
-          var prop = lumetri.properties[pi];
-          if (prop.displayName === propName) {
-            try {
-              prop.setValue(params.basic[key], true);
-              applied.push(key + "=" + params.basic[key]);
-            } catch(e) {
-              applied.push(key + "=FAILED:" + e.message);
-            }
-            break;
-          }
+    var clipsAffected = 0;
+    var failures = [];
+    for (var ti = 0; ti < tracksToDo.length; ti++) {
+      var tIdx = tracksToDo[ti];
+      var track = seq.videoTracks[tIdx];
+      if (!track) continue;
+      var n = track.clips.numItems;
+      for (var ci = 0; ci < n; ci++) {
+        var rr = _applyLumetriToClip(seq, qeSeq, tIdx, ci, settings);
+        if (rr.error) {
+          failures.push("V" + tIdx + ":" + ci + " " + rr.error);
+        } else {
+          clipsAffected++;
         }
       }
     }
 
-    // Apply creative settings
-    if (params.creative) {
-      for (var cKey in params.creative) {
-        var cPropName = creativeMap[cKey];
-        if (!cPropName) continue;
-        for (var cpi = 0; cpi < lumetri.properties.numItems; cpi++) {
-          var cProp = lumetri.properties[cpi];
-          if (cProp.displayName === cPropName) {
-            try {
-              cProp.setValue(params.creative[cKey], true);
-              applied.push(cKey + "=" + params.creative[cKey]);
-            } catch(e) {
-              applied.push(cKey + "=FAILED:" + e.message);
-            }
-            break;
-          }
-        }
-      }
-    }
-
-    return { applied: applied, clipIndex: clipIdx };
+    return { clipsAffected: clipsAffected, failures: failures };
   },
 
   // ── RAW EVAL ──────────────────────────────────────────────────
@@ -1088,6 +1105,96 @@ function _searchBin(bin, name) {
 function _secondsToTicks(seconds) {
   // Premiere uses ticks (254016000000 ticks per second)
   return Math.round(seconds * 254016000000);
+}
+
+// Apply a Lumetri grade to ONE clip. Shared by color.applyLumetri (single
+// clip) and color.applyTimelineGrade (whole timeline, single round-trip).
+// `settings` is { basic:{...}, creative:{...} }.
+function _applyLumetriToClip(seq, qeSeq, trackIdx, clipIdx, settings) {
+  var track = seq.videoTracks[trackIdx];
+  if (!track || clipIdx >= track.clips.numItems) {
+    return { error: "Clip not found at V" + trackIdx + ":" + clipIdx };
+  }
+  var clip = track.clips[clipIdx];
+
+  // Add Lumetri Color via QE DOM if not already present.
+  try {
+    if (qeSeq) {
+      var qeTrack = qeSeq.getVideoTrackAt(trackIdx);
+      var qeClip = qeTrack.getItemAt(clipIdx);
+      qeClip.addVideoEffect(
+        QEApplication.project.getVideoEffectByName("Lumetri Color")
+      );
+    }
+  } catch(e) { /* may already have it */ }
+
+  var basicMap = {
+    "temperature": "Color Temperature",
+    "tint": "Tint",
+    "exposure": "Exposure",
+    "contrast": "Contrast",
+    "highlights": "Highlight",
+    "shadows": "Shadow",
+    "whites": "White",
+    "blacks": "Black"
+  };
+  var creativeMap = {
+    "vibrance": "Vibrance",
+    "saturation": "Saturation"
+  };
+
+  // Find Lumetri component on the clip
+  var components = clip.components;
+  var lumetri = null;
+  for (var ci = 0; ci < components.numItems; ci++) {
+    if (components[ci].displayName === "Lumetri Color") {
+      lumetri = components[ci];
+      break;
+    }
+  }
+  if (!lumetri) return { error: "Lumetri Color effect not found on clip" };
+
+  var applied = [];
+
+  if (settings && settings.basic) {
+    for (var key in settings.basic) {
+      var propName = basicMap[key];
+      if (!propName) continue;
+      for (var pi = 0; pi < lumetri.properties.numItems; pi++) {
+        var prop = lumetri.properties[pi];
+        if (prop.displayName === propName) {
+          try {
+            prop.setValue(settings.basic[key], true);
+            applied.push(key + "=" + settings.basic[key]);
+          } catch(e) {
+            applied.push(key + "=FAILED:" + e.message);
+          }
+          break;
+        }
+      }
+    }
+  }
+
+  if (settings && settings.creative) {
+    for (var cKey in settings.creative) {
+      var cPropName = creativeMap[cKey];
+      if (!cPropName) continue;
+      for (var cpi = 0; cpi < lumetri.properties.numItems; cpi++) {
+        var cProp = lumetri.properties[cpi];
+        if (cProp.displayName === cPropName) {
+          try {
+            cProp.setValue(settings.creative[cKey], true);
+            applied.push(cKey + "=" + settings.creative[cKey]);
+          } catch(e) {
+            applied.push(cKey + "=FAILED:" + e.message);
+          }
+          break;
+        }
+      }
+    }
+  }
+
+  return { applied: applied };
 }
 
 // Find a built-in .sqpreset matching requested dimensions + frame rate.

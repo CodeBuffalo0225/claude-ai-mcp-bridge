@@ -255,10 +255,25 @@ class ColorGrader {
     // Scale all values by intensity
     const scaledPreset = this._scalePreset(presetData, intensity / 100);
 
-    // Get clips to apply to based on scope
-    const clips = await this._getTargetClips(scope);
+    // FIX 2026-05-29: previously this looped every clip with a separate
+    // bridge.send (one WebSocket round-trip each). On a 14-16 clip 4K
+    // timeline that exceeded the MCP tool-call timeout every time. The
+    // bridge now grades the whole timeline in a SINGLE round-trip via
+    // color.applyTimelineGrade. For selected/range scopes we still target
+    // specific clips, but full_timeline (the common case) is one call.
+    if (scope === 'full_timeline') {
+      const result = await this.bridge.send('premiere', 'color.applyTimelineGrade', {
+        settings: scaledPreset,
+      });
+      return {
+        clipsAffected: result.clipsAffected ?? 0,
+        preset: presetData.name,
+        failures: result.failures || [],
+      };
+    }
 
-    // Apply Lumetri Color to each clip
+    // selected_clips / in_out_range — apply per targeted clip
+    const clips = await this._getTargetClips(scope);
     for (const clip of clips) {
       await this.bridge.send('premiere', 'color.applyLumetri', {
         trackIndex: clip.trackIndex,
