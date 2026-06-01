@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "tiktok",
+  "generatedAt": "2026-06-01T13:03:05Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "8d449dda48e4",
+      "platform": "tiktok",
+      "trend": "Rock Music Glitch editing trend remix format outdoor creators summer 2026",
+      "evidence": "\"The biggest TikTok trends right now are the Rock Music Glitch, the 2026 Summer Anthem, and the Wow, Ok acting-range challenge\" — Turrboo TikTok's Biggest Trends Right Now May 2026 (corroborated by Clipchamp TikTok's Biggest Trends Right Now 2026); outdoor and hunting creators who layer the glitch-cut edit style — rapid distortion frames at beat hits — over field footage of animal encounters or gear reveals are seeing above-average FYP distribution in the summer 2026 algorithm.",
+      "source": "https://turrboo.com/blog/latest-tiktok-trends",
+      "firstSeen": "2026-06-01T13:03:05Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_glitch_transition",
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "624059559596",
+      "platform": "tiktok",
+      "trend": "summer anthem Like a Prayer TikTok transition outdoor adventure format 2026",
+      "evidence": "\"Josh Fawaz's 'Like a Prayer' remix has become the unofficial summer anthem of 2026, with small creators reporting millions of views on first attempts\" — Clipchamp TikTok's Biggest Trends Right Now 2026 (corroborated by Turrboo TikTok's Biggest Trends Right Now May 2026); outdoor and hunting creators are pairing beat-sync transitions to this track — cutting from base camp to kill-shot reveal or launch-boat to fish-on moment — to ride the audio's momentum in the FYP feed.",
+      "source": "https://clipchamp.com/en/blog/tiktok-trends-challenges/",
+      "firstSeen": "2026-06-01T13:03:05Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "154431a788e3",
+      "platform": "tiktok",
+      "trend": "color hunting outdoor photography walk creative palette format TikTok June 2026",
+      "evidence": "\"The color hunting trend transforms regular city walks into a creative photography workshop — pick a color, then spend the day photographing everything in that shade, capturing anything from flowers and storefronts to street art and vegetables\" — Newengen TikTok Trends What's Trending on TikTok Right Now 2026 (corroborated by Later TikTok Trends 2026 Updated Weekly); outdoor and hunting creators are adapting this as camo-color walks, blaze-orange landscape edits, and habitat-palette montages, generating high save-and-share rates with nature-adjacent audiences.",
+      "source": "https://newengen.com/tiktok-trends/",
+      "firstSeen": "2026-06-01T13:03:05Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "2603f5e64f17",
+      "platform": "tiktok",
+      "trend": "hunting community niche FYP algorithm search-driven keyword caption June 2026",
+      "evidence": "\"If you want your strategy to work in 2026, focus on content that's specific to a niche, easy to understand, and built around what the TikTok algorithm is looking to distribute to new users\" — SocialPilot TikTok Trends May 2026 (corroborated by TikTok Newsroom TikTok Unveils 2026 Trend Predictions); hunting creators who front-load searchable keywords — species, state, season, technique — in on-screen text and captions are seeing expanded FYP reach beyond existing followers as TikTok's search-intent discovery becomes a primary growth vector.",
+      "source": "https://www.socialpilot.co/blog/tiktok-trends",
+      "firstSeen": "2026-06-01T13:03:05Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "TikTok hunting outdoors firearms creators trending format summer 2026"
+    },
+    {
+      "id": "22e15d3566d1",
+      "platform": "tiktok",
+      "trend": "serialized follow-along multi-episode hunt behind-the-scenes TikTok 2026",
+      "evidence": "\"Users will see a new video trend gain momentum in 2026: serialized content. Many businesses are shifting toward publishing video series that give viewers a quick, behind-the-scenes look at the people behind the brand\" — Slate Teams Social Media Trends 2026 (corroborated by Envato TikTok Trends 2026 What's Trending This Month); hunting creators publishing multi-episode follow-alongs — 'Day 1 of 7-day elk hunt' — see compounding follower growth and return-viewer rates that outperform one-off clips across TikTok's FYP in summer 2026.",
+      "source": "https://slateteams.com/blog/social-media-trends-2026",
+      "firstSeen": "2026-06-01T13:03:05Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_series_template",
+      "rawQuery": "TikTok hunting outdoors firearms creators trending format summer 2026"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "linkedin",
+  "generatedAt": "2026-06-01T13:03:05Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "312cb19f1580",
+      "platform": "linkedin",
+      "trend": "short-form vertical video LinkedIn 34pct engagement jump outdoor brands June 2026",
+      "evidence": "\"LinkedIn saw a 34% jump in video engagement compared to last year, and the platform expanded its short-form video feed and analytics tools\" — IQFluence Social Media Trends 2026 What Changed This Year (corroborated by Metricool LinkedIn Trends 6 Strategy Insights 2026); outdoor and firearms brands repurposing 9:16 field footage natively to LinkedIn are gaining B2B reach among dealers, distributors, and land managers with near-zero additional production cost as the algorithm boosts short-form video.",
+      "source": "https://iqfluence.io/public/blog/social-trends",
+      "firstSeen": "2026-06-01T13:03:05Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "8e03daf0e99f",
+      "platform": "linkedin",
+      "trend": "founder-led authentic unscripted video outdoor brand B2B LinkedIn 75pct buyer preference 2026",
+      "evidence": "\"B2B decision-makers are 75% more likely to engage with founder-led video content than traditional corporate ads. Film in natural settings, speak directly to the camera, and skip heavy production — authenticity wins\" — iStudios Media Video-First Thought Leadership on LinkedIn 2026 Executive Guide (corroborated by LaGrowthMachine LinkedIn Marketing Strategy 2026 Complete B2B Guide); outdoor and hunting brand founders posting unscripted field clips on LinkedIn outperform polished brand video by 4-5× in comments and DM-driven dealer inquiries.",
+      "source": "https://istudiosmedia.com/video-first-thought-leadership-on-linkedin/",
+      "firstSeen": "2026-06-01T13:03:05Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "LinkedIn video outdoor brands authenticity thought leadership B2B 2026"
+    },
+    {
+      "id": "a1c08143d9f6",
+      "platform": "linkedin",
+      "trend": "serialized behind-the-scenes brand video series LinkedIn outdoor hunting 2026",
+      "evidence": "\"Many businesses are shifting toward publishing video series that give viewers a quick, behind-the-scenes look at the people behind the brand or feature people having unedited discussions about topics that matter to the brand and its audience\" — Slate Teams Social Media Trends 2026 (corroborated by Teleprompter Pro 2026 Content Trends Every Creator Needs to Know); outdoor industry brands publishing serialized LinkedIn video series — manufacturing floor, pro staff field days, conservation projects — see higher dwell time and connection request rates from trade buyers.",
+      "source": "https://slateteams.com/blog/social-media-trends-2026",
+      "firstSeen": "2026-06-01T13:03:05Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_series_template",
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "375c0003f099",
+      "platform": "linkedin",
+      "trend": "talking-head executive video outperforms polished corporate outdoor LinkedIn 2026",
+      "evidence": "\"Talking-head videos from executives and practitioners consistently outperform polished brand videos on LinkedIn\" — LaGrowthMachine LinkedIn Marketing Strategy 2026 Complete B2B Guide (corroborated by iStudios Media Video-First Thought Leadership on LinkedIn 2026); for outdoor and firearms brands, short talking-head clips from the founder or lead pro-staffer discussing product field performance outperform agency-produced brand videos in comment engagement and inbound dealer inquiries on LinkedIn.",
+      "source": "https://lagrowthmachine.com/linkedin-marketing-strategy-2026/",
+      "firstSeen": "2026-06-01T13:03:05Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "LinkedIn video outdoor brands authenticity thought leadership B2B 2026"
+    },
+    {
+      "id": "54fe5abd2c8e",
+      "platform": "linkedin",
+      "trend": "comment-driven distribution outdoor brand LinkedIn short-form 2026",
+      "evidence": "\"Likes still matter, but comments matter more, and meaningful conversation is what drives distribution — when a post creates back-and-forth discussion, LinkedIn pushes it to a wider audience\" — Slate Teams Social Media Trends 2026 (corroborated by Sprout Social 7 Social Media Trends to Know in 2026); outdoor brands that end LinkedIn short-form videos with a direct question — 'What's your go-to pre-season training?' — consistently see higher organic reach than identical videos without a call-to-comment.",
+      "source": "https://slateteams.com/blog/social-media-trends-2026",
+      "firstSeen": "2026-06-01T13:03:05Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    }
+  ]
+}

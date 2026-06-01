@@ -1,0 +1,247 @@
+CutPilot Viral Intelligence — Weekly Digest
+Generated: 2026-06-01T13:03:05Z
+Niche: Hunting / Outdoors / Firearms / Outdoor Lifestyle
+================================================================================
+
+YOUTUBE
+-------
+
+• Pacing-cut every 0.5 s drives 70% completion outdoor Shorts June 2026
+  Evidence: "Cutting techniques that work: visual changes every 0.5-1 second through cuts, zooms,
+  or overlays; on-screen text appearing in rapid succession; color grade shifts or speed ramping
+  to maintain novelty; and eliminating dead air" — Praper Media Viral YouTube Shorts 2026
+  (corroborated by Conbersa.ai); outdoor/hunting creators maintaining sub-second visual variety
+  consistently hit the 70% completion threshold that triggers broader Shorts algorithm distribution.
+  Source: https://prapermedia.com/blog/make-viral-youtube-shorts/
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: false (covered by ai_auto_edit + edit_cut)
+
+• Fishing hook-set reveal Short outperforms talking-head opener June 2026
+  Evidence: "Short clips showing hook sets, fish reveals, or quick tips help bring new viewers
+  to your long-form videos. Fishing videos that perform best usually include one clear hook: a
+  challenge, a question, or a transformation" — Packapop 25 Fishing YouTube Video Ideas 2026
+  (corroborated by InfluenceFlow YouTube Shorts Strategy Guide 2026); action-first openers
+  outperform creator face-cam openers in click-hold and completion for the hunting/fishing vertical.
+  Source: https://packapop.com/blogs/youtube-success-blog/fishing-youtube-video-ideas
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: false (covered by ai_generate_hook)
+
+• Suppressor-ready rifle gear reveal Short sustains post-SHOT engagement June 2026
+  Evidence: "The two big trends in rifles at this year's SHOT show are manufacturers building new
+  rifles to enhance performance at distance and to be suppressor friendly" — The Avid Outdoorsman
+  SHOT Show 2026 (corroborated by American Hunter NRA Wildest Hunting Finds of SHOT 2026);
+  suppressor-friendly gear still drives category search volume in June; threaded-muzzle Shorts
+  see high algorithmic reach as summer pre-season anticipation builds.
+  Source: https://theavidoutdoorsman.com/shot-show-2026-reveals-the-gear-trends-hunters-will-see-everywhere-this-fall/
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: false (covered by edit_add_text · position=lower_third)
+
+• Loop-worthy rewatch structure outdoor Shorts algorithm rewards June 2026
+  Evidence: "Shorts that break past 1 million views share a small set of structural traits:
+  a tight 3-second hook, relentless pacing, and a loop that rewards rewatches" — Conbersa.ai
+  How to Go Viral on YouTube Shorts 2026 (corroborated by LunaBloom AI YouTube Short Video Viral
+  2026); outdoor creators engineering a seamless loop — ending on the striking opener frame —
+  boost replay counts that the Shorts algorithm treats as a strong engagement signal.
+  Source: https://www.conbersa.ai/learn/how-to-go-viral-on-youtube-shorts
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: TRUE → edit_loop_outro (GAP: no tool
+  creates a seamless end-to-beginning loop join; ai_generate_hook creates an opener but
+  cannot close the loop back to it programmatically)
+
+• Sub-60s rapid pacing visual variety outdoor Shorts algorithm reach 2026
+  Evidence: "Making YouTube Shorts go viral in 2026 requires hitting three algorithm signals in the
+  first 3 seconds: a visual or text hook that stops the swipe, a clear topic match, and a pacing
+  that drives completion rates above 70%" — Teleprompter.com Trending YouTube Shorts 2026 Top 10
+  Formats (corroborated by JoinBrands How to Create YouTube Shorts 2026); outdoor creators keeping
+  runtimes under 60 seconds with high visual variety are the fastest-growing format by view velocity.
+  Source: https://www.teleprompter.com/blog/trending-youtube-shorts
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: false (covered by ai_auto_edit)
+
+
+TIKTOK
+------
+
+• Rock Music Glitch editing trend remix format outdoor creators summer 2026
+  Evidence: "The biggest TikTok trends right now are the Rock Music Glitch, the 2026 Summer Anthem,
+  and the Wow, Ok acting-range challenge" — Turrboo TikTok's Biggest Trends Right Now May 2026
+  (corroborated by Clipchamp TikTok's Biggest Trends Right Now 2026); outdoor and hunting creators
+  layering glitch-cut distortion frames over field footage at beat hits see above-average FYP
+  distribution in the summer 2026 algorithm.
+  Source: https://turrboo.com/blog/latest-tiktok-trends
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: TRUE → edit_glitch_transition (GAP:
+  no dedicated glitch/distortion frame composite; ae_create_transition covers 15 types but
+  no explicit glitch distortion on a beat-hit trigger)
+
+• Summer anthem Like a Prayer TikTok transition outdoor adventure format 2026
+  Evidence: "Josh Fawaz's 'Like a Prayer' remix has become the unofficial summer anthem of 2026,
+  with small creators reporting millions of views on first attempts" — Clipchamp TikTok's Biggest
+  Trends Right Now 2026 (corroborated by Turrboo TikTok Trends May 2026); outdoor creators
+  pairing beat-sync transitions to this track — base camp to kill-shot, launch-boat to fish-on —
+  ride the audio's mainstream momentum in the FYP feed.
+  Source: https://clipchamp.com/en/blog/tiktok-trends-challenges/
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: false (covered by ai_beat_sync)
+
+• Color hunting outdoor photography palette walk creative format TikTok June 2026
+  Evidence: "The color hunting trend transforms regular city walks into a creative photography
+  workshop — pick a color, then spend the day photographing everything in that shade" — Newengen
+  TikTok Trends What's Trending Right Now 2026 (corroborated by Later TikTok Trends 2026 Updated
+  Weekly); outdoor creators adapting this as camo-color walks, blaze-orange landscape edits, and
+  habitat-palette montages generate high save/share rates with nature-adjacent audiences.
+  Source: https://newengen.com/tiktok-trends/
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: false (covered by ai_auto_edit + color_grade_preset)
+
+• Hunting community niche FYP algorithm search-driven keyword caption June 2026
+  Evidence: "If you want your strategy to work in 2026, focus on content that's specific to a niche,
+  easy to understand, and built around what the TikTok algorithm is looking to distribute to new
+  users" — SocialPilot TikTok Trends May 2026 (corroborated by TikTok Newsroom 2026 Trend
+  Predictions); hunting creators front-loading searchable keywords — species, state, season,
+  technique — in on-screen text see expanded FYP reach beyond followers.
+  Source: https://www.socialpilot.co/blog/tiktok-trends
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: false (covered by edit_add_text)
+
+• Serialized follow-along multi-episode hunt behind-the-scenes TikTok 2026
+  Evidence: "Users will see serialized content gain momentum in 2026, with many businesses shifting
+  toward publishing video series that give viewers a quick, behind-the-scenes look at the people
+  behind the brand" — Slate Teams Social Media Trends 2026 (corroborated by Envato TikTok Trends
+  2026 What's Trending This Month); hunting creators publishing multi-episode follow-alongs
+  ('Day 1 of 7-day elk hunt') see compounding follower growth and return-viewer rates.
+  Source: https://slateteams.com/blog/social-media-trends-2026
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: TRUE → edit_series_template (GAP:
+  shorts_batch_create batches output but carries no persistent branded intro/outro/lower-third
+  continuity template across a serialized multi-episode series)
+
+
+INSTAGRAM
+---------
+
+• "I Am Home" Beat It MJ trend outdoor hunting camp adaptation Reels June 2026
+  Evidence: "Michael Jackson's 'Beat It' is having a moment thanks to the new MJ biopic, fueling
+  the 'I Am Home' trend where creators strut into their secret third place" — SocialBee The Latest
+  Instagram Trends May 28 2026 (corroborated by SocialPilot Instagram Reels Trends 2026); hunting
+  creators adapting this as walk-ins to treestand, duck blind, or elk camp drive cross-niche reach.
+  Source: https://socialbee.com/blog/instagram-trends/
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: false (covered by ai_beat_sync + edit_add_text)
+
+• EVERYTHING HALLELUJAH Justin Bieber listing Reels gear reveal outdoor brand June 2026
+  Evidence: "Justin Bieber's 'EVERYTHING HALLELUJAH' continues dominating brand-friendly listing
+  Reels" — SocialBee The Latest Instagram Trends May 28 2026 (corroborated by Newengen Instagram
+  Trends June 2026); outdoor gear brands applying the listing format ('Everything I bring to the
+  elk woods') see high saves and shares with pre-season planning audiences.
+  Source: https://socialbee.com/blog/instagram-trends/
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: false (covered by edit_add_text)
+
+• "I Have Therapy" POV outdoor gear restoration confessional Reels format June 2026
+  Evidence: "The 'I Have Therapy' POV format is everywhere as creators cut from 'sorry I can't
+  today, I have therapy' to whatever actually restores them" — SocialBee The Latest Instagram
+  Trends May 28 2026 (corroborated by Later Top Instagram Reels Trends to Try in 2026 Updated
+  Weekly); outdoor creators adapting as 'Sorry, I can't — I have therapy' → woods/range/boat
+  drive high engagement from non-hunting audiences discovering outdoor content.
+  Source: https://socialbee.com/blog/instagram-trends/
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: false (covered by edit_cut + ai_generate_hook)
+
+• Color walk outdoor camo pattern habitat palette Reels high-save format June 2026
+  Evidence: "The 'color walk' trend works particularly well for outdoor brands, product showcases,
+  and destination content" — Later Top Instagram Reels Trends to Try in 2026 Updated Weekly
+  (corroborated by Newengen Instagram Trends June 2026 Updated Weekly); camo-palette walks,
+  blaze-orange season montages, and habitat-palette compilations generate outsized save rates.
+  Source: https://later.com/blog/instagram-reels-trends/
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: false (covered by ai_auto_edit + color_grade_preset)
+
+• POP DAT THANG DaBaby GloRilla outdoor gear beat-drop reveal Reels 2026
+  Evidence: "POP DAT THANG (Official Remix) by DaBaby, GloRilla, Yung Miami, and YKNIECE has
+  thousands of reels already using the sound for gym clips, lip syncs, fashion edits, travel
+  recaps" — HeyOrca 2026 Trending TikTok and Instagram Reels Audio Updated Weekly (corroborated
+  by Buffer 13 Trending Sounds on Instagram May 2026); outdoor/firearms gear creators adapting
+  the beat-drop hold-to-reveal of new gear are reaching new audiences via the audio's mainstream
+  momentum.
+  Source: https://www.heyorca.com/blog/trending-audio-for-reels-tiktok
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: false (covered by ai_beat_sync)
+
+
+LINKEDIN
+--------
+
+• Short-form vertical video LinkedIn 34% engagement jump outdoor brands June 2026
+  Evidence: "LinkedIn saw a 34% jump in video engagement compared to last year, and the platform
+  expanded its short-form video feed and analytics tools" — IQFluence Social Media Trends 2026
+  What Changed This Year (corroborated by Metricool LinkedIn Trends 6 Strategy Insights 2026);
+  outdoor and firearms brands repurposing 9:16 field footage to LinkedIn gain B2B reach among
+  dealers and distributors with near-zero additional production cost.
+  Source: https://iqfluence.io/public/blog/social-trends
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: false (covered by shorts_create · reframeMode=smart_crop)
+
+• Founder-led authentic unscripted video outdoor brand B2B LinkedIn 75% buyer preference 2026
+  Evidence: "B2B decision-makers are 75% more likely to engage with founder-led video content than
+  traditional corporate ads. Film in natural settings, speak directly to the camera, and skip heavy
+  production — authenticity wins" — iStudios Media Video-First Thought Leadership on LinkedIn 2026
+  (corroborated by LaGrowthMachine LinkedIn Marketing Strategy 2026 Complete B2B Guide); outdoor
+  brand founders posting unscripted field clips outperform polished brand video by 4-5× in DM-
+  driven dealer inquiries.
+  Source: https://istudiosmedia.com/video-first-thought-leadership-on-linkedin/
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: false (covered by ai_auto_edit minimal mode)
+
+• Serialized behind-the-scenes brand video series LinkedIn outdoor 2026
+  Evidence: "Many businesses are shifting toward publishing video series that give viewers a quick,
+  behind-the-scenes look at the people behind the brand" — Slate Teams Social Media Trends 2026
+  (corroborated by Teleprompter Pro 2026 Content Trends Every Creator Needs to Know); outdoor
+  industry brands running serialized LinkedIn series — manufacturing floor, pro staff field days,
+  conservation projects — see higher dwell time and trade buyer connection request rates.
+  Source: https://slateteams.com/blog/social-media-trends-2026
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: TRUE → edit_series_template (same
+  gap as TikTok signal: no persistent branding template across episodes)
+
+• Talking-head executive video outperforms polished corporate outdoor LinkedIn 2026
+  Evidence: "Talking-head videos from executives and practitioners consistently outperform polished
+  brand videos on LinkedIn" — LaGrowthMachine LinkedIn Marketing Strategy 2026 Complete B2B Guide
+  (corroborated by iStudios Media Video-First Thought Leadership on LinkedIn 2026 Executive Guide);
+  outdoor/firearms brand executives discussing product field performance in short clips outperform
+  agency-produced videos in comment engagement and inbound dealer inquiries.
+  Source: https://lagrowthmachine.com/linkedin-marketing-strategy-2026/
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: false
+
+• Comment-driven distribution outdoor brand LinkedIn short-form 2026
+  Evidence: "Likes still matter, but comments matter more, and meaningful conversation is what
+  drives distribution — when a post creates back-and-forth discussion, LinkedIn pushes it to a
+  wider audience" — Slate Teams Social Media Trends 2026 (corroborated by Sprout Social 7 Social
+  Media Trends to Know in 2026); outdoor brands ending LinkedIn short-form videos with a direct
+  question see consistently higher organic reach than identical videos without a call-to-comment.
+  Source: https://slateteams.com/blog/social-media-trends-2026
+  Confidence: HIGH | cutpilotRelevant: false | bridgeRelevant: false
+
+================================================================================
+
+BRIDGE GAP ANALYSIS (reconciled against live premiere-live MCP tool inventory)
+-----------------------------------------------------------------------------
+20 signals surfaced this week. Each bridgeRelevant candidate was checked against
+the editor capabilities the Bridge ALREADY ships. Only capabilities with no
+existing tool are flagged as genuine gaps worth scaffolding.
+
+GENUINE GAPS — candidates to scaffold (do NOT auto-scaffold; flagged only):
+  • edit_loop_outro       (youtube)    Seamless end-to-beginning loop join for Shorts
+                                       rewatch engineering. ai_generate_hook creates an
+                                       opener but cannot close the clip back to that
+                                       opener frame to create a replay loop.
+  • edit_glitch_transition (tiktok)    Beat-triggered glitch/distortion frame composite.
+                                       ae_create_transition covers 15 styles but has no
+                                       explicit glitch/distortion type; no beat-hit
+                                       trigger parameter exists on any transition tool.
+  • edit_series_template  (tiktok,     Reusable branded series template — consistent
+                          linkedin)    intro/outro/lower-thirds across episodes.
+                                       shorts_batch_create batches output but carries
+                                       no persistent branding template. (Recurs from
+                                       prior week — elevated priority.)
+
+ALREADY COVERED BY EXISTING BRIDGE TOOLS (no scaffolding needed):
+  • sub-second visual pacing              → ai_auto_edit + edit_cut
+  • action-first hook (hook-set reveal)   → ai_generate_hook (hookStyle=cold_open)
+  • gear product lower-third text         → edit_add_text (position=lower_third)
+  • beat-sync audio transition            → ai_beat_sync
+  • keyword searchable title card         → edit_add_text
+  • LinkedIn 9:16 vertical reframe        → shorts_create (reframeMode=smart_crop)
+  • color palette montage                 → ai_auto_edit + color_grade_preset
+  • listing overlay Reels                 → edit_add_text
+  • beat-drop reveal cut                  → ai_beat_sync
+
+NOTE ON RECURRENT GAP: edit_series_template has now appeared across 2 consecutive
+weekly reports (2026-05-25 and 2026-06-01) in both TikTok and LinkedIn signals.
+This recurrence suggests the gap is real and growing — recommend scheduling a
+scaffold planning session.
+
+================================================================================
+END OF DIGEST
