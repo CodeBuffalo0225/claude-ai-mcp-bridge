@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "tiktok",
+  "generatedAt": "2026-06-08T14:32:43Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "5706e2daefc9",
+      "platform": "tiktok",
+      "trend": "Rock Music Glitch visual-glitch transition becomes dominant TikTok edit style June 2026",
+      "evidence": "\"The biggest TikTok trends right now are the Rock Music Glitch, the 2026 Summer Anthem, and the Wow, Ok acting-range challenge\" — Turrboo TikTok's Biggest Trends Right Now roundup; the Rock Music Glitch pairs hard cut/glitch transitions with rock-tempo audio, and outdoor creators are already adapting it as a transition between gear-prep and field-action segments in hunting and shooting clips.",
+      "source": "https://turrboo.com/blog/latest-tiktok-trends",
+      "firstSeen": "2026-06-08T14:32:43Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_glitch_transition",
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "14a46eac9a5d",
+      "platform": "tiktok",
+      "trend": "Like a Prayer remix Summer Anthem 2026 becomes default trending-audio choice for outdoor creator clips June 2026",
+      "evidence": "\"Josh Fawaz's 'Like a Prayer' remix has become the unofficial summer anthem of 2026, with small creators reporting millions of views on first attempts\" — Turrboo TikTok's Biggest Trends Right Now; small hunting and outdoor accounts riding this single trending-audio track are seeing first-attempt breakout reach well beyond their usual baseline this week.",
+      "source": "https://turrboo.com/blog/latest-tiktok-trends",
+      "firstSeen": "2026-06-08T14:32:43Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "a2f733735bbd",
+      "platform": "tiktok",
+      "trend": "color-hunting six-clip grid challenge format adapts to outdoor field-day montage edits June 2026",
+      "evidence": "\"a 'color hunting' trend where creators pick a color and spend the day photographing everything in that shade to build an artistic six-image grid\" — SocialPilot TikTok Trends May 2026; outdoor creators are remixing this as a field-day montage — six quick clips (gear, terrain, wildlife sign, harvest, camp, sunset) assembled into a single grid reveal at the end of the cut.",
+      "source": "https://www.socialpilot.co/blog/tiktok-trends",
+      "firstSeen": "2026-06-08T14:32:43Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_grid_montage",
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "8dcec6160b74",
+      "platform": "tiktok",
+      "trend": "gun and hunting hashtags sustain massive volume but face moderation friction on TikTok June 2026",
+      "evidence": "\"The gun hashtag has over 1.1 million overall posts and 15 billion overall views\" — DisplayPurposes #guns hashtag analytics (corroborated by Digital Trends' \"TikTok has a gun problem, and it's doing nothing to fix it\" coverage of ongoing moderation scrutiny of firearms content); creators are pairing high-volume tags like #hunting and #guns with softer on-screen captions and B-roll-led openers to reduce takedown risk while still riding the hashtag's reach.",
+      "source": "https://displaypurposes.com/hashtags/hashtag/guns",
+      "firstSeen": "2026-06-08T14:32:43Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "gun TikTok trend 2026 firearms content creators viral hashtag"
+    },
+    {
+      "id": "35722858e28b",
+      "platform": "tiktok",
+      "trend": "Wow Ok deadpan acting-range challenge format spreads to outdoor gear-reaction clips June 2026",
+      "evidence": "\"the Wow, Ok acting-range challenge\" — listed by Turrboo alongside Rock Music Glitch and Summer Anthem as one of the three biggest TikTok trends right now; the deadpan-to-exaggerated reaction range format is starting to show up in outdoor gear-unboxing and harvest-reveal clips as a comedic beat before the payoff cut.",
+      "source": "https://newengen.com/tiktok-trends/",
+      "firstSeen": "2026-06-08T14:32:43Z",
+      "confidence": "LOW",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    }
+  ]
+}

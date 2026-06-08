@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "linkedin",
+  "generatedAt": "2026-06-08T14:32:43Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "f3b25c600b63",
+      "platform": "linkedin",
+      "trend": "vertical 1080x1920 export gets feed distribution boost while square and horizontal formats lose reach on LinkedIn June 2026",
+      "evidence": "\"Vertical video (1080×1920) is currently getting a distribution boost, while square and horizontal formats are getting slightly deprioritized in the feed, so shoot or export vertical first if creating content specifically for LinkedIn's short-form feed\" — Visla LinkedIn Video in 2026: What's Working and How to Make It; small outdoor brands repurposing Shorts/Reels cuts for LinkedIn need a vertical-first export pass rather than a horizontal default to catch this distribution boost.",
+      "source": "https://www.visla.us/blog/guides/linkedin-video-in-2026-whats-working-and-how-to-make-it/",
+      "firstSeen": "2026-06-08T14:32:43Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "outdoor brand small business LinkedIn video content strategy 2026 short-form"
+    },
+    {
+      "id": "23f87f1fdabf",
+      "platform": "linkedin",
+      "trend": "60-to-90-second short-form video length becomes LinkedIn sweet spot for outdoor brand storytelling June 2026",
+      "evidence": "\"LinkedIn recommends keeping short-form videos concise at around 60 to 90 seconds, giving you enough time to deliver something useful without losing attention\" — Visla LinkedIn Video in 2026: What's Working and How to Make It; this is noticeably longer than the sub-60-second outdoor Shorts/Reels cuts CutPilot otherwise produces, meaning LinkedIn versions need a longer trim point and room for a complete narrative beat rather than a single hook-and-payoff loop.",
+      "source": "https://www.visla.us/blog/guides/linkedin-video-in-2026-whats-working-and-how-to-make-it/",
+      "firstSeen": "2026-06-08T14:32:43Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "outdoor brand small business LinkedIn video content strategy 2026 short-form"
+    },
+    {
+      "id": "e25ce4c83e4c",
+      "platform": "linkedin",
+      "trend": "serialized behind-the-scenes video series replaces one-off viral posts for small outdoor brands June 2026",
+      "evidence": "\"Users will see a new video trend gain momentum in 2026: serialized content. Many businesses are shifting toward publishing video series... Giving viewers a quick, behind-the-scenes look at the people behind the brand to showcase day-to-day operations and workplace culture\" — Slate Social Media Trends 2026 (corroborated by University of Houston SBDC's 2026 Social Media Trends for Small Business on authenticity and community over one-off virality); outdoor brands are committing to recurring weekly series — gear builds, guide-day diaries, range walkthroughs — rather than chasing single viral clips.",
+      "source": "https://slateteams.com/blog/social-media-trends-2026",
+      "firstSeen": "2026-06-08T14:32:43Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_series_template",
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "1df6df731147",
+      "platform": "linkedin",
+      "trend": "personal-profile video distribution outperforms company-page posts as organic reach drops sixty percent June 2026",
+      "evidence": "\"You'll consistently get more reach by distributing video through your team members' personal profiles than through your company page alone, as company page organic reach dropped roughly 60-66% between 2024 and 2026\" — Visla LinkedIn Video in 2026: What's Working and How to Make It; this is a publishing/distribution-channel signal rather than an editing decision — it changes who posts the cut, not how CutPilot assembles it — but it should inform which account a finished export gets routed to.",
+      "source": "https://www.visla.us/blog/guides/linkedin-video-in-2026-whats-working-and-how-to-make-it/",
+      "firstSeen": "2026-06-08T14:32:43Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "outdoor brand small business LinkedIn video content strategy 2026 short-form"
+    },
+    {
+      "id": "a8e3b174f723",
+      "platform": "linkedin",
+      "trend": "seasonal hook content like outdoor cooking and Father's Day drives timely engagement for outdoor brand video June 2026",
+      "evidence": "\"For outdoor brands specifically, seasonal content hooks like Father's Day, outdoor cooking, and the FIFA World Cup serve as examples of timely content opportunities\" — Visla LinkedIn Video in 2026: What's Working and How to Make It; this week's cut list should weight Father's Day and outdoor-cooking framing into captions, on-screen text, and opening-line hooks for any LinkedIn-bound exports.",
+      "source": "https://www.visla.us/blog/guides/linkedin-video-in-2026-whats-working-and-how-to-make-it/",
+      "firstSeen": "2026-06-08T14:32:43Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "outdoor brand small business LinkedIn video content strategy 2026 short-form"
+    }
+  ]
+}

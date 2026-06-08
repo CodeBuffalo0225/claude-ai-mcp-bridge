@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "youtube",
+  "generatedAt": "2026-06-08T14:32:43Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "40f0d2dcf82c",
+      "platform": "youtube",
+      "trend": "3-second swipe-stopping hook plus 70pct completion pacing drives Shorts algorithm reach June 2026",
+      "evidence": "\"Making YouTube Shorts go viral in 2026 requires hitting three algorithm signals in the first 3 seconds: a visual or text hook that stops the swipe, a clear topic match so the Shorts algorithm serves your content to the right seed audience, and a pacing that drives completion rates above 70%\" — Teleprompter.com Trending YouTube Shorts 2026 Top 10 Formats (corroborated by Conbersa.ai How to Go Viral on YouTube Shorts 2026); outdoor and hunting Shorts that front-load a visual gear or action hook in frame-one are clearing the 70% completion bar that triggers broader Shorts distribution.",
+      "source": "https://www.teleprompter.com/blog/trending-youtube-shorts",
+      "firstSeen": "2026-06-08T14:32:43Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "hunting fishing outdoor creators YouTube Shorts format hook pacing 2026 viral June"
+    },
+    {
+      "id": "979bfac899cb",
+      "platform": "youtube",
+      "trend": "sub-second cut cadence with color and speed-ramp shifts sustains outdoor Shorts novelty June 2026",
+      "evidence": "\"Cutting techniques that work: visual changes every 0.5-1 second through cuts, zooms, or overlays; on-screen text appearing in rapid succession; color grade shifts or speed ramping to maintain novelty; and eliminating dead air\" — Praper Media Viral YouTube Shorts 2026 (corroborated by Miraflow.ai YouTube Shorts Best Practices 2026); outdoor and hunting editors stacking sub-second visual changes — gear close-ups, on-screen captions, quick color shifts — across a Short's runtime keep skip rates low through the critical opening seconds.",
+      "source": "https://prapermedia.com/blog/make-viral-youtube-shorts/",
+      "firstSeen": "2026-06-08T14:32:43Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "hunting fishing outdoor creators YouTube Shorts format hook pacing 2026 viral June"
+    },
+    {
+      "id": "c313d656afcf",
+      "platform": "youtube",
+      "trend": "action-first hook-set or shot-break openers outperform talking-head intros in fishing hunting Shorts June 2026",
+      "evidence": "\"Short clips showing hook sets, fish reveals, or quick tips help bring new viewers to your long-form videos. Fishing videos that perform best usually include one clear hook: a challenge, a question, or a transformation\" — Packapop 25 Fishing YouTube Video Ideas 2026; reordering footage so the payoff moment (hook-set, fish break, shot break) lands in frame-one, ahead of any creator face-cam setup, is the structural change driving outsized completion in the hunting/fishing vertical this week.",
+      "source": "https://packapop.com/blogs/youtube-success-blog/fishing-youtube-video-ideas",
+      "firstSeen": "2026-06-08T14:32:43Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_action_first_reorder",
+      "rawQuery": "hunting fishing outdoor creators YouTube Shorts format hook pacing 2026 viral June"
+    },
+    {
+      "id": "8b211bc6ffc1",
+      "platform": "youtube",
+      "trend": "threaded-muzzle suppressor-ready rifle gear reveals sustain post-SHOT-Show engagement into June 2026",
+      "evidence": "\"The two big trends in rifles at this year's SHOT show are manufacturers building new rifles to enhance performance at distance and to be suppressor friendly\" — The Avid Outdoorsman SHOT Show 2026 gear-trends roundup (corroborated by American Hunter NRA's \"Wildest Hunting Finds of SHOT 2026\"); hunters are \"probably going to notice the same things showing up over and over on gun racks and gear pages: threaded muzzles, more optics options, more fit adjustments\" — sustaining a wave of threaded-muzzle unboxing and field-test Shorts heading into the fall pre-season.",
+      "source": "https://theavidoutdoorsman.com/shot-show-2026-reveals-the-gear-trends-hunters-will-see-everywhere-this-fall/",
+      "firstSeen": "2026-06-08T14:32:43Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "789e16e35c5b",
+      "platform": "youtube",
+      "trend": "daily 1-to-3x Shorts posting cadence compounds algorithmic reach for outdoor gear channels June 2026",
+      "evidence": "\"Daily posting generates 3-5x more algorithmic distribution than weekly posting, and successful creators post 1-3 shorts daily\" — niche-creator strategy roundup corroborating the YouTube Shorts hook-and-pacing playbook; this is a publishing-cadence signal rather than an in-edit decision, but it raises the volume of cuts CutPilot needs to turn around per week for outdoor channels chasing the distribution multiplier.",
+      "source": "https://www.teleprompter.com/blog/trending-youtube-shorts",
+      "firstSeen": "2026-06-08T14:32:43Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "hunting fishing outdoor creators YouTube Shorts format hook pacing 2026 viral June"
+    }
+  ]
+}

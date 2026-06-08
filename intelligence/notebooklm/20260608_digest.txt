@@ -1,0 +1,212 @@
+CutPilot Viral Intelligence — Weekly Digest
+Generated: 2026-06-08T14:32:43Z
+Niche: Hunting / Outdoors / Firearms / Outdoor Lifestyle
+================================================================================
+
+YOUTUBE
+-------
+
+• 3-second swipe-stopping hook plus 70pct completion pacing drives Shorts algorithm reach June 2026
+  Evidence: "Making YouTube Shorts go viral in 2026 requires hitting three algorithm signals
+  in the first 3 seconds: a visual or text hook that stops the swipe, a clear topic match...
+  and a pacing that drives completion rates above 70%" — Teleprompter.com Trending YouTube
+  Shorts 2026 Top 10 Formats
+  Source: https://www.teleprompter.com/blog/trending-youtube-shorts
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: false
+
+• Sub-second cut cadence with color and speed-ramp shifts sustains outdoor Shorts novelty June 2026
+  Evidence: "Cutting techniques that work: visual changes every 0.5-1 second through cuts,
+  zooms, or overlays; on-screen text appearing in rapid succession; color grade shifts or
+  speed ramping to maintain novelty; and eliminating dead air" — Praper Media Viral
+  YouTube Shorts 2026
+  Source: https://prapermedia.com/blog/make-viral-youtube-shorts/
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: false
+
+• Action-first hook-set or shot-break openers outperform talking-head intros in fishing/hunting Shorts June 2026
+  Evidence: "Short clips showing hook sets, fish reveals, or quick tips help bring new
+  viewers to your long-form videos. Fishing videos that perform best usually include one
+  clear hook: a challenge, a question, or a transformation" — Packapop 25 Fishing
+  YouTube Video Ideas 2026
+  Source: https://packapop.com/blogs/youtube-success-blog/fishing-youtube-video-ideas
+  Confidence: MEDIUM | cutpilotRelevant: true | bridgeRelevant: TRUE -> edit_action_first_reorder
+
+• Threaded-muzzle suppressor-ready rifle gear reveals sustain post-SHOT-Show engagement into June 2026
+  Evidence: "The two big trends in rifles at this year's SHOT show are manufacturers
+  building new rifles to enhance performance at distance and to be suppressor friendly" —
+  The Avid Outdoorsman SHOT Show 2026 (corroborated by American Hunter NRA "Wildest
+  Hunting Finds of SHOT 2026")
+  Source: https://theavidoutdoorsman.com/shot-show-2026-reveals-the-gear-trends-hunters-will-see-everywhere-this-fall/
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: false
+
+• Daily 1-to-3x Shorts posting cadence compounds algorithmic reach for outdoor gear channels June 2026
+  Evidence: "Daily posting generates 3-5x more algorithmic distribution than weekly
+  posting, and successful creators post 1-3 shorts daily" — niche-creator strategy
+  roundup corroborating the YouTube Shorts hook-and-pacing playbook
+  Source: https://www.teleprompter.com/blog/trending-youtube-shorts
+  Confidence: MEDIUM | cutpilotRelevant: false | bridgeRelevant: false (publishing cadence,
+  not an editing decision)
+
+
+TIKTOK
+------
+
+• Rock Music Glitch visual-glitch transition becomes dominant TikTok edit style June 2026
+  Evidence: "The biggest TikTok trends right now are the Rock Music Glitch, the 2026
+  Summer Anthem, and the Wow, Ok acting-range challenge" — Turrboo TikTok's Biggest
+  Trends Right Now
+  Source: https://turrboo.com/blog/latest-tiktok-trends
+  Confidence: MEDIUM | cutpilotRelevant: true | bridgeRelevant: TRUE -> edit_glitch_transition
+  (recurs from prior weekly flag — elevated priority)
+
+• Like a Prayer remix Summer Anthem 2026 becomes default trending-audio choice for outdoor creator clips June 2026
+  Evidence: "Josh Fawaz's 'Like a Prayer' remix has become the unofficial summer anthem
+  of 2026, with small creators reporting millions of views on first attempts" — Turrboo
+  TikTok's Biggest Trends Right Now
+  Source: https://turrboo.com/blog/latest-tiktok-trends
+  Confidence: MEDIUM | cutpilotRelevant: true | bridgeRelevant: false
+
+• Color-hunting six-clip grid challenge format adapts to outdoor field-day montage edits June 2026
+  Evidence: "a 'color hunting' trend where creators pick a color and spend the day
+  photographing everything in that shade to build an artistic six-image grid" —
+  SocialPilot TikTok Trends May 2026
+  Source: https://www.socialpilot.co/blog/tiktok-trends
+  Confidence: MEDIUM | cutpilotRelevant: true | bridgeRelevant: TRUE -> edit_grid_montage
+  (recurs from prior weekly flag — elevated priority)
+
+• Gun and hunting hashtags sustain massive volume but face moderation friction on TikTok June 2026
+  Evidence: "The gun hashtag has over 1.1 million overall posts and 15 billion overall
+  views" — DisplayPurposes #guns hashtag analytics (corroborated by Digital Trends'
+  "TikTok has a gun problem, and it's doing nothing to fix it")
+  Source: https://displaypurposes.com/hashtags/hashtag/guns
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: false
+
+• Wow Ok deadpan acting-range challenge format spreads to outdoor gear-reaction clips June 2026
+  Evidence: "the Wow, Ok acting-range challenge" — listed by Turrboo alongside Rock
+  Music Glitch and Summer Anthem as one of the three biggest TikTok trends right now
+  Source: https://newengen.com/tiktok-trends/
+  Confidence: LOW | cutpilotRelevant: true | bridgeRelevant: false
+
+
+INSTAGRAM
+---------
+
+• Seeing if the Algorithm Prefers high-effort-vs-deadpan duel format spreads to outdoor gear-test Reels June 2026
+  Evidence: "The 'Seeing if the Algorithm Prefers' format is now two weeks deep and
+  still climbing, pitting a high-effort edit against a deadpan static shot to let the
+  comments vote" — SocialBee The Latest Instagram Trends June 4 2026
+  Source: https://socialbee.com/blog/instagram-trends/
+  Confidence: MEDIUM | cutpilotRelevant: true | bridgeRelevant: TRUE -> edit_ab_variant_export
+
+• Foliage-reveal seven-to-fifteen-second product beat becomes go-to outdoor Reels structure June 2026
+  Evidence: "a trending format involves finding any outdoor patch with foliage,
+  crouching down and gesturing into the leaves, then revealing a product on the next
+  beat, with the whole thing landing in 7-15 seconds, which is the completion-rate
+  sweet spot for Reels" — Lightreel What's Trending on Instagram May 2026 Weekly Report
+  Source: https://lightreel.ai/blogs/whats-trending-on-instagram
+  Confidence: MEDIUM | cutpilotRelevant: true | bridgeRelevant: false
+
+• DM-share-weighted distribution favors raw unpolished outdoor clips over high-production edits June 2026
+  Evidence: "Instagram's algorithm in 2026 weights DM shares 3-5x higher than likes for
+  Reels distribution" and "Raw, unpolished content is outperforming high-production
+  posts, short-form Reels with strong hooks are dominating reach" — SocialBee The
+  Latest Instagram Trends June 4 2026
+  Source: https://socialbee.com/blog/instagram-trends/
+  Confidence: MEDIUM | cutpilotRelevant: true | bridgeRelevant: false
+
+• Two-person walking duet edits using JENNIE Dracula remix surge past 300K Reels and migrate to hunting-partner content June 2026
+  Evidence: "JENNIE's remix of Tame Impala's 'Dracula' became the breakout two-person
+  walk trend with 300K+ Reels" — SocialBee The Latest Instagram Trends June 4 2026
+  Source: https://socialbee.com/blog/instagram-trends/
+  Confidence: MEDIUM | cutpilotRelevant: true | bridgeRelevant: TRUE -> edit_split_screen
+  (recurs from prior weekly flag — elevated priority)
+
+• I Am Home MJ Beat It nostalgia-audio trend offers brand-safe soundtrack option for gear-reveal Reels June 2026
+  Evidence: "Michael Jackson's 'Beat It' is having a moment thanks to the new MJ
+  biopic, fueling the 'I Am Home' trend" — SocialBee The Latest Instagram Trends
+  June 4 2026
+  Source: https://socialbee.com/blog/instagram-trends/
+  Confidence: LOW | cutpilotRelevant: true | bridgeRelevant: false
+
+
+LINKEDIN
+--------
+
+• Vertical 1080x1920 export gets feed distribution boost while square/horizontal formats lose reach on LinkedIn June 2026
+  Evidence: "Vertical video (1080x1920) is currently getting a distribution boost,
+  while square and horizontal formats are getting slightly deprioritized in the feed,
+  so shoot or export vertical first if creating content specifically for LinkedIn's
+  short-form feed" — Visla LinkedIn Video in 2026: What's Working and How to Make It
+  Source: https://www.visla.us/blog/guides/linkedin-video-in-2026-whats-working-and-how-to-make-it/
+  Confidence: MEDIUM | cutpilotRelevant: true | bridgeRelevant: false
+
+• 60-to-90-second short-form video length becomes LinkedIn sweet spot for outdoor brand storytelling June 2026
+  Evidence: "LinkedIn recommends keeping short-form videos concise at around 60 to 90
+  seconds, giving you enough time to deliver something useful without losing
+  attention" — Visla LinkedIn Video in 2026: What's Working and How to Make It
+  Source: https://www.visla.us/blog/guides/linkedin-video-in-2026-whats-working-and-how-to-make-it/
+  Confidence: MEDIUM | cutpilotRelevant: true | bridgeRelevant: false
+
+• Serialized behind-the-scenes video series replaces one-off viral posts for small outdoor brands June 2026
+  Evidence: "Users will see a new video trend gain momentum in 2026: serialized
+  content. Many businesses are shifting toward publishing video series... Giving
+  viewers a quick, behind-the-scenes look at the people behind the brand to showcase
+  day-to-day operations and workplace culture" — Slate Social Media Trends 2026
+  (corroborated by University of Houston SBDC 2026 Social Media Trends for Small Business)
+  Source: https://slateteams.com/blog/social-media-trends-2026
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: TRUE -> edit_series_template
+  (recurs across multiple weekly reports and now both TikTok-adjacent and LinkedIn
+  contexts — elevated priority; same underlying gap)
+
+• Personal-profile video distribution outperforms company-page posts as organic reach drops sixty percent June 2026
+  Evidence: "You'll consistently get more reach by distributing video through your
+  team members' personal profiles than through your company page alone, as company
+  page organic reach dropped roughly 60-66% between 2024 and 2026" — Visla LinkedIn
+  Video in 2026: What's Working and How to Make It
+  Source: https://www.visla.us/blog/guides/linkedin-video-in-2026-whats-working-and-how-to-make-it/
+  Confidence: MEDIUM | cutpilotRelevant: false | bridgeRelevant: false (publishing/
+  distribution-channel signal, not an editing decision)
+
+• Seasonal hook content like outdoor cooking and Father's Day drives timely engagement for outdoor brand video June 2026
+  Evidence: "For outdoor brands specifically, seasonal content hooks like Father's
+  Day, outdoor cooking, and the FIFA World Cup serve as examples of timely content
+  opportunities" — Visla LinkedIn Video in 2026: What's Working and How to Make It
+  Source: https://www.visla.us/blog/guides/linkedin-video-in-2026-whats-working-and-how-to-make-it/
+  Confidence: MEDIUM | cutpilotRelevant: true | bridgeRelevant: false
+
+================================================================================
+
+BRIDGE-RELEVANT CANDIDATES (flagged only — NOT auto-scaffolded)
+----------------------------------------------------------------
+NOTE: the premiere-live MCP server (configured in .mcp.json against a local
+Premiere Pro install) was not reachable in this environment, so these candidates
+could not be reconciled against a live Bridge tool inventory the way prior weeks'
+digests did. Treat the suggestions below as raw signals for a human to check
+against the current tool list before scaffolding.
+
+  • edit_action_first_reorder (youtube)   Auto-detect and promote the payoff/action
+                                          clip (hook-set, shot break, fish reveal)
+                                          ahead of any talking-head lead-in.
+  • edit_glitch_transition    (tiktok)    Beat-triggered glitch/distortion frame
+                                          composite for the Rock Music Glitch trend.
+                                          (Recurs from a prior weekly flag.)
+  • edit_grid_montage         (tiktok)    Multi-clip grid compositing for the
+                                          color-hunting six-image grid format adapted
+                                          to outdoor field-day montages. (Recurs.)
+  • edit_ab_variant_export    (instagram) Export two edit treatments (high-effort vs.
+                                          deadpan static) of the same source for
+                                          algorithm-preference duel posts.
+  • edit_split_screen         (instagram) Two-source side-by-side compositing for
+                                          synced duet/walk trends adapted to
+                                          hunting-partner and guide/client footage.
+                                          (Recurs.)
+  • edit_series_template  (tiktok+linkedin) Reusable branded intro/outro/lower-third
+                                          template for recurring weekly series.
+                                          (Recurs across multiple weeks — elevated
+                                          priority; the most persistent gap signal.)
+
+RECURRING-GAP NOTE: edit_series_template and edit_split_screen have now appeared
+across consecutive weekly reports. edit_glitch_transition and edit_grid_montage also
+recur from a prior flag. Recommend prioritizing these for a scaffold planning session.
+
+================================================================================
+END OF DIGEST

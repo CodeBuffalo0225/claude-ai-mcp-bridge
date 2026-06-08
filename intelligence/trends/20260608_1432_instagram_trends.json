@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "instagram",
+  "generatedAt": "2026-06-08T14:32:43Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "a542524368cf",
+      "platform": "instagram",
+      "trend": "Seeing if the Algorithm Prefers high-effort-vs-deadpan duel format spreads to outdoor gear-test Reels June 2026",
+      "evidence": "\"The 'Seeing if the Algorithm Prefers' format is now two weeks deep and still climbing, pitting a high-effort edit against a deadpan static shot to let the comments vote\" — SocialBee The Latest Instagram Trends June 4 2026; outdoor accounts posting a heavily-cut gear-test edit alongside a single static-shot version of the same product, then letting comments pick a winner, are seeing strong dual-post engagement this week.",
+      "source": "https://socialbee.com/blog/instagram-trends/",
+      "firstSeen": "2026-06-08T14:32:43Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_ab_variant_export",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "c16cdcbcac7b",
+      "platform": "instagram",
+      "trend": "foliage-reveal seven-to-fifteen-second product beat becomes go-to outdoor Reels structure June 2026",
+      "evidence": "\"a trending format involves finding any outdoor patch with foliage, crouching down and gesturing into the leaves, then revealing a product on the next beat, with the whole thing landing in 7-15 seconds, which is the completion-rate sweet spot for Reels\" — Lightreel What's Trending on Instagram May 2026 Weekly Report; this maps directly onto hunting/outdoors gear-reveal Reels — crouch-in-the-brush into a knife, call, or optic reveal — at the exact runtime the algorithm currently rewards.",
+      "source": "https://lightreel.ai/blogs/whats-trending-on-instagram",
+      "firstSeen": "2026-06-08T14:32:43Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "hunting outdoor Instagram Reels creators viral format 2026 trending"
+    },
+    {
+      "id": "600b48b66d50",
+      "platform": "instagram",
+      "trend": "DM-share-weighted distribution favors raw unpolished outdoor clips over high-production edits June 2026",
+      "evidence": "\"Instagram's algorithm in 2026 weights DM shares 3-5x higher than likes for Reels distribution\" and \"Raw, unpolished content is outperforming high-production posts, short-form Reels with strong hooks are dominating reach\" — SocialBee The Latest Instagram Trends June 4 2026; outdoor and hunting Reels cut with lighter color grading and fewer effect layers — leaning on authentic field audio over heavy scoring — are the ones generating the DM-forward shares the algorithm now rewards most.",
+      "source": "https://socialbee.com/blog/instagram-trends/",
+      "firstSeen": "2026-06-08T14:32:43Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "ca52ba68c6e3",
+      "platform": "instagram",
+      "trend": "two-person walking duet edits using JENNIE Dracula remix surge past 300K Reels and migrate to hunting-partner content June 2026",
+      "evidence": "\"JENNIE's remix of Tame Impala's 'Dracula' became the breakout two-person walk trend with 300K+ Reels\" — SocialBee The Latest Instagram Trends June 4 2026; hunting-duo and guide/client accounts are adapting the synced two-person walking format to side-by-side trail or stand-approach footage, which requires cutting two camera sources into one frame in time with the trending audio.",
+      "source": "https://socialbee.com/blog/instagram-trends/",
+      "firstSeen": "2026-06-08T14:32:43Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_split_screen",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "fc83f64c922e",
+      "platform": "instagram",
+      "trend": "I Am Home MJ Beat It nostalgia-audio trend offers brand-safe soundtrack option for gear-reveal Reels June 2026",
+      "evidence": "\"Michael Jackson's 'Beat It' is having a moment thanks to the new MJ biopic, fueling the 'I Am Home' trend\" — SocialBee The Latest Instagram Trends June 4 2026; the nostalgia-driven audio resurgence gives outdoor gear and apparel accounts a recognizable, brand-safe music bed for cinematic gear-reveal cuts without leaning on niche-specific audio that may have a shorter shelf life.",
+      "source": "https://socialbee.com/blog/instagram-trends/",
+      "firstSeen": "2026-06-08T14:32:43Z",
+      "confidence": "LOW",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    }
+  ]
+}
