@@ -1,0 +1,155 @@
+CutPilot Viral Intelligence — Weekly Digest
+Generated: 2026-06-15T13:11:37Z
+Niche: Hunting / Outdoors / Firearms / Outdoor Lifestyle
+================================================================================
+
+YOUTUBE
+-------
+
+• Immersive shopping and 360-degree video join Shorts-first storytelling as breakout YouTube Shorts formats for outdoor gear channels June 2026
+  Evidence: "June 2026 shows five big signals at once: Shorts-first storytelling, live streaming, immersive shopping, 360 video, and the old reliable category of humorous fails and bloopers." — NexLev YouTube Shorts Niches That Grow Fast And Go Viral In 2026
+  Source: https://www.nexlev.io/youtube-shorts-niches
+  Confidence: MEDIUM | cutpilotRelevant: true | bridgeRelevant: true -> edit_360_to_vertical_reframe
+
+• Threaded-muzzle, suppressor-ready rifle gear reveals continue dominating hunting YouTube Shorts post-SHOT-Show into summer 2026
+  Evidence: "The two big trends in rifles at this year's SHOT show are manufacturers building new rifles to enhance performance at distance and to be suppressor friendly... hunters are probably going to notice the same things showing up over and over on gun racks and gear pages: threaded muzzles, more optics options, more fit adjustments" — The Avid Outdoorsman SHOT Show 2026 gear-trends roundup (corroborated by American Hunter "Wildest Hunting Finds of SHOT 2026" and Field & Stream "Hottest New Rifles from the 2026 SHOT Show")
+  Source: https://theavidoutdoorsman.com/shot-show-2026-reveals-the-gear-trends-hunters-will-see-everywhere-this-fall/
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: false
+
+• Seamless rewatch-loop endings and instantly-recognizable formats drive viral YouTube Shorts retention this week
+  Evidence: "Trending YouTube Shorts cluster around a few clear viewer behaviors: fast comprehension, strong retention, rewatch loops, and formats people instantly recognize." — Top 10 Viral YouTube Shorts Everyone Watched This Week
+  Source: https://trends.usa.one/16-top-10-viral-youtube-shorts-this-week-and-why-they-blew-up.html
+  Confidence: MEDIUM | cutpilotRelevant: true | bridgeRelevant: true -> edit_seamless_loop
+
+• Smart connected optics and digital ballistics gear reveals create a new gear-demo Shorts subgenre for hunting channels in 2026
+  Evidence: "The newest smart scopes and rangefinding binoculars combine laser rangefinding, ballistic calculation, and Bluetooth connectivity into one seamless unit... Ballistics is going digital, with ammunition makers combining metallurgy, aerodynamics, and data science to produce rounds that deliver more accuracy and cleaner kills." — Houston Safari Club Foundation, The 5 Hottest Hunting Gear Trends to See in Person in 2026
+  Source: https://hscfdn.org/the-5-hottest-hunting-gear-trends-to-see-in-person-in-2026/
+  Confidence: MEDIUM | cutpilotRelevant: true | bridgeRelevant: false
+
+• Lightweight gear and nanofiber scent-control apparel field-test demos become a recurring outdoor gear-review topic for 2026
+  Evidence: "Modern hunters want gear that's stronger, lighter, and more comfortable... the newest hunting apparel technology using nanofiber membranes, ozone-neutralizing fabrics, and silver-ion treatments to fight odor at the molecular level." — Houston Safari Club Foundation, The 5 Hottest Hunting Gear Trends to See in Person in 2026
+  Source: https://hscfdn.org/the-5-hottest-hunting-gear-trends-to-see-in-person-in-2026/
+  Confidence: MEDIUM | cutpilotRelevant: false | bridgeRelevant: false
+
+
+TIKTOK
+------
+
+• Rock Music stuck-frame glitch freeze edit becomes the dominant TikTok transition format for outdoor gear reveal clips June 2026
+  Evidence: "Charli XCX's 'Rock Music' is powering the breakout edit format this week... The glitch in the track — that deliberate vocal malfunction mid-song — is the whole mechanic. Creators film a clip, sync to that section, then apply Instagram's 'stuck frame' animation to freeze the highlight moment mid-motion... Use it for outfit reveals, product close-ups, launch moments, packaging shots, or any clip where one frame deserves to freeze." — Trending TikTok Songs June 2026: Sounds and Formats
+  Source: https://blog.crescitaly.com/13-trending-tiktok-songs-june-2026/
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: true -> edit_glitch_transition
+
+• Product-highlight clips with professional visuals and compelling copy become the top-performing TikTok format for fishing and hunting gear creators June 2026
+  Evidence: "The fishing & hunting niche on TikTok offers unique opportunities for creators to connect with engaged audiences, with data-driven strategies to create viral fishing & hunting videos. One effective format for creators involves highlighting products with professional visuals and compelling copy, which is perfect for e-commerce and affiliate content." — Hooked, TikTok Fishing & Hunting Trends & Top Creators 2026
+  Source: https://www.tryhooked.ai/trends/tiktok/fishing_hunting
+  Confidence: MEDIUM | cutpilotRelevant: true | bridgeRelevant: false
+
+• Unbelievable-trick and funny-fail outdoor clips outperform polished tutorials in the TikTok fishing/hunting niche June 2026
+  Evidence: "Unbelievable fishing tricks, weird fishing moments, funny fishing clips, and outdoor fishing hacks that showcase surprising angler tricks" — Hooked, TikTok Fishing & Hunting Trends & Top Creators 2026
+  Source: https://www.tryhooked.ai/trends/tiktok/fishing_hunting
+  Confidence: MEDIUM | cutpilotRelevant: true | bridgeRelevant: false
+
+• Outdoor-niche TikTok creator rosters spanning hunting, fishing, and magnet fishing expand as a distinct discoverable vertical June 2026
+  Evidence: "Modash has compiled a list of the top 20 American outdoor TikTokers in June 2026... the results do include some content snippets that appear to be from creators on this list, featuring creators focused on activities like hunting, fishing, magnet fishing, and other outdoor pursuits." — Modash, Top 20 American Outdoor TikTokers on TikTok (Jun 2026)
+  Source: https://www.modash.io/find-influencers/tiktok/united-states/outdoor
+  Confidence: LOW | cutpilotRelevant: false | bridgeRelevant: false
+
+• Summer Anthem lip-sync and nostalgia-carousel audio trends remain the default trending-sound choices for outdoor creator clips into June 2026
+  Evidence: "June 2026 TikTok audio is moving around summer anthem clips, glitch edits, creator lip-syncs, nostalgia carousels, and major cultural moments." — June 2026 TikTok Trends: What's Viral This Month
+  Source: https://newengen.com/insights/june-tiktok-trends/
+  Confidence: MEDIUM | cutpilotRelevant: true | bridgeRelevant: false
+
+
+INSTAGRAM
+---------
+
+• 8-to-19-second Reels with strong first-two-second hooks remain the completion-rate sweet spot for outdoor gear Reels June 2026
+  Evidence: "Strong hooks are optimized for the first 3 seconds, with the first two seconds deciding everything... The sweet spot for most viral Reels is between 8 and 19 seconds, as shorter videos increase completion rates." — Retiplex, 47 Viral Hook Ideas for TikTok & Instagram Reels (2026)
+  Source: https://www.retiplex.com/blog/viral-hook-ideas
+  Confidence: MEDIUM | cutpilotRelevant: true | bridgeRelevant: false
+
+• Raw, unpolished Reels with relatable storytelling continue to outperform high-production posts for outdoor brands June 2026
+  Evidence: "Raw moments, strong hooks, and relatable storytelling outperform overly polished content, and brands increasingly prefer Reels that feel real, useful, and human." — Influish, Viral Content Reel Ideas for 2026: Formats, Hooks, and Strategies
+  Source: https://www.influish.com/blog/viral-content-reel-ideas-for-2026-formats-hooks-and-strategies
+  Confidence: MEDIUM | cutpilotRelevant: true | bridgeRelevant: false
+
+• Belief-challenging contrarian hooks paired with POV reveal-move camera angles drive scroll-stopping outdoor Reels June 2026
+  Evidence: "Starting a Reel with a statement that challenges common beliefs immediately stops the scroll, and brands love this format because it sparks conversation and saves... Camera POV innovation — angles, overhead shots, and reveal moves — create scroll-stop moments." — OpusClip, 50+ Instagram Video Hooks & Hook Ideas (2026)
+  Source: https://www.opus.pro/research/best-video-hooks-instagram
+  Confidence: MEDIUM | cutpilotRelevant: true | bridgeRelevant: true -> edit_pov_reveal_transition
+
+• Rock Music stuck-frame glitch freeze effect crosses over from TikTok to Instagram Reels for outdoor gear-reveal clips June 2026
+  Evidence: "Creators film a clip, sync to that section, then apply Instagram's 'stuck frame' animation to freeze the highlight moment mid-motion. Use it for outfit reveals, product close-ups, launch moments, packaging shots, or any clip where one frame deserves to freeze." — Trending TikTok Songs June 2026: Sounds and Formats
+  Source: https://blog.crescitaly.com/13-trending-tiktok-songs-june-2026/
+  Confidence: MEDIUM | cutpilotRelevant: true | bridgeRelevant: true -> edit_glitch_transition
+
+• Outdoor gear brand Instagram accounts lean on scenic lifestyle photography and product-in-action shots as the dominant Reels aesthetic June 2026
+  Evidence: "REI (@REI) offers scenic photos, lifestyle pics, and gear for almost every type of outdoor activity and sport. Mountain Hardwear (@mountainhardwear) features huge peaks, ultra-runs, first ski descents, and frozen waterfalls in their Instagram feed." — GearJunkie, Must-Follow: Outdoor Gear Brands On Instagram
+  Source: https://gearjunkie.com/adventure/instagram-outdoor-brands
+  Confidence: MEDIUM | cutpilotRelevant: false | bridgeRelevant: false
+
+
+LINKEDIN
+--------
+
+• LinkedIn overtakes YouTube as the top B2B video channel, pushing outdoor brands toward native short-form vertical video in 2026
+  Evidence: "LinkedIn has surpassed YouTube as the top B2B video channel, with 81% of businesses citing it as their primary platform, according to Wistia's 2026 State of Video Report. YouTube trails at 76%." — PPC Land, LinkedIn beats YouTube as top B2B video channel, Wistia report finds (corroborated by qd-up.com, LinkedIn Just Beat YouTube for B2B Video: What SMBs Need to Do Right Now)
+  Source: https://ppc.land/linkedin-beats-youtube-as-top-b2b-video-channel-wistia-report-finds/
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: false
+
+• Vertical short-form video under 60 seconds earns a 34% dwell-time boost on LinkedIn for small-business outdoor brands in 2026
+  Evidence: "Short-form vertical video under 60 seconds earns 34% higher dwell time on LinkedIn. The sweet spot for B2B often lies between 30 to 90 seconds." — qd-up.com, LinkedIn Video for SMBs: Beat YouTube in B2B Marketing 2026 (corroborated by Visla, "Vertical video (1080x1920) is currently getting a distribution boost")
+  Source: https://qd-up.com/linkedin-video-marketing-small-business-2026/
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: false
+
+• Serialized behind-the-scenes video series remain the dominant small-business format strategy on LinkedIn going into summer 2026
+  Evidence: "Many businesses are shifting toward publishing video series that typically fall into one of two formats: Giving viewers a quick, behind-the-scenes look at the people behind the brand to showcase day-to-day operations and workplace culture or featuring people having unedited discussions about topics that matter to the brand and its audience." — University of Houston SBDC, 2026 Social Media Trends Small Businesses Should Leverage
+  Source: https://www.sbdc.uh.edu/sbdc/2026-social-media-trends-small-business.asp
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: true -> edit_series_template
+
+• Native LinkedIn video posts earn 5x more engagement than static updates, favoring directly-uploaded outdoor brand clips over linked YouTube content June 2026
+  Evidence: "LinkedIn's algorithm began heavily rewarding native video in 2024, pushing video posts to 5x more engagement than static updates." — qd-up.com, LinkedIn Video for SMBs: Beat YouTube in B2B Marketing 2026
+  Source: https://qd-up.com/linkedin-video-marketing-small-business-2026/
+  Confidence: MEDIUM | cutpilotRelevant: false | bridgeRelevant: false
+
+• Brands shift toward quality-over-virality, relatable-voice micro-influencer short-form video on LinkedIn and broader social in 2026
+  Evidence: "Brands are shifting toward quality over viral quantity, and audiences trust relatable voices over celebrities, with micro-influencers with tight communities driving higher engagement and conversions." — University of Houston SBDC, 2026 Social Media Trends Small Businesses Should Leverage
+  Source: https://www.sbdc.uh.edu/sbdc/2026-social-media-trends-small-business.asp
+  Confidence: MEDIUM | cutpilotRelevant: true | bridgeRelevant: false
+
+
+================================================================================
+BRIDGE-RELEVANT CANDIDATES (flagged only — NOT auto-scaffolded)
+----------------------------------------------------------------------
+NOTE: the premiere-live MCP server (configured for a local Premiere Pro
+install) was not reconciled against a live Bridge tool inventory this
+week. Treat the suggestions below as raw signals for a human to check
+against the current tool list before scaffolding.
+
+  • edit_360_to_vertical_reframe (youtube  ) Reframe 360-degree source footage into a vertical 9:16
+                                          Shorts crop that follows the action automatically.
+  • edit_seamless_loop           (youtube  ) Trim and crossfade a clip's tail back into its head so
+                                          the Short replays as a seamless loop.
+  • edit_glitch_transition       (tiktok   ) Beat-triggered "stuck frame" glitch/freeze composite for
+                                          the Rock Music Glitch trend, now cross-platform
+                                          (TikTok + Instagram). (Recurs from prior weekly
+                                          flags — elevated priority.)
+  • edit_pov_reveal_transition   (instagram) Overhead/POV reveal-move transition template for
+                                          gear-reveal Reels.
+  • edit_glitch_transition       (instagram) Beat-triggered "stuck frame" glitch/freeze composite for
+                                          the Rock Music Glitch trend, now cross-platform
+                                          (TikTok + Instagram). (Recurs from prior weekly
+                                          flags — elevated priority.)
+  • edit_series_template         (linkedin ) Reusable branded intro/outro/lower-third template for
+                                          recurring weekly series. (Recurs across multiple
+                                          weekly reports — elevated priority; the most
+                                          persistent gap signal.)
+
+RECURRING-GAP NOTE: edit_series_template and edit_glitch_transition have now
+appeared across consecutive weekly reports (edit_glitch_transition now spans
+both TikTok and Instagram). Recommend prioritizing these for a scaffold
+planning session.
+
+================================================================================
+END OF DIGEST

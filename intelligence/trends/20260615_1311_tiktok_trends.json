@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "tiktok",
+  "generatedAt": "2026-06-15T13:11:37Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "ad28e36bab79",
+      "platform": "tiktok",
+      "trend": "Rock Music stuck-frame glitch freeze edit becomes the dominant TikTok transition format for outdoor gear reveal clips June 2026",
+      "evidence": "\"Charli XCX's 'Rock Music' is powering the breakout edit format this week... The glitch in the track — that deliberate vocal malfunction mid-song — is the whole mechanic. Creators film a clip, sync to that section, then apply Instagram's 'stuck frame' animation to freeze the highlight moment mid-motion... Use it for outfit reveals, product close-ups, launch moments, packaging shots, or any clip where one frame deserves to freeze.\" — Trending TikTok Songs June 2026: Sounds and Formats",
+      "source": "https://blog.crescitaly.com/13-trending-tiktok-songs-june-2026/",
+      "firstSeen": "2026-06-15T13:11:37Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_glitch_transition",
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "8acb38a35b33",
+      "platform": "tiktok",
+      "trend": "Product-highlight clips with professional visuals and compelling copy become the top-performing TikTok format for fishing and hunting gear creators June 2026",
+      "evidence": "\"The fishing & hunting niche on TikTok offers unique opportunities for creators to connect with engaged audiences, with data-driven strategies to create viral fishing & hunting videos. One effective format for creators involves highlighting products with professional visuals and compelling copy, which is perfect for e-commerce and affiliate content.\" — Hooked, TikTok Fishing & Hunting Trends & Top Creators 2026",
+      "source": "https://www.tryhooked.ai/trends/tiktok/fishing_hunting",
+      "firstSeen": "2026-06-15T13:11:37Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "23bf41ad0221",
+      "platform": "tiktok",
+      "trend": "Unbelievable-trick and funny-fail outdoor clips outperform polished tutorials in the TikTok fishing/hunting niche June 2026",
+      "evidence": "\"Unbelievable fishing tricks, weird fishing moments, funny fishing clips, and outdoor fishing hacks that showcase surprising angler tricks\" — Hooked, TikTok Fishing & Hunting Trends & Top Creators 2026",
+      "source": "https://www.tryhooked.ai/trends/tiktok/fishing_hunting",
+      "firstSeen": "2026-06-15T13:11:37Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "5bab7f5fed64",
+      "platform": "tiktok",
+      "trend": "Outdoor-niche TikTok creator rosters spanning hunting, fishing, and magnet fishing expand as a distinct discoverable vertical June 2026",
+      "evidence": "\"Modash has compiled a list of the top 20 American outdoor TikTokers in June 2026... the results do include some content snippets that appear to be from creators on this list, featuring creators focused on activities like hunting, fishing, magnet fishing, and other outdoor pursuits.\" — Modash, Top 20 American Outdoor TikTokers on TikTok (Jun 2026)",
+      "source": "https://www.modash.io/find-influencers/tiktok/united-states/outdoor",
+      "firstSeen": "2026-06-15T13:11:37Z",
+      "confidence": "LOW",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "48e9cc83c984",
+      "platform": "tiktok",
+      "trend": "Summer Anthem lip-sync and nostalgia-carousel audio trends remain the default trending-sound choices for outdoor creator clips into June 2026",
+      "evidence": "\"June 2026 TikTok audio is moving around summer anthem clips, glitch edits, creator lip-syncs, nostalgia carousels, and major cultural moments.\" — June 2026 TikTok Trends: What's Viral This Month",
+      "source": "https://newengen.com/insights/june-tiktok-trends/",
+      "firstSeen": "2026-06-15T13:11:37Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    }
+  ]
+}

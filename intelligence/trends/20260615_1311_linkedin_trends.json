@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "linkedin",
+  "generatedAt": "2026-06-15T13:11:37Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "26051e67725a",
+      "platform": "linkedin",
+      "trend": "LinkedIn overtakes YouTube as the top B2B video channel, pushing outdoor brands toward native short-form vertical video in 2026",
+      "evidence": "\"LinkedIn has surpassed YouTube as the top B2B video channel, with 81% of businesses citing it as their primary platform, according to Wistia's 2026 State of Video Report. YouTube trails at 76%.\" — PPC Land, LinkedIn beats YouTube as top B2B video channel, Wistia report finds (corroborated by qd-up.com, LinkedIn Just Beat YouTube for B2B Video: What SMBs Need to Do Right Now)",
+      "source": "https://ppc.land/linkedin-beats-youtube-as-top-b2b-video-channel-wistia-report-finds/",
+      "firstSeen": "2026-06-15T13:11:37Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "98d8806a1466",
+      "platform": "linkedin",
+      "trend": "Vertical short-form video under 60 seconds earns a 34% dwell-time boost on LinkedIn for small-business outdoor brands in 2026",
+      "evidence": "\"Short-form vertical video under 60 seconds earns 34% higher dwell time on LinkedIn. The sweet spot for B2B often lies between 30 to 90 seconds.\" — qd-up.com, LinkedIn Video for SMBs: Beat YouTube in B2B Marketing 2026 (corroborated by Visla, \"Vertical video (1080x1920) is currently getting a distribution boost\")",
+      "source": "https://qd-up.com/linkedin-video-marketing-small-business-2026/",
+      "firstSeen": "2026-06-15T13:11:37Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "b3fe4d410023",
+      "platform": "linkedin",
+      "trend": "Serialized behind-the-scenes video series remain the dominant small-business format strategy on LinkedIn going into summer 2026",
+      "evidence": "\"Many businesses are shifting toward publishing video series that typically fall into one of two formats: Giving viewers a quick, behind-the-scenes look at the people behind the brand to showcase day-to-day operations and workplace culture or featuring people having unedited discussions about topics that matter to the brand and its audience.\" — University of Houston SBDC, 2026 Social Media Trends Small Businesses Should Leverage",
+      "source": "https://www.sbdc.uh.edu/sbdc/2026-social-media-trends-small-business.asp",
+      "firstSeen": "2026-06-15T13:11:37Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_series_template",
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "a3bad80ff2a9",
+      "platform": "linkedin",
+      "trend": "Native LinkedIn video posts earn 5x more engagement than static updates, favoring directly-uploaded outdoor brand clips over linked YouTube content June 2026",
+      "evidence": "\"LinkedIn's algorithm began heavily rewarding native video in 2024, pushing video posts to 5x more engagement than static updates.\" — qd-up.com, LinkedIn Video for SMBs: Beat YouTube in B2B Marketing 2026",
+      "source": "https://qd-up.com/linkedin-video-marketing-small-business-2026/",
+      "firstSeen": "2026-06-15T13:11:37Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "00258c7f65e5",
+      "platform": "linkedin",
+      "trend": "Brands shift toward quality-over-virality, relatable-voice micro-influencer short-form video on LinkedIn and broader social in 2026",
+      "evidence": "\"Brands are shifting toward quality over viral quantity, and audiences trust relatable voices over celebrities, with micro-influencers with tight communities driving higher engagement and conversions.\" — University of Houston SBDC, 2026 Social Media Trends Small Businesses Should Leverage",
+      "source": "https://www.sbdc.uh.edu/sbdc/2026-social-media-trends-small-business.asp",
+      "firstSeen": "2026-06-15T13:11:37Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    }
+  ]
+}

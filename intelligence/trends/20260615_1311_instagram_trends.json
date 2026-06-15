@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "instagram",
+  "generatedAt": "2026-06-15T13:11:37Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "42f01204fef6",
+      "platform": "instagram",
+      "trend": "8-to-19-second Reels with strong first-two-second hooks remain the completion-rate sweet spot for outdoor gear Reels June 2026",
+      "evidence": "\"Strong hooks are optimized for the first 3 seconds, with the first two seconds deciding everything... The sweet spot for most viral Reels is between 8 and 19 seconds, as shorter videos increase completion rates.\" — Retiplex, 47 Viral Hook Ideas for TikTok & Instagram Reels (2026)",
+      "source": "https://www.retiplex.com/blog/viral-hook-ideas",
+      "firstSeen": "2026-06-15T13:11:37Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "824ddd64c370",
+      "platform": "instagram",
+      "trend": "Raw, unpolished Reels with relatable storytelling continue to outperform high-production posts for outdoor brands June 2026",
+      "evidence": "\"Raw moments, strong hooks, and relatable storytelling outperform overly polished content, and brands increasingly prefer Reels that feel real, useful, and human.\" — Influish, Viral Content Reel Ideas for 2026: Formats, Hooks, and Strategies",
+      "source": "https://www.influish.com/blog/viral-content-reel-ideas-for-2026-formats-hooks-and-strategies",
+      "firstSeen": "2026-06-15T13:11:37Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "e694b325ef1a",
+      "platform": "instagram",
+      "trend": "Belief-challenging contrarian hooks paired with POV reveal-move camera angles drive scroll-stopping outdoor Reels June 2026",
+      "evidence": "\"Starting a Reel with a statement that challenges common beliefs immediately stops the scroll, and brands love this format because it sparks conversation and saves... Camera POV innovation — angles, overhead shots, and reveal moves — create scroll-stop moments.\" — OpusClip, 50+ Instagram Video Hooks & Hook Ideas (2026)",
+      "source": "https://www.opus.pro/research/best-video-hooks-instagram",
+      "firstSeen": "2026-06-15T13:11:37Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_pov_reveal_transition",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "0e09d093c23f",
+      "platform": "instagram",
+      "trend": "Rock Music stuck-frame glitch freeze effect crosses over from TikTok to Instagram Reels for outdoor gear-reveal clips June 2026",
+      "evidence": "\"Creators film a clip, sync to that section, then apply Instagram's 'stuck frame' animation to freeze the highlight moment mid-motion. Use it for outfit reveals, product close-ups, launch moments, packaging shots, or any clip where one frame deserves to freeze.\" — Trending TikTok Songs June 2026: Sounds and Formats",
+      "source": "https://blog.crescitaly.com/13-trending-tiktok-songs-june-2026/",
+      "firstSeen": "2026-06-15T13:11:37Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_glitch_transition",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "43be3c6261c2",
+      "platform": "instagram",
+      "trend": "Outdoor gear brand Instagram accounts lean on scenic lifestyle photography and product-in-action shots as the dominant Reels aesthetic June 2026",
+      "evidence": "\"REI (@REI) offers scenic photos, lifestyle pics, and gear for almost every type of outdoor activity and sport. Mountain Hardwear (@mountainhardwear) features huge peaks, ultra-runs, first ski descents, and frozen waterfalls in their Instagram feed.\" — GearJunkie, Must-Follow: Outdoor Gear Brands On Instagram",
+      "source": "https://gearjunkie.com/adventure/instagram-outdoor-brands",
+      "firstSeen": "2026-06-15T13:11:37Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    }
+  ]
+}

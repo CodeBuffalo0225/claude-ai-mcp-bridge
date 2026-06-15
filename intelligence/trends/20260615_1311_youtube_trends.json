@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "youtube",
+  "generatedAt": "2026-06-15T13:11:37Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "0e772d16dbd2",
+      "platform": "youtube",
+      "trend": "Immersive shopping and 360-degree video join Shorts-first storytelling as breakout YouTube Shorts formats for outdoor gear channels June 2026",
+      "evidence": "\"June 2026 shows five big signals at once: Shorts-first storytelling, live streaming, immersive shopping, 360 video, and the old reliable category of humorous fails and bloopers.\" — NexLev YouTube Shorts Niches That Grow Fast And Go Viral In 2026",
+      "source": "https://www.nexlev.io/youtube-shorts-niches",
+      "firstSeen": "2026-06-15T13:11:37Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_360_to_vertical_reframe",
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "41b8ed16a477",
+      "platform": "youtube",
+      "trend": "Threaded-muzzle, suppressor-ready rifle gear reveals continue dominating hunting YouTube Shorts post-SHOT-Show into summer 2026",
+      "evidence": "\"The two big trends in rifles at this year's SHOT show are manufacturers building new rifles to enhance performance at distance and to be suppressor friendly... hunters are probably going to notice the same things showing up over and over on gun racks and gear pages: threaded muzzles, more optics options, more fit adjustments\" — The Avid Outdoorsman SHOT Show 2026 gear-trends roundup (corroborated by American Hunter \"Wildest Hunting Finds of SHOT 2026\" and Field & Stream \"Hottest New Rifles from the 2026 SHOT Show\")",
+      "source": "https://theavidoutdoorsman.com/shot-show-2026-reveals-the-gear-trends-hunters-will-see-everywhere-this-fall/",
+      "firstSeen": "2026-06-15T13:11:37Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "a38abf609e2d",
+      "platform": "youtube",
+      "trend": "Seamless rewatch-loop endings and instantly-recognizable formats drive viral YouTube Shorts retention this week",
+      "evidence": "\"Trending YouTube Shorts cluster around a few clear viewer behaviors: fast comprehension, strong retention, rewatch loops, and formats people instantly recognize.\" — Top 10 Viral YouTube Shorts Everyone Watched This Week",
+      "source": "https://trends.usa.one/16-top-10-viral-youtube-shorts-this-week-and-why-they-blew-up.html",
+      "firstSeen": "2026-06-15T13:11:37Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_seamless_loop",
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "c9f8b4c55590",
+      "platform": "youtube",
+      "trend": "Smart connected optics and digital ballistics gear reveals create a new gear-demo Shorts subgenre for hunting channels in 2026",
+      "evidence": "\"The newest smart scopes and rangefinding binoculars combine laser rangefinding, ballistic calculation, and Bluetooth connectivity into one seamless unit... Ballistics is going digital, with ammunition makers combining metallurgy, aerodynamics, and data science to produce rounds that deliver more accuracy and cleaner kills.\" — Houston Safari Club Foundation, The 5 Hottest Hunting Gear Trends to See in Person in 2026",
+      "source": "https://hscfdn.org/the-5-hottest-hunting-gear-trends-to-see-in-person-in-2026/",
+      "firstSeen": "2026-06-15T13:11:37Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "457ec1b55810",
+      "platform": "youtube",
+      "trend": "Lightweight gear and nanofiber scent-control apparel field-test demos become a recurring outdoor gear-review topic for 2026",
+      "evidence": "\"Modern hunters want gear that's stronger, lighter, and more comfortable... the newest hunting apparel technology using nanofiber membranes, ozone-neutralizing fabrics, and silver-ion treatments to fight odor at the molecular level.\" — Houston Safari Club Foundation, The 5 Hottest Hunting Gear Trends to See in Person in 2026",
+      "source": "https://hscfdn.org/the-5-hottest-hunting-gear-trends-to-see-in-person-in-2026/",
+      "firstSeen": "2026-06-15T13:11:37Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    }
+  ]
+}
