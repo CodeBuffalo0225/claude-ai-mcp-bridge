@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "tiktok",
+  "generatedAt": "2026-06-22T13:06:20Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "bda0c51d9370",
+      "platform": "tiktok",
+      "trend": "2026 Summer Anthem lip-sync trend powered by Josh Fawaz Like a Prayer remix exploding for small creators",
+      "evidence": "\"The 2026 Summer Anthem trend is TikTok's easiest viral entry point of the season, powered by Josh Fawaz's Like a Prayer remix. Creators record a seven-second lip-sync to camera, add on-screen text reading 2026 Summer Anthem, tag #summeranthem, and post. Small creators are reporting millions of views on first attempts.\" — Envato Elements TikTok Trends",
+      "source": "https://elements.envato.com/learn/tiktok-trends",
+      "firstSeen": "2026-06-22T13:06:20Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "49a5a0e74b95",
+      "platform": "tiktok",
+      "trend": "7-10 second summer fishing clips with trending sounds dominating outdoor TikTok June 2026",
+      "evidence": "\"Capturing these precious moments in 7 to 10-second videos is a fantastic way to share the joy of summer fishing with friends and followers, with the backdrop of trending songs enhancing the experience.\" — TikTok Viral Fishing Videos and Trends",
+      "source": "https://www.tiktok.com/content/viral-fishing-videos-and-trends",
+      "firstSeen": "2026-06-22T13:06:20Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "auto_clip_to_duration",
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "1d4606b4da1c",
+      "platform": "tiktok",
+      "trend": "Big bait fishing and hidden pond discovery content going viral in hunting outdoors niche June 2026",
+      "evidence": "\"Viral content includes fishing traps and hidden pond discoveries, such as catching large species like Pacu from deep woods... Big bait fishing content is trending, featuring techniques like using live carp as bait and 3D printed glide baits.\" — TikTok Viral Fishing Videos and Trends",
+      "source": "https://www.tiktok.com/content/viral-fishing-videos-and-trends",
+      "firstSeen": "2026-06-22T13:06:20Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "4794a17dd502",
+      "platform": "tiktok",
+      "trend": "Rock Music Glitch effect trend adaptable for dramatic outdoor and hunting reveal edits June 2026",
+      "evidence": "\"The biggest TikTok trends right now are the Rock Music Glitch, the 2026 Summer Anthem, and the Wow, Ok acting-range challenge.\" — Envato Elements TikTok Trends June 2026",
+      "source": "https://elements.envato.com/learn/tiktok-trends",
+      "firstSeen": "2026-06-22T13:06:20Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_glitch_effect",
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "c219afd5984f",
+      "platform": "tiktok",
+      "trend": "Get the NET bass fishing song by Shane Borne trending as niche outdoor sound June 2026",
+      "evidence": "\"A new bass fishing song by Shane Bornè called Get the NET is trending for fishing TikToks.\" — TikTok Trending Fishing Songs; corroborated by Buffer Trending Songs on TikTok June 2026",
+      "source": "https://www.tiktok.com/discover/trending-fishing-songs?lang=en",
+      "firstSeen": "2026-06-22T13:06:20Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    }
+  ]
+}

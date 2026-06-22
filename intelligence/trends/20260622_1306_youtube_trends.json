@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "youtube",
+  "generatedAt": "2026-06-22T13:06:20Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "fa4454a8cb72",
+      "platform": "youtube",
+      "trend": "20-35 second Shorts sweet spot with first-frame visual hooks dominate June 2026 retention",
+      "evidence": "\"Shorts between 20 and 35 seconds perform best for virality in 2026. Shorter clips lose depth; longer clips drop completion rates.\" — Praper Media; corroborated by Conbersa: \"Videos that hook viewers in the first 15 seconds retain 65% of their audience, but after 15 seconds without a hook, retention drops below 45%.\"",
+      "source": "https://prapermedia.com/blog/make-viral-youtube-shorts/",
+      "firstSeen": "2026-06-22T13:06:20Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "auto_trim_to_target_length",
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "8ffa1326e625",
+      "platform": "youtube",
+      "trend": "Transformation reveal Shorts with surprise-ending hooks driving rewatches for gear and hunting content June 2026",
+      "evidence": "\"Transformation videos continue to dominate trending shorts, with hooks like You won't believe the ending keeping viewers watching and boosting retention.\" — Teleprompter.com Trending YouTube Shorts 2026",
+      "source": "https://www.teleprompter.com/blog/trending-youtube-shorts",
+      "firstSeen": "2026-06-22T13:06:20Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_transformation_reveal",
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "89c09a2c3ed8",
+      "platform": "youtube",
+      "trend": "On-screen captions replacing verbal hooks as most Shorts viewers scroll on mute in 2026",
+      "evidence": "\"Most Shorts viewers scroll on mute, and a Short with no audio hook that still pulls retention will outperform a Short with a great verbal hook that no one hears.\" — Praper Media Viral YouTube Shorts 2026",
+      "source": "https://prapermedia.com/blog/make-viral-youtube-shorts/",
+      "firstSeen": "2026-06-22T13:06:20Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "auto_caption_overlay",
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "d5bb3416e8a4",
+      "platform": "youtube",
+      "trend": "Suppressor-ready rifle and smart optics gear demos remain dominant hunting Shorts format post-SHOT Show 2026",
+      "evidence": "\"The two big trends in rifles at this year's SHOT show are manufacturers building new rifles to enhance performance at distance and to be suppressor friendly... The newest smart scopes and rangefinding binoculars combine laser rangefinding, ballistic calculation, and Bluetooth connectivity into one seamless unit.\" — The Avid Outdoorsman + Houston Safari Club Foundation (corroborated by American Hunter and Field & Stream)",
+      "source": "https://theavidoutdoorsman.com/shot-show-2026-reveals-the-gear-trends-hunters-will-see-everywhere-this-fall/",
+      "firstSeen": "2026-06-22T13:06:20Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "b6235eb12213",
+      "platform": "youtube",
+      "trend": "Day-in-the-life mini vlogs and quick DIY tutorials trending as top Shorts formats for outdoor creators June 2026",
+      "evidence": "\"The best Shorts in 2026 follow repeatable formats that hold attention fast: day-in-the-life mini vlogs, food challenges, dance to trending audio, quick DIY tutorials, and short explainers. These styles earn rewatches because viewers instantly understand the payoff.\" — Teleprompter.com",
+      "source": "https://www.teleprompter.com/blog/trending-youtube-shorts",
+      "firstSeen": "2026-06-22T13:06:20Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    }
+  ]
+}

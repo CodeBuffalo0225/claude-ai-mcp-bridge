@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "instagram",
+  "generatedAt": "2026-06-22T13:06:20Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "b506d1fff5e7",
+      "platform": "instagram",
+      "trend": "Color walk Reels format trending for outdoor brands and product showcases with ambient audio June 2026",
+      "evidence": "\"Color walk trends work for outdoor brands, product showcases, and destination content when edited to a trending ambient track or upbeat original audio.\" — Later Top Instagram Reels Trends 2026",
+      "source": "https://later.com/blog/instagram-reels-trends/",
+      "firstSeen": "2026-06-22T13:06:20Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_color_walk_sequence",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "0fb2c58c37af",
+      "platform": "instagram",
+      "trend": "List-based ranking Reels with viral sounds for product recommendations trending June 2026",
+      "evidence": "\"Creators are using viral sounds to rank anything and everything, their own products, favorite finds, honest opinions, or go-to recommendations.\" — NewEnGen Instagram Trends June 2026",
+      "source": "https://newengen.com/insights/instagram-trends/",
+      "firstSeen": "2026-06-22T13:06:20Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "aa4fec3b2014",
+      "platform": "instagram",
+      "trend": "Spend Dat Sax by Corey Staggers trending for product reveals and brand content Reels June 2026",
+      "evidence": "\"SPEND DAT SAX by Corey Staggers is a smooth, saxophone-driven track that works great for recipes, product reveals, and brand content.\" — Buffer Trending Sounds on Instagram June 2026; corroborated by SocialPilot Instagram Reels Trends",
+      "source": "https://buffer.com/resources/trending-audio-instagram/",
+      "firstSeen": "2026-06-22T13:06:20Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "113282a24ee0",
+      "platform": "instagram",
+      "trend": "Problem Solver format Reels positioning creators as the solution trending for outdoor niche June 2026",
+      "evidence": "\"The Problem Solver trend is all about positioning yourself as the solution to a problem your audience didn't even know they had.\" — NewEnGen Instagram Trends June 2026",
+      "source": "https://newengen.com/insights/instagram-trends/",
+      "firstSeen": "2026-06-22T13:06:20Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "49b4e76fffa6",
+      "platform": "instagram",
+      "trend": "Game Time by Future and Tyla FIFA World Cup 2026 soundtrack trending for sports and outdoor adventure Reels",
+      "evidence": "\"Game Time by Future and Tyla, released as part of the FIFA World Cup 2026 soundtrack, is being used across Instagram for sports edits, gym content, travel reels, and fashion videos.\" — Buffer Trending Sounds on Instagram June 2026; corroborated by Scott Social Marketing",
+      "source": "https://buffer.com/resources/trending-audio-instagram/",
+      "firstSeen": "2026-06-22T13:06:20Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    }
+  ]
+}

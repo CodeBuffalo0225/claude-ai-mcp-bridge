@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "linkedin",
+  "generatedAt": "2026-06-22T13:06:20Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "2799b1f7ccc6",
+      "platform": "linkedin",
+      "trend": "Short-form native video engagement up 36 percent YoY with LinkedIn expanding creator accelerator 2026",
+      "evidence": "\"LinkedIn saw a 34% jump in video engagement compared to last year... video on LinkedIn is up 36% year over year, with native video uploaded directly to LinkedIn consistently outperforming linked video.\" — Hootsuite Social Media Trends 2026; corroborated by IQfluence",
+      "source": "https://www.hootsuite.com/research/social-trends",
+      "firstSeen": "2026-06-22T13:06:20Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "108516ac6946",
+      "platform": "linkedin",
+      "trend": "Serialized behind-the-scenes video series building subscriber audiences for outdoor brands 2026",
+      "evidence": "\"Serialized content is gaining momentum in 2026, with businesses publishing video series that either give behind-the-scenes glimpses of the people behind the brand and workplace culture, or feature unedited discussions about topics that matter to the brand and audience.\" — Visla LinkedIn Video 2026; corroborated by Slate Teams Social Media Trends 2026",
+      "source": "https://www.visla.us/blog/guides/linkedin-video-in-2026-whats-working-and-how-to-make-it/",
+      "firstSeen": "2026-06-22T13:06:20Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_series_template",
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "e01ae8d39ee3",
+      "platform": "linkedin",
+      "trend": "Edutainment format combining educational video with humor and storytelling winning for product demos 2026",
+      "evidence": "\"The content that's winning right now is edutainment: educational video that uses humor, storytelling, and strong visuals to make product information genuinely interesting.\" — Visla LinkedIn Video 2026; corroborated by Neal Schaffer LinkedIn Videos Guide",
+      "source": "https://www.visla.us/blog/guides/linkedin-video-in-2026-whats-working-and-how-to-make-it/",
+      "firstSeen": "2026-06-22T13:06:20Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "dffb24e4ce3d",
+      "platform": "linkedin",
+      "trend": "30-90 second micro-stories outperforming polished content for small business discovery on LinkedIn 2026",
+      "evidence": "\"Small businesses win by being fast, real, and close to the customer instead of copying big brands. Short clips between 30 and 90 seconds work best for discovery.\" — University of Houston SBDC 2026 Social Media Trends; corroborated by LinkedFusion LinkedIn Content Trends 2026",
+      "source": "https://www.sbdc.uh.edu/sbdc/2026-social-media-trends-small-business.asp",
+      "firstSeen": "2026-06-22T13:06:20Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "auto_trim_to_target_length",
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "49601a96e9bc",
+      "platform": "linkedin",
+      "trend": "Raw unedited customer testimonials and quick tactical tips driving engagement for outdoor brands on LinkedIn 2026",
+      "evidence": "\"Customer testimonials, quick tactical tips, and behind-the-scenes product demos drive strong engagement... Native in-feed videos are the workhorse for organic storytelling and brand building.\" — Stackmatix LinkedIn Video Marketing; corroborated by Visla",
+      "source": "https://www.stackmatix.com/blog/linkedin-video-marketing-b2b",
+      "firstSeen": "2026-06-22T13:06:20Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    }
+  ]
+}
