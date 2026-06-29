@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "youtube",
+  "generatedAt": "2026-06-29T12:30:00Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "59be156de58b",
+      "platform": "youtube",
+      "trend": "AI tool demo Shorts under 60 seconds trending as fastest path to viral for niche creators June 2026",
+      "evidence": "\"AI tool demos, showing a single impressive AI feature or automation in under 60 seconds, trend because AI tools surface constantly and early demos reach audiences before the tool becomes mainstream.\" — VeeFly 30 Viral YouTube Shorts Ideas 2026",
+      "source": "https://blog.veefly.com/youtube-marketing/30-viral-youtube-shorts-ideas-for-your-next-video-in-2026/",
+      "firstSeen": "2026-06-29T12:30:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "auto_trim_to_60s",
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "0e68559ac0e1",
+      "platform": "youtube",
+      "trend": "Summer anthem audio trends crossing into outdoor content with 7-second lip-sync format dominating June 2026",
+      "evidence": "\"Josh Fawaz's 'Like a Prayer' remix is the unofficial 2026 Summer Anthem, and creators are calling it the easiest viral entry point of the season by recording a seven-second video lip-syncing the song.\" — NewEngen June 2026 TikTok Trends (cross-platform format spreading to Shorts)",
+      "source": "https://newengen.com/insights/june-tiktok-trends/",
+      "firstSeen": "2026-06-29T12:30:00Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "e62c14ed7231",
+      "platform": "youtube",
+      "trend": "Suppressor-ready rifle and smart optics gear demo Shorts remain top performing hunting format post-SHOT Show 2026",
+      "evidence": "\"The two big trends in rifles at this year's SHOT show are manufacturers building new rifles to enhance performance at distance and to be suppressor friendly... The newest smart scopes and rangefinding binoculars combine laser rangefinding, ballistic calculation, and Bluetooth connectivity into one seamless unit.\" — The Avid Outdoorsman + American Hunter (corroborated)",
+      "source": "https://theavidoutdoorsman.com/shot-show-2026-reveals-the-gear-trends-hunters-will-see-everywhere-this-fall/",
+      "firstSeen": "2026-06-29T12:30:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "3802c1cd20f0",
+      "platform": "youtube",
+      "trend": "Before-and-after transformation reveals with mute-friendly captions driving rewatches in outdoor gear content June 2026",
+      "evidence": "\"Most Shorts viewers scroll on mute, and a Short with no audio hook that still pulls retention will outperform a Short with a great verbal hook that no one hears.\" — Praper Media; corroborated by Teleprompter.com: \"Transformation videos continue to dominate trending shorts, with hooks like You won't believe the ending keeping viewers watching and boosting retention.\"",
+      "source": "https://prapermedia.com/blog/make-viral-youtube-shorts/",
+      "firstSeen": "2026-06-29T12:30:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_transformation_reveal",
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "d493df8104fd",
+      "platform": "youtube",
+      "trend": "Quick DIY tutorials under 60 seconds trending as top Shorts format for outdoor skills and camp hacks 2026",
+      "evidence": "\"The best Shorts in 2026 follow repeatable formats that hold attention fast: day-in-the-life mini vlogs, food challenges, dance to trending audio, quick DIY tutorials, and short explainers. These styles earn rewatches because viewers instantly understand the payoff.\" — Teleprompter.com Trending YouTube Shorts 2026",
+      "source": "https://www.teleprompter.com/blog/trending-youtube-shorts",
+      "firstSeen": "2026-06-29T12:30:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    }
+  ]
+}

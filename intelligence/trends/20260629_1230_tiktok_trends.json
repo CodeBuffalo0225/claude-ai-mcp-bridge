@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "tiktok",
+  "generatedAt": "2026-06-29T12:30:00Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "4d0b9c51e8f1",
+      "platform": "tiktok",
+      "trend": "Summer outdoor lifestyle content outperforming all other categories on TikTok late June 2026",
+      "evidence": "\"Summer is fully in swing, with outdoor, travel, and lifestyle content outperforming everything else on TikTok as of late June 2026.\" — Optimise Your Marketing TikTok Trends This Week 23rd June 2026; corroborated by NewEngen June 2026 trends report",
+      "source": "https://www.optimiseyourmarketing.co.uk/blog/tiktok-trends-this-week-23rd-june-2026",
+      "firstSeen": "2026-06-29T12:30:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "19d5cdd7b638",
+      "platform": "tiktok",
+      "trend": "Nirvana nevermind carefree-energy trend adapted by outdoor creators showing off-grid disconnected moments",
+      "evidence": "\"Nirvana's 'Smells Like Teen Spirit' is back on the FYP, with creators dropping the 'oh well, whatever, nevermind' lyric as on-screen text over a single shot of themselves doing whatever makes the world go quiet — lying on a black sand beach, mid-set at the gym, on a boat with no service, hiking somewhere that doesn't get cell signal.\" — SocialPilot Trending TikTok Sounds June 2026",
+      "source": "https://www.socialpilot.co/blog/tiktok-trends",
+      "firstSeen": "2026-06-29T12:30:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_single_shot_text_overlay",
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "58eb901e43ab",
+      "platform": "tiktok",
+      "trend": "Hunting hashtags turkeyhunting deerhunting bowhunting huntersoftiktok generating millions of views summer 2026",
+      "evidence": "\"Hunting-related hashtags like #hunting, #huntingvideos, #huntingseason, #deer, #buck, #deerhunting, #buckhunting, #outdoors, and #wildanimals appear on TikTok's hunt tag page\" with viral creators generating millions of views — TikTok #hunt tag page",
+      "source": "https://www.tiktok.com/tag/hunt?lang=en",
+      "firstSeen": "2026-06-29T12:30:00Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "14fa0552e988",
+      "platform": "tiktok",
+      "trend": "2026 Summer Anthem lip-sync format as easiest viral entry point for outdoor creators this season",
+      "evidence": "\"Josh Fawaz's 'Like a Prayer' remix is the unofficial 2026 Summer Anthem, and creators are calling it the easiest viral entry point of the season by recording a seven-second video lip-syncing the song, adding on-screen text reading '2026 Summer Anthem,' and tagging #summeranthem.\" — NewEngen June 2026 TikTok Trends",
+      "source": "https://newengen.com/insights/june-tiktok-trends/",
+      "firstSeen": "2026-06-29T12:30:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "auto_lip_sync_template",
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "4fef8d96e165",
+      "platform": "tiktok",
+      "trend": "Carousel-based content and nostalgic audio pairing trending for fishing and outdoor activity compilations June 2026",
+      "evidence": "\"Other trending formats include outdoor and lifestyle content paired with nostalgic audio, carousel-based content, and World Cup-related videos dominating the platform during this period.\" — SocialBee June 23 2026 TikTok Trends",
+      "source": "https://socialbee.com/blog/tiktok-trends/",
+      "firstSeen": "2026-06-29T12:30:00Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_photo_carousel_video",
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    }
+  ]
+}

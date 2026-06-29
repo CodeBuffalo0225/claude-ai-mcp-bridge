@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "instagram",
+  "generatedAt": "2026-06-29T12:30:00Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "734d0441c9a6",
+      "platform": "instagram",
+      "trend": "First 2-3 second hook determines Reel reach with algorithm tracking watch-past-3-seconds as primary distribution signal 2026",
+      "evidence": "\"Watch time is the single most important signal, with Instagram tracking total seconds watched, percentage of video completed, and whether viewers rewatch, and if most viewers watch past the 3-second mark, Instagram interprets that as a working hook and pushes the Reel wider.\" — TrueFuture Media Instagram Reels Reach 2026 Guide; corroborated by InVideo and CreatorFlow",
+      "source": "https://www.truefuturemedia.com/articles/instagram-reels-reach-2026-business-growth-guide",
+      "firstSeen": "2026-06-29T12:30:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "auto_hook_first_3s",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "e832db0d93ae",
+      "platform": "instagram",
+      "trend": "DM shares now strongest distribution trigger for Reels surpassing likes for outdoor niche community content 2026",
+      "evidence": "\"DM shares are the strongest distribution trigger for Reels... Saves signal that content has lasting value and are weighted roughly 3x higher than likes.\" — TrueFuture Media Instagram Reels Reach 2026; corroborated by CreatorFlow Instagram Algorithm 2026",
+      "source": "https://creatorflow.so/blog/instagram-algorithm-2026/",
+      "firstSeen": "2026-06-29T12:30:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "20cb3beff4ad",
+      "platform": "instagram",
+      "trend": "Du bist gut genug audio trend adapted by fitness and outdoor creators for motivational content June 2026",
+      "evidence": "\"The 'Du bist gut genug' trend uses a viral clip from the song Gut Genug by Blumengarten, KITSCHKRIEG, and Shirin David, with the phrase translating to 'you are good enough.'\" — SocialBee Instagram Trends June 23 2026; corroborated by SocialPilot Reels Trends",
+      "source": "https://socialbee.com/blog/instagram-trends/",
+      "firstSeen": "2026-06-29T12:30:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "e309faf4f808",
+      "platform": "instagram",
+      "trend": "World Cup 2026 content dominating feeds with outdoor brands tying products to sport-adjacent lifestyle",
+      "evidence": "\"The World Cup 2026 trend shows the World Cup taking over feeds, with every brand finding ways to tie their products to the sport.\" — SocialBee Instagram Trends June 23 2026",
+      "source": "https://socialbee.com/blog/instagram-trends/",
+      "firstSeen": "2026-06-29T12:30:00Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "d051cb72f835",
+      "platform": "instagram",
+      "trend": "Hallelujah gratitude list format trending for outdoor lifestyle creators showing gear and nature moments June 2026",
+      "evidence": "\"The 'hallelujah' trend took off after Justin Bieber's emotional Coachella 2026 performance, with the format being simple: list things you love or are grateful for, punctuating each one with 'hallelujah.'\" — SocialBee Instagram Trends June 2026",
+      "source": "https://socialbee.com/blog/instagram-trends/",
+      "firstSeen": "2026-06-29T12:30:00Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_list_format_slideshow",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    }
+  ]
+}

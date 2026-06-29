@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "linkedin",
+  "generatedAt": "2026-06-29T12:30:00Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "2dc7c8d1e591",
+      "platform": "linkedin",
+      "trend": "LinkedIn short-form video engagement up 34 percent year-over-year making it viable for outdoor brand thought leadership 2026",
+      "evidence": "\"LinkedIn saw a 34% jump in video engagement compared to last year, making it an increasingly important platform for brands... Short-form video is worth prioritizing for brands on LinkedIn — it's become the primary format for thought leadership, recruitment content, and industry-specific influencer collaborations.\" — Hootsuite Social Media Trends 2026",
+      "source": "https://www.hootsuite.com/research/social-trends",
+      "firstSeen": "2026-06-29T12:30:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "9cdc7e9b3e7a",
+      "platform": "linkedin",
+      "trend": "Serialized behind-the-scenes video series trending for small outdoor businesses showing craftsmanship and process",
+      "evidence": "\"Users will see a new video trend gain momentum in 2026: serialized content, with many businesses shifting toward publishing video series that give viewers a quick, behind-the-scenes look at the people behind the brand or feature unedited discussions about topics that matter to the brand and its audience.\" — Coursera 12 Major Social Media Trends 2026",
+      "source": "https://www.coursera.org/articles/social-media-trends",
+      "firstSeen": "2026-06-29T12:30:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_series_intro_bumper",
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "6b109d4b1f1a",
+      "platform": "linkedin",
+      "trend": "Authenticity over production value as top-performing content signal on LinkedIn for outdoor brands 2026",
+      "evidence": "\"'Authentic' is the top word for creators in 2026 — perfect, filtered content does not do as well; raw, real-life moments perform better.\" — IQfluence Social Media Trends 2026; corroborated by Sprout Social and Slate Teams",
+      "source": "https://iqfluence.io/public/blog/social-trends",
+      "firstSeen": "2026-06-29T12:30:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "a35f9e985e93",
+      "platform": "linkedin",
+      "trend": "Micro-influencers with tight outdoor communities driving higher engagement than macro names on LinkedIn 2026",
+      "evidence": "\"Audiences trust relatable voices over celebrities, and micro-influencers with tight communities are driving higher engagement and conversions than macro names.\" — UH SBDC 2026 Social Media Trends Small Businesses; corroborated by InfluenceFlow",
+      "source": "https://www.sbdc.uh.edu/sbdc/2026-social-media-trends-small-business.asp",
+      "firstSeen": "2026-06-29T12:30:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "3f456e3e618a",
+      "platform": "linkedin",
+      "trend": "Community-building over reach as primary LinkedIn video strategy for outdoor and hunting brands summer 2026",
+      "evidence": "\"Connection will be the currency that matters most on social in 2026, with a desire to feel like a part of something bigger driving users toward brands that prioritize resonance over reach instead of chasing virality and focusing on building community with audiences.\" — Sprout Social 7 Social Media Trends 2026",
+      "source": "https://sproutsocial.com/insights/social-media-trends/",
+      "firstSeen": "2026-06-29T12:30:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    }
+  ]
+}
