@@ -139,11 +139,9 @@ class AdobeBridge {
   }
 
   _scheduleReconnect(app) {
-    if (this.reconnectAttempts[app] >= MAX_RECONNECT_ATTEMPTS) {
-      logger.warn(`Max reconnect attempts reached for ${app}`);
-      return;
-    }
-
+    // Never permanently give up — the CEP panel may open at any time (e.g. the
+    // host app was launched after the bridge started). Keep retrying with a
+    // capped backoff so the bridge self-heals without a manual restart.
     this.reconnectAttempts[app]++;
     const delay = RECONNECT_INTERVAL * Math.min(this.reconnectAttempts[app], 5);
 
@@ -167,20 +165,23 @@ class AdobeBridge {
    * @returns {Promise<any>} - Command result
    */
   async send(app, command, params = {}) {
-    const ws = this.connections[app];
+    let ws = this.connections[app];
 
     if (!ws || ws.readyState !== WebSocket.OPEN) {
-      // HARD FAIL on disconnect — never simulate. Silent simulation returns
-      // fake data and destroys the ML decision log. The skill's #1 rule.
-      // The bridge auto-reconnects (see _scheduleReconnect); wait or reload panel.
-      const reconnectState = this.connections[app] === null
-        ? `disconnected (reconnect attempt ${this.reconnectAttempts[app]}/${MAX_RECONNECT_ATTEMPTS})`
-        : `readyState=${ws ? ws.readyState : 'no-ws'}`;
-      throw new Error(
-        `Bridge not connected to ${app} (${reconnectState}). ` +
-        `Open the Claude AI Editor panel in ${app} (Window → Extensions). ` +
-        `Auto-reconnect retries every ${RECONNECT_INTERVAL / 1000}s for ${MAX_RECONNECT_ATTEMPTS} attempts.`
-      );
+      // On-demand reconnect: the panel may have opened after the bridge
+      // started (e.g. the host app was launched late). Attempt one fresh
+      // connection before failing. Never simulate — if it still can't
+      // connect, hard-fail per the skill's #1 rule.
+      try {
+        this.reconnectAttempts[app] = 0;
+        ws = await this._connectToApp(app);
+      } catch (err) {
+        throw new Error(
+          `Bridge not connected to ${app} (on-demand reconnect failed: ${err.message}). ` +
+          `Open the Claude AI Editor panel in ${app} (Window → Extensions). ` +
+          `Auto-reconnect retries every ${RECONNECT_INTERVAL / 1000}s.`
+        );
+      }
     }
 
     const id = ++this.requestId;

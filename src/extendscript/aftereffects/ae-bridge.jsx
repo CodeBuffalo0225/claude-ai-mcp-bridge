@@ -4,7 +4,19 @@
 //  Handles comp creation, layer ops, keyframes, expressions, rendering.
 // ============================================================================
 
-/* global app, CompItem, ShapeLayer, TextLayer, CameraLayer, LightLayer */
+/* global app, CompItem, ShapeLayer, TextLayer, CameraLayer, LightLayer, JSON */
+
+// After Effects' ExtendScript engine is ES3 and has no built-in JSON object.
+// Load a JSON polyfill (json2) so executeCommand can parse/stringify payloads.
+// Without this, JSON.parse() throws on the first command and the bridge
+// returns an empty string (which the panel reports as a parse error).
+if (typeof JSON !== "object") {
+    try {
+        $.evalFile(File(File($.fileName).parent.fsName + "/json2.jsx"));
+    } catch (e) {
+        // If the polyfill can't be loaded, commands will fail loudly later.
+    }
+}
 
 var AEBridge = {
 
@@ -324,19 +336,30 @@ function _getLayerType(layer) {
 }
 
 function _applyEasing(prop, keyIndex, easing) {
-  var ease;
+  // KeyframeEase(speed, influence): influence must be in 0.1..100 — using 0
+  // throws "out of range" and aborts the whole command. Temporal ease arrays
+  // must also match the property's dimension count (Scale/Position are 2D).
+  var dims = 1;
+  try { dims = (prop.value && prop.value.length) ? prop.value.length : 1; } catch (e) { dims = 1; }
+
+  var fast = new KeyframeEase(0, 75);    // strong ease (smooth)
+  var flat = new KeyframeEase(0, 0.1);   // near-linear (min legal influence)
+
+  function fill(e) {
+    var a = [];
+    for (var i = 0; i < dims; i += 1) { a.push(e); }
+    return a;
+  }
+
   switch (easing) {
     case "ease_in":
-      ease = new KeyframeEase(0.33, 75);
-      prop.setTemporalEaseAtKey(keyIndex, [ease], [new KeyframeEase(0, 0)]);
+      prop.setTemporalEaseAtKey(keyIndex, fill(fast), fill(flat));
       break;
     case "ease_out":
-      ease = new KeyframeEase(0.33, 75);
-      prop.setTemporalEaseAtKey(keyIndex, [new KeyframeEase(0, 0)], [ease]);
+      prop.setTemporalEaseAtKey(keyIndex, fill(flat), fill(fast));
       break;
     case "ease_in_out":
-      ease = new KeyframeEase(0.33, 75);
-      prop.setTemporalEaseAtKey(keyIndex, [ease], [ease]);
+      prop.setTemporalEaseAtKey(keyIndex, fill(fast), fill(fast));
       break;
   }
 }

@@ -1673,8 +1673,14 @@ CSInterface.prototype.getWindowTitle = function()
 
   log('Loading: ' + jsxFile, 'info');
 
+  // After Effects' ExtendScript engine (ES3) has no built-in JSON — load a
+  // polyfill BEFORE the bridge so executeCommand can parse/stringify payloads.
+  // Premiere's engine already provides JSON, so it's only needed for AE.
+  var polyfillFile = extPath + '/src/extendscript/aftereffects/json2.jsx';
+  var polyfillLoad = isPremiere ? '' : '$.evalFile(' + JSON.stringify(polyfillFile) + '); ';
+
   // Use evalScript + $.evalFile() — CSInterface has no evalFile method
-  var evalFileScript = '$.evalFile(' + JSON.stringify(jsxFile) + '); typeof executeCommand === "function" ? "ok" : "fail"';
+  var evalFileScript = polyfillLoad + '$.evalFile(' + JSON.stringify(jsxFile) + '); typeof executeCommand === "function" ? "ok" : "fail"';
   cs.evalScript(evalFileScript, function (result) {
     if (result === 'EvalScript error.' || result === 'fail' || result === 'undefined' || !result) {
       $scriptSt.textContent = 'ExtendScript: FAILED — ' + jsxFile;
