@@ -46,6 +46,7 @@ class PremiereProMCPServer {
     this._registerSoundEngineeringTools();
     this._registerShortsTools();
     this._registerExportTools();
+    this._registerBridgeTools();
     this._registerResourceProviders();
   }
 
@@ -304,7 +305,8 @@ class PremiereProMCPServer {
         preset: z.enum(['wav_48k_16bit', 'aac_48k_128', 'aiff_48k']).default('wav_48k_16bit').describe('Audio export preset. wav_48k_16bit is whisper-optimal.'),
       },
       async (params) => {
-        const result = await this.bridge.send('premiere', 'export.clipAudio', params);
+        // AME encode of the range — can outlive the 30s WS timeout on long clips
+        const result = await this.bridge.sendJob('premiere', 'export.clipAudio', params, { maxWaitMs: 600000 });
         return { content: [{ type: 'text', text: JSON.stringify(result) }] };
       }
     );
@@ -1090,13 +1092,15 @@ class PremiereProMCPServer {
         useMediaEncoder: z.boolean().default(true),
       },
       async (params) => {
-        const result = await this.bridge.send('premiere', 'export.media', params);
+        // Long op: run as a panel-side async job so the encode can't hit the
+        // 30s WS timeout. Poll up to 20 min.
+        const result = await this.bridge.sendJob('premiere', 'export.media', params, { maxWaitMs: 1200000 });
         return {
           content: [{
             type: 'text',
-            text: `Export started: ${params.preset}\n` +
+            text: `Export finished: ${params.preset}\n` +
               `Output: ${params.outputPath}\n` +
-              `Estimated time: ${result.estimatedTime}`,
+              JSON.stringify(result),
           }],
         };
       }
@@ -1114,6 +1118,55 @@ class PremiereProMCPServer {
       async (params) => {
         const result = await this.bridge.send('premiere', 'export.frame', params);
         return { content: [{ type: 'text', text: `Frame exported: ${params.outputPath}` }] };
+      }
+    );
+  }
+
+  // ── BRIDGE DIAGNOSTICS ─────────────────────────────────────────────────
+
+  _registerBridgeTools() {
+    this.server.tool(
+      'bridge_preflight',
+      'Health-check the Premiere bridge: panel reachable + which JSX build (version, handler list) is LIVE in the engine. Run before the first edit call of any session.',
+      {},
+      async () => {
+        const ping = await this.bridge.send('premiere', '_ping', {}, { timeoutMs: 5000 });
+        let info = null;
+        try {
+          info = await this.bridge.send('premiere', '_info', {}, { timeoutMs: 10000 });
+        } catch (e) {
+          return {
+            content: [{
+              type: 'text',
+              text: `Panel is up (${JSON.stringify(ping)}) but _info failed: ${e.message}\n` +
+                `A pre-2026-07 JSX is live — run bridge_reload_jsx or restart Premiere.`,
+            }],
+            isError: true,
+          };
+        }
+        return {
+          content: [{
+            type: 'text',
+            text: `Bridge OK — ${ping.app} on port ${ping.port}\n` +
+              `JSX version: ${info.jsxVersion} (Premiere ${info.appVersion})\n` +
+              `Handlers (${info.handlerCount}): ${info.handlers.join(', ')}`,
+          }],
+        };
+      }
+    );
+
+    this.server.tool(
+      'bridge_reload_jsx',
+      'Hot-reload the ExtendScript bridge inside the running Premiere — picks up .jsx edits WITHOUT quitting Premiere. Returns the freshly loaded version + handlers.',
+      {},
+      async () => {
+        const result = await this.bridge.reloadJsx('premiere');
+        return {
+          content: [{
+            type: 'text',
+            text: `JSX reloaded: v${result.jsxVersion} — ${result.handlerCount} handlers\n${(result.handlers || []).join(', ')}`,
+          }],
+        };
       }
     );
   }

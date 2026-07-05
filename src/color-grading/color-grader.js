@@ -262,9 +262,11 @@ class ColorGrader {
     // color.applyTimelineGrade. For selected/range scopes we still target
     // specific clips, but full_timeline (the common case) is one call.
     if (scope === 'full_timeline') {
-      const result = await this.bridge.send('premiere', 'color.applyTimelineGrade', {
+      // Async job: even one round-trip can exceed 30s on a long 4K timeline
+      // (bug #11) — the panel replies with a jobId and we poll to completion.
+      const result = await this.bridge.sendJob('premiere', 'color.applyTimelineGrade', {
         settings: scaledPreset,
-      });
+      }, { maxWaitMs: 600000 });
       return {
         clipsAffected: result.clipsAffected ?? 0,
         preset: presetData.name,

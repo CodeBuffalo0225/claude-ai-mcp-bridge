@@ -18,6 +18,42 @@ Primary YouTube/TikTok/Instagram/Facebook/X. Brand collabs (BetterBoat, Moultrie
 
 ---
 
+## ✅ RELIABILITY LAYER — SHIPPED 2026-07-05 (needs ONE final app restart to activate)
+
+Deployed in commit(s) on `feat/agent-team-and-audio-pipeline`. After ONE full quit+reopen of
+Premiere/AE (to load the new panel + JSX), the restart tax is gone forever:
+
+1. **JSX version handshake (kills bug #10).** Both .jsx files carry `BRIDGE_JSX_VERSION`
+   ("2026-07-05.1") + an `_info` handler returning the live version + full handler list.
+   Panel logs "JSX loaded: vX, N handlers" at startup. MCP tools: `bridge_preflight`
+   (Premiere) / `ae_bridge_preflight` (AE). RUN THE PREFLIGHT FIRST every session.
+2. **Hot-reload (kills the Cmd+Q tax).** `bridge_reload_jsx` / `ae_bridge_reload_jsx`
+   re-evalFiles the .jsx in the running app and returns the fresh version. JSX edits no
+   longer need a Premiere/AE restart — ONLY panel-HTML or MCP-server (.js) edits do
+   (server edits: kill the node proc, Claude Code respawns it).
+3. **Async jobs (kills bug #11-class timeouts).** Any command sent with `params._async=true`
+   returns `{jobId}` instantly; panel stashes the result for `_jobStatus` polling.
+   `bridge.sendJob()` wraps this. Already wired: `export_media`, `export_clip_audio`,
+   `color_grade_preset` (full_timeline), `ae_render`. `bridge.send()` also takes
+   `{timeoutMs}` per call now.
+4. **AE render fixed — NO MORE PNG-loop + ffmpeg.** Preferred: `ae_render_headless`
+   (saves project via new AE `project.save` handler, spawns `aerender` CLI in background,
+   poll with `ae_render_status`; default output module "Lossless", transcode with ffmpeg
+   only if h264 needed). `ae_render` (in-app RQ) now applies templates honestly — errors
+   with the installed-template list instead of silently rendering defaults; check
+   `ae_render_list_templates`. `_eval` also added to the AE bridge.
+5. **Simulation code deleted** from adobe-bridge.js (hard rule #1 can't regress).
+6. **Stale copy neutralized:** `Adobe files/premiere-bridge.jsx` is now a symlink to
+   `src/extendscript/premiere/premiere-bridge.jsx` (old file kept as `.stale-2026-07-05.bak`).
+7. **Duplicate MCP registration removed:** `premiere-pro` deleted from `~/.claude.json`
+   (Downloads project) — `premiere-live` is THE Premiere server now (backup:
+   `~/.claude.json.bak-2026-07-05`).
+
+**Session pattern from now on:** `bridge_preflight` → verify jsxVersion ≥ 2026-07-05.1 →
+edit. After any .jsx change: bump `BRIDGE_JSX_VERSION`, `bridge_reload_jsx`, confirm version.
+
+---
+
 ## ⚠️ BRIDGE BUGS — READ BEFORE TOUCHING ANYTHING (state as of 2026-05-21)
 
 ### FIXED in this repo (verified working)

@@ -9,6 +9,10 @@
 
 /* global app, $, ProjectItemType, QEApplication */
 
+// Bump on every edit to this file. `_info` reports it so the preflight can
+// verify which JSX build is actually live in the engine (stale-cache bug #10).
+var BRIDGE_JSX_VERSION = "2026-07-05.1";
+
 // ── Premiere Pro DOM API Wrappers ────────────────────────────────────────
 
 var PremiereBridge = {
@@ -1062,6 +1066,23 @@ var PremiereBridge = {
     }
 
     return { clipsAffected: clipsAffected, failures: failures };
+  },
+
+  // ── INTROSPECTION ─────────────────────────────────────────────
+  // Live JSX version + every registered handler, so the preflight knows
+  // exactly what this engine can do before any edit call.
+  "_info": function() {
+    var handlers = [];
+    for (var key in PremiereBridge) {
+      if (PremiereBridge.hasOwnProperty(key)) handlers.push(key);
+    }
+    return {
+      jsxVersion: BRIDGE_JSX_VERSION,
+      app: "premiere",
+      appVersion: app.version,
+      handlers: handlers,
+      handlerCount: handlers.length
+    };
   },
 
   // ── RAW EVAL ──────────────────────────────────────────────────

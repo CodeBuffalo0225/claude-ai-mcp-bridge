@@ -18,7 +18,37 @@ if (typeof JSON !== "object") {
     }
 }
 
+// Bump on every edit to this file. `_info` reports it so the preflight can
+// verify which JSX build is actually live in the engine.
+var BRIDGE_JSX_VERSION = "2026-07-05.1";
+
 var AEBridge = {
+
+  // ── INTROSPECTION ──────────────────────────────────────────────
+
+  "_info": function() {
+    var handlers = [];
+    for (var key in AEBridge) {
+      if (AEBridge.hasOwnProperty(key)) handlers.push(key);
+    }
+    return {
+      jsxVersion: BRIDGE_JSX_VERSION,
+      app: "aftereffects",
+      appVersion: app.version,
+      handlers: handlers,
+      handlerCount: handlers.length
+    };
+  },
+
+  "_eval": function(params) {
+    try {
+      var fn = new Function(params.script);
+      var result = fn();
+      return { evalResult: (result !== undefined) ? String(result) : "undefined" };
+    } catch(e) {
+      return { error: "Eval error: " + e.message };
+    }
+  },
 
   // ── PROJECT ────────────────────────────────────────────────────
 
@@ -31,6 +61,19 @@ var AEBridge = {
   "project.create": function(params) {
     app.newProject();
     return { name: params.name };
+  },
+
+  "project.save": function(params) {
+    // aerender needs the project on disk — save (or save-as) and return the
+    // real file path so the headless render can be pointed at it.
+    if (params && params.saveAs) {
+      app.project.save(new File(params.saveAs));
+    } else if (app.project.file) {
+      app.project.save();
+    } else {
+      return { error: "Project has never been saved — pass saveAs with a full path" };
+    }
+    return { saved: true, path: app.project.file ? app.project.file.fsName : null };
   },
 
   "project.importFootage": function(params) {
@@ -274,17 +317,38 @@ var AEBridge = {
     var rq = app.project.renderQueue;
     var item = rq.items.add(comp);
 
-    // Set output module
     var om = item.outputModule(1);
     om.file = new File(params.outputPath);
 
-    // Set format
-    _setRenderFormat(om, params.format || "prores_4444");
+    var fmt = _setRenderFormat(om, params.format || "prores_4444");
+    if (fmt.error) {
+      item.remove();
+      return fmt; // honest failure: requested template doesn't exist in this AE
+    }
 
-    // Start render
     rq.render();
 
-    return { started: true, outputPath: params.outputPath };
+    var rendered = new File(params.outputPath).exists;
+    return {
+      started: true,
+      fileExists: rendered,
+      appliedTemplate: fmt.applied,
+      outputPath: params.outputPath
+    };
+  },
+
+  "render.listTemplates": function(params) {
+    // What output-module templates does THIS AE install actually have?
+    // Needs a comp in the RQ to read from — use active or named comp.
+    var comp = params && params.compName ? _findComp(params.compName) : app.project.activeItem;
+    if (!comp || !(comp instanceof CompItem)) return { error: "Open/select a comp first" };
+    var rq = app.project.renderQueue;
+    var item = rq.items.add(comp);
+    var templates = item.outputModule(1).templates;
+    var list = [];
+    for (var i = 0; i < templates.length; i++) list.push(templates[i]);
+    item.remove();
+    return { templates: list };
   }
 };
 
@@ -440,18 +504,36 @@ function _applyIntroStyle(comp, textLayer, style, duration, colors) {
 }
 
 function _setRenderFormat(outputModule, format) {
-  // Set render format based on requested type
-  var templates = {
-    "prores_422": "Apple ProRes 422",
-    "prores_4444": "Apple ProRes 4444",
-    "h264": "H.264",
-    "h265": "H.265",
-    "png_sequence": "PNG Sequence"
+  // Map requested format → candidate template names (names vary by AE
+  // version/locale). Try candidates in order against the templates that
+  // actually exist; error honestly if none match instead of silently
+  // rendering with whatever default is set.
+  var candidates = {
+    "prores_422": ["Apple ProRes 422", "Apple ProRes 422 HQ"],
+    "prores_4444": ["Apple ProRes 4444", "Apple ProRes 4444 with alpha"],
+    "h264": ["H.264 - Match Render Settings - 15 Mbps", "H.264", "High Quality with Alpha"],
+    "h265": ["H.265", "HEVC"],
+    "png_sequence": ["PNG Sequence", "PNG Sequence with Alpha"],
+    "lossless": ["Lossless", "Lossless with Alpha"]
   };
-  var template = templates[format];
-  if (template) {
-    try { outputModule.applyTemplate(template); } catch(e) {}
+  var wanted = candidates[format];
+  if (!wanted) return { error: "Unknown format: " + format };
+
+  var installed = outputModule.templates;
+  for (var i = 0; i < wanted.length; i++) {
+    for (var j = 0; j < installed.length; j++) {
+      if (installed[j] === wanted[i]) {
+        outputModule.applyTemplate(wanted[i]);
+        return { applied: wanted[i] };
+      }
+    }
   }
+
+  var avail = [];
+  for (var k = 0; k < installed.length; k++) avail.push(installed[k]);
+  return {
+    error: "No output-module template for '" + format + "'. Installed templates: " + avail.join(", ")
+  };
 }
 
 // ── Command Dispatcher ───────────────────────────────────────────────────

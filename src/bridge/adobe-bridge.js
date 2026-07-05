@@ -162,9 +162,10 @@ class AdobeBridge {
    * @param {string} app - 'premiere' or 'aftereffects'
    * @param {string} command - Dot-notation command (e.g., 'timeline.addClip')
    * @param {object} params - Command parameters
+   * @param {object} opts - { timeoutMs } per-call override of REQUEST_TIMEOUT
    * @returns {Promise<any>} - Command result
    */
-  async send(app, command, params = {}) {
+  async send(app, command, params = {}, opts = {}) {
     let ws = this.connections[app];
 
     if (!ws || ws.readyState !== WebSocket.OPEN) {
@@ -186,12 +187,13 @@ class AdobeBridge {
 
     const id = ++this.requestId;
     const message = JSON.stringify({ id, command, params });
+    const timeoutMs = opts.timeoutMs || REQUEST_TIMEOUT;
 
     return new Promise((resolve, reject) => {
       const timeout = setTimeout(() => {
         this.pendingRequests.delete(id);
-        reject(new Error(`Request to ${app} timed out: ${command}`));
-      }, REQUEST_TIMEOUT);
+        reject(new Error(`Request to ${app} timed out after ${timeoutMs / 1000}s: ${command}`));
+      }, timeoutMs);
 
       this.pendingRequests.set(id, { resolve, reject, timeout });
       ws.send(message);
@@ -199,10 +201,46 @@ class AdobeBridge {
   }
 
   /**
+   * Run a long command as a panel-side async job: the panel replies with a
+   * jobId immediately, then we poll _jobStatus until it finishes. Use for
+   * anything that can outlive REQUEST_TIMEOUT (full-timeline grades,
+   * exports, renders). maxWaitMs bounds the total polling time.
+   */
+  async sendJob(app, command, params = {}, { pollMs = 2000, maxWaitMs = 600000 } = {}) {
+    const start = await this.send(app, command, { ...params, _async: true });
+    if (!start || !start.jobId) {
+      // Panel predates async-job support — result came back synchronously.
+      return start;
+    }
+    const deadline = Date.now() + maxWaitMs;
+    while (Date.now() < deadline) {
+      await new Promise((r) => setTimeout(r, pollMs));
+      const status = await this.send(app, '_jobStatus', { jobId: start.jobId });
+      if (status.done) return status.result;
+    }
+    throw new Error(`Job ${start.jobId} (${command}) still running after ${maxWaitMs / 1000}s — check the ${app} panel log`);
+  }
+
+  /**
    * Execute raw ExtendScript in an Adobe app.
    */
   async executeScript(app, script) {
     return this.send(app, '_eval', { script });
+  }
+
+  /**
+   * Preflight handshake: which JSX build + handlers are live in the engine.
+   */
+  async info(app) {
+    return this.send(app, '_info', {});
+  }
+
+  /**
+   * Hot-reload the JSX bridge in the running host app (no Premiere/AE
+   * restart). Returns the freshly loaded version + handler list.
+   */
+  async reloadJsx(app) {
+    return this.send(app, '_reloadJsx', {}, { timeoutMs: 15000 });
   }
 
   // ── EVENT SYSTEM ───────────────────────────────────────────────────────
@@ -219,46 +257,6 @@ class AdobeBridge {
     const key = `${app}:${event}`;
     const listeners = this.eventListeners.get(key) || [];
     listeners.forEach((cb) => cb(data));
-  }
-
-  // ── SIMULATION (when Adobe apps aren't connected) ──────────────────────
-
-  _simulateResponse(app, command, params) {
-    // Provides realistic mock responses for development and testing
-    const simulations = {
-      'project.open': { name: params.path?.split('/').pop() || 'Project', sequences: ['Main Sequence'] },
-      'project.create': { path: `${params.path}/${params.name}.prproj`, name: params.name },
-      'project.getInfo': {
-        name: 'My Project',
-        path: '/projects/my-project.prproj',
-        sequences: [{ name: 'Main Sequence', duration: 300, trackCount: { video: 4, audio: 4 } }],
-        mediaCount: 12,
-        bins: ['Footage', 'Audio', 'Graphics'],
-      },
-      'project.save': { path: params.saveAs || '/projects/saved.prproj' },
-      'project.importMedia': { imported: params.files || [] },
-      'timeline.create': { name: params.name, id: `seq_${Date.now()}` },
-      'timeline.getState': {
-        name: 'Main Sequence',
-        duration: 300,
-        playheadPosition: 0,
-        videoTracks: [
-          { index: 0, clips: [{ name: 'Clip 1', start: 0, end: 45, source: 'footage_01.mp4' }] },
-          { index: 1, clips: [] },
-        ],
-        audioTracks: [
-          { index: 0, clips: [{ name: 'Audio 1', start: 0, end: 45 }] },
-          { index: 1, clips: [] },
-        ],
-        markers: [],
-      },
-      'timeline.addClip': { clipId: `clip_${Date.now()}` },
-      'export.media': { estimatedTime: '~5 minutes', jobId: `job_${Date.now()}` },
-      'export.frame': { path: params.outputPath },
-    };
-
-    const key = command;
-    return Promise.resolve(simulations[key] || { success: true, command, params, simulated: true });
   }
 
   // ── DISCONNECT ─────────────────────────────────────────────────────────
