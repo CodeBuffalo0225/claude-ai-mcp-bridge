@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "instagram",
+  "generatedAt": "2026-07-06T13:33:00Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "2a6ff821d4cf",
+      "platform": "instagram",
+      "trend": "Wait let me wipe the camera transition driving viral location and gear reveals for outdoor creators July 2026",
+      "evidence": "\"The 'wait, let me wipe the camera' transition is one of the cleanest product and location reveals on Reels right now, with the format originating from a Brisbane coffee and croque bar — now being used widely for location and product reveals.\" — NewEngen Instagram Trends July 2026",
+      "source": "https://newengen.com/insights/instagram-trends/",
+      "firstSeen": "2026-07-06T13:33:00Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_wipe_reveal_transition",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms July 2026"
+    },
+    {
+      "id": "fe7c93ae7f46",
+      "platform": "instagram",
+      "trend": "Everything Hallelujah B-roll romanticizing format adopted by hunting lifestyle creators for sunrise gear moments July 2026",
+      "evidence": "\"A soft, feel-good trend is about romanticizing the little things, set to Justin Bieber's 'Everything Hallelujah,' using short B-roll clips to show small everyday wins like coffee, sunlight, pets, and team moments.\" — NewEngen Instagram Trends July 2026 + SocialBee Instagram Trends (corroborated)",
+      "source": "https://newengen.com/insights/instagram-trends/",
+      "firstSeen": "2026-07-06T13:33:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms July 2026"
+    },
+    {
+      "id": "200d55fcdc89",
+      "platform": "instagram",
+      "trend": "Pixel stretch landscape motion effect trending for scenic outdoor hunting terrain Reels July 2026",
+      "evidence": "\"The pixel stretch trend involves stretching a slice of pixels from a photograph to create a dynamic sense of motion, with examples ranging from vehicles to landscapes using bright colors.\" — Ramdam Instagram Trends July 2026",
+      "source": "https://www.ramd.am/blog/trends-instagram",
+      "firstSeen": "2026-07-06T13:33:00Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_pixel_stretch_motion",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms July 2026"
+    },
+    {
+      "id": "09cf3dace943",
+      "platform": "instagram",
+      "trend": "Day in the life summer edition Reels with deep-house beat drops performing well for outdoor lifestyle brands July 2026",
+      "evidence": "\"A deep-house track from indie producers is powering looping beach and vacation clips, plus 'day in the life' summer-edition Reels where the beat drop reveals a new moment of the day.\" — Ramdam Instagram Trends July 2026",
+      "source": "https://www.ramd.am/blog/trends-instagram",
+      "firstSeen": "2026-07-06T13:33:00Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "Instagram Reels trends July 2026 outdoor lifestyle"
+    },
+    {
+      "id": "0898daeec0fb",
+      "platform": "instagram",
+      "trend": "Sensory routine packing and morning camp ASMR Reels gaining traction in outdoor niche July 2026",
+      "evidence": "\"Wellness content is focusing on sensory routine content including morning sheds, cleaning resets, packing ASMR, and lifestyle optimization.\" — NewEngen Instagram Trends July 2026",
+      "source": "https://newengen.com/insights/instagram-trends/",
+      "firstSeen": "2026-07-06T13:33:00Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "Instagram Reels trends July 2026 outdoor lifestyle"
+    }
+  ]
+}

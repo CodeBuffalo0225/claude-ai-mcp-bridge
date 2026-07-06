@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "youtube",
+  "generatedAt": "2026-07-06T13:33:00Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "e46a624286bc",
+      "platform": "youtube",
+      "trend": "Hook-first Shorts with movement or bold text overlay in first frame dominating outdoor creator feeds July 2026",
+      "evidence": "\"YouTube's algorithm uses video completion rate as a primary ranking signal — and completion rate is determined almost entirely by whether the hook retains viewers past the first few seconds. Start with movement or visual change (not static), ask a question the Short answers, show before/after or surprising result, use trending sounds immediately, add bold text overlay in first frame.\" — Praper Media + Teleprompter.com (corroborated)",
+      "source": "https://prapermedia.com/blog/make-viral-youtube-shorts/",
+      "firstSeen": "2026-07-06T13:33:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_auto_hook_overlay",
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "6cb5e90796d2",
+      "platform": "youtube",
+      "trend": "Smart optics and suppressor-ready rifle gear demo Shorts sustaining viral traction post-SHOT Show 2026",
+      "evidence": "\"The two big trends in rifles at this year's SHOT show are manufacturers building new rifles to enhance performance at distance and to be suppressor friendly... The newest smart scopes and rangefinding binoculars combine laser rangefinding, ballistic calculation, and Bluetooth connectivity into one seamless unit.\" — The Avid Outdoorsman + American Hunter (corroborated)",
+      "source": "https://theavidoutdoorsman.com/shot-show-2026-reveals-the-gear-trends-hunters-will-see-everywhere-this-fall/",
+      "firstSeen": "2026-07-06T13:33:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "bfcf24053e61",
+      "platform": "youtube",
+      "trend": "Before-and-after transformation reveals with mute-friendly captions driving rewatch in outdoor gear Shorts July 2026",
+      "evidence": "\"Most Shorts viewers scroll on mute, and a Short with no audio hook that still pulls retention will outperform a Short with a great verbal hook that no one hears. In 2026, 85% of Shorts are watched without sound initially — captions aren't optional; they're essential for hook delivery and retention.\" — Praper Media + Miraflow (corroborated)",
+      "source": "https://miraflow.ai/blog/youtube-shorts-best-practices-2026-complete-guide",
+      "firstSeen": "2026-07-06T13:33:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_silent_caption_reveal",
+      "rawQuery": "trending YouTube Shorts formats July 2026 outdoor creators hooks"
+    },
+    {
+      "id": "f67bc66df79d",
+      "platform": "youtube",
+      "trend": "Quick DIY outdoor-skills tutorials under 60 seconds holding top-performing Shorts format July 2026",
+      "evidence": "\"The best Shorts in 2026 follow repeatable formats that hold attention fast: day-in-the-life mini vlogs, food challenges, dance to trending audio, quick DIY tutorials, and short explainers. These styles earn rewatches because viewers instantly understand the payoff.\" — Teleprompter.com Trending YouTube Shorts 2026",
+      "source": "https://www.teleprompter.com/blog/trending-youtube-shorts",
+      "firstSeen": "2026-07-06T13:33:00Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "trending YouTube Shorts formats July 2026 outdoor creators hooks"
+    },
+    {
+      "id": "84e4d04073a9",
+      "platform": "youtube",
+      "trend": "July 4th patriot hunting and freedom-themed Shorts capitalizing on holiday-timed audience surge 2026",
+      "evidence": "\"Culture-timed content tied to July events, films, sports, and music drops is spreading now — what is spreading includes micro videos and content timed to July moments.\" — blog.mean.ceo Short-Form Video Marketing Trends July 2026 + startups.co.uk social media trends July 2026 (corroborated)",
+      "source": "https://blog.mean.ceo/short-form-video-marketing-trends-july-2026/",
+      "firstSeen": "2026-07-06T13:33:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    }
+  ]
+}

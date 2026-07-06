@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "linkedin",
+  "generatedAt": "2026-07-06T13:33:00Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "2dc7c8d1e591",
+      "platform": "linkedin",
+      "trend": "LinkedIn short-form video engagement up 34 percent year-over-year making it viable for outdoor brand thought leadership 2026",
+      "evidence": "\"LinkedIn saw a 34% jump in video engagement compared to last year... Short-form video is worth prioritizing for brands on LinkedIn — it's become the primary format for thought leadership, recruitment content, and industry-specific influencer collaborations.\" — Hootsuite Social Trends 2026 + Sprout Social (corroborated)",
+      "source": "https://www.hootsuite.com/research/social-trends",
+      "firstSeen": "2026-07-06T13:33:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "422881631a20",
+      "platform": "linkedin",
+      "trend": "Serialized behind-the-scenes video series trending for small outdoor businesses showing craftsmanship and process July 2026",
+      "evidence": "\"A new video trend gaining momentum in 2026: serialized content, with businesses publishing video series that give viewers a quick, behind-the-scenes look at the people behind the brand to showcase day-to-day operations and workplace culture.\" — Coursera 12 Major Social Media Trends 2026 + SBDC Houston (corroborated)",
+      "source": "https://www.coursera.org/articles/social-media-trends",
+      "firstSeen": "2026-07-06T13:33:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_series_template",
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "c87eee1465a8",
+      "platform": "linkedin",
+      "trend": "Authenticity over production value as top-performing LinkedIn content signal for outdoor and hunting brands July 2026",
+      "evidence": "\"Winning brands are intentionally moving away from overly polished social content. Imperfections, natural pacing — even typos! — signal authenticity, even when AI is at work behind the scenes. Over-editing is out, and the occasional stutter or flub is in.\" — iqfluence.io Social Trends 2026 + startups.co.uk July 2026 (corroborated)",
+      "source": "https://iqfluence.io/public/blog/social-trends",
+      "firstSeen": "2026-07-06T13:33:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "LinkedIn video trends July 2026 small business outdoor hunting brands"
+    },
+    {
+      "id": "9e7c9cc3ed51",
+      "platform": "linkedin",
+      "trend": "Founder-led short vertical video posts outperforming corporate content for small outdoor brands on LinkedIn July 2026",
+      "evidence": "\"Authentic founder content, repurposed clips from one source recording — what works best in 2026. LinkedIn video posts earn three times the engagement of text-only posts. Additionally, the format can be short, vertical, and direct.\" — blog.mean.ceo Short-Form Video Marketing Trends July 2026",
+      "source": "https://blog.mean.ceo/short-form-video-marketing-trends-july-2026/",
+      "firstSeen": "2026-07-06T13:33:00Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "LinkedIn video trends July 2026 small business outdoor hunting brands"
+    },
+    {
+      "id": "2fed868489f9",
+      "platform": "linkedin",
+      "trend": "UGC and micro-influencer collaborations driving highest conversion rates for outdoor gear brands on LinkedIn July 2026",
+      "evidence": "\"Audiences trust relatable voices over celebrities, and micro-influencers with tight communities are driving higher engagement and conversions than macro names. UGC will outperform polished brand content — outdoor consumers trust real people who show real experiences.\" — SBDC Houston 2026 Social Media Trends + kellybrandmanagement.com outdoor retailers (corroborated)",
+      "source": "https://www.sbdc.uh.edu/sbdc/2026-social-media-trends-small-business.asp",
+      "firstSeen": "2026-07-06T13:33:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "social media trends July 2026 outdoor brands short video"
+    }
+  ]
+}
