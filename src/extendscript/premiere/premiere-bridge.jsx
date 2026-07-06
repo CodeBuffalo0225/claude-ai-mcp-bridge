@@ -11,7 +11,7 @@
 
 // Bump on every edit to this file. `_info` reports it so the preflight can
 // verify which JSX build is actually live in the engine (stale-cache bug #10).
-var BRIDGE_JSX_VERSION = "2026-07-05.1";
+var BRIDGE_JSX_VERSION = "2026-07-05.2";
 
 // ── Premiere Pro DOM API Wrappers ────────────────────────────────────────
 
@@ -1068,6 +1068,128 @@ var PremiereBridge = {
     return { clipsAffected: clipsAffected, failures: failures };
   },
 
+  // ── SPEED RAMP (time-remap keyframes; cutpilot-speed-ramp recipe) ──
+  // Read-only calibration probe. Run once per Premiere version: reports
+  // whether the Time Remapping component is reachable and what numeric
+  // scale its Speed property uses (~1 = multiplier, ~100 = percent).
+  "edit.speedRampProbe": function(params) {
+    var found = _findRampTarget(params);
+    if (found.error) return found;
+
+    var names = [];
+    for (var i = 0; i < found.clip.components.numItems; i++) {
+      names.push(found.clip.components[i].displayName);
+    }
+
+    if (!found.speedProp) {
+      return {
+        timeRemapFound: false,
+        componentNames: names,
+        note: "No Time Remapping component on this clip. Nested/graphic clips don't carry it — probe a plain video clip."
+      };
+    }
+
+    var current = null;
+    try { current = found.speedProp.getValue(); } catch (e) {}
+    var keyCount = 0;
+    try {
+      var ks = found.speedProp.getKeys();
+      keyCount = ks ? ks.length : 0;
+    } catch (e2) {}
+
+    return {
+      timeRemapFound: true,
+      componentNames: names,
+      speedCurrentValue: current,
+      keyCount: keyCount,
+      clip: {
+        name: found.clip.name,
+        startSec: found.clip.start.seconds,
+        endSec: found.clip.end.seconds,
+        inPointSec: found.clip.inPoint.seconds,
+        durationSec: found.clip.end.seconds - found.clip.start.seconds
+      }
+    };
+  },
+
+  // Apply a ramp: multiple keyframes on Time Remapping → Speed.
+  // params: { sequenceName?, trackIndex, clipIndex, keys:[{time,speed}],
+  //           valueScale (1|100, from probe), timeBase ("clip"|"sequence"|"media"),
+  //           smooth (bezier ease) }
+  // Never lies: returns applied[]/errors[] plus a keyCountAfter readback.
+  "edit.speedRamp": function(params) {
+    var found = _findRampTarget(params);
+    if (found.error) return found;
+    if (!found.speedProp) {
+      return { error: "No Time Remapping → Speed property on this clip. Run edit.speedRampProbe first." };
+    }
+    if (!params.keys || params.keys.length < 2) {
+      return { error: "A ramp needs at least 2 keys" };
+    }
+
+    var scale = params.valueScale || 1;
+    var timeBase = params.timeBase || "clip";
+    var offset = 0;
+    if (timeBase === "clip") offset = found.clip.start.seconds;
+    else if (timeBase === "media") offset = found.clip.inPoint.seconds;
+    // "sequence": offset stays 0, key times are absolute sequence seconds
+
+    try { found.speedProp.setTimeVarying(true); } catch (eTV) {
+      return { error: "setTimeVarying failed: " + eTV.message };
+    }
+
+    var applied = [];
+    var errors = [];
+    var interpApplied = 0;
+
+    for (var i = 0; i < params.keys.length; i++) {
+      var k = params.keys[i];
+      var t = offset + k.time;
+      var v = k.speed * scale;
+      try {
+        found.speedProp.addKey(t);
+        found.speedProp.setValueAtKey(t, v, 1);
+        applied.push({ time: t, speed: v });
+        if (params.smooth) {
+          // Bezier interp enum differs across versions — try candidates,
+          // count what sticks; a linear ramp still ramps.
+          var interpCandidates = [5, 2];
+          for (var c = 0; c < interpCandidates.length; c++) {
+            try {
+              found.speedProp.setInterpolationTypeAtKey(t, interpCandidates[c], 1);
+              interpApplied++;
+              break;
+            } catch (eI) {}
+          }
+        }
+      } catch (eK) {
+        errors.push("key[" + i + "] t=" + t + ": " + eK.message);
+      }
+    }
+
+    var keyCountAfter = null;
+    try {
+      var ksAfter = found.speedProp.getKeys();
+      keyCountAfter = ksAfter ? ksAfter.length : 0;
+    } catch (eR) {}
+
+    var success = errors.length === 0 && applied.length === params.keys.length &&
+      (keyCountAfter === null || keyCountAfter >= params.keys.length);
+
+    return {
+      success: success,
+      applied: applied,
+      errors: errors,
+      keyCountAfter: keyCountAfter,
+      interpApplied: interpApplied,
+      valueScale: scale,
+      timeBase: timeBase,
+      note: success
+        ? "Verify visually at the ramp midpoint (export_frame)."
+        : "Ramp did not fully take. If keyCountAfter is 0, retry with a different timeBase (clip/sequence/media); if speeds look 100x off, flip valueScale."
+    };
+  },
+
   // ── INTROSPECTION ─────────────────────────────────────────────
   // Live JSX version + every registered handler, so the preflight knows
   // exactly what this engine can do before any edit call.
@@ -1098,6 +1220,47 @@ var PremiereBridge = {
 };
 
 // ── Helper Functions ─────────────────────────────────────────────────────
+
+// Resolve { sequenceName?, trackIndex, clipIndex } to the clip and its
+// Time Remapping → Speed property. Returns { clip, speedProp } or { error }.
+// speedProp is null (not an error) when the component isn't on the clip so
+// the probe can report it honestly.
+function _findRampTarget(params) {
+  var seq = params.sequenceName ? _findSequence(params.sequenceName) : app.project.activeSequence;
+  if (!seq) return { error: "No active sequence" + (params.sequenceName ? " named '" + params.sequenceName + "'" : "") };
+
+  var trackIdx = (params.trackIndex !== undefined) ? params.trackIndex : 0;
+  if (trackIdx >= seq.videoTracks.numTracks) {
+    return { error: "trackIndex " + trackIdx + " out of range (" + seq.videoTracks.numTracks + " video tracks)" };
+  }
+  var track = seq.videoTracks[trackIdx];
+  var clipIdx = (params.clipIndex !== undefined) ? params.clipIndex : 0;
+  if (clipIdx >= track.clips.numItems) {
+    return { error: "clipIndex " + clipIdx + " out of range (" + track.clips.numItems + " clips on V" + (trackIdx + 1) + ")" };
+  }
+  var clip = track.clips[clipIdx];
+
+  var speedProp = null;
+  try {
+    for (var i = 0; i < clip.components.numItems; i++) {
+      var comp = clip.components[i];
+      var isTimeRemap = comp.displayName === "Time Remapping" ||
+        (comp.matchName && comp.matchName.indexOf("Time Remapping") !== -1);
+      if (!isTimeRemap) continue;
+      for (var j = 0; j < comp.properties.numItems; j++) {
+        if (comp.properties[j].displayName === "Speed") {
+          speedProp = comp.properties[j];
+          break;
+        }
+      }
+      break;
+    }
+  } catch (e) {
+    return { error: "Component walk failed: " + e.message };
+  }
+
+  return { clip: clip, speedProp: speedProp };
+}
 
 function _findSequence(name) {
   var proj = app.project;

@@ -49,8 +49,31 @@ Premiere/AE (to load the new panel + JSX), the restart tax is gone forever:
    (Downloads project) — `premiere-live` is THE Premiere server now (backup:
    `~/.claude.json.bak-2026-07-05`).
 
-**Session pattern from now on:** `bridge_preflight` → verify jsxVersion ≥ 2026-07-05.1 →
+**Session pattern from now on:** `bridge_preflight` → verify jsxVersion ≥ 2026-07-05.2 →
 edit. After any .jsx change: bump `BRIDGE_JSX_VERSION`, `bridge_reload_jsx`, confirm version.
+
+## ✅ RECIPE TOOLS + UXP-READY SEAM — SHIPPED 2026-07-05 (session 2)
+
+1. **`ramp_clip` (first recipe tool).** One call = probe → auto-calibrate valueScale →
+   design keys → apply → read-back verify. Shapes: `punch_in`, `open_slow_rampout`
+   (transition goes at the over-cranked tail), `ramp_into_slow`, `custom`. Clean slow-mo
+   ratio auto-picked from sourceFps+timelineFps (60→24 = 40%). Refuses clips that already
+   have speed keys. Run on a WORKING COPY. JSX handlers `edit.speedRampProbe` /
+   `edit.speedRamp` now actually exist (jsx v2026-07-05.2) — the cutpilot-speed-ramp
+   skill described them but they were never implemented. Math in `src/recipes/speed-ramp.js`,
+   22 unit tests in `tests/` (`npm test`, fixed for node22).
+   ⚠️ NOT yet live-verified in Premiere (apps closed) — first live run: probe a clip,
+   confirm keys land; the calibration loop (timeBase/valueScale) is built in for that.
+2. **CEP→UXP = one-file swap now.** Transport lives behind `src/bridge/adapters/`
+   (HostAdapter contract → `cep-ws-adapter.js` active, `uxp-adapter.js` skeleton with
+   build guide). AdobeBridge is a facade; MCP servers/recipes/graders are transport-
+   agnostic. Protocol contract: `docs/host-adapter-protocol.md`. Switch per app via
+   `BRIDGE_ADAPTER_PREMIERE=uxp` or `adapters:{premiere:'uxp'}`. Key UXP fact: connection
+   direction inverts (Node hosts the WS server, UXP plugin dials out); frames + internal
+   commands (`_info`, `_jobStatus`, async jobs…) stay identical.
+3. **Bugfix found by the loopback tests:** adapter `disconnect()` now stops the
+   infinite reconnect loop + rejects in-flight requests; reconnect timers are unref'd so
+   they can't pin the process open.
 
 ---
 

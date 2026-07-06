@@ -13,6 +13,7 @@ import { AIEditor } from '../ai-editor/editor-engine.js';
 import { ColorGrader } from '../color-grading/color-grader.js';
 import { SoundEngineer } from '../sound-engineering/sound-engineer.js';
 import { ShortsCutter } from '../shorts-cutter/shorts-cutter.js';
+import { cleanSlowmoSpeed, designRamp, validateKeys, inferValueScale } from '../recipes/speed-ramp.js';
 import { Logger } from '../utils/logger.js';
 
 const logger = new Logger('PremiereMCP');
@@ -46,6 +47,7 @@ class PremiereProMCPServer {
     this._registerSoundEngineeringTools();
     this._registerShortsTools();
     this._registerExportTools();
+    this._registerRecipeTools();
     this._registerBridgeTools();
     this._registerResourceProviders();
   }
@@ -1118,6 +1120,105 @@ class PremiereProMCPServer {
       async (params) => {
         const result = await this.bridge.send('premiere', 'export.frame', params);
         return { content: [{ type: 'text', text: `Frame exported: ${params.outputPath}` }] };
+      }
+    );
+  }
+
+  // ── RECIPES ────────────────────────────────────────────────────────────
+
+  _registerRecipeTools() {
+    this.server.tool(
+      'ramp_clip',
+      'Speed-ramp a clip in ONE call: probes + auto-calibrates the time-remap DOM, designs the keyframes from a named shape, applies them, and verifies by read-back. Shapes: punch_in (normal→slow on the beat→ease back), open_slow_rampout (open slow, over-crank out — put the transition at the tail), ramp_into_slow (fast head→slow landing), custom (pass keys). Use edit_speed_duration for uniform speed changes. Run on a WORKING COPY (timeline_duplicate) — never the master.',
+      {
+        sequenceName: z.string().optional().describe('Target sequence (default: active). Must be a working copy, not the master.'),
+        trackIndex: z.number().default(0).describe('Video track (0 = V1)'),
+        clipIndex: z.number().describe('Clip index on the track (from timeline_get_state)'),
+        shape: z.enum(['punch_in', 'open_slow_rampout', 'ramp_into_slow', 'custom']).default('punch_in'),
+        beatStart: z.number().optional().describe('Clip-relative seconds where the slow-mo lands (punch_in/ramp_into_slow)'),
+        beatEnd: z.number().optional().describe('Clip-relative seconds where the hold ends (punch_in) / hold length (open_slow_rampout)'),
+        slowSpeed: z.number().optional().describe('Slow-mo speed as multiplier (0.4 = 40%). Default: clean ratio from fps, else 0.4'),
+        fastSpeed: z.number().default(2.0).describe('Over-crank speed for rampout/into shapes'),
+        sourceFps: z.number().optional().describe('Clip fps (e.g. 59.94) — with timelineFps, picks the clean slow-mo ratio'),
+        timelineFps: z.number().optional().describe('Sequence fps (e.g. 23.976)'),
+        easeDuration: z.number().default(0.4).describe('Seconds of ease into/out of speed changes'),
+        smooth: z.boolean().default(true).describe('Bezier ease (cinematic). false = linear (hard/edgy)'),
+        keys: z.array(z.object({ time: z.number(), speed: z.number() })).optional()
+          .describe('shape=custom only: explicit clip-relative keys'),
+      },
+      async (params) => {
+        const fail = (text) => ({ content: [{ type: 'text', text }], isError: true });
+
+        // 1. Probe: is time remap reachable, what scale, how long is the clip
+        const probe = await this.bridge.send('premiere', 'edit.speedRampProbe', {
+          sequenceName: params.sequenceName,
+          trackIndex: params.trackIndex,
+          clipIndex: params.clipIndex,
+        });
+        if (probe.error) return fail(`Probe failed: ${probe.error}`);
+        if (!probe.timeRemapFound) {
+          return fail(`No Time Remapping on this clip. Components found: ${(probe.componentNames || []).join(', ')}\n${probe.note || ''}`);
+        }
+        const valueScale = inferValueScale(probe.speedCurrentValue);
+        if (!valueScale) {
+          return fail(`Could not calibrate: Speed reads ${probe.speedCurrentValue}. Ramp manually via premiere_eval after inspecting the DOM.`);
+        }
+        if (probe.keyCount > 0) {
+          return fail(`Clip already has ${probe.keyCount} speed keyframes — clear them first (or pick another clip). Refusing to stack ramps.`);
+        }
+        const clipDuration = probe.clip.durationSec;
+
+        // 2. Design the keys
+        let keys, decision;
+        if (params.shape === 'custom') {
+          if (!params.keys || params.keys.length < 2) return fail('shape=custom requires keys[] (≥2)');
+          keys = params.keys;
+          decision = 'custom keys supplied by caller';
+        } else {
+          const slowSpeed = params.slowSpeed ??
+            cleanSlowmoSpeed(params.sourceFps, params.timelineFps) ?? 0.4;
+          try {
+            ({ keys, decision } = designRamp({
+              shape: params.shape,
+              clipDuration,
+              slowSpeed,
+              fastSpeed: params.fastSpeed,
+              beatStart: params.beatStart,
+              beatEnd: params.beatEnd,
+              easeDuration: params.easeDuration,
+            }));
+          } catch (e) {
+            return fail(`Ramp design rejected: ${e.message} (clip is ${clipDuration.toFixed(2)}s)`);
+          }
+        }
+        const check = validateKeys(keys, clipDuration);
+        if (!check.ok) return fail(`Invalid keys: ${check.errors.join('; ')}`);
+
+        // 3. Apply + read back
+        const result = await this.bridge.send('premiere', 'edit.speedRamp', {
+          sequenceName: params.sequenceName,
+          trackIndex: params.trackIndex,
+          clipIndex: params.clipIndex,
+          keys,
+          valueScale,
+          timeBase: 'clip',
+          smooth: params.smooth,
+        }, { timeoutMs: 60000 });
+
+        const lines = [
+          `Ramp ${result.success ? 'APPLIED' : 'FAILED'} on "${probe.clip.name}" (V${params.trackIndex + 1} clip ${params.clipIndex})`,
+          `Decision: ${decision}`,
+          `Keys: ${keys.map((k) => `${k.time}s→${Math.round(k.speed * 100)}%`).join('  ')}`,
+          `Calibration: valueScale=${valueScale} (probe read ${probe.speedCurrentValue}), timeBase=clip`,
+          `Applied ${result.applied?.length ?? 0}/${keys.length} keys, read back ${result.keyCountAfter ?? '?'} on the property, ${result.interpApplied ?? 0} bezier eases`,
+        ];
+        if (check.warnings.length) lines.push(`Warnings: ${check.warnings.join('; ')}`);
+        if (result.errors?.length) lines.push(`Errors: ${result.errors.join('; ')}`);
+        if (result.note) lines.push(result.note);
+        if (params.shape === 'open_slow_rampout' && result.success) {
+          lines.push('Next: edit_add_transition at this clip\'s END — the over-crank hides the cut.');
+        }
+        return { content: [{ type: 'text', text: lines.join('\n') }], ...(result.success ? {} : { isError: true }) };
       }
     );
   }
