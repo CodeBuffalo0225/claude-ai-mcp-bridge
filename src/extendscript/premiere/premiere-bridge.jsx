@@ -11,7 +11,7 @@
 
 // Bump on every edit to this file. `_info` reports it so the preflight can
 // verify which JSX build is actually live in the engine (stale-cache bug #10).
-var BRIDGE_JSX_VERSION = "2026-07-05.2";
+var BRIDGE_JSX_VERSION = "2026-07-05.3";
 
 // ── Premiere Pro DOM API Wrappers ────────────────────────────────────────
 
@@ -1141,6 +1141,21 @@ var PremiereBridge = {
     var applied = [];
     var errors = [];
     var interpApplied = 0;
+    var keysCleared = 0;
+
+    // Clear prior keys on request — needed for the calibration retry loop
+    // (a failed first attempt leaves keys at wrong times). Iterate from the
+    // end so indices stay valid while removing.
+    if (params.clearExisting) {
+      try {
+        var existing = found.speedProp.getKeys ? found.speedProp.getKeys() : [];
+        for (var x = existing.length - 1; x >= 0; x--) {
+          try { found.speedProp.removeKey(existing[x]); keysCleared++; } catch (eRem) {}
+        }
+      } catch (eClear) {
+        errors.push("clearExisting: " + eClear.message);
+      }
+    }
 
     for (var i = 0; i < params.keys.length; i++) {
       var k = params.keys[i];
@@ -1151,9 +1166,10 @@ var PremiereBridge = {
         found.speedProp.setValueAtKey(t, v, 1);
         applied.push({ time: t, speed: v });
         if (params.smooth) {
-          // Bezier interp enum differs across versions — try candidates,
-          // count what sticks; a linear ramp still ramps.
-          var interpCandidates = [5, 2];
+          // KF_INTERP_MODE_BEZIER = 2 (per the field-tested CutPilot-AI
+          // handler); 5 kept as fallback for version drift. A linear ramp
+          // still ramps if neither sticks.
+          var interpCandidates = [2, 5];
           for (var c = 0; c < interpCandidates.length; c++) {
             try {
               found.speedProp.setInterpolationTypeAtKey(t, interpCandidates[c], 1);
@@ -1181,6 +1197,7 @@ var PremiereBridge = {
       applied: applied,
       errors: errors,
       keyCountAfter: keyCountAfter,
+      keysCleared: keysCleared,
       interpApplied: interpApplied,
       valueScale: scale,
       timeBase: timeBase,

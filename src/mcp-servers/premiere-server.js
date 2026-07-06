@@ -1145,6 +1145,8 @@ class PremiereProMCPServer {
         smooth: z.boolean().default(true).describe('Bezier ease (cinematic). false = linear (hard/edgy)'),
         keys: z.array(z.object({ time: z.number(), speed: z.number() })).optional()
           .describe('shape=custom only: explicit clip-relative keys'),
+        clearExisting: z.boolean().default(false)
+          .describe('Remove existing speed keyframes first — use on a calibration retry after a failed attempt'),
       },
       async (params) => {
         const fail = (text) => ({ content: [{ type: 'text', text }], isError: true });
@@ -1163,8 +1165,8 @@ class PremiereProMCPServer {
         if (!valueScale) {
           return fail(`Could not calibrate: Speed reads ${probe.speedCurrentValue}. Ramp manually via premiere_eval after inspecting the DOM.`);
         }
-        if (probe.keyCount > 0) {
-          return fail(`Clip already has ${probe.keyCount} speed keyframes — clear them first (or pick another clip). Refusing to stack ramps.`);
+        if (probe.keyCount > 0 && !params.clearExisting) {
+          return fail(`Clip already has ${probe.keyCount} speed keyframes. Refusing to stack ramps — retry with clearExisting:true to replace them (right after a failed calibration attempt), or pick another clip.`);
         }
         const clipDuration = probe.clip.durationSec;
 
@@ -1203,6 +1205,7 @@ class PremiereProMCPServer {
           valueScale,
           timeBase: 'clip',
           smooth: params.smooth,
+          clearExisting: params.clearExisting,
         }, { timeoutMs: 60000 });
 
         const lines = [
