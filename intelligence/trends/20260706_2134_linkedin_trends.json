@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "linkedin",
+  "generatedAt": "2026-07-06T21:34:28Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "63944269dfe2",
+      "platform": "linkedin",
+      "trend": "Founder-led authentic talking-head short video generating 561% more reach than company pages for outdoor hunting brands on LinkedIn 2026",
+      "evidence": "\"Personal profiles now generate 561% more reach, with a founder profile with a fraction of a company page's followers able to match or exceed its total engagement. Story-driven posts consistently outperform generic advice, getting 5x more comments because they're relatable and authentic. A founder-led LinkedIn content strategy is a repeatable system for turning a founder's stories, beliefs, customer patterns, and category expertise into public proof that earns trust before a buyer ever books a call.\" — gallium.ai Founder-Led LinkedIn Content Strategy 2026 + heysid.com (corroborated)",
+      "source": "https://gallium.ai/blog/founder-led-linkedin-content-strategy-2026",
+      "firstSeen": "2026-07-06T21:34:28Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "3cc831d95cf4",
+      "platform": "linkedin",
+      "trend": "Serialized behind-the-scenes video series replacing polished brand content as top LinkedIn format for outdoor small business brands 2026",
+      "evidence": "\"A new video trend gaining momentum in 2026 is serialized content, with many businesses shifting toward publishing video series that give viewers behind-the-scenes looks at the people behind the brand or featuring unedited discussions about topics that matter to the brand and its audience, similar to a podcast. Brands are shifting toward quality over viral quantity.\" — sbdc.uh.edu 2026 Social Media Trends Small Businesses + slateteams.com Social Media Trends 2026 (corroborated)",
+      "source": "https://www.sbdc.uh.edu/sbdc/2026-social-media-trends-small-business.asp",
+      "firstSeen": "2026-07-06T21:34:28Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "6c53465cf1d1",
+      "platform": "linkedin",
+      "trend": "LinkedIn short-form video engagement up 34% YoY - vertical-first ultra-short clips under 60 seconds dominating for outdoor brands 2026",
+      "evidence": "\"LinkedIn saw a 34% jump in video engagement compared to last year. What works best in 2026: ultra-short videos, vertical-first recording, authentic founder content, repurposed clips from one source recording, and stronger focus on completion rate, saves, clicks, and conversions over empty view counts. Video is 20 times more likely to be shared than any other LinkedIn post type.\" — hootsuite.com Social Trends 2026 + iqfluence.io Social Media Trends 2026 (corroborated)",
+      "source": "https://www.hootsuite.com/research/social-trends",
+      "firstSeen": "2026-07-06T21:34:28Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "LinkedIn video strategy outdoor brand thought leadership founder story 2026"
+    },
+    {
+      "id": "eae64e3722a4",
+      "platform": "linkedin",
+      "trend": "Specific defensible POV in short LinkedIn videos drives thought leadership for outdoor gear hunting brand founders July 2026",
+      "evidence": "\"The LinkedIn creators getting the most traction in 2026 share one quality: a specific, defensible point of view that tells an audience what you believe, and why. Implementing a video-first thought leadership strategy has become the definitive 'human verification' layer — Series B and C founders pivoting from ghostwritten articles to verified video presence to maintain trust with investors and talent.\" — istudiosmedia.com Video-First Thought Leadership 2026 + rosica.com LinkedIn Thought Leadership 2026 (corroborated)",
+      "source": "https://istudiosmedia.com/video-first-thought-leadership-on-linkedin/",
+      "firstSeen": "2026-07-06T21:34:28Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "LinkedIn video strategy outdoor brand thought leadership founder story 2026"
+    },
+    {
+      "id": "b4473cc17840",
+      "platform": "linkedin",
+      "trend": "Hybrid workflow high-production plus raw behind-scenes clips outperforming pure-polished content for outdoor brand LinkedIn presence 2026",
+      "evidence": "\"In 2026, the 'Hybrid Workflow' is most effective, with high-production studio content establishing authority and brand caliber, while occasional raw clips provide a 'behind-the-scenes' authenticity. Short, informal, talking-head clips from individual executives outperform polished brand productions.\" — istudiosmedia.com Video-First Thought Leadership on LinkedIn 2026",
+      "source": "https://istudiosmedia.com/video-first-thought-leadership-on-linkedin/",
+      "firstSeen": "2026-07-06T21:34:28Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_raw_bts_splice",
+      "rawQuery": "LinkedIn video strategy outdoor brand thought leadership founder story 2026"
+    }
+  ]
+}

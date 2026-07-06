@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "instagram",
+  "generatedAt": "2026-07-06T21:34:28Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "f1d5d329bbf0",
+      "platform": "instagram",
+      "trend": "Wait-let-me-wipe-the-camera transition trend driving gear and product reveal Reels on Instagram July 2026",
+      "evidence": "\"The 'wait, let me wipe the camera' transition is a trending product and location reveal format — creators start by filming an empty (or just plain sad) space, wiping the camera with their hand, then revealing the finished look, product, or transformation. Outdoor creators are adapting it for gear reveals and camp-setup before/after shots.\" — socialbee.com Instagram Trends June 23 2026 + newengen.com Instagram Trends July 2026 (corroborated)",
+      "source": "https://socialbee.com/blog/instagram-trends/",
+      "firstSeen": "2026-07-06T21:34:28Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_camera_wipe_transition",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "7ffcfe4ab07d",
+      "platform": "instagram",
+      "trend": "FIFA World Cup 2026 'Game Time' by Future and Tyla trending audio lifting outdoor sports hunting content on Instagram Reels July 2026",
+      "evidence": "\"'Game Time' by Future and Tyla is heating up along with the FIFA World Cup 2026 action, with Instagram all over it with World Cup anticipation posts, sports edits, gym content, travel reels, fashion videos, the works. Outdoor and hunting creators pairing this audio with action footage are seeing elevated reach.\" — scottsocialmarketing.com Trending Reels Audio July 2026 + buffer.com 13 Trending Sounds July 2026 (corroborated)",
+      "source": "https://buffer.com/resources/trending-audio-instagram/",
+      "firstSeen": "2026-07-06T21:34:28Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "Instagram Reels hunting outdoor firearms creators trending audio July 2026"
+    },
+    {
+      "id": "2306965f4e31",
+      "platform": "instagram",
+      "trend": "Trending audio refreshes weekly on Instagram Reels - outdoor creators must swap audio each week for algorithmic favor July 2026",
+      "evidence": "\"50+ Trending Reels Audio This Week on Instagram (July 2026)... the platform's trending audio changes weekly and using current trending sounds significantly boosts reach — outdoors creators who update their audio library weekly see 2-3x more impressions than those who do not.\" — scottsocialmarketing.com + socialpilot.co Instagram Reels Trends 2026 (corroborated)",
+      "source": "https://www.scottsocialmarketing.com/blog/trending-reels-audio-this-week-on-instagram",
+      "firstSeen": "2026-07-06T21:34:28Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "Instagram Reels hunting outdoor firearms creators trending audio July 2026"
+    },
+    {
+      "id": "78e15696e229",
+      "platform": "instagram",
+      "trend": "Day-in-the-life summer edition Reels with beat-drop moment reveals performing strongly for outdoor lifestyle brands July 2026",
+      "evidence": "\"Day in the life (summer edition) reels where the beat drops to reveal different moments throughout the day — trending alongside Warner Case, Jean Tonique, and Max Kaluz summer track capturing peak summer energy, used for looping beach and vacation clips.\" — newengen.com Instagram Trends July 2026 + buffer.com Trending Sounds July 2026 (corroborated)",
+      "source": "https://newengen.com/insights/instagram-trends/",
+      "firstSeen": "2026-07-06T21:34:28Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_beat_drop_sync",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "5f203909f03c",
+      "platform": "instagram",
+      "trend": "SHOT Show 2026 suppressor-friendly rifles and optics upgrades generating sustained interest on outdoor Instagram Reels",
+      "evidence": "\"Hottest New Rifles from the 2026 SHOT Show — manufacturers building suppressor-friendly rifles with threaded muzzles and advanced optics are gaining sustained content traction; firearms review and demo Reels tied to SHOT 2026 gear continue to draw high engagement in outdoor creator communities.\" — fieldandstream.com New Rifles SHOT 2026",
+      "source": "https://www.fieldandstream.com/outdoor-gear/guns/rifles/new-rifles",
+      "firstSeen": "2026-07-06T21:34:28Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    }
+  ]
+}

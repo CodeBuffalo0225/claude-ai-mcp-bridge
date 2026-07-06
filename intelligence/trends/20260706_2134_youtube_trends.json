@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "youtube",
+  "generatedAt": "2026-07-06T21:34:28Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "dec1147af722",
+      "platform": "youtube",
+      "trend": "Hook-first 3-second pattern interrupt drives 70%+ completion rate on hunting/outdoor Shorts July 2026",
+      "evidence": "\"Making YouTube Shorts go viral in 2026 requires hitting three algorithm signals in the first 3 seconds: a visual or text hook that stops the swipe, a clear topic match so the Shorts algorithm serves your content to the right seed audience, and a pacing that drives completion rates above 70%. What's working now is to start with something visually or audibly unexpected—an unusual camera angle, an unexpected action, or a sound that doesn't match the visual. Pattern interrupts work because they break the scroll autopilot.\" — influenceflow.io + prapermedia.com (corroborated)",
+      "source": "https://influenceflow.io/resources/youtube-shorts-and-long-form-video-strategy-the-complete-2026-creators-guide-1/",
+      "firstSeen": "2026-07-06T21:34:28Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_pattern_interrupt_hook",
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "c980c5dcd2d6",
+      "platform": "youtube",
+      "trend": "Fish-reveal and hunt-payoff hook format sustaining viral momentum for outdoor/fishing Shorts mid-2026",
+      "evidence": "\"Fishing Shorts performed extremely well in 2026, with short clips showing hook sets, fish reveals, or quick tips helping bring new viewers to long-form videos. Fishing videos that perform best usually include one clear hook: a challenge, a question, or a transformation. The lesson for creators: sell the feeling of the catch, not the technical details.\" — packapop.com Fishing YouTube Video Ideas 2026",
+      "source": "https://packapop.com/blogs/youtube-success-blog/fishing-youtube-video-ideas",
+      "firstSeen": "2026-07-06T21:34:28Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "YouTube Shorts hunting fishing outdoor creators viral hook format July 2026"
+    },
+    {
+      "id": "d35e7b294add",
+      "platform": "youtube",
+      "trend": "SHOT Show 2026 suppressor-friendly and smart optics gear demo Shorts sustaining viral traction in firearms content",
+      "evidence": "\"The two big trends in rifles at this year's SHOT show are manufacturers building new rifles to enhance performance at distance and to be suppressor friendly... hunters are probably going to notice threaded muzzles, more optics options, more fit adjustments, and more talk about making rifles easier on the ears without giving up field usefulness.\" — The Avid Outdoorsman + Field & Stream (corroborated)",
+      "source": "https://theavidoutdoorsman.com/shot-show-2026-reveals-the-gear-trends-hunters-will-see-everywhere-this-fall/",
+      "firstSeen": "2026-07-06T21:34:28Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "9e85cae01a20",
+      "platform": "youtube",
+      "trend": "Trending hashtag-and-format pairing driving discovery for niche outdoor Shorts July 2026",
+      "evidence": "\"60+ trending YouTube Shorts hashtags for viral success in 2026 — combining format trends with relevant hashtags increases reach for niche creators; outdoor and hunting hashtags are among the top-performing long-tail categories.\" — filmora.wondershare.com + elementor.com YouTube Shorts hashtag guides 2026 (corroborated)",
+      "source": "https://filmora.wondershare.com/youtube/youtube-shorts-hashtags.html",
+      "firstSeen": "2026-07-06T21:34:28Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "f71bbbaa8c81",
+      "platform": "youtube",
+      "trend": "Mute-optimized captions with bold first-frame text overlay essential for outdoor Shorts as 85% scroll silent July 2026",
+      "evidence": "\"In 2026, 85% of Shorts are watched without sound initially — captions aren't optional; they're essential for hook delivery and retention. A Short with no audio hook that still pulls retention will outperform a Short with a great verbal hook that no one hears.\" — miraflow.ai YouTube Shorts Best Practices 2026 + prapermedia.com (corroborated)",
+      "source": "https://miraflow.ai/blog/youtube-shorts-best-practices-2026-complete-guide",
+      "firstSeen": "2026-07-06T21:34:28Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_auto_first_frame_caption",
+      "rawQuery": "YouTube Shorts hunting fishing outdoor creators viral hook format July 2026"
+    }
+  ]
+}

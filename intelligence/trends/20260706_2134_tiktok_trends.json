@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "tiktok",
+  "generatedAt": "2026-07-06T21:34:28Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "e9deb14fe534",
+      "platform": "tiktok",
+      "trend": "70%+ completion rate required for TikTok virality - outdoor/hunting creators must front-load payoff in first 3 seconds July 2026",
+      "evidence": "\"You need 70%+ completion rate to go viral in 2026, which is up from 50% in 2024, meaning your hooks need to be stronger. As of July 2026, the follower-first distribution model is in place where followers act as the test audience, with watch time, rewatch rate, original audio, and search relevance carrying the most weight.\" — socialync.io TikTok Algorithm 2026 July Update + unil.ink TikTok Trends 2026 (corroborated)",
+      "source": "https://www.socialync.io/blog/tiktok-algorithm-2026-what-works-now",
+      "firstSeen": "2026-07-06T21:34:28Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_completion_rate_optimizer",
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "dd2b408942b7",
+      "platform": "tiktok",
+      "trend": "Anime-style reveal transition format spreading to outdoor gear unboxing and product reveals on TikTok July 2026",
+      "evidence": "\"The dominant trends include the 'food jutsu' anime-style reveal — borrowing summoning hand signs from Jujutsu Kaisen with the payoff being food or drinks — spreading to product and gear reveal formats across lifestyle niches including outdoor and hunting creators.\" — radaar.io July's Hottest TikTok Trends 2026",
+      "source": "https://www.radaar.io/resources-121/blog-388/are-you-ready-to-unlock-july-s-hottest-tiktok-trends-and-discover-what-will-fuel-viral-moments-this-summer-18910/",
+      "firstSeen": "2026-07-06T21:34:28Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_anime_reveal_transition",
+      "rawQuery": "TikTok hunting outdoor creators viral content strategy July 2026 #hunting"
+    },
+    {
+      "id": "08a31e509053",
+      "platform": "tiktok",
+      "trend": "72-hour peak-to-death trend cycle demands hunting creators post at trend emergence (6am-noon window) or skip July 2026",
+      "evidence": "\"A sound or format that took three weeks to peak in 2022 now peaks in 72 hours and is dead in five days. Creators must spot a trend at 6 a.m., post by noon, or skip it entirely. Being among the first 100 creators to execute a trend generates more distribution than being among the first 10,000.\" — socialync.io TikTok Algorithm 2026 July Update",
+      "source": "https://www.socialync.io/blog/tiktok-algorithm-2026-what-works-now",
+      "firstSeen": "2026-07-06T21:34:28Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "TikTok hunting outdoor creators viral content strategy July 2026 #hunting"
+    },
+    {
+      "id": "5ac3379012d2",
+      "platform": "tiktok",
+      "trend": "Outdoor and lifestyle content outperforming all other TikTok categories in summer 2026 - prime window for hunting/fishing creators",
+      "evidence": "\"Outdoor, travel, and lifestyle content is outperforming everything else in summer 2026. For creators in the hunting niche specifically, this is a particularly favorable time — strategy and consistency are everything; treat it like a job, do your research, be consistent, and seek out advice from other creators.\" — radaar.io July 2026 TikTok Trends + tiktok.com Outdoor Content Creator guide (corroborated)",
+      "source": "https://www.radaar.io/resources-121/blog-388/are-you-ready-to-unlock-july-s-hottest-tiktok-trends-and-discover-what-will-fuel-viral-moments-this-summer-18910/",
+      "firstSeen": "2026-07-06T21:34:28Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "4c9c66d10126",
+      "platform": "tiktok",
+      "trend": "96% of TikTok post reach in first 10 days - watch time, rewatch rate, and original audio weighted highest July 2026 algorithm",
+      "evidence": "\"96% of a post's total reach happens in the first 10 days, emphasizing the importance of rapid distribution once content is published. Watch time, rewatch rate, original audio, and search relevance carry the most weight in the July 2026 algorithm update.\" — socialync.io + metricool.com TikTok Content Strategy Guide 2026 (corroborated)",
+      "source": "https://metricool.com/tiktok-strategy/",
+      "firstSeen": "2026-07-06T21:34:28Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_rewatch_loop_outro",
+      "rawQuery": "TikTok hunting outdoor creators viral content strategy July 2026 #hunting"
+    }
+  ]
+}
