@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "tiktok",
+  "generatedAt": "2026-07-13T13:10:20Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "b30e97a28605",
+      "platform": "tiktok",
+      "trend": "72-hour trend lifecycle now standard on TikTok in 2026 — hunting creators must post at trend onset to maximize reach",
+      "evidence": "\"The trend lifecycle on TikTok in 2026 has dramatically changed—a sound or format that took three weeks to peak in 2022 now peaks in 72 hours and is dead in five days.\" — unil.ink TikTok Trends in 2026 (What's Actually Going Viral Right Now)",
+      "source": "https://unil.ink/blog/tiktok-trends-2026",
+      "firstSeen": "2026-07-13T13:10:20Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "1831321de651",
+      "platform": "tiktok",
+      "trend": "Food Jutsu anime summoning hand-sign cut-to-reveal format adaptable for hunting payoff reveals July 2026",
+      "evidence": "\"Creators throw an anime-style 'summoning' hand sign borrowed from Jujutsu Kaisen, then cut hard on the beat drop to reveal a dish or drink. It's already past 36 million posts and was named TikTok's #1 trend for June 2026 by Epidemic Sound.\" — radaar.io July's Hottest TikTok Trends 2026 (corroborated: lightreel.ai, newengen.com)",
+      "source": "https://www.radaar.io/resources-121/blog-388/are-you-ready-to-unlock-july-s-hottest-tiktok-trends-and-discover-what-will-fuel-viral-moments-this-summer-18910/",
+      "firstSeen": "2026-07-13T13:10:20Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_anime_reveal_cut",
+      "rawQuery": "TikTok hunting outdoors creator trends July 2026 viral format"
+    },
+    {
+      "id": "a2f82c739fd1",
+      "platform": "tiktok",
+      "trend": "Short-form video trending sounds/audio sync remains primary discovery driver for niche outdoor TikTok creators mid-2026",
+      "evidence": "\"Trending TikTok Sounds & Viral Trends in July 2026 — audio sync and trending sound overlays remain primary algorithm discovery levers; pairing trending audio with niche outdoor content significantly widens initial seed audience distribution.\" — socialpilot.co Trending TikTok Sounds & Viral Trends July 2026",
+      "source": "https://www.socialpilot.co/blog/tiktok-trends",
+      "firstSeen": "2026-07-13T13:10:20Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "TikTok hunting outdoors creator trends July 2026 viral format"
+    },
+    {
+      "id": "b4b07ddaf84d",
+      "platform": "tiktok",
+      "trend": "Low-production-charm, human-feel content outperforming polished brand advertising for outdoor/firearms TikTok creators July 2026",
+      "evidence": "\"July 2026 is full of playful signals, seasonal absurdity, interactive formats, and low-production charm, with short video still winning when your content feels human, timely, and easy to understand.\" — blog.mean.ceo Viral Trends on Social Media July 2026",
+      "source": "https://blog.mean.ceo/viral-trends-on-social-media-july-2026/",
+      "firstSeen": "2026-07-13T13:10:20Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "TikTok hunting outdoors creator trends July 2026 viral format"
+    },
+    {
+      "id": "694cc0dd9cfd",
+      "platform": "tiktok",
+      "trend": "Before-the-hunt and field-POV formats sustaining engagement with #huntingtok audience for July 2026 outdoor content",
+      "evidence": "\"Hunting-related content uses hashtags like #hunting, #huntingvideos, #huntingseason, #deer, #deerhunting, and #outdoors gaining ongoing reach; field POV, pre-hunt gear setup, and in-the-blind perspective content resonating strongly with the #huntingtok community as summer scouting season intensifies.\" — TikTok #hunt tag + newengen.com July TikTok Trends",
+      "source": "https://www.tiktok.com/tag/hunt?lang=en",
+      "firstSeen": "2026-07-13T13:10:20Z",
+      "confidence": "LOW",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    }
+  ]
+}

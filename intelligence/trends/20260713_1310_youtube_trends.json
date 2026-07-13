@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "youtube",
+  "generatedAt": "2026-07-13T13:10:20Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "110516034135",
+      "platform": "youtube",
+      "trend": "Hook-first 3-second algorithm pattern: completion rate above 70% is key metric for hunting/outdoor Shorts July 2026",
+      "evidence": "\"Making YouTube Shorts go viral in 2026 requires hitting three algorithm signals in the first 3 seconds: a visual or text hook that stops the swipe, a clear topic match so the Shorts algorithm serves your content to the right seed audience, and a pacing that drives completion rates above 70%.\" — prapermedia.com + influenceflow.io (corroborated)",
+      "source": "https://prapermedia.com/blog/make-viral-youtube-shorts/",
+      "firstSeen": "2026-07-13T13:10:20Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_pattern_interrupt_hook",
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "333cf32df016",
+      "platform": "youtube",
+      "trend": "Quick educational how-to under 60s with single problem/solution dominant format for outdoor skills Shorts mid-July 2026",
+      "evidence": "\"Quick educational how-tos with one problem and one solution under 60 seconds perform well, with financial, productivity, and fitness micro-tips consistently outperforming general lifestyle content. This applies to hunting tips and outdoor skills content.\" — teleprompter.com Trending YouTube Shorts 2026",
+      "source": "https://www.teleprompter.com/blog/trending-youtube-shorts",
+      "firstSeen": "2026-07-13T13:10:20Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "trending YouTube Shorts hunting outdoor creators format hooks July 2026"
+    },
+    {
+      "id": "9b9a81657834",
+      "platform": "youtube",
+      "trend": "SHOT Show 2026 suppressor-friendly rifle and smart optics gear content gaining outdoor YouTube Shorts traction",
+      "evidence": "\"The two big trends in rifles at this year's SHOT show are manufacturers building new rifles to enhance performance at distance and to be suppressor friendly... hunters are probably going to notice threaded muzzles, more optics options, more fit adjustments, and more talk about making rifles easier on the ears without giving up field usefulness.\" — The Avid Outdoorsman (corroborated: Field & Stream, Houston Safari Club)",
+      "source": "https://theavidoutdoorsman.com/shot-show-2026-reveals-the-gear-trends-hunters-will-see-everywhere-this-fall/",
+      "firstSeen": "2026-07-13T13:10:20Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "3de2d1099480",
+      "platform": "youtube",
+      "trend": "Bold first-frame text overlay essential for outdoor Shorts as majority of viewers scroll mute July 2026",
+      "evidence": "\"In 2026, 85% of Shorts are watched without sound initially — captions aren't optional; they're essential for hook delivery and retention. A Short with no audio hook that still pulls retention will outperform a Short with a great verbal hook that no one hears.\" — miraflow.ai YouTube Shorts Best Practices 2026 (corroborated: prapermedia.com)",
+      "source": "https://miraflow.ai/blog/youtube-shorts-best-practices-2026-complete-guide",
+      "firstSeen": "2026-07-13T13:10:20Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_auto_first_frame_caption",
+      "rawQuery": "trending YouTube Shorts hunting outdoor creators format hooks July 2026"
+    },
+    {
+      "id": "e58b6e5c02b5",
+      "platform": "youtube",
+      "trend": "Before/after transformation format and gear-reveal hook sustaining strong performance for firearms and outdoor Shorts July 2026",
+      "evidence": "\"YouTube Shorts hooks include showing before/after or surprising result, using trending sounds immediately, and adding bold text overlay in the first frame. Shorts hook techniques include starting with movement or visual change (not static), asking a question the Short answers.\" — conbersa.ai Best YouTube Shorts Hooks and Formats in 2026",
+      "source": "https://www.conbersa.ai/learn/best-youtube-shorts-hooks",
+      "firstSeen": "2026-07-13T13:10:20Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_before_after_reveal",
+      "rawQuery": "trending YouTube Shorts hunting outdoor creators format hooks July 2026"
+    }
+  ]
+}

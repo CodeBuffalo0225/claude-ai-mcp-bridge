@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "instagram",
+  "generatedAt": "2026-07-13T13:10:20Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "589cc5a6aab0",
+      "platform": "instagram",
+      "trend": "Niche-specific Reels consistently outperforming broad content for hunting/outdoor creators; strong algorithm targeting in 2026",
+      "evidence": "\"Niche-specific content outperforming broad posts — niche-specific Reels earn higher save-rates and share-rates in 2026, driving 3x reach compared to general lifestyle content.\" — later.com Top Instagram Reels Trends to Try in 2026 + socialbee.com Instagram Trends July 8 2026 (corroborated)",
+      "source": "https://later.com/blog/instagram-reels-trends/",
+      "firstSeen": "2026-07-13T13:10:20Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "d4324ecc778c",
+      "platform": "instagram",
+      "trend": "Wait-let-me-wipe-the-camera reveal transition driving viral discovery for gear/location reveals on Instagram Reels July 2026",
+      "evidence": "\"The 'wait, let me wipe the camera' transition for product and location reveals, which originated with @james.and.antler, a Brisbane coffee venue — this format is now the top-performing narrative hook for reveal-style Reels in July 2026 and is highly adaptable for firearms/gear unboxing or blind-reveal outdoor content.\" — newengen.com Instagram Trends July 2026",
+      "source": "https://newengen.com/insights/instagram-trends/",
+      "firstSeen": "2026-07-13T13:10:20Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_camera_wipe_reveal",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "c03d5dce0683",
+      "platform": "instagram",
+      "trend": "SHOT Show 2026 quieter rifles and tactical crossover gear content sustaining Instagram Reels traction for firearms creators",
+      "evidence": "\"The hunting market is leaning harder into quieter rifles, more threaded barrels, more optics choices, more adjustable fit, and more crossover gear that blends old-school hunting use with features that used to feel more tactical or competition-driven.\" — The Avid Outdoorsman SHOT Show 2026 (corroborated: Houston Safari Club 5 Hottest Hunting Gear Trends 2026)",
+      "source": "https://theavidoutdoorsman.com/shot-show-2026-reveals-the-gear-trends-hunters-will-see-everywhere-this-fall/",
+      "firstSeen": "2026-07-13T13:10:20Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "f6d8c5cf0709",
+      "platform": "instagram",
+      "trend": "Series-based content building long-term audience growth for outdoor Instagram Reels as one-off viral chasing loses effectiveness mid-2026",
+      "evidence": "\"Series-based content building long-term audience growth; the latest Instagram trends (July 8, 2026) show creators doubling down on episodic short-form series rather than standalone viral moments — episodic outdoor content like 'week before the hunt' or 'gear series' outperforms one-off posts.\" — socialbee.com The latest Instagram trends July 8 2026",
+      "source": "https://socialbee.com/blog/instagram-trends/",
+      "firstSeen": "2026-07-13T13:10:20Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "51b78ce16e42",
+      "platform": "instagram",
+      "trend": "Hallelujah gratitude/listing trend adaptable for gear-love and season-highlights hunter Reels July 2026",
+      "evidence": "\"The 'hallelujah' trend, which involves listing things you love or are grateful for and has spread widely due to its positivity and flexibility — adaptable to any niche including outdoor/hunting 'things I love about deer season' or 'my top 5 pieces of kit' formats.\" — lightreel.ai What Is Trending on Instagram July 2026",
+      "source": "https://lightreel.ai/blogs/whats-trending-on-instagram",
+      "firstSeen": "2026-07-13T13:10:20Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_list_reveal_sequence",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    }
+  ]
+}

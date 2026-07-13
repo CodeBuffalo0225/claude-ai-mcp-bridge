@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "linkedin",
+  "generatedAt": "2026-07-13T13:10:20Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "8fea575cc57f",
+      "platform": "linkedin",
+      "trend": "LinkedIn video engagement up 34% YoY; outdoor/firearms brand founders seeing 3x return on short-form professional video vs text 2026",
+      "evidence": "\"LinkedIn saw a 34% jump in video engagement compared to last year. LinkedIn expanded its short-form video feed and analytics tools in late 2025 while growing its creator accelerator program... Benchmark Email reports that LinkedIn video posts earn three times the engagement of text-only posts. That is a major signal for founders selling to professional audiences.\" — linkedin.com B2B Marketing Insights 2026 + prodshort.com (corroborated)",
+      "source": "https://www.linkedin.com/business/marketing/blog/trends-tips/b2b-insights-video-controls-conversation",
+      "firstSeen": "2026-07-13T13:10:20Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "629c47e68fb4",
+      "platform": "linkedin",
+      "trend": "Serialized behind-the-scenes brand video series outperforming polished brand ads for outdoor small businesses on LinkedIn July 2026",
+      "evidence": "\"Users will see a new video trend gain momentum in 2026: serialized content. Many businesses are shifting toward publishing video series that typically fall into one of two formats: Giving viewers a quick, behind-the-scenes look at the people behind the brand to showcase day-to-day operations and workplace culture or featuring people having unedited discussions about topics that matter to the brand.\" — sbdc.uh.edu 2026 Social Media Trends Small Businesses (corroborated: sproutsocial.com)",
+      "source": "https://www.sbdc.uh.edu/sbdc/2026-social-media-trends-small-business.asp",
+      "firstSeen": "2026-07-13T13:10:20Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "5bb8abbe5662",
+      "platform": "linkedin",
+      "trend": "Authentic unscripted B2B talking-head video outperforming polished creative for outdoor gear brand professional audience LinkedIn 2026",
+      "evidence": "\"Content that comes from real work outperforms scripted talking-head videos. Businesses that grow on short-form video successfully in 2026 typically put a human face to the brand, show behind-the-scenes of how decisions get made, and respond to customer questions with video; this content consistently outperforms polished brand advertising because it feels real.\" — slateteams.com Social Media Trends 2026",
+      "source": "https://slateteams.com/blog/social-media-trends-2026",
+      "firstSeen": "2026-07-13T13:10:20Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "53c60f9e27a2",
+      "platform": "linkedin",
+      "trend": "Community-resonance over viral reach shift driving outdoor brands toward LinkedIn niche engagement content mid-2026",
+      "evidence": "\"By 2026, chasing one-off viral hits is less effective than building deep resonance in smaller, more engaged communities. A desire to feel like a part of something bigger than themselves will drive users toward brands that prioritize resonance over reach.\" — iqfluence.io Social Media Trends 2026",
+      "source": "https://iqfluence.io/public/blog/social-trends",
+      "firstSeen": "2026-07-13T13:10:20Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "3f9d7e96aa49",
+      "platform": "linkedin",
+      "trend": "Vibe Coding AI-skills showcase trend on LinkedIn 2026 adaptable for outdoor founders showing tech-forward brand operations",
+      "evidence": "\"LinkedIn introduced 'Vibe Coding' to showcase AI skills and continued to emphasize short-form video for career-focused content in 2026; founders and brand owners using short-form video to show AI-enhanced workflows are seeing strong engagement from professional audiences.\" — blog.mean.ceo Short-Form Video Marketing Trends July 2026 + teleprompterpro.com 2026 Content Trends",
+      "source": "https://blog.mean.ceo/short-form-video-marketing-trends-july-2026/",
+      "firstSeen": "2026-07-13T13:10:20Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    }
+  ]
+}
