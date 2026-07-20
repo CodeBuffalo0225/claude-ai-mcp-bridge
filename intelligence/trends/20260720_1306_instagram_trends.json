@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "instagram",
+  "generatedAt": "2026-07-20T13:06:00Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "aeac3387bb59",
+      "platform": "instagram",
+      "trend": "Camera POV innovations overhead shots and reveal moves dominating first-2-second hook for outdoor Reels July 2026",
+      "evidence": "\"Camera POV innovation — angles, overhead shots, and reveal moves — are creating scroll-stop moments in July 2026, with the first two seconds deciding everything. Outdoor and hunting creators using dramatic angle changes in the first 2 seconds see significantly higher initial hook retention than static opening shots.\" — newengen.com Instagram Trends July 2026 Updated Weekly + later.com Top Instagram Reels Trends 2026 (corroborated)",
+      "source": "https://newengen.com/insights/instagram-trends/",
+      "firstSeen": "2026-07-20T13:06:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_pov_angle_hook_cut",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "a588bf267b5d",
+      "platform": "instagram",
+      "trend": "Wait let me wipe the camera reveal transition remains top-performing format for gear product reveals on Reels July 2026",
+      "evidence": "\"The 'wait, let me wipe the camera' transition for product and location reveals is now the top-performing narrative hook for reveal-style Reels in July 2026. Highly adaptable for firearms and gear unboxing or blind-reveal outdoor content — the format originated with @james.and.antler and is now natively understood by the outdoor audience on Reels.\" — newengen.com Instagram Trends July 2026",
+      "source": "https://newengen.com/insights/instagram-trends/",
+      "firstSeen": "2026-07-20T13:06:00Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_camera_wipe_reveal",
+      "rawQuery": "Instagram Reels trending formats outdoor hunting July 2026 hooks"
+    },
+    {
+      "id": "d6e9f8a762d5",
+      "platform": "instagram",
+      "trend": "Emotionally specific and utility-specific hooks replacing vague curiosity hooks for outdoor hunting Instagram Reels July 2026",
+      "evidence": "\"The best hooks this week are not vague curiosity hooks — they are emotionally specific, socially specific, or utility specific. Hooks that name a feeling ('the moment you hear the first gobble of the season') or a specific utility ('how to zero a scope in 3 shots') outperform vague 'you won't believe this' openers for the hunting audience in July 2026.\" — insense.pro 40+ Must-Try Instagram Reel Hooks 2026 + taggbox.com 100+ Best Instagram Hooks 2026 (corroborated)",
+      "source": "https://insense.pro/blog/instagram-reel-hooks",
+      "firstSeen": "2026-07-20T13:06:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "Instagram Reels trending formats outdoor hunting July 2026 hooks"
+    },
+    {
+      "id": "6158e4fd91b0",
+      "platform": "instagram",
+      "trend": "Summer routine repeated-visual-hook trend adaptable for day-in-the-field hunting content on Reels July 2026",
+      "evidence": "\"The summer routines trend uses a repeating visual hook several times, with creators showing what their ideal summer day looks like using short, carefully selected clips. For hunting/outdoor creators, this translates directly to 'a day in my deer stand' or 'my morning turkey hunt routine' formats that reward habitual viewers.\" — newengen.com Instagram Trends July 2026 + lightreel.ai Trending on Instagram July 2026 (corroborated)",
+      "source": "https://newengen.com/insights/instagram-trends/",
+      "firstSeen": "2026-07-20T13:06:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_routine_loop_sequence",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "0bcf8a8c69d7",
+      "platform": "instagram",
+      "trend": "Series-based episodic content outperforming one-off viral posts for outdoor brands Instagram Reels mid-2026",
+      "evidence": "\"The latest Instagram trends (July 8, 2026) show creators doubling down on episodic short-form series rather than standalone viral moments. Outdoor brands publishing series — e.g., 'Week 1 of elk scouting', 'Week 2' — are seeing 3x return-viewer rates and higher follower conversion compared to one-off viral-chasing content.\" — socialbee.com Latest Instagram Trends July 2026 + sproutsocial.com 20 Instagram Trends 2026 (corroborated)",
+      "source": "https://socialbee.com/blog/instagram-trends/",
+      "firstSeen": "2026-07-20T13:06:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    }
+  ]
+}

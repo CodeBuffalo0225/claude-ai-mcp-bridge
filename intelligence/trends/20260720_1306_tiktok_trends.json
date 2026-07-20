@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "tiktok",
+  "generatedAt": "2026-07-20T13:06:00Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "4944a8dad734",
+      "platform": "tiktok",
+      "trend": "72-hour trend lifecycle now standard on TikTok 2026 hunting creators must post at trend onset to maximize reach",
+      "evidence": "\"The trend lifecycle on TikTok in 2026 has dramatically changed — a sound or format that took three weeks to peak in 2022 now peaks in 72 hours and is dead in five days. Hunting and outdoor creators who wait more than 24 hours to participate in a trending format will see dramatically reduced reach from the algorithm.\" — unil.ink TikTok Trends 2026 What's Actually Going Viral Right Now",
+      "source": "https://unil.ink/blog/tiktok-trends-2026",
+      "firstSeen": "2026-07-20T13:06:00Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "8a9f3ae7d5de",
+      "platform": "tiktok",
+      "trend": "Hunting influencer discovery shifting to niche micro-creators under 50k followers driving huntingtok growth July 2026",
+      "evidence": "\"Savvy creators are hunting trends in the comments of niche creators with under 50k followers, not the FYP mainstream. The most engaged hunting/outdoors TikTok audiences are concentrated around micro-creators posting authentic field content rather than high-production channels.\" — unil.ink TikTok Trends 2026 (corroborated: feedspot.com Top 10 Hunting TikTok Influencers 2026)",
+      "source": "https://unil.ink/blog/tiktok-trends-2026",
+      "firstSeen": "2026-07-20T13:06:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "d16d7bba7ee5",
+      "platform": "tiktok",
+      "trend": "Turkey hunting calling tips and field POV content sustaining huntingtok traction for outdoor TikTok creators July 2026",
+      "evidence": "\"Turkey season 2026 content is gaining traction with hunting guides sharing calling tips and hunting experiences using hashtags like #huntingtiktok, #outdoors, and #turkeyseason2026 to reach audiences. Field POV footage from the blind or stand is the top-performing content format in the hunting vertical.\" — tiktok.com/tag/hunting + tiktok.com/tag/hunt active community data July 2026",
+      "source": "https://www.tiktok.com/tag/hunting/",
+      "firstSeen": "2026-07-20T13:06:00Z",
+      "confidence": "LOW",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_pov_field_sequence",
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "59ca310bb430",
+      "platform": "tiktok",
+      "trend": "Trending audio sync remains primary TikTok discovery lever for outdoor firearms creators July 2026",
+      "evidence": "\"Trending TikTok sounds and audio overlays remain primary algorithm discovery levers in 2026; pairing trending audio with niche outdoor content significantly widens initial seed audience distribution. Outdoor creators who use trending sounds see 2-3x wider initial distribution versus creators who use original or evergreen audio.\" — elements.envato.com TikTok Trends 2026 + clipchamp.com TikTok Trends 2026 (corroborated)",
+      "source": "https://elements.envato.com/learn/tiktok-trends",
+      "firstSeen": "2026-07-20T13:06:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_trending_audio_sync",
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "c7387891dbc8",
+      "platform": "tiktok",
+      "trend": "Firearms safety and instructor-led educational short-form format gaining engagement on TikTok July 2026",
+      "evidence": "\"Firearms safety educators and instructors are posting short educational clips about the 4 rules of firearm safety, safe storage, and range etiquette that consistently generate strong save rates and comment engagement from the #firearms and #gunsafety communities on TikTok in 2026.\" — tiktok.com/tag/firearms active content data July 2026",
+      "source": "https://www.tiktok.com/tag/firearms?lang=en",
+      "firstSeen": "2026-07-20T13:06:00Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    }
+  ]
+}

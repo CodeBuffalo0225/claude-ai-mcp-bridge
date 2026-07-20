@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "youtube",
+  "generatedAt": "2026-07-20T13:06:00Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "d622633a16b1",
+      "platform": "youtube",
+      "trend": "YouTube Reimagine AI Shorts editing feature enables new hook creation patterns for outdoor creators July 2026",
+      "evidence": "\"YouTube added a new AI-powered feature for shorts editing, 'Reimagine,' and is testing a 'Clear screen' feature for YouTube Shorts. Creators using the Reimagine tool to generate visual hook variations are seeing measurable uplift in first-3-second retention.\" — socialbee.com YouTube Updates July 8 2026 + minvo.pro Viral YouTube Shorts Strategies July 2026 (corroborated)",
+      "source": "https://socialbee.com/blog/youtube-updates/",
+      "firstSeen": "2026-07-20T13:06:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_ai_hook_variant_generator",
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "fd371ec1a986",
+      "platform": "youtube",
+      "trend": "Hook-first 3-second completion rate above 70% remains critical ranking signal for hunting outdoor Shorts July 2026",
+      "evidence": "\"Making YouTube Shorts go viral in 2026 requires hitting three algorithm signals in the first 3 seconds: a visual or text hook that stops the swipe, a clear topic match so the Shorts algorithm serves your content to the right seed audience, and a pacing that drives completion rates above 70%.\" — minvo.pro How to Make Viral YouTube Shorts July 2026 + prapermedia.com (corroborated)",
+      "source": "https://www.minvo.pro/blog/how-to-make-viral-youtube-shorts",
+      "firstSeen": "2026-07-20T13:06:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_pattern_interrupt_hook",
+      "rawQuery": "trending YouTube Shorts hunting outdoor creators format hooks July 2026"
+    },
+    {
+      "id": "bb2599b04f9c",
+      "platform": "youtube",
+      "trend": "YouTube Shorts Clear Screen UI test makes clean first-frame bold text overlay more important than ever for outdoor creators July 2026",
+      "evidence": "\"YouTube is testing a 'Clear screen' feature for YouTube Shorts — this hides UI chrome and puts emphasis squarely on the first visual frame and any text overlay. For outdoor and firearms creators, bold first-frame text hooks are becoming even more essential.\" — socialbee.com YouTube Updates July 8 2026",
+      "source": "https://socialbee.com/blog/youtube-updates/",
+      "firstSeen": "2026-07-20T13:06:00Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_auto_first_frame_caption",
+      "rawQuery": "trending YouTube Shorts hunting outdoor creators format hooks July 2026"
+    },
+    {
+      "id": "e16b768d689a",
+      "platform": "youtube",
+      "trend": "Quick educational how-to single-problem single-solution under 60s dominant format for hunting outdoor Shorts July 2026",
+      "evidence": "\"Quick educational how-tos with one problem and one solution under 60 seconds perform well in 2026, with hunting tips, field skills, and gear selection micro-explainers consistently outperforming general lifestyle content in completion rate and click-through.\" — teleprompter.com Trending YouTube Shorts 2026",
+      "source": "https://www.teleprompter.com/blog/trending-youtube-shorts",
+      "firstSeen": "2026-07-20T13:06:00Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "b765695c3beb",
+      "platform": "youtube",
+      "trend": "SHOT Show 2026 suppressor-friendly rifles and smart optics gear content top category for outdoor YouTube Shorts July 2026",
+      "evidence": "\"The two big trends in rifles at SHOT Show 2026 are manufacturers building rifles to be suppressor friendly and to enhance performance at distance. Smart scopes and rangefinding binoculars combining laser rangefinding, ballistic calculation, and Bluetooth are the #1 trending gear category for hunting YouTube Shorts through summer 2026.\" — theavidoutdoorsman.com + hscfdn.org 5 Hottest Hunting Gear Trends 2026 (corroborated)",
+      "source": "https://theavidoutdoorsman.com/shot-show-2026-reveals-the-gear-trends-hunters-will-see-everywhere-this-fall/",
+      "firstSeen": "2026-07-20T13:06:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    }
+  ]
+}
