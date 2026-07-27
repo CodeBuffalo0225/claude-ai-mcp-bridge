@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "youtube",
+  "generatedAt": "2026-07-27T13:10:32Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "c1a8e1c43706",
+      "platform": "youtube",
+      "trend": "YouTube Shorts algorithm kills a Short not hitting performance threshold in first 30-60 minutes critical for outdoor niche creators July 2026",
+      "evidence": "\"If your Short does not hit a certain performance threshold in the first 30 to 60 minutes, YouTube basically stops pushing it. This represents a significant shift — outdoor and hunting creators must front-load engagement triggers (hook, CTA, pattern interrupt) to survive the initial push window.\" — miraflow.ai How the YouTube Algorithm Decides Who Sees Your Shorts in 2026 + learnwithparth.com YouTube Shorts Algorithm Update 2026 (corroborated)",
+      "source": "https://miraflow.ai/blog/how-youtube-algorithm-decides-who-sees-your-shorts-2026",
+      "firstSeen": "2026-07-27T13:10:32Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_urgency_hook_amplifier",
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "bfc369798e16",
+      "platform": "youtube",
+      "trend": "YouTube AI filter suppresses recycled hooks and formats outdoor creators must use unique angles per Short July 2026",
+      "evidence": "\"YouTube has rolled out an AI filter that detects if your content is too similar to what you have already posted — or too similar to what is already trending, suppressing recycled formats and hooks. For hunting and outdoor creators posting similar field footage, this means varying the opening angle, text overlay, and audio each time to avoid algorithmic suppression.\" — outlierkit.com YouTube Algorithm Updates 2026 Every Confirmed Change Explained",
+      "source": "https://outlierkit.com/resources/youtube-algorithm-updates/",
+      "firstSeen": "2026-07-27T13:10:32Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "YouTube Shorts algorithm update July 2026 trending short-form video outdoor niche"
+    },
+    {
+      "id": "312f5e7d0dfd",
+      "platform": "youtube",
+      "trend": "Saves-to-playlist now heavily weighted bridge metric on YouTube Shorts outdoor creators should direct viewers to playlists July 2026",
+      "evidence": "\"The bridge metric YouTube cares most about in 2026 is engagement that bridges viewers to long-form content. Saves to playlists are heavily weighted intent signals. Outdoor creators who include a 'save this to your hunting tips playlist' CTA in their Shorts caption or voiceover see measurably higher algorithmic amplification.\" — likes.io YouTube Shorts Algorithm 2026 Why It's Different + socialbee.com How Does the YouTube Algorithm Work in 2026 (corroborated)",
+      "source": "https://likes.io/blog/youtube-shorts-algorithm-2026",
+      "firstSeen": "2026-07-27T13:10:32Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "YouTube Shorts algorithm update July 2026 trending short-form video outdoor niche"
+    },
+    {
+      "id": "9560ade6c6f4",
+      "platform": "youtube",
+      "trend": "Quick DIY tutorials and before-vs-after outdoor format dominating Shorts completion rates July 2026",
+      "evidence": "\"The best Shorts in 2026 follow repeatable formats that hold attention fast: day-in-the-life mini vlogs, food challenges, dance to trending audio, quick DIY tutorials, and short explainers. For outdoor creators specifically, proven formats include 'Before vs. After,' 'Quick Tips,' 'POV Skits,' 'Myth Busting,' and 'Trending Challenge Variations.'\" — youtubetoolshub.com 100 YouTube Shorts Ideas That Go Viral in 2026 + teleprompter.com Trending YouTube Shorts 2026 (corroborated)",
+      "source": "https://www.youtubetoolshub.com/blog/youtube-shorts-ideas-2026",
+      "firstSeen": "2026-07-27T13:10:32Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_before_after_cut",
+      "rawQuery": "YouTube Shorts hunting outdoor creators trending formats July 2026 hooks algorithm"
+    },
+    {
+      "id": "9dfe4014c604",
+      "platform": "youtube",
+      "trend": "Viral attention starting short then expanding outdoor YouTube Shorts fueling longer reaction commentary video growth July 2026",
+      "evidence": "\"July 2026 signals show viral attention often starts short, then expands into reactions, commentary, and explainers. Creators who publish an authoritative Short on a hunting or gear topic then follow up with a long-form reaction or deep-dive see compound subscriber growth — the Short is the seed, the long-form is the harvest.\" — blog.mean.ceo Viral YouTube Video Trends July 2026 STARTUP EDITION",
+      "source": "https://blog.mean.ceo/viral-youtube-video-trends-july-2026/",
+      "firstSeen": "2026-07-27T13:10:32Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "tiktok",
+  "generatedAt": "2026-07-27T13:10:32Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "1ee2dc869154",
+      "platform": "tiktok",
+      "trend": "Food Jutsu anime-style beat-drop reveal cut format adaptable for hunting gear and harvest reveal TikTok July 2026",
+      "evidence": "\"Creators throw an anime-style 'summoning' hand sign borrowed from Jujutsu Kaisen, then cut hard on the beat drop to reveal a dish or drink as if it appeared from nowhere, with over 36 million posts already. The format is highly adaptable for hunting/outdoor creators — gear reveal, harvest reveal, or trophy reveal on the beat drop drives massive engagement.\" — newengen.com July 2026 TikTok Trends What's Viral This Month + influenceflow.io Current TikTok Trends July 2026 (corroborated)",
+      "source": "https://newengen.com/insights/july-tiktok-trends/",
+      "firstSeen": "2026-07-27T13:10:32Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_beat_drop_reveal_cut",
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators July 2026"
+    },
+    {
+      "id": "cb8729f85601",
+      "platform": "tiktok",
+      "trend": "TikTok niche community deep dives gaining traction huntingtok micro-creator content driving authenticity signals July 2026",
+      "evidence": "\"Current TikTok trends in July 2026 include viral sounds, niche community deep dives, relatable skits, and AR filters. Niche community deep-dive content from micro-creators under 50k followers is outperforming broadcast content in engaged-view metrics. HuntingTok micro-creators posting deep-dive field lore, gear breakdowns, and behind-the-scenes scouting footage are seeing algorithmic favorability.\" — influenceflow.io Current TikTok Trends July 2026 You Can't Miss + radaar.io July's Hottest TikTok Trends 2026 (corroborated)",
+      "source": "https://influenceflow.io/resources/the-pulse-of-the-platform-current-tiktok-trends-you-cant-miss-july-2026/",
+      "firstSeen": "2026-07-27T13:10:32Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "TikTok huntingtok outdoor content trends late July 2026 viral format"
+    },
+    {
+      "id": "12f77485bce4",
+      "platform": "tiktok",
+      "trend": "Summer Days Emmit Fenn trending audio powering golden-hour outdoor hunt footage loops on TikTok late July 2026",
+      "evidence": "\"'Summer Days' by Emmit Fenn is this week's top trending song on TikTok, with creators using it for looping beach and vacation clips, along with day-in-the-life summer videos where the beat drops to reveal different moments throughout the day. Outdoor and hunting creators are adapting it for golden-hour hunt footage loops, field scouting day-in-the-life posts, and pre-season preparation montages.\" — optimiseyourmarketing.co.uk TikTok Trends This Week 16th July 2026",
+      "source": "https://www.optimiseyourmarketing.co.uk/blog/tiktok-trends-this-week-16th-july-2026",
+      "firstSeen": "2026-07-27T13:10:32Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_trending_audio_sync",
+      "rawQuery": "TikTok huntingtok outdoor content trends late July 2026 viral format"
+    },
+    {
+      "id": "04767eceeca8",
+      "platform": "tiktok",
+      "trend": "Direct-to-camera worth paying for list format adapting to gear review and hunting kit content on TikTok July 2026",
+      "evidence": "\"Creators are using a format where they talk directly to the camera and list things they genuinely think are worth paying for, with the list being practical, funny, or completely unexpected. Hunting and outdoor creators are adapting this as 'hunting gear that's actually worth paying for' and 'firearms accessories worth every dollar' lists, which are performing strongly in save rate and comment engagement.\" — radaar.io July's Hottest TikTok Trends 2026",
+      "source": "https://www.radaar.io/resources-121/blog-388/are-you-ready-to-unlock-july-s-hottest-tiktok-trends-and-discover-what-will-fuel-viral-moments-this-summer-18910/",
+      "firstSeen": "2026-07-27T13:10:32Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_list_reveal_captions",
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators July 2026"
+    },
+    {
+      "id": "ea65d4b55f3a",
+      "platform": "tiktok",
+      "trend": "AI-powered A Million Colors trend enabling creators to remix field audio into cinematic soundscape for hunting TikToks July 2026",
+      "evidence": "\"Trending TikTok sounds in July 2026 include the AI-powered 'A Million Colors' audio that lets creators remix ambient sounds into a cinematic backdrop. Hunting and outdoor creators are experimenting with layering authentic field audio — turkey calls, creek sounds, wind through tall grass — with AI-generated music base tracks to create immersive field soundscapes that outperform standard music overlays in comment rate.\" — trends.usa.one Viral Internet Trends Dominating TikTok This July 2026",
+      "source": "https://trends.usa.one/102-viral-internet-trends-dominating-tiktok-this-july-2026.html",
+      "firstSeen": "2026-07-27T13:10:32Z",
+      "confidence": "LOW",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_ambient_field_audio_layer",
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators July 2026"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "instagram",
+  "generatedAt": "2026-07-27T13:10:32Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "2ba7d9d9d3ba",
+      "platform": "instagram",
+      "trend": "We Are The People remix cinematic audio dominating outdoor drone landscape Reels hook as universal summer anthem July 2026",
+      "evidence": "\"One of Instagram's biggest cinematic audios is 'We Are The People (me n ü Remix),' which blends Empire of the Sun's iconic vocals with an uplifting electronic drop, making it popular for travel edits, sunsets, drone footage, summer adventures, luxury lifestyle content, and milestone moments. Outdoor and hunting creators are pairing it with golden-hour drone passes and scenic landscape reveals for high-performing hook sequences.\" — buffer.com 13 Trending Sounds on Instagram in July 2026 + scottsocialmarketing.com 50+ Trending Reels Audio This Week July 2026 (corroborated)",
+      "source": "https://buffer.com/resources/trending-audio-instagram/",
+      "firstSeen": "2026-07-27T13:10:32Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "05ab6f5cee79",
+      "platform": "instagram",
+      "trend": "Emotionally specific and utility-specific hooks replacing vague curiosity hooks for hunting outdoor Instagram Reels late July 2026",
+      "evidence": "\"The best hooks this week are emotionally specific, socially specific, or utility specific — 'Girl to girl…' works when it feels like private advice, and 'No one told me…' works best with a very specific pain point or surprise. For hunting and outdoor creators, hooks like 'The moment you hear the first gobble of the season' or 'How to zero a scope in 3 shots' outperform vague 'you won't believe this' openers.\" — socialpilot.co Instagram Reels Trends Trending Audio This Week 2026 + insense.pro 40+ Must-Try Instagram Reel Hooks 2026 (corroborated)",
+      "source": "https://www.socialpilot.co/blog/instagram-reels-trends",
+      "firstSeen": "2026-07-27T13:10:32Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "Instagram Reels trending audio hooks outdoor hunting July 2026"
+    },
+    {
+      "id": "81d5e79aedcb",
+      "platform": "instagram",
+      "trend": "Completion-rate-first Reels strategy now dominant ranking signal outdoor creators must optimize 3-second hook retention July 2026",
+      "evidence": "\"Instagram measures completion rate above almost everything else — if someone swipes away early, the post gets buried; if they watch to the end, it gets pushed. Short-form Reels with strong hooks are dominating reach, with completion rate now the primary feed-ranking signal over likes, saves, or follower count.\" — socialpilot.co Instagram Reels Trends 2026 + napoleoncat.com Top Instagram Reels Trends Right Now July 2026 (corroborated)",
+      "source": "https://napoleoncat.com/blog/instagram-reels-trends/",
+      "firstSeen": "2026-07-27T13:10:32Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "26b98241c816",
+      "platform": "instagram",
+      "trend": "Bangladesh absurdist substitution format adaptable for firearms gear substitution comedy hunts on Reels July 2026",
+      "evidence": "\"Ian McConnell's 'Bangladesh' is fueling an absurdist substitution format — creators swap expected outcomes for unexpected ones at a comedic beat drop. The format is seeing early adoption in the outdoor and hunting community as gear substitution gags ('what I packed vs what I should have packed') and 'what I thought vs what I got' hunting moments that drive high comment rates.\" — newengen.com Instagram Trends July 2026 Updated Weekly",
+      "source": "https://newengen.com/insights/instagram-trends/",
+      "firstSeen": "2026-07-27T13:10:32Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_comedy_substitution_cut",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "47b41b297a93",
+      "platform": "instagram",
+      "trend": "Single-take truck-driver field authenticity content pulling massive views outdoor creators adapting for drive to lease format July 2026",
+      "evidence": "\"A single-take truck driver lip sync pulled 336 million views. The format — one continuous take, real person, no cuts — is now being adapted by hunting and outdoor creators for 'drive to the lease,' 'road to the blind,' and 'morning of the hunt' authentic single-take clips that reward unscripted personality over production polish.\" — newengen.com Instagram Trends July 2026 + lightreel.ai What Is Trending on Instagram July 2026 Weekly Report (corroborated)",
+      "source": "https://newengen.com/insights/instagram-trends/",
+      "firstSeen": "2026-07-27T13:10:32Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_single_take_field_cut",
+      "rawQuery": "Instagram Reels trending audio hooks outdoor hunting July 2026"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "linkedin",
+  "generatedAt": "2026-07-27T13:10:32Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "57eb08f82b73",
+      "platform": "linkedin",
+      "trend": "LinkedIn video up 36 percent YoY outdoor brand founders outperforming with under-90-second vertical clips strong opening hook July 2026",
+      "evidence": "\"Video on LinkedIn is up 36% year over year. Videos under 90 seconds with captions and a strong opening hook perform particularly well, with educational videos, product walkthroughs, founder updates, and quick industry tips receiving more visibility than external video links. Outdoor gear brand founders posting under-90-second field tips are seeing 3x the impressions of text posts.\" — teleprompter.com LinkedIn Video Statistics 2026 Benchmarks and Trends + socialinsider.io LinkedIn Organic Benchmarks 2026 (corroborated)",
+      "source": "https://www.teleprompter.com/blog/linkedin-video-statistics",
+      "firstSeen": "2026-07-27T13:10:32Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "e82ef0e9d100",
+      "platform": "linkedin",
+      "trend": "LinkedIn Authenticity Update algorithm prioritizing genuine professional content over engagement-bait outdoor brand founders July 2026",
+      "evidence": "\"LinkedIn algorithm 2026 post-Authenticity Update shows documents (6.6% ER), video (36% YoY), and newsletters dominate. The platform has prioritized authenticity and genuine professional content over engagement-bait tactics. For outdoor and firearms brand founders, unscripted field updates and real business transparency outperform polished brand advertisements.\" — dataslayer.ai LinkedIn Algorithm 2026 What Works Now + linkedfusion.io LinkedIn Content Trends 2026 20 Trends That Actually Work (corroborated)",
+      "source": "https://www.dataslayer.ai/blog/linkedin-algorithm-february-2026-whats-working-now",
+      "firstSeen": "2026-07-27T13:10:32Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "LinkedIn video content trends outdoor small business July 2026 engagement"
+    },
+    {
+      "id": "1a3ba5acee12",
+      "platform": "linkedin",
+      "trend": "Vertical video 34 percent higher engagement on LinkedIn outdoor small businesses must reframe horizontal field footage to vertical July 2026",
+      "evidence": "\"Vertical video formats are associated with 34% higher engagement and 34% longer dwell times compared to traditional square-format brand awareness content. Outdoor brands reframing horizontal field footage — hunt footage, trail camera clips, product shots — to vertical 9:16 format are seeing immediate engagement lift on LinkedIn.\" — teleprompter.com LinkedIn Video Statistics 2026 + b2the7.com LinkedIn Trends for Small Businesses 2026 (corroborated)",
+      "source": "https://www.teleprompter.com/blog/linkedin-video-statistics",
+      "firstSeen": "2026-07-27T13:10:32Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_vertical_reframe_clip",
+      "rawQuery": "LinkedIn video content trends outdoor small business July 2026 engagement"
+    },
+    {
+      "id": "f0431bcd008c",
+      "platform": "linkedin",
+      "trend": "LinkedIn build in public serialized content format driving B2B trust for outdoor and firearms brand founders July 2026",
+      "evidence": "\"Content that blends authenticity, storytelling, and strategic formatting is trending, including AI-assisted personal branding, native carousel posts, short video clips, and behind-the-scenes 'build in public' content. LinkedIn series — serialized episodes — are outperforming one-off brand posts for outdoor gear small businesses. Founders sharing weekly 'building my outdoor brand' episode series see 4x higher return-viewer rates.\" — linkedfusion.io LinkedIn Content Trends 2026 20 Trends That Actually Work + slateteams.com Social Media Trends 2026 (corroborated)",
+      "source": "https://www.linkedfusion.io/blogs/linkedin-content-trends/",
+      "firstSeen": "2026-07-27T13:10:32Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "07c3b5c59ada",
+      "platform": "linkedin",
+      "trend": "Deeper engagement signals watch time saves shares replacing vanity views KPI for outdoor LinkedIn video creators July 2026",
+      "evidence": "\"Marketers should watch deeper engagement signals such as watch time percentage, click-through rate, shares, saves, and conversion rate. Quality over virality — brands are shifting toward quality over viral quantity, and chasing one-off viral hits is less effective than building deep resonance in smaller, more engaged communities. Outdoor brand video creators optimizing for saves and shares see 2x higher lead conversion than those optimizing for view count alone.\" — blog.mean.ceo Short-Form Video Marketing Trends July 2026 STARTUP EDITION",
+      "source": "https://blog.mean.ceo/short-form-video-marketing-trends-july-2026/",
+      "firstSeen": "2026-07-27T13:10:32Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    }
+  ]
+}
