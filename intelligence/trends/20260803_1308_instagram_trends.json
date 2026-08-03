@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "instagram",
+  "generatedAt": "2026-08-03T13:08:22Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "dac63df9486a",
+      "platform": "instagram",
+      "trend": "Bangladesh Ian McConnell absurdist substitution format trending August 2026 Instagram adaptable for hunting gear swap what I packed vs what I needed",
+      "evidence": "\"Ian McConnell's 'Bangladesh' is fueling an absurdist substitution format — creators swap expected outcomes for unexpected ones at a comedic beat drop.\" — newengen.com Instagram Trends: August 2026 Updated Weekly + socialpilot.co Instagram Reels Trends: Trending Audio This Week 2026 (corroborated). Outdoor creators can deploy as 'What I packed for the hunt vs. what I actually used' or 'What I thought the shot felt like vs. what it looked like on camera,' adapting the gap between expectation and absurd reality — a niche-perfect hook.",
+      "source": "https://newengen.com/insights/instagram-trends/",
+      "firstSeen": "2026-08-03T13:08:22Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_comedy_substitution_cut",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "678700f1cf76",
+      "platform": "instagram",
+      "trend": "Netflix Documentary chair sit format crossed from TikTok to Instagram August 2026 outdoor brand founder storytelling format opportunity",
+      "evidence": "\"The 'Netflix Documentary' chair-sit bit has crossed over from TikTok and is already trending independently on Instagram.\" — newengen.com Instagram Trends: August 2026 Updated Weekly. Outdoor brand founders and hunting creators can use the format to open a confessional-style storytelling Reel: sit in a camp chair or truck seat, shot with shallow depth-of-field, deliver a field story or brand origin narrative to camera. Low-production cost, high perceived legitimacy.",
+      "source": "https://newengen.com/insights/instagram-trends/",
+      "firstSeen": "2026-08-03T13:08:22Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "Instagram Reels trends August 2026 hooks formats what is working"
+    },
+    {
+      "id": "8884060ecae2",
+      "platform": "instagram",
+      "trend": "Visual loop hook format landing four times keeping viewers back Instagram August 2026 outdoor looping scenery transitions field footage",
+      "evidence": "\"A visual loop format is going viral with hooks that land four times, creating a visual loop that keeps pulling you back in.\" — newengen.com Instagram Trends August 2026. Outdoor and hunting creators can exploit this by editing field footage into a seamless ambient loop — dawn light over a blind, water flowing through a creek crossing, or a trail cam loop — with a strong text hook that appears on each cycle. The format rewards smooth edit transitions at the loop point.",
+      "source": "https://newengen.com/insights/instagram-trends/",
+      "firstSeen": "2026-08-03T13:08:22Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_seamless_loop_cut",
+      "rawQuery": "Instagram Reels trends August 2026 hooks formats what is working"
+    },
+    {
+      "id": "8bd23c57adca",
+      "platform": "instagram",
+      "trend": "Sub 3 second visual pattern interrupt quick zoom before after unexpected first shot driving completion rate Instagram Reels August 2026",
+      "evidence": "\"Add a short text overlay in the first 1–2 seconds that matches your hook, and use a visual pattern interrupt like a quick zoom, before and after, or an unexpected first shot. The best Instagram hooks use big clear text overlays, strong visuals, and faces that say a lot without words.\" — insense.pro 40 Must-Try Ideas for Instagram Reel Hooks 2026 + heyorca.com The BEST social media hooks for 2026 (corroborated). For outdoor and hunting creators: open with the unexpected — a deer at 10 yards, a bird falling, a fish breaking water — rather than a walking-up or intro shot.",
+      "source": "https://insense.pro/blog/instagram-reel-hooks",
+      "firstSeen": "2026-08-03T13:08:22Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "Instagram Reels trends August 2026 hooks formats what is working"
+    },
+    {
+      "id": "e2984defedfe",
+      "platform": "instagram",
+      "trend": "Raw unpolished single-take content outperforming high production for outdoor hunting creators on Instagram Reels August 2026",
+      "evidence": "\"Raw, unpolished content is outperforming high-production posts, and low-production skits are beating polished content right now — a single-take truck driver lip sync pulled 336 million views.\" — newengen.com Instagram Trends August 2026 + later.com Top Instagram Reels Trends to Try in 2026 + napoleoncat.com Top Instagram Reels Trends Right Now July 2026 (corroborated). Hunting and outdoor creators who shoot a single uncut take — real hunt moments, honest post-hunt debrief to camera, or raw field conditions — are outperforming polished cinematic productions in reach and engagement.",
+      "source": "https://later.com/blog/instagram-reels-trends/",
+      "firstSeen": "2026-08-03T13:08:22Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_single_take_field_cut",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    }
+  ]
+}

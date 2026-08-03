@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "tiktok",
+  "generatedAt": "2026-08-03T13:08:22Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "b5e296366577",
+      "platform": "tiktok",
+      "trend": "Rock Music Glitch trend Charli XCX vocal glitch sync stuck frame freeze format adaptable for hunting harvest trophy reveal TikTok August 2026",
+      "evidence": "\"The 'Rock Music Glitch' trend is TikTok and Instagram's new edit format powered by Charli XCX's 'Rock Music,' where creators sync their footage to the vocal glitch mid-song, then apply the 'stuck frame' animation to freeze a key moment of the video mid-motion.\" — newengen.com August 2026 TikTok Trends | What's Viral on TikTok Right Now + ramd.am Tiktok Trends August 2026 (corroborated). Outdoor and hunting creators can adapt by freezing the moment of a harvest, a trophy reveal, or a big-shot moment on the glitch beat drop — a visceral pattern interrupt that fits the niche perfectly.",
+      "source": "https://newengen.com/insights/august-tiktok-trends/",
+      "firstSeen": "2026-08-03T13:08:22Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_glitch_freeze_reveal_cut",
+      "rawQuery": "TikTok trending sounds August 2026 viral formats Rock Music Glitch outdoor"
+    },
+    {
+      "id": "cf7a5bcad30e",
+      "platform": "tiktok",
+      "trend": "Lady Gaga Paparazzi dubstep remix ugly to hot glow-up transition format adaptable for gear before after hunting setup TikTok August 2026",
+      "evidence": "\"The Lady Gaga 'Paparazzi' dubstep remix is driving one of the month's biggest glow-up transitions on TikTok in August 2026.\" — newengen.com August 2026 TikTok Trends. Hunting and outdoor creators can adapt as a gear transformation: start with a budget or worn-out kit, cut on the bass drop to full hunt-ready loadout, or use it for field vs. cleaned-up camp aesthetics. Before-after bow builds and rifle builds also fit the format naturally.",
+      "source": "https://newengen.com/insights/august-tiktok-trends/",
+      "firstSeen": "2026-08-03T13:08:22Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_glow_up_transition_cut",
+      "rawQuery": "TikTok trending sounds August 2026 viral formats Rock Music Glitch outdoor"
+    },
+    {
+      "id": "9e7dfd84d96e",
+      "platform": "tiktok",
+      "trend": "Me at the Same Age as My Parents Pitbull Hey Baby nostalgia format adaptable for family hunting tradition legacy content TikTok August 2026",
+      "evidence": "\"Pitbull's 'Hey Baby (Drop It to the Floor)' is powering the 'Me at the Same Age as My Parents' trend, with creators posting side-by-side photo or video comparisons of themselves at their parents' age.\" — newengen.com August 2026 TikTok Trends + revid.ai Viral TikTok Songs Right Now August 2026 (corroborated). Hunting and outdoor creators can adapt as 'Me at the Same Age My Dad Taught Me to Hunt' — split-screen comparing archival family hunting photos with current footage, tapping strong legacy and tradition sentiment in the niche.",
+      "source": "https://newengen.com/insights/august-tiktok-trends/",
+      "firstSeen": "2026-08-03T13:08:22Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_split_screen_compare",
+      "rawQuery": "TikTok trending sounds August 2026 viral formats Rock Music Glitch outdoor"
+    },
+    {
+      "id": "dacbcacb3aa8",
+      "platform": "tiktok",
+      "trend": "My Favorite Person TikTok format August 2026 adaptable for hunting dog partner mentor outdoor buddy appreciation content",
+      "evidence": "\"Big formats in August 2026 include 'My Favorite Person' — creators dedicate a short video to a person who matters to them, often combining footage, text overlays, and an emotional audio track.\" — newengen.com August 2026 TikTok Trends. For hunting creators this maps directly onto: hunting dog tributes, season-opener dedications to mentors or fathers, or honoring a hunting partner — all resonating deeply with the community-driven hunting audience and generating strong save and share rates.",
+      "source": "https://newengen.com/insights/august-tiktok-trends/",
+      "firstSeen": "2026-08-03T13:08:22Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "ad7f1807aec9",
+      "platform": "tiktok",
+      "trend": "TikTok trend lifecycle accelerated to 72 hour peak window outdoor hunting creators must act on trending audio within 24 hours August 2026",
+      "evidence": "\"Trend lifecycles have accelerated significantly in 2026, with sounds or formats peaking in 72 hours and becoming outdated within five days.\" — unil.ink/blog TikTok Trends in 2026 (What's Actually Going Viral Right Now) + tokchart.com Top trending songs on TikTok today 2 August 2026 (corroborated). Hunting creators who can capture and edit a short clip using trending audio within 24 hours of that audio breaking nationally are disproportionately rewarded with algorithmic distribution before the format saturates.",
+      "source": "https://unil.ink/blog/tiktok-trends-2026",
+      "firstSeen": "2026-08-03T13:08:22Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    }
+  ]
+}

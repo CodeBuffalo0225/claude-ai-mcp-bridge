@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "linkedin",
+  "generatedAt": "2026-08-03T13:08:22Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "e3f1c3308fd4",
+      "platform": "linkedin",
+      "trend": "Native vertical video 9 to 16 under 60 seconds reaching non-followers at unprecedented distribution rate LinkedIn algorithm August 2026",
+      "evidence": "\"Posts uploaded as native vertical video are getting distribution to non-followers at a rate not seen with any other format. This is the single biggest new distribution opportunity in the 2026 LinkedIn algorithm update. A 30-second vertical video on a relevant topic can reach audiences 5–10x larger than a text post with the same engagement rate.\" — nealschaffer.com LinkedIn Videos: The Complete 2026 Guide to B2B Video Success + viralbrain.ai LinkedIn Algorithm 2026: Latest Updates, Changes & How It Works (corroborated). Outdoor brand founders must reframe horizontal field footage to 9:16 vertical for LinkedIn posting.",
+      "source": "https://nealschaffer.com/linkedin-videos/",
+      "firstSeen": "2026-08-03T13:08:22Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_vertical_reframe_clip",
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "f4ac38f588be",
+      "platform": "linkedin",
+      "trend": "LinkedIn first 60 minutes decide total reach outdoor brands must post at peak engagement windows August 2026",
+      "evidence": "\"LinkedIn's biggest algorithm update: the first 60 minutes after posting now determine the total reach ceiling for that post. Early signals — comments, reactions, and shares in the first hour — tell the algorithm whether to amplify beyond your immediate network.\" — growleads.io LinkedIn Algorithm 2026: First 60 Minutes Decide Reach + whitehat-seo.co.uk How to Increase Engagement on LinkedIn: 2026 B2B Algorithm Guide (corroborated). Outdoor brands should schedule posts during peak LinkedIn engagement windows (Tuesday–Thursday, 8–10am or noon) to maximize the first-60-minute signal.",
+      "source": "https://growleads.io/blog/linkedin-algorithm-2026-text-vs-video-reach/",
+      "firstSeen": "2026-08-03T13:08:22Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "LinkedIn video algorithm 2026 outdoor small business vertical content strategy"
+    },
+    {
+      "id": "ec3cc778b628",
+      "platform": "linkedin",
+      "trend": "LinkedIn video uploads up 20 percent views up 36 percent YoY outdoor brands have white space B2B trust opportunity August 2026",
+      "evidence": "\"LinkedIn reports video uploads increased 20% whilst views grew 36%. LinkedIn videos get 1.4x more engagement than other formats.\" — visla.us LinkedIn Video in 2026: What's Working and How to Make It + linkboost.co LinkedIn Video Specs & Requirements 2026 Complete Guide (corroborated). The 36% view growth outpacing 20% upload growth signals under-saturation — the outdoor and firearms brand category has disproportionate visibility opportunity because competition for the niche audience's attention on LinkedIn is still low.",
+      "source": "https://www.visla.us/blog/guides/linkedin-video-in-2026-whats-working-and-how-to-make-it/",
+      "firstSeen": "2026-08-03T13:08:22Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "f71ea4b97bff",
+      "platform": "linkedin",
+      "trend": "LinkedIn algorithm penalizes recycled horizontal video native vertical signals platform specific creation outdoor small business August 2026",
+      "evidence": "\"The LinkedIn algorithm has learned to distinguish native vertical content from recycled horizontal video. Vertical format signals you created for LinkedIn specifically — and the algorithm rewards it with materially higher reach.\" — linkboost.co LinkedIn Video Specs & Requirements 2026 Complete Guide + hyperclapper.com LinkedIn Video Requirements 2026 (corroborated). Outdoor small businesses that cross-post landscape-mode field footage from YouTube or Instagram without reformatting to 9:16 are being algorithmically penalized for the signal mismatch.",
+      "source": "https://www.linkboost.co/blog/linkedin-video-specs-requirements-2026/",
+      "firstSeen": "2026-08-03T13:08:22Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "LinkedIn video algorithm 2026 outdoor small business vertical content strategy"
+    },
+    {
+      "id": "3866a18e7cb4",
+      "platform": "linkedin",
+      "trend": "LinkedIn 73 percent mobile silent viewers outdoor brands must caption all video content for reach August 2026",
+      "evidence": "\"73% of video views come from mobile devices where users typically watch without sound. Outdoor brands should ensure all video content includes captions for full reach impact.\" — hyperclapper.com LinkedIn Video Requirements 2026 Organic + Ads + yansmedia.com LinkedIn Video Ad Specs & Placements Guide for 2026 (corroborated). Field footage without captions loses the majority of its audience before the hook can land — auto-caption is now table stakes for any hunting or outdoor brand posting on LinkedIn.",
+      "source": "https://www.hyperclapper.com/blog-posts/linkedin-video-requirements-organic-ads",
+      "firstSeen": "2026-08-03T13:08:22Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_auto_caption_burn",
+      "rawQuery": "LinkedIn video algorithm 2026 outdoor small business vertical content strategy"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "youtube",
+  "generatedAt": "2026-08-03T13:08:22Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "af4b3aaf2996",
+      "platform": "youtube",
+      "trend": "Watch-Through Rate on First Loop is top Shorts algorithm ranking signal for outdoor hunting creators Shorts under 40 seconds loop best August 2026",
+      "evidence": "\"The single most important metric the 2026 Shorts algorithm rewards is Watch-Through Rate on the First Loop, with Shorts under 40 seconds consistently showing higher loop rates, which is the key signal the 2026 algorithm rewards most heavily.\" — vidpros.com YouTube Shorts Update 2026: Every Major Change Explained + socialbee.com How does the YouTube algorithm work in 2026 (corroborated)",
+      "source": "https://vidpros.com/youtube-shorts-update/",
+      "firstSeen": "2026-08-03T13:08:22Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_loop_point_optimizer",
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "32b93f5a218d",
+      "platform": "youtube",
+      "trend": "YouTube Shorts freshness update August 2026 favors recent uploads over evergreen performance outdoor hunting creators must post consistently",
+      "evidence": "\"Recent changes favor fresh uploads and search optimized content more than long term evergreen performance, with a shift away from the classic evergreen model where a Short could keep compounding views for months. Outdoor and hunting creators must establish a consistent cadence — 3–5 Shorts per week — to keep the freshness signal active.\" — tunepocket.com YouTube Shorts Algorithm Update: Focus on Freshness and Search",
+      "source": "https://www.tunepocket.com/youtube-shorts-algorithm-update-focus-on-freshness-and-search/",
+      "firstSeen": "2026-08-03T13:08:22Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "YouTube Shorts algorithm update August 2026 trending outdoor niche hunting hooks"
+    },
+    {
+      "id": "089be395c3fc",
+      "platform": "youtube",
+      "trend": "Sub 0.5 second visual or text hook now required threshold for YouTube Shorts outdoor niche creators to survive algorithm cut August 2026",
+      "evidence": "\"Create Shorts-native content and hook viewers in the first 0.5 seconds with visual or text hooks. For outdoor and hunting creators, this means leading with a motion visual — a shot breaking, a buck stepping into frame, a reaction face — within the opening half-second frame. A generic wide-shot introduction now kills reach before the algorithm grants any push.\" — vidiq.com How the YouTube Algorithm Works in 2026: Updates & Tips + socialbee.com YouTube algorithm 2026 (corroborated)",
+      "source": "https://vidiq.com/blog/post/understanding-youtube-algorithm/",
+      "firstSeen": "2026-08-03T13:08:22Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_half_second_hook_cut",
+      "rawQuery": "YouTube Shorts algorithm update August 2026 trending outdoor niche hunting hooks"
+    },
+    {
+      "id": "221579d2785e",
+      "platform": "youtube",
+      "trend": "Channels under 1000 subscribers represent 30 percent of trending in niche categories hunting outdoor creators have algorithmic parity opportunity August 2026",
+      "evidence": "\"Channels under 1,000 subscribers represent 30% of all new videos in the top 100 of trending topics in niche categories, suggesting the outdoor and hunting niche offers significant opportunity for smaller creators. The 2026 algorithm is actively surfacing micro-niche content to interested audiences regardless of channel size.\" — learnwithparth.com YouTube Shorts Algorithm Update & Changes 2026",
+      "source": "https://www.learnwithparth.com/blog/youtube-shorts-algorithm-update-2026",
+      "firstSeen": "2026-08-03T13:08:22Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "YouTube Shorts algorithm update August 2026 trending outdoor niche hunting hooks"
+    },
+    {
+      "id": "f91ff1fc8f3d",
+      "platform": "youtube",
+      "trend": "Trending niche-specific sounds within YouTube Shorts essential for outdoor hunting creator growth 3 to 5 Shorts per week minimum August 2026",
+      "evidence": "\"For Shorts growth, use trending sounds and formats within your niche and post Shorts consistently (3–5 per week minimum for growth). Outdoor and hunting creators should monitor trending audio within the hunting and nature subcategory rather than using mainstream pop sounds, which signals relevance to niche audience clusters the algorithm is trying to satisfy.\" — sproutsocial.com The YouTube algorithm: how it works and tips to optimize in 2026 + outlierkit.com YouTube Algorithm Updates 2026 (corroborated)",
+      "source": "https://sproutsocial.com/insights/youtube-algorithm/",
+      "firstSeen": "2026-08-03T13:08:22Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    }
+  ]
+}
