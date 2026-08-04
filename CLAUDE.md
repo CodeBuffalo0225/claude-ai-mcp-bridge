@@ -62,8 +62,21 @@ edit. After any .jsx change: bump `BRIDGE_JSX_VERSION`, `bridge_reload_jsx`, con
    `edit.speedRamp` now actually exist (jsx v2026-07-05.2) — the cutpilot-speed-ramp
    skill described them but they were never implemented. Math in `src/recipes/speed-ramp.js`,
    22 unit tests in `tests/` (`npm test`, fixed for node22).
-   ⚠️ NOT yet live-verified in Premiere (apps closed) — first live run: probe a clip,
-   confirm keys land; the calibration loop (timeBase/valueScale) is built in for that.
+   ❌ LIVE-VERIFIED BROKEN 2026-07-06 on Premiere 26.3.0 — DO NOT USE, do not re-attempt
+   without a design change first. `edit.speedRampProbe` returns `timeRemapFound: false`
+   on every clip tried (real GoPro footage, confirmed NOT VFR). Root cause confirmed at
+   the raw DOM level: `clip.components` AND the QE `qeClip` component list both show
+   exactly 3 entries (`AE.ADBE Opacity`, `AE.ADBE Motion`, `AE.ADBE Lumetri`) — no Time
+   Remapping component, on any clip, even after manually enabling Time Remapping on the
+   clip via the Premiere UI first (ruled out the "lazy instantiation" theory). QE's
+   `qeClip.speed` also stays `1` throughout. Conclusion: Premiere 26.3.0's scripting API
+   (standard DOM and QE DOM both) does not expose a scriptable Time Remapping / ramp
+   handle at all — the whole `_findRampTarget()` component-walk approach this tool and
+   the folded-in CutPilot-AI code relied on is a dead end on this Premiere build, not a
+   calibration or naming bug. See [[speed-ramp-premiere-bridge]] for what to try next
+   (UI-automation drag via computer-use, or check if UXP's DOM exposes this differently).
+   Test artifact left in project: sequence "GX018683 - ramp test" (untouched, no ramp
+   applied, safe to ignore or delete).
 2. **CEP→UXP = one-file swap now.** Transport lives behind `src/bridge/adapters/`
    (HostAdapter contract → `cep-ws-adapter.js` active, `uxp-adapter.js` skeleton with
    build guide). AdobeBridge is a facade; MCP servers/recipes/graders are transport-
