@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "youtube",
+  "generatedAt": "2026-08-10T13:24:44Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "8ed6c3309541",
+      "platform": "youtube",
+      "trend": "Fast pacing with 15-30 second optimal window drives completion rates above 70 percent — outdoor hunting Shorts must cut aggressively August 2026",
+      "evidence": "\"The optimal length for engagement in 2026 is between 15 and 30 seconds, which is perfect for delivering a strong viral hook and encouraging viewers to re-watch. The edit should follow fast pacing; context, pauses, and scene-setting reduce feed performance because the value comes too late.\" — socialchamp.com YouTube Shorts Algorithm 2026: How It Works & How To Win",
+      "source": "https://www.socialchamp.com/blog/youtube-shorts-algorithm/",
+      "firstSeen": "2026-08-10T13:24:44Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_duration_trim_optimizer",
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "967c8c00a55e",
+      "platform": "youtube",
+      "trend": "85 percent of YouTube Shorts watched without sound — hard-coded captions in first frame lift retention 25-40 percent for outdoor hunting creator August 2026",
+      "evidence": "\"In 2026, 85% of shorts are watched without sound initially. Captions aren't optional; they're essential for hook delivery and retention. Hard-coded captions that appear in the first frame lift sound-off retention by 25–40%. Use captions with a height of at least 98 pixels in a 9:16 frame.\" — socialchamp.com YouTube Shorts Algorithm 2026 + asensebranding.com Silent Vertical 3-Second Hooks 2026 (corroborated)",
+      "source": "https://asensebranding.com/blogs/video-production-trends-in-2026-how-algorithms-favor-silent-vertical-instant-videos",
+      "firstSeen": "2026-08-10T13:24:44Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_silent_caption_hook",
+      "rawQuery": "YouTube Shorts algorithm August 2026 hook pacing editing trends outdoor creator"
+    },
+    {
+      "id": "23765a367d84",
+      "platform": "youtube",
+      "trend": "First 3 seconds must hit visual hook plus topic match plus 70 percent completion pacing — hunting harvest shot or buck-in-frame must appear sub-3s August 2026",
+      "evidence": "\"Making YouTube Shorts go viral in 2026 requires hitting three algorithm signals in the first 3 seconds: a visual or text hook that stops the swipe, a clear topic match, and a pacing that drives completion rates above 70%. Within the first 1 to 2 seconds, viewers make a split-second choice: keep watching or swipe away.\" — prapermedia.com Viral YouTube Shorts 2026: Hooks, Trends & Tips + vidiq.com Viral Hooks for YouTube Shorts 2026 (corroborated)",
+      "source": "https://prapermedia.com/blog/make-viral-youtube-shorts/",
+      "firstSeen": "2026-08-10T13:24:44Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_three_second_hook_cut",
+      "rawQuery": "YouTube Shorts algorithm August 2026 hook pacing editing trends outdoor creator"
+    },
+    {
+      "id": "7b4b55ae8676",
+      "platform": "youtube",
+      "trend": "Re-watches and shares outweigh likes for niche outdoor creator distribution — loop-point edits that prompt re-watch now strategic August 2026",
+      "evidence": "\"The ranking signals that seem to matter most, heaviest first, are early retention, full-video completion, re-watches, shares, comments, and likes. The YouTube Shorts algorithm distributes videos through roughly three sequential stages — seed distribution that weighs early hook retention, velocity-based escalation where high swipe-through-rate and completion drive wider fan-out, and cross-surface amplification.\" — reelforgeai.io YouTube Shorts Algorithm 2026 Complete Creator Guide",
+      "source": "https://reelforgeai.io/blog/youtube-shorts-algorithm-2026-complete-guide",
+      "firstSeen": "2026-08-10T13:24:44Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_loop_rewatch_bait",
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "24772c6ae704",
+      "platform": "youtube",
+      "trend": "YouTube Shorts reaches 200 billion daily views in 2026 — hunting niche Shorts reaching new non-subscriber audiences at 3-5 posts per week cadence August 2026",
+      "evidence": "\"Shorts hit 200 billion daily views in 2026, up from 70 billion daily views in early 2024, while YouTube split Shorts ranking away from long-form recommendations in late 2025. The algorithm actively surfaces micro-niche content to interested audiences regardless of channel size, rewarding consistent cadence of 3–5 Shorts per week for niche outdoor and hunting creators.\" — quso.ai The YouTube Shorts Algorithm: Your 2026 Guide",
+      "source": "https://quso.ai/blog/youtube-shorts-algorithm",
+      "firstSeen": "2026-08-10T13:24:44Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "tiktok",
+  "generatedAt": "2026-08-10T13:24:44Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "bdaf973620f0",
+      "platform": "tiktok",
+      "trend": "Ian McConnell Bangladesh absurdist substitution format on TikTok — adaptable for hunting gear swap what I packed versus what I needed August 2026",
+      "evidence": "\"Ian McConnell's 'Bangladesh' is fueling an absurdist substitution format — creators swap expected outcomes for unexpected ones at a comedic beat drop. August 2026 on TikTok is shaped by absurdist humor, emotional tribute formats, and lightly staged conversational content.\" — newengen.com August 2026 TikTok Trends | What's Viral on TikTok Right Now",
+      "source": "https://newengen.com/insights/august-tiktok-trends/",
+      "firstSeen": "2026-08-10T13:24:44Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_absurdist_substitution_cut",
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "e724cbbc53ca",
+      "platform": "tiktok",
+      "trend": "TikTok Netflix Documentary chair-sit format — outdoor brand founder storytelling sit-down short-form confessional format August 2026",
+      "evidence": "\"The 'Netflix Documentary' sit-down structure gives brand founders a low-effort storytelling format: sit in a chair, speak to camera for 45 seconds, deliver one clear revelation. August 2026 on TikTok is shaped by absurdist humor, emotional tribute formats, and lightly staged conversational content. The Netflix Documentary chair-sit bit is one of the biggest formats driving engagement.\" — newengen.com August 2026 TikTok Trends + blog.mean.ceo Viral Trends on Social Media August 2026 (corroborated)",
+      "source": "https://blog.mean.ceo/viral-trends-on-social-media-august-2026/",
+      "firstSeen": "2026-08-10T13:24:44Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "TikTok hunting outdoors viral format August 2026 this week creator trend"
+    },
+    {
+      "id": "7a8f210cab82",
+      "platform": "tiktok",
+      "trend": "My Favorite Person tribute video format TikTok — hunting dog partner mentor appreciation content August 2026",
+      "evidence": "\"Big formats right now include 'My Favorite Person' — creators dedicate a short video to a person who matters to them, often combining footage, text overlays, and an emotional audio track. The strongest examples from trend tracking show emotional tribute posts such as 'you're a spark in the dark' driving high saves and shares.\" — newengen.com August 2026 TikTok Trends | What's Viral on TikTok Right Now",
+      "source": "https://newengen.com/insights/august-tiktok-trends/",
+      "firstSeen": "2026-08-10T13:24:44Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "e2379ee19dc6",
+      "platform": "tiktok",
+      "trend": "Abby Lee Miller No I didnt dingbat LISTEN audio plus choreographed escalation — adaptable for hunting rule-break reveal format TikTok August 2026",
+      "evidence": "\"The 'No I didn't, dingbat, LISTEN!' trend uses audio from an iconic Dance Moms clip where Abby Lee Miller has a spat with one of her students' mothers. In videos, creators mime along to the dialogue, then break into a choreographed dance as the clip escalates.\" — napoleoncat.com Current TikTok Trends To Try Right Now August 2026 + blog.mean.ceo Viral Trends August 2026 (corroborated)",
+      "source": "https://napoleoncat.com/blog/tiktok-trends/",
+      "firstSeen": "2026-08-10T13:24:44Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_audio_mime_escalation_cut",
+      "rawQuery": "TikTok hunting outdoors viral format August 2026 this week creator trend"
+    },
+    {
+      "id": "519cd3ae4e4e",
+      "platform": "tiktok",
+      "trend": "TikTok trend lifecycle accelerated to 72-hour peak window — outdoor hunting creators must post within 24 hours of trend detection August 2026",
+      "evidence": "\"Trend lifecycles have accelerated significantly in 2026, with sounds or formats peaking in 72 hours and becoming outdated within five days. Outdoor and hunting creators must identify trending audio within 24 hours of emergence and post before the 72-hour peak to benefit from algorithmic amplification.\" — unil.ink TikTok Trends in 2026 (What's Actually Going Viral Right Now)",
+      "source": "https://unil.ink/blog/tiktok-trends-2026",
+      "firstSeen": "2026-08-10T13:24:44Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    }
+  ]
+}

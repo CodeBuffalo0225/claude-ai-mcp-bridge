@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "linkedin",
+  "generatedAt": "2026-08-10T13:24:44Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "1838992e5a49",
+      "platform": "linkedin",
+      "trend": "Native LinkedIn short-form video under 90 seconds generates 2x engagement over text posts — outdoor brand vertical field clips reach non-followers August 2026",
+      "evidence": "\"Native video generating up to two times more engagement than text-only posts. Short clips between 30 and 90 seconds work best for discovery. A 30-second vertical video on a relevant topic can reach audiences 5–10x larger than a text post with the same engagement rate.\" — visla.us LinkedIn Video in 2026: What's Working and How to Make It + nealschaffer.com LinkedIn Videos: The Complete 2026 Guide to B2B Video Success (corroborated)",
+      "source": "https://www.visla.us/blog/guides/linkedin-video-in-2026-whats-working-and-how-to-make-it/",
+      "firstSeen": "2026-08-10T13:24:44Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_vertical_reframe_clip",
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "d81e4e258bc2",
+      "platform": "linkedin",
+      "trend": "LinkedIn video engagement up 34 percent year over year — outdoor small business white space B2B trust opportunity August 2026",
+      "evidence": "\"LinkedIn saw a 34% jump in video engagement compared to last year, and LinkedIn short video is rising fast for B2B trust and lead generation. LinkedIn videos get 1.4x more engagement than other formats. Short-form video lets a small team or solo founder compete with bigger brands by showing real competence fast.\" — iqfluence.io Social Media Trends 2026 for Influencer Marketing + sproutsocial.com How to Use LinkedIn Video in Your Social Strategy (corroborated)",
+      "source": "https://iqfluence.io/public/blog/social-trends",
+      "firstSeen": "2026-08-10T13:24:44Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "dbc88e22c180",
+      "platform": "linkedin",
+      "trend": "Serialized content series B2B LinkedIn behind-the-scenes build in public episodes outperform one-off posts outdoor brand August 2026",
+      "evidence": "\"A new video trend is gaining momentum in 2026: serialized content, with many businesses shifting toward publishing video series that give viewers behind-the-scenes looks at the people behind the brand or feature unedited discussions about topics that matter to the brand and its audience. Building content series creates engagement and audience return visits.\" — blog.mean.ceo Short-Form Video Marketing Trends July 2026 + linkedfusion.io LinkedIn Content Trends 2026: 20 Trends That Actually Work (corroborated)",
+      "source": "https://blog.mean.ceo/short-form-video-marketing-trends-july-2026/",
+      "firstSeen": "2026-08-10T13:24:44Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "LinkedIn video 2026 outdoor brand founder build in public serialized short-form strategy"
+    },
+    {
+      "id": "fabee4b41ada",
+      "platform": "linkedin",
+      "trend": "Employee-generated founder-led video outperforms company page posts — outdoor brand owner-operator shooting field footage drives authentic LinkedIn reach August 2026",
+      "evidence": "\"Brands are encouraging employees, founders, sales teams, and customer success managers to share their expertise instead of relying solely on the company page. Employee-generated content consistently earns higher engagement because it feels authentic. Authentic founder content, repurposed clips from one source recording — these formats consistently outperform polished company page posts.\" — linkboost.co LinkedIn Content Creation in 2026: The Ultimate Guide + linkedfusion.io LinkedIn Content Trends 2026 (corroborated)",
+      "source": "https://www.linkboost.co/blog/linkedin-content-creation-2026/",
+      "firstSeen": "2026-08-10T13:24:44Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "LinkedIn video 2026 outdoor brand founder build in public serialized short-form strategy"
+    },
+    {
+      "id": "651e7daaf339",
+      "platform": "linkedin",
+      "trend": "LinkedIn algorithm penalizes recycled horizontal video — vertical-native 9:16 format signals platform-specific creation for outdoor small business August 2026",
+      "evidence": "\"The LinkedIn algorithm has learned to distinguish native vertical content from recycled horizontal video. Vertical format signals you created for LinkedIn specifically — and the algorithm rewards it with materially higher reach. Outdoor brands that simply crosspost horizontal YouTube or TikTok content are penalized versus creators shooting vertical-native field footage.\" — linkboost.co LinkedIn Content Creation 2026 + linkedfusion.io LinkedIn Content Trends 2026: 20 Trends That Actually Work (corroborated)",
+      "source": "https://www.linkedfusion.io/blogs/linkedin-content-trends/",
+      "firstSeen": "2026-08-10T13:24:44Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_platform_native_vertical_export",
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    }
+  ]
+}

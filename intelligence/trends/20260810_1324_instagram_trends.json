@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "instagram",
+  "generatedAt": "2026-08-10T13:24:44Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "9dbdffd8035a",
+      "platform": "instagram",
+      "trend": "Ian McConnell Bangladesh absurdist substitution format on Instagram Reels — hunting gear swap unexpected outcome comedy beat August 2026",
+      "evidence": "\"Ian McConnell's 'Bangladesh' is fueling an absurdist substitution format — creators swap expected outcomes for unexpected ones at a comedic beat drop. The format has crossed from TikTok to Instagram Reels and is driving strong completion rates in August 2026, with outdoor and hunting creators using gear-swap or expectation-vs-reality structures to hit the same comedic timing.\" — newengen.com Instagram Trends August 2026 Updated Weekly",
+      "source": "https://newengen.com/insights/instagram-trends/",
+      "firstSeen": "2026-08-10T13:24:44Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_comedy_substitution_cut",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "e28a1327dbb4",
+      "platform": "instagram",
+      "trend": "Netflix Documentary chair-sit format crossed to Instagram from TikTok — outdoor brand founder trust-building storytelling format August 2026",
+      "evidence": "\"The 'Netflix Documentary' chair-sit bit has crossed over from TikTok and is already trending independently on Instagram. Other trending formats include the single-take, low-production lip sync, the absurd-rule service skit, and the 'Netflix documentary' chair-sit format which gives outdoor brand founders a natural vehicle for 30–60 second trust-building storytelling Reels.\" — newengen.com Instagram Trends August 2026 + later.com Top Instagram Reels Trends 2026 (corroborated)",
+      "source": "https://newengen.com/insights/instagram-trends/",
+      "firstSeen": "2026-08-10T13:24:44Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "3d3597ec3d20",
+      "platform": "instagram",
+      "trend": "Raw single-take low-production skit outperforming polished content on Instagram — outdoor field footage beats studio August 2026",
+      "evidence": "\"Raw, unpolished content is outperforming high-production posts, and low-production skits are beating polished content right now — a single-take truck driver lip sync pulled 336 million views. For outdoor hunting creators, a single-take field moment — unscripted, raw — now outperforms a produced product demo in both reach and completion rate.\" — later.com Top Instagram Reels Trends to Try in 2026 (Updated Weekly)",
+      "source": "https://later.com/blog/instagram-reels-trends/",
+      "firstSeen": "2026-08-10T13:24:44Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_single_take_field_cut",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "7adde8b63e15",
+      "platform": "instagram",
+      "trend": "Sub 3 second visual pattern interrupt zoom plus before-after plus unexpected first shot drives Reels completion rate outdoor brand August 2026",
+      "evidence": "\"Add a short text overlay in the first 1–2 seconds that matches your hook, and use a visual pattern interrupt like a quick zoom, before and after, or an unexpected first shot. Securing a 1–3s hold is the only way to slash skip rates and signal early relevance in an increasingly crowded feed. The best Instagram hooks use big clear text overlays, strong visuals, and faces that say a lot without words.\" — lightreel.ai What Is Trending on Instagram August 2026 Weekly Report",
+      "source": "https://lightreel.ai/blogs/whats-trending-on-instagram",
+      "firstSeen": "2026-08-10T13:24:44Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_pattern_interrupt_hook",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "a6ba34c8fb62",
+      "platform": "instagram",
+      "trend": "Subtitle Gratitude Format text overlay emotional tribute no licensing risk for outdoor business accounts Instagram August 2026",
+      "evidence": "\"The 'Subtitle Gratitude Format' is giving business accounts an easy, no-licensing-required win — large text overlays tell a story or show gratitude frame by frame, with no spoken audio required. Olivia Rodrigo's tracks and the subtitle gratitude format are both driving nostalgic tribute carousels and Reels with high save rates in August 2026.\" — socialbee.com The latest Instagram trends August 5 2026",
+      "source": "https://socialbee.com/blog/instagram-trends/",
+      "firstSeen": "2026-08-10T13:24:44Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    }
+  ]
+}
