@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "instagram",
+  "generatedAt": "2026-08-17T13:19:35Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "658ee7d498e5",
+      "platform": "instagram",
+      "trend": "Ian McConnell Bangladesh absurdist substitution format Instagram Reels — hunting gear swap unexpected outcome comedy beat August 2026",
+      "evidence": "\"Ian McConnell's 'Bangladesh' is fueling an absurdist substitution format — creators swap expected outcomes for unexpected ones at a comedic beat drop. The format has crossed from TikTok to Instagram Reels and is driving strong completion rates in August 2026. For hunting creators, the swap could be: expected outcome = perfect harvest, actual outcome = forgotten release, delivered at the beat.\" — newengen.com Instagram Trends: August 2026 — Updated Weekly",
+      "source": "https://newengen.com/insights/instagram-trends/",
+      "firstSeen": "2026-08-17T13:19:35Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_comedy_substitution_cut",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "aff5b29dc16c",
+      "platform": "instagram",
+      "trend": "Instagram algorithm weighs first 2 seconds more aggressively than TikTok — outdoor hunting brand visual hook must fire sub-2s August 2026",
+      "evidence": "\"Instagram's algorithm currently weighs the first two seconds of a video more aggressively than TikTok does. If someone swipes away early, the post gets buried; if they watch to the end, it gets pushed. Winning reels follow repeatable formats such as UGC-style talking heads, educational listicles, and before-and-after transformations.\" — buffer.com How the Instagram Algorithm Works: Your 2026 Guide + invideo.io Instagram Reels Guide 2026 (corroborated)",
+      "source": "https://buffer.com/resources/instagram-algorithms/",
+      "firstSeen": "2026-08-17T13:19:35Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_two_second_visual_hook",
+      "rawQuery": "Instagram Reels August 2026 trending formats hooks algorithms outdoor brand"
+    },
+    {
+      "id": "87d6463b0f39",
+      "platform": "instagram",
+      "trend": "Selfie-cam talking head authenticity over polish — outdoor field hunting videos outperform studio quality Instagram Reels August 2026",
+      "evidence": "\"Authenticity outperforms polish as Instagram deprioritizes over-produced content, with selfie-cam talking head videos outperforming studio-quality productions. The algorithm now rewards clarity, speed, and consistency over follower count or production polish.\" — newengen.com Instagram Trends: August 2026 — Updated Weekly + lightreel.ai What Is Trending on Instagram — August 2026 Weekly Report (corroborated)",
+      "source": "https://newengen.com/insights/instagram-trends/",
+      "firstSeen": "2026-08-17T13:19:35Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "Instagram Reels August 2026 trending formats hooks algorithms outdoor brand"
+    },
+    {
+      "id": "c1cce3fcefc4",
+      "platform": "instagram",
+      "trend": "Physical props and real ambient audio in-frame drives high view counts — hunting gear hands-on field sounds outperform voiceover Reels August 2026",
+      "evidence": "\"Physical props, real unedited audio instead of music, and making an app the plot device correlate with high view counts. For outdoor hunting creators, this means in-frame hands-on gear demos with ambient field audio — bolt clicks, leaf crunch, bow draw — outperform licensed music tracks.\" — flowcast.space Instagram Reels Hooks: 7 Formats That Still Work in 2026",
+      "source": "https://flowcast.space/blog/instagram-reels-hooks-that-work-in-2026",
+      "firstSeen": "2026-08-17T13:19:35Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_ambient_audio_preserve",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "e175fefca9d5",
+      "platform": "instagram",
+      "trend": "Kinetic typography on-screen captions ensure message lands without sound outdoor hunting brand Instagram Reels August 2026",
+      "evidence": "\"About half of Instagram videos are watched without sound, so your reels need a strong visual hook. Use kinetic typography or clear on-screen captions to ensure the message lands regardless of volume. The first two seconds of on-screen text must immediately signal the topic to retain silent viewers.\" — thesocialcontentfactory.com Instagram Reel Trends 2026: Viral Hooks, Formats & Audio + lightreel.ai What Is Trending on Instagram August 2026 (corroborated)",
+      "source": "https://thesocialcontentfactory.com/reel-trends",
+      "firstSeen": "2026-08-17T13:19:35Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_kinetic_caption_overlay",
+      "rawQuery": "Instagram Reels August 2026 trending formats hooks algorithms outdoor brand"
+    }
+  ]
+}

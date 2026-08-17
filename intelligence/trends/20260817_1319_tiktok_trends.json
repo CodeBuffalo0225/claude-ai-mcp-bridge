@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "tiktok",
+  "generatedAt": "2026-08-17T13:19:35Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "a6514f9bb336",
+      "platform": "tiktok",
+      "trend": "Six Seven Seis Sete Brazilian funk finger-counting challenge dominant — hunting gear kit counting reveal format adaptable August 2026",
+      "evidence": "\"The 'Six Seven' (Seis Sete) Brazilian funk challenge featuring finger-counting choreography is the dominant trend, amplified by J-Hope from BTS to 75M+ views. The format's finger-counting mechanic is highly adaptable — outdoor hunting creators can overlay gear item callouts on each count beat for a kit reveal or essential-items list.\" — newengen.com August 2026 TikTok Trends: What's Viral on TikTok Right Now",
+      "source": "https://newengen.com/insights/august-tiktok-trends/",
+      "firstSeen": "2026-08-17T13:19:35Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_finger_count_reveal_cut",
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "2daceb854ad5",
+      "platform": "tiktok",
+      "trend": "My Favorite Person tribute format TikTok — hunting dog partner mentor appreciation content text overlay emotional audio August 2026",
+      "evidence": "\"Big formats right now include 'My Favorite Person' — creators dedicate a short video to a person who matters to them, often combining footage, text overlays, and an emotional audio track. For outdoor and hunting creators, the format maps naturally onto hunting dog tributes, mentors who taught the craft, or field partners.\" — newengen.com August 2026 TikTok Trends: What's Viral on TikTok Right Now",
+      "source": "https://newengen.com/insights/august-tiktok-trends/",
+      "firstSeen": "2026-08-17T13:19:35Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "TikTok August 2026 viral trends sounds formats what is trending right now"
+    },
+    {
+      "id": "4ee5e85e8d7f",
+      "platform": "tiktok",
+      "trend": "TikTok trend lifecycle compressed to 72-hour peak window — outdoor hunting creators must post within 24 hours of trend detection August 2026",
+      "evidence": "\"Trend lifecycles have accelerated significantly in 2026, with sounds or formats peaking in 72 hours and becoming outdated within five days. For niche outdoor hunting creators, this means any trend identified should be filmed and posted within 24 hours to catch the growth phase.\" — unil.ink TikTok Trends 2026: What's Actually Going Viral Right Now",
+      "source": "https://unil.ink/blog/tiktok-trends-2026",
+      "firstSeen": "2026-08-17T13:19:35Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "703c30ea8dac",
+      "platform": "tiktok",
+      "trend": "Nostalgic fishing creek spoken audio viral transition sound — hunting field gear reveal outdoor transition format TikTok August 2026",
+      "evidence": "\"A viral spoken audio, 'and I used to go fishin' when I was a lil girl, you gotta be real quiet on the creek,' is being used as a nostalgic transition sound for outfit reveals and other content. This audio is particularly relevant for outdoor and hunting-related transitions — creators are pairing it with gear reveals, habitat cuts, and season-opening field content.\" — newengen.com August 2026 TikTok Trends: What's Viral on TikTok Right Now",
+      "source": "https://newengen.com/insights/august-tiktok-trends/",
+      "firstSeen": "2026-08-17T13:19:35Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_audio_transition_cut",
+      "rawQuery": "hunting outdoors creator TikTok viral format August 2026 gear reveal field content"
+    },
+    {
+      "id": "8a2fbf8a1f8d",
+      "platform": "tiktok",
+      "trend": "How Different Our Lives Are side-by-side split comparison format TikTok — hunting lifestyle versus city life contrast August 2026",
+      "evidence": "\"The 'How Different Our Lives Are' side-by-side comparison format is among the biggest formats right now — creators show contrasting lifestyles or situations in a split frame. For hunting and outdoor creators, the city-vs-field contrast is an authentic format: dawn alarm city commute vs. sunrise tree stand, desk lunch vs. field-dressed whitetail.\" — lightreel.ai What Is Trending on TikTok — August 2026 Weekly Report + newengen.com August 2026 TikTok Trends (corroborated)",
+      "source": "https://lightreel.ai/blogs/whats-trending-on-tiktok",
+      "firstSeen": "2026-08-17T13:19:35Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_split_screen_comparison",
+      "rawQuery": "TikTok August 2026 viral trends sounds formats what is trending right now"
+    }
+  ]
+}

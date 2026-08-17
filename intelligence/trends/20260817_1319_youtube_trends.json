@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "youtube",
+  "generatedAt": "2026-08-17T13:19:35Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "bf66733a9cde",
+      "platform": "youtube",
+      "trend": "Hook must land in first 2 seconds for completion rate and algorithm distribution — hunting outdoor Shorts sub-2s hook mandatory August 2026",
+      "evidence": "\"Going viral on YouTube Shorts in 2026 comes down to three things: a hook that lands in the first two seconds, a completion rate high enough to trigger wider distribution, and a posting rhythm the algorithm can predict. Within the first 1 to 2 seconds, viewers make a split-second choice: keep watching or swipe away.\" — prapermedia.com Viral YouTube Shorts 2026: Hooks, Trends & Tips + socialync.io YouTube Shorts Algorithm 2026 (corroborated)",
+      "source": "https://prapermedia.com/blog/make-viral-youtube-shorts/",
+      "firstSeen": "2026-08-17T13:19:35Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_two_second_hook_cut",
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "2404b6c936e3",
+      "platform": "youtube",
+      "trend": "85 percent of YouTube Shorts watched without sound — hard-coded captions essential for hook delivery and retention outdoor hunting creator August 2026",
+      "evidence": "\"In 2026, 85% of shorts are watched without sound initially. Captions aren't optional; they're essential for hook delivery and retention. Hard-coded captions that appear in the first frame lift sound-off retention by 25–40%. Use captions with a height of at least 98 pixels in a 9:16 frame.\" — socialync.io YouTube Shorts Algorithm 2026: What Pushes Views Now + scalelab.com 41 Tips to Make YouTube Shorts Go Viral in 2026 (corroborated)",
+      "source": "https://www.socialync.io/blog/youtube-shorts-algorithm-2026",
+      "firstSeen": "2026-08-17T13:19:35Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_silent_caption_hook",
+      "rawQuery": "YouTube Shorts algorithm trends August 2026 hook editing outdoor creator"
+    },
+    {
+      "id": "5556784244c3",
+      "platform": "youtube",
+      "trend": "Viral window compressed to 24-36 hours — outdoor hunting Shorts must act on early engagement signals within 24 hours August 2026",
+      "evidence": "\"In 2026, the viral window for Shorts has compressed to 24–36 hours — early engagement signals now determine whether a Short breaks out or stalls. YouTube Shorts views are less about how many people swiped past your video and more about watch time per impression.\" — socialync.io YouTube Shorts Algorithm 2026: What Pushes Views Now",
+      "source": "https://www.socialync.io/blog/youtube-shorts-algorithm-2026",
+      "firstSeen": "2026-08-17T13:19:35Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "YouTube Shorts algorithm trends August 2026 hook editing outdoor creator"
+    },
+    {
+      "id": "3f73ae09753d",
+      "platform": "youtube",
+      "trend": "Transformation before-after and POV framing with quick cuts creates scroll-stop moments for outdoor hunting YouTube Shorts August 2026",
+      "evidence": "\"Creators use quick cuts, captions, and 'POV' framing to build tension fast. Transformation content and educational formats are top performing formats — outdoor creators can leverage these to showcase before-and-after field results, trophy reveals, and nature-based tutorials.\" — teleprompter.com Trending YouTube Shorts 2026: Top 10 Formats + scalelab.com 41 Tips to Make YouTube Shorts Go Viral in 2026 (corroborated)",
+      "source": "https://www.teleprompter.com/blog/trending-youtube-shorts",
+      "firstSeen": "2026-08-17T13:19:35Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_pov_transformation_cut",
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "830140577cb0",
+      "platform": "youtube",
+      "trend": "Daily posting 1-3 Shorts per day generates 3-5x more algorithmic distribution than weekly posting outdoor hunting creator August 2026",
+      "evidence": "\"Daily posting generates 3-5x more algorithmic distribution than weekly posting, and successful creators post 1-3 shorts daily. Going viral on YouTube Shorts in 2026 also requires a posting rhythm the algorithm can predict.\" — scalelab.com 41 Tips to Make YouTube Shorts Go Viral in 2026",
+      "source": "https://scalelab.com/en/41-tips-to-make-youtube-shorts-viral",
+      "firstSeen": "2026-08-17T13:19:35Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "YouTube Shorts algorithm trends August 2026 hook editing outdoor creator"
+    }
+  ]
+}

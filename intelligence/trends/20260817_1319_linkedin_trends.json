@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "linkedin",
+  "generatedAt": "2026-08-17T13:19:35Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "3c62562e3b92",
+      "platform": "linkedin",
+      "trend": "LinkedIn video watch time grew 36 percent year over year — outdoor small business native short-form video now essential B2B reach August 2026",
+      "evidence": "\"Video watch time on the platform grew more than 36% year over year, and short-form clips are the fastest-growing content type in the feed. LinkedIn video posts earn 3x the engagement of text-only posts, and video posts are shared 20 times more than other content types.\" — teleprompter.com LinkedIn Video Statistics 2026: Benchmarks and Trends + shootsta.com LinkedIn Video Strategy in 2026 (corroborated)",
+      "source": "https://www.teleprompter.com/blog/linkedin-video-statistics",
+      "firstSeen": "2026-08-17T13:19:35Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "e3d3b9f013ee",
+      "platform": "linkedin",
+      "trend": "Native vertical video in LinkedIn feed signals platform-specific creation earns materially higher algorithmic reach outdoor brand 9:16 August 2026",
+      "evidence": "\"The LinkedIn video feed operates separately from your main feed. It's a vertical, full-screen experience designed for short-form video consumption. Native short video for feed discovery uses vertical or near-vertical framing — the algorithm rewards vertical-native content created specifically for LinkedIn with materially higher reach than recycled horizontal video.\" — linkedfusion.io LinkedIn Content Trends 2026: 20 Trends That Actually Work + hyperclapper.com LinkedIn Video Requirements 2026 (corroborated)",
+      "source": "https://www.linkedfusion.io/blogs/linkedin-content-trends/",
+      "firstSeen": "2026-08-17T13:19:35Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_platform_native_vertical_export",
+      "rawQuery": "LinkedIn video short-form 2026 B2B outdoor brand strategy vertical native algorithm"
+    },
+    {
+      "id": "b28e7fa1f3e7",
+      "platform": "linkedin",
+      "trend": "Post from personal founder profile not company page — outdoor hunting brand owner-operator native video drives 3x higher engagement LinkedIn August 2026",
+      "evidence": "\"Post from your personal profile, not your company page. The businesses that are growing on the platform right now are posting from personal profiles, sharing specific things they actually know, and using document posts and native video instead of text posts with links. Educational videos, product walkthroughs, and founder updates receive more visibility than external video links.\" — b2the7.com LinkedIn Trends for Small Businesses 2026 + inspiredmarketingb2b.com B2B LinkedIn Strategy 2026 (corroborated)",
+      "source": "https://www.b2the7.com/news-blog/linkedin-trends-small-business-2026",
+      "firstSeen": "2026-08-17T13:19:35Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "LinkedIn video outdoor small business hunting brand 2026 founder storytelling native vertical"
+    },
+    {
+      "id": "4de25bff5790",
+      "platform": "linkedin",
+      "trend": "Serialized video content series build-in-public hunting season prep episode arc drives re-engagement LinkedIn outdoor brand August 2026",
+      "evidence": "\"A new video trend gaining momentum in 2026 is serialized content, with many businesses shifting toward publishing video series that give viewers behind-the-scenes looks at the people behind the brand or unedited discussions about topics that matter to the brand. Instead of chasing one viral video, plan a series that builds on a theme to encourage re-engagement and familiarity.\" — blog.mean.ceo Short-Form Video Marketing Trends July 2026 + sbdc.uh.edu 2026 Social Media Trends Small Businesses (corroborated)",
+      "source": "https://blog.mean.ceo/short-form-video-marketing-trends-july-2026/",
+      "firstSeen": "2026-08-17T13:19:35Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "5e1a47b29002",
+      "platform": "linkedin",
+      "trend": "Videos under 90 seconds with captions and strong opening hook perform best — outdoor hunting founder clip format LinkedIn August 2026",
+      "evidence": "\"Educational videos, product walkthroughs, founder updates, and quick industry tips receive more visibility than external video links. Videos under 90 seconds with captions and a strong opening hook perform particularly well. Some of the most effective videos are filmed on a smartphone and shared within minutes.\" — nealschaffer.com LinkedIn Videos: The Complete 2026 Guide to B2B Video Success + prodshort.com 10 Short Form Video Trends for 2026 Founders (corroborated)",
+      "source": "https://nealschaffer.com/linkedin-videos/",
+      "firstSeen": "2026-08-17T13:19:35Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_founder_clip_caption_export",
+      "rawQuery": "LinkedIn video short-form 2026 B2B outdoor brand strategy vertical native algorithm"
+    }
+  ]
+}

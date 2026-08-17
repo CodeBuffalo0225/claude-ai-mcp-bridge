@@ -1,0 +1,118 @@
+CutPilot Weekly Trend Digest — 2026-08-17
+Generated: 2026-08-17T13:19:35Z
+Niche: Hunting / Outdoors / Firearms / Outdoor Lifestyle
+=========================================================
+
+== YOUTUBE ==
+
+• Hook must land in first 2 seconds for completion rate and algorithm distribution — hunting outdoor Shorts sub-2s hook mandatory August 2026
+  Evidence: "Going viral on YouTube Shorts in 2026 comes down to three things: a hook that lands in the first two seconds, a completion rate high enough to trigger wider distribution, and a posting rhythm the algorithm can predict."
+  Source: https://prapermedia.com/blog/make-viral-youtube-shorts/
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: true → edit_two_second_hook_cut
+
+• 85 percent of YouTube Shorts watched without sound — hard-coded captions essential for hook delivery and retention outdoor hunting creator August 2026
+  Evidence: "In 2026, 85% of shorts are watched without sound initially. Captions aren't optional; they're essential for hook delivery and retention. Hard-coded captions that appear in the first frame lift sound-off retention by 25–40%."
+  Source: https://www.socialync.io/blog/youtube-shorts-algorithm-2026
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: true → edit_silent_caption_hook
+
+• Viral window compressed to 24-36 hours — outdoor hunting Shorts must act on early engagement signals within 24 hours August 2026
+  Evidence: "In 2026, the viral window for Shorts has compressed to 24–36 hours — early engagement signals now determine whether a Short breaks out or stalls."
+  Source: https://www.socialync.io/blog/youtube-shorts-algorithm-2026
+  Confidence: MEDIUM | cutpilotRelevant: false | bridgeRelevant: false
+
+• Transformation before-after and POV framing with quick cuts creates scroll-stop moments for outdoor hunting YouTube Shorts August 2026
+  Evidence: "Creators use quick cuts, captions, and 'POV' framing to build tension fast. Transformation content and educational formats are top performing for outdoor creators to showcase before-and-after results or nature-based tutorials."
+  Source: https://www.teleprompter.com/blog/trending-youtube-shorts
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: true → edit_pov_transformation_cut
+
+• Daily posting 1-3 Shorts per day generates 3-5x more algorithmic distribution than weekly posting outdoor hunting creator August 2026
+  Evidence: "Daily posting generates 3-5x more algorithmic distribution than weekly posting, and successful creators post 1-3 shorts daily."
+  Source: https://scalelab.com/en/41-tips-to-make-youtube-shorts-viral
+  Confidence: MEDIUM | cutpilotRelevant: false | bridgeRelevant: false
+
+
+== TIKTOK ==
+
+• Six Seven Seis Sete Brazilian funk finger-counting challenge dominant — hunting gear kit counting reveal format adaptable August 2026
+  Evidence: "The 'Six Seven' (Seis Sete) Brazilian funk challenge featuring finger-counting choreography is the dominant trend, amplified by J-Hope from BTS to 75M+ views."
+  Source: https://newengen.com/insights/august-tiktok-trends/
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: true → edit_finger_count_reveal_cut
+
+• My Favorite Person tribute format TikTok — hunting dog partner mentor appreciation content text overlay emotional audio August 2026
+  Evidence: "Big formats right now include 'My Favorite Person' — creators dedicate a short video to a person who matters to them, often combining footage, text overlays, and an emotional audio track."
+  Source: https://newengen.com/insights/august-tiktok-trends/
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: false
+
+• TikTok trend lifecycle compressed to 72-hour peak window — outdoor hunting creators must post within 24 hours of trend detection August 2026
+  Evidence: "Trend lifecycles have accelerated significantly in 2026, with sounds or formats peaking in 72 hours and becoming outdated within five days."
+  Source: https://unil.ink/blog/tiktok-trends-2026
+  Confidence: HIGH | cutpilotRelevant: false | bridgeRelevant: false
+
+• Nostalgic fishing creek spoken audio viral transition sound — hunting field gear reveal outdoor transition format TikTok August 2026
+  Evidence: "A viral spoken audio, 'and I used to go fishin' when I was a lil girl, you gotta be real quiet on the creek,' is being used as a nostalgic transition sound for outfit reveals and other content. Particularly relevant for outdoor and hunting-related transitions."
+  Source: https://newengen.com/insights/august-tiktok-trends/
+  Confidence: MEDIUM | cutpilotRelevant: true | bridgeRelevant: true → edit_audio_transition_cut
+
+• How Different Our Lives Are side-by-side split comparison format TikTok — hunting lifestyle versus city life contrast August 2026
+  Evidence: "The 'How Different Our Lives Are' side-by-side comparison format is among the biggest formats right now — creators show contrasting lifestyles or situations in a split frame."
+  Source: https://lightreel.ai/blogs/whats-trending-on-tiktok
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: true → edit_split_screen_comparison
+
+
+== INSTAGRAM ==
+
+• Ian McConnell Bangladesh absurdist substitution format Instagram Reels — hunting gear swap unexpected outcome comedy beat August 2026
+  Evidence: "Ian McConnell's 'Bangladesh' is fueling an absurdist substitution format — creators swap expected outcomes for unexpected ones at a comedic beat drop. The format has crossed from TikTok to Instagram Reels and is driving strong completion rates in August 2026."
+  Source: https://newengen.com/insights/instagram-trends/
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: true → edit_comedy_substitution_cut
+
+• Instagram algorithm weighs first 2 seconds more aggressively than TikTok — outdoor hunting brand visual hook must fire sub-2s August 2026
+  Evidence: "Instagram's algorithm currently weighs the first two seconds of a video more aggressively than TikTok does. If someone swipes away early, the post gets buried; if they watch to the end, it gets pushed."
+  Source: https://buffer.com/resources/instagram-algorithms/
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: true → edit_two_second_visual_hook
+
+• Selfie-cam talking head authenticity over polish — outdoor field hunting videos outperform studio quality Instagram Reels August 2026
+  Evidence: "Authenticity outperforms polish as Instagram deprioritizes over-produced content, with selfie-cam talking head videos outperforming studio-quality productions."
+  Source: https://newengen.com/insights/instagram-trends/
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: false
+
+• Physical props and real ambient audio in-frame drives high view counts — hunting gear hands-on field sounds outperform voiceover Reels August 2026
+  Evidence: "Physical props, real unedited audio instead of music, and making an app the plot device correlate with high view counts."
+  Source: https://flowcast.space/blog/instagram-reels-hooks-that-work-in-2026
+  Confidence: MEDIUM | cutpilotRelevant: true | bridgeRelevant: true → edit_ambient_audio_preserve
+
+• Kinetic typography on-screen captions ensure message lands without sound outdoor hunting brand Instagram Reels August 2026
+  Evidence: "About half of Instagram videos are watched without sound, so your reels need a strong visual hook. Use kinetic typography or clear on-screen captions to ensure the message lands regardless of volume."
+  Source: https://thesocialcontentfactory.com/reel-trends
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: true → edit_kinetic_caption_overlay
+
+
+== LINKEDIN ==
+
+• LinkedIn video watch time grew 36 percent year over year — outdoor small business native short-form video now essential B2B reach August 2026
+  Evidence: "Video watch time on the platform grew more than 36% year over year, and short-form clips are the fastest-growing content type in the feed. LinkedIn video posts earn 3x the engagement of text-only posts."
+  Source: https://www.teleprompter.com/blog/linkedin-video-statistics
+  Confidence: HIGH | cutpilotRelevant: false | bridgeRelevant: false
+
+• Native vertical video in LinkedIn feed signals platform-specific creation earns materially higher algorithmic reach outdoor brand 9:16 August 2026
+  Evidence: "The LinkedIn video feed operates separately from your main feed. It's a vertical, full-screen experience designed for short-form video consumption. The algorithm rewards vertical-native content with materially higher reach than recycled horizontal video."
+  Source: https://www.linkedfusion.io/blogs/linkedin-content-trends/
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: true → edit_platform_native_vertical_export
+
+• Post from personal founder profile not company page — outdoor hunting brand owner-operator native video drives 3x higher engagement LinkedIn August 2026
+  Evidence: "Post from your personal profile, not your company page. The businesses that are growing on the platform right now are posting from personal profiles, sharing specific things they actually know, and using native video instead of text posts with links."
+  Source: https://www.b2the7.com/news-blog/linkedin-trends-small-business-2026
+  Confidence: HIGH | cutpilotRelevant: false | bridgeRelevant: false
+
+• Serialized video content series build-in-public hunting season prep episode arc drives re-engagement LinkedIn outdoor brand August 2026
+  Evidence: "A new video trend gaining momentum in 2026 is serialized content, with many businesses shifting toward publishing video series that give viewers behind-the-scenes looks at the people behind the brand."
+  Source: https://blog.mean.ceo/short-form-video-marketing-trends-july-2026/
+  Confidence: HIGH | cutpilotRelevant: false | bridgeRelevant: false
+
+• Videos under 90 seconds with captions and strong opening hook perform best — outdoor hunting founder clip format LinkedIn August 2026
+  Evidence: "Educational videos, product walkthroughs, founder updates, and quick industry tips receive more visibility than external video links. Videos under 90 seconds with captions and a strong opening hook perform particularly well."
+  Source: https://nealschaffer.com/linkedin-videos/
+  Confidence: HIGH | cutpilotRelevant: true | bridgeRelevant: true → edit_founder_clip_caption_export
+
+=========================================================
+END OF DIGEST
