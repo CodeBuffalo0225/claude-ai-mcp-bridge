@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "linkedin",
+  "generatedAt": "2026-08-24T13:14:00Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "bd2a691a5cb5",
+      "platform": "linkedin",
+      "trend": "LinkedIn video engagement up 34% — serialized behind-the-scenes content series driving discovery for outdoor brand small businesses August 2026",
+      "evidence": "\"LinkedIn saw a 34% jump in video engagement compared to last year. A new video trend gaining momentum in 2026 is serialized content, with many businesses shifting toward publishing video series that typically give viewers a quick, behind-the-scenes look at the people behind the brand to showcase day-to-day operations.\" — blog.mean.ceo Short-Form Video Marketing Trends August 2026 (corroborated by slateteams.com Social Media Trends 2026)",
+      "source": "https://blog.mean.ceo/short-form-video-marketing-trends-august-2026/",
+      "firstSeen": "2026-08-24T13:14:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "6f689a0a9f74",
+      "platform": "linkedin",
+      "trend": "Authentic founder/operator short-form video — real-work content outperforms scripted talking-head videos for outdoor brands on LinkedIn August 2026",
+      "evidence": "\"Content that comes from real work outperforms scripted talking-head videos, and businesses that grow on short-form video successfully in 2026 typically put a human face to the brand, show behind-the-scenes of how decisions get made, and respond to customer questions with video.\" — blog.mean.ceo Short-Form Video Marketing Trends August 2026",
+      "source": "https://blog.mean.ceo/short-form-video-marketing-trends-august-2026/",
+      "firstSeen": "2026-08-24T13:14:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "c51c51f5a8c7",
+      "platform": "linkedin",
+      "trend": "Retention-first ultra-short vertical LinkedIn video — completion rate and saves over view counts for outdoor small business LinkedIn 2026",
+      "evidence": "\"Ultra-short videos, vertical-first recording, authentic founder content, repurposed clips from one source recording, and stronger focus on completion rate, saves, clicks, and conversions over empty view counts are what work best in 2026.\" — prodshort.com 10 Short Form Video Trends for 2026 Founders (corroborated by sbdc.uh.edu 2026 Social Media Trends Small Businesses)",
+      "source": "https://prodshort.com/blog/short-form-video-trends",
+      "firstSeen": "2026-08-24T13:14:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "53cf64ff7eb8",
+      "platform": "linkedin",
+      "trend": "Repurposed cross-platform clips — one source recording repurposed to LinkedIn driving efficiency for outdoor brand teams August 2026",
+      "evidence": "\"repurposed clips from one source recording... AI-assisted production helps small teams publish more often\" — prodshort.com 10 Short Form Video Trends for 2026 Founders",
+      "source": "https://prodshort.com/blog/short-form-video-trends",
+      "firstSeen": "2026-08-24T13:14:00Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_reformat_for_linkedin",
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "05052339028c",
+      "platform": "linkedin",
+      "trend": "B2B operator lesson and niche business discussion format — LinkedIn suits outdoor brand operator stories and hiring videos for small business August 2026",
+      "evidence": "\"LinkedIn suits B2B expertise, operator lessons, hiring stories, professional services, and niche business discussions\" — blog.mean.ceo Short-Form Video Marketing Trends August 2026 STARTUP EDITION",
+      "source": "https://blog.mean.ceo/short-form-video-marketing-trends-august-2026/",
+      "firstSeen": "2026-08-24T13:14:00Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    }
+  ]
+}

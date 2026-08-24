@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "instagram",
+  "generatedAt": "2026-08-24T13:14:00Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "973fb0a392df",
+      "platform": "instagram",
+      "trend": "First two seconds decides everything for Instagram Reels — niche-specific outdoor hunting hooks outperforming broad content August 2026",
+      "evidence": "\"Short-form Reels with strong hooks are dominating reach, with the first two seconds deciding everything. Niche-specific content is outperforming broad, general posts.\" — later.com Top Instagram Reels Trends to Try in 2026 (corroborated by newengen.com Instagram Trends August 2026)",
+      "source": "https://later.com/blog/instagram-reels-trends/",
+      "firstSeen": "2026-08-24T13:14:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_reels_two_second_hook",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "09e5c4ba042b",
+      "platform": "instagram",
+      "trend": "Camera POV innovation — overhead angles and reveal moves creating scroll-stop moments on Instagram Reels outdoor hunting content August 2026",
+      "evidence": "\"Camera POV innovation — angles, overhead shots, and reveal moves — are creating scroll-stop moments.\" — lightreel.ai What Is Trending on Instagram August 2026 Weekly Report",
+      "source": "https://lightreel.ai/blogs/whats-trending-on-instagram",
+      "firstSeen": "2026-08-24T13:14:00Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_overhead_reveal_angle",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "fe46cbb9b218",
+      "platform": "instagram",
+      "trend": "Single-take low-production content outperforms overproduced brand content on Instagram Reels for outdoor brands August 2026",
+      "evidence": "\"Current trending formats include single-take, low-production lip syncs, absurd-rule service skits, and 'POV: [ordinary thing] in 2026' exaggerations.\" — socialpilot.co Instagram Reels Trends: Trending Audio This Week 2026",
+      "source": "https://www.socialpilot.co/blog/instagram-reels-trends",
+      "firstSeen": "2026-08-24T13:14:00Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "5d48e08e7fc0",
+      "platform": "instagram",
+      "trend": "#guns hashtag trending on Instagram Reels with suppressor and firearms gear content August 2026",
+      "evidence": "\"#guns Hashtags: 10+ Trending Tags for Instagram Reels (2026) — firearms and outdoor gear hashtag content driving engagement\" — iqhashtags.com #guns Hashtags 2026",
+      "source": "https://iqhashtags.com/hashtags/hashtag/guns",
+      "firstSeen": "2026-08-24T13:14:00Z",
+      "confidence": "LOW",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "16e92e93f9bd",
+      "platform": "instagram",
+      "trend": "POV ordinary hunting moment in 2026 exaggeration format driving Instagram Reels virality for outdoor creators August 2026",
+      "evidence": "\"'POV: [ordinary thing] in 2026' exaggerations are among current trending formats on Instagram Reels\" — socialpilot.co Instagram Reels Trends: Trending Audio This Week 2026 (corroborated by anijam.ai Instagram Reels Trends 2026)",
+      "source": "https://www.socialpilot.co/blog/instagram-reels-trends",
+      "firstSeen": "2026-08-24T13:14:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_pov_text_exaggeration",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "tiktok",
+  "generatedAt": "2026-08-24T13:14:00Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "2fa21a844fa2",
+      "platform": "tiktok",
+      "trend": "Split-screen comparison format — pairing outdoor hunting topics with unexpected references drives 5.3M views for small accounts August 2026",
+      "evidence": "\"split-screen comparisons pairing trending topics with unexpected references pulled 5.3M views for an 11K-follower account, making them one of the most effective formats for small creators this month\" — lightreel.ai What Is Trending on TikTok August 2026 Weekly Report (corroborated by ghostshorts.com How to Make Split-Screen Videos for TikTok 2026)",
+      "source": "https://lightreel.ai/blogs/whats-trending-on-tiktok",
+      "firstSeen": "2026-08-24T13:14:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_split_screen_comparison",
+      "rawQuery": "TikTok split screen reaction outdoor niche creator format viral August 2026"
+    },
+    {
+      "id": "2b174e0b72f5",
+      "platform": "tiktok",
+      "trend": "Reaction content filmed outdoors — field filming hits 8.9M views for 2.9K account, high-stakes authentic unscripted outdoor hunting content August 2026",
+      "evidence": "\"Reaction content filmed from accessible locations like sidewalks got 8.9M views for a 2.9K account, highlighting how outdoor filming in casual settings is resonating with audiences\" — lightreel.ai What Is Trending on TikTok August 2026 Weekly Report",
+      "source": "https://lightreel.ai/blogs/whats-trending-on-tiktok",
+      "firstSeen": "2026-08-24T13:14:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "TikTok split screen reaction outdoor niche creator format viral August 2026"
+    },
+    {
+      "id": "1d5f9e1e2eac",
+      "platform": "tiktok",
+      "trend": "Compressed storytelling — opening text explains situation immediately, video supplies proof or reaction punchline for hunting/firearms TikTok August 2026",
+      "evidence": "\"winning posts explain the situation immediately with opening text, then the video supplies the proof, reaction, transformation, or punchline\" — newengen.com August 2026 TikTok Trends (corroborated by virlo.ai Top TikTok Trends Right Now August 2026)",
+      "source": "https://newengen.com/insights/august-tiktok-trends/",
+      "firstSeen": "2026-08-24T13:14:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_text_overlay_hook",
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "a918084dd52b",
+      "platform": "tiktok",
+      "trend": "Seeing How My X Would Respond format adaptable for hunting/outdoors niche driving TikTok virality August 2026",
+      "evidence": "\"'Seeing How My X Would Respond to a Bully' is TikTok's new favorite way to expose people, where on-screen text sets it up first... Reaction and emotional reveal formats (clap-backs, parent reveals) are the fastest movers, with the common driver being authenticity and unscripted stakes.\" — virlo.ai Top TikTok Trends Right Now August 2026",
+      "source": "https://virlo.ai/blog/tiktok-trends-august-2026",
+      "firstSeen": "2026-08-24T13:14:00Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "3636e9f18560",
+      "platform": "tiktok",
+      "trend": "Split-screen reaction videos achieve 55-72% longer watch times than single-frame videos in outdoor niches on TikTok August 2026",
+      "evidence": "\"Creators using split-screen consistently post 55-72% longer watch times than single-frame videos in the same niches, which explains why in 2026, split-screen video is not a gimmick but the highest-retention format in short-form\" — ghostshorts.com How to Make Split-Screen Videos for TikTok and YouTube Shorts in 2026",
+      "source": "https://ghostshorts.com/blog/how-to-make-split-screen-videos-tiktok-youtube-2026",
+      "firstSeen": "2026-08-24T13:14:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_split_screen_reaction",
+      "rawQuery": "TikTok split screen reaction outdoor niche creator format viral August 2026"
+    }
+  ]
+}

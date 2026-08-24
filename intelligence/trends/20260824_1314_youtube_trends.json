@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "youtube",
+  "generatedAt": "2026-08-24T13:14:00Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "2a5741f8e0b2",
+      "platform": "youtube",
+      "trend": "Visual Velocity editing rule — new visual beat every 2.5 seconds for hook pacing in hunting outdoor YouTube Shorts August 2026",
+      "evidence": "\"Focus on 'Visual Velocity'—ensure there is a movement, cut, or new text element on screen every 2.5 seconds.\" — upmyviews.com YouTube Shorts Strategy 2026: Hooks, Looping & Swipe-Stopping Editing (corroborated by vortexxcel.com YouTube Shorts Editing Guide 2026)",
+      "source": "https://upmyviews.com/youtube-shorts-strategy-2026/",
+      "firstSeen": "2026-08-24T13:14:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_visual_velocity_pacing",
+      "rawQuery": "hunting outdoor creator YouTube Shorts hook style pacing editing August 2026"
+    },
+    {
+      "id": "bcac35c32aca",
+      "platform": "youtube",
+      "trend": "Problem-Agitation-Solution hook framework with 0-2s hook, 2-8s setup, 1.5-3s visual cuts for outdoor hunting Shorts August 2026",
+      "evidence": "\"Every high-performing Short follows the same skeleton: Hook (0–2s) with a visual or verbal promise, Setup (2–8s) with fast context, Escalation (8s–80%) with a new visual beat every 1.5–3 seconds, and Payoff + loop (final 3s) that resolves the promise.\" — conthunt.app How to Edit YouTube Shorts: The Ultimate 2026 Strategy (corroborated by joinbrands.com)",
+      "source": "https://conthunt.app/blog/how-to-edit-youtube-shorts",
+      "firstSeen": "2026-08-24T13:14:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_pas_hook_structure",
+      "rawQuery": "hunting outdoor creator YouTube Shorts hook style pacing editing August 2026"
+    },
+    {
+      "id": "1d39ed12c5a9",
+      "platform": "youtube",
+      "trend": "Micro-payoff pattern break every 2-3 seconds to sustain retention in short hunting outdoor firearms Shorts August 2026",
+      "evidence": "\"Successful creators create micro-payoffs every 2–3 seconds (pattern breaks). Add strong scripting, tight pacing, and clean delivery, and your Shorts start feeling like a series viewers want to follow.\" — upmyviews.com YouTube Shorts Strategy 2026 (corroborated by narrationbox.com Hook Pacing Templates)",
+      "source": "https://upmyviews.com/youtube-shorts-strategy-2026/",
+      "firstSeen": "2026-08-24T13:14:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_pattern_break_insert",
+      "rawQuery": "hunting outdoor creator YouTube Shorts hook style pacing editing August 2026"
+    },
+    {
+      "id": "b7d9bd800569",
+      "platform": "youtube",
+      "trend": "POV transformation before-after reveal format dominating hunting outdoor Shorts August 2026",
+      "evidence": "\"Creators use quick cuts, captions, and 'POV' framing to build tension fast. Transformation content and educational formats are top performing formats — outdoor creators can leverage these to showcase before-and-after field results, trophy reveals, and nature-based tutorials.\" — teleprompter.com Trending YouTube Shorts 2026: Top 10 Formats (corroborated by anijam.ai YouTube Shorts Trends 2026)",
+      "source": "https://www.teleprompter.com/blog/trending-youtube-shorts",
+      "firstSeen": "2026-08-24T13:14:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_pov_transformation_cut",
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "6bd03ad92176",
+      "platform": "youtube",
+      "trend": "SHOT Show 2026 suppressor-friendly firearm content trending — hunting creators focusing on suppressed hunts and threaded muzzle gear reveal Shorts",
+      "evidence": "\"hunters are probably going to notice threaded muzzles, more optics options, more fit adjustments, and more talk about making rifles easier on the ears without giving up field usefulness. New subsonic and suppressor-friendly ammunition releases for 2026 include new rifle offerings from Remington and Federal, and there's a growing number of hunting-focused cans hitting the market.\" — theavidoutdoorsman.com SHOT Show 2026 gear trends",
+      "source": "https://theavidoutdoorsman.com/shot-show-2026-reveals-the-gear-trends-hunters-will-see-everywhere-this-fall/",
+      "firstSeen": "2026-08-24T13:14:00Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    }
+  ]
+}
