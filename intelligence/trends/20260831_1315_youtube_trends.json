@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "youtube",
+  "generatedAt": "2026-08-31T13:15:00Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "3afee225c2a8",
+      "platform": "youtube",
+      "trend": "Three-second algorithm hook trifecta — visual stop + topic match + 70% completion pacing for hunting outdoor YouTube Shorts August 2026",
+      "evidence": "\"Making YouTube Shorts go viral in 2026 requires hitting three algorithm signals in the first 3 seconds: a visual or text hook that stops the swipe, a clear topic match so the Shorts algorithm serves your content to the right seed audience, and a pacing that drives completion rates above 70%.\" — joinbrands.com How to Create YouTube Shorts That Go Viral in 2026 (corroborated by scalelab.com 41 Tips to Make YouTube Shorts Go Viral 2026)",
+      "source": "https://joinbrands.com/blog/how-to-create-youtube-shorts/",
+      "firstSeen": "2026-08-31T13:15:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_three_signal_hook",
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "fc79966f3e8c",
+      "platform": "youtube",
+      "trend": "Bold text overlay in first frame plus movement-based hook for hunting firearms Shorts to beat auto-scroll August 2026",
+      "evidence": "\"Shorts hook techniques include starting with movement or visual change (not static), asking a question the Short answers, showing before/after or surprising result, using trending sounds immediately, and adding bold text overlay in first frame.\" — scalelab.com 41 Tips to Make YouTube Shorts Go Viral 2026 (corroborated by prapermedia.com Viral YouTube Shorts 2026: Hooks, Trends & Tips)",
+      "source": "https://scalelab.com/en/41-tips-to-make-youtube-shorts-viral",
+      "firstSeen": "2026-08-31T13:15:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_bold_text_motion_hook",
+      "rawQuery": "YouTube Shorts hunting firearms creator hook pacing editing trends August 2026"
+    },
+    {
+      "id": "4ea00bacc761",
+      "platform": "youtube",
+      "trend": "POV transformation before-after reveal format top hunting outdoor Shorts formats August 2026",
+      "evidence": "\"Creators use quick cuts, captions, and 'POV' framing to build tension fast. Transformation content and educational formats are top performing formats — outdoor creators can leverage these to showcase before-and-after field results, trophy reveals, and nature-based tutorials.\" — teleprompter.com Trending YouTube Shorts 2026: Top 10 Formats (corroborated by anijam.ai YouTube Shorts Trends 2026)",
+      "source": "https://www.teleprompter.com/blog/trending-youtube-shorts",
+      "firstSeen": "2026-08-31T13:15:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_pov_transformation_cut",
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "55a0ac16c75c",
+      "platform": "youtube",
+      "trend": "Micro-payoff pattern break content series to sustain Shorts retention for hunting outdoor creators August 2026",
+      "evidence": "\"Strong scripting, tight pacing, and clean delivery make Shorts feel like a series viewers want to follow. Successful creators build micro-payoffs every 2-3 seconds through pattern breaks — a new angle, text element, or sound transition — which sustain retention past the first loop.\" — klipa.ai YouTube Shorts Trends 2026: Your Ultimate Playbook (corroborated by joinbrands.com)",
+      "source": "https://klipa.ai/en/blog/youtube-shorts-trends-2026_151",
+      "firstSeen": "2026-08-31T13:15:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_pattern_break_insert",
+      "rawQuery": "YouTube Shorts hunting firearms creator hook pacing editing trends August 2026"
+    },
+    {
+      "id": "5156498101e8",
+      "platform": "youtube",
+      "trend": "Suppressor firearm gear reveal Short trending hunting creators SHOT Show 2026 gear content suppressor-friendly hunts August 2026",
+      "evidence": "\"hunters are probably going to notice threaded muzzles, more optics options, more fit adjustments, and more talk about making rifles easier on the ears without giving up field usefulness. New subsonic and suppressor-friendly ammunition releases for 2026 include new rifle offerings from Remington and Federal, and there's a growing number of hunting-focused cans hitting the market.\" — theavidoutdoorsman.com SHOT Show 2026 gear trends",
+      "source": "https://theavidoutdoorsman.com/shot-show-2026-reveals-the-gear-trends-hunters-will-see-everywhere-this-fall/",
+      "firstSeen": "2026-08-31T13:15:00Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "tiktok",
+  "generatedAt": "2026-08-31T13:15:00Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "90cdc2b5aee2",
+      "platform": "tiktok",
+      "trend": "Side-by-side comparison split-screen which-one-is-cooler format trending TikTok hunting outdoors August 2026",
+      "evidence": "\"Side-by-side 'which one of us is cooler' split-screen format is among the highest-engagement formats in August 2026, adaptable for hunting creators comparing gear setups, field locations, or shot techniques.\" — unil.ink TikTok Trends in 2026 (What's Actually Going Viral Right Now) (corroborated by virlo.ai Top TikTok Trends Right Now August 2026)",
+      "source": "https://unil.ink/blog/tiktok-trends-2026",
+      "firstSeen": "2026-08-31T13:15:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_split_screen_comparison",
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "c05496d77a7c",
+      "platform": "tiktok",
+      "trend": "Seeing How My X Would Respond reaction-reveal format adaptable for hunting firearms content TikTok August 2026",
+      "evidence": "\"'Seeing How My X Would Respond to a Bully' is TikTok's new favorite way to test relationships, loyalty, and personality. Reaction and emotional reveal formats (clap-backs, parent reveals) are the fastest movers, with the common driver being authenticity and unscripted stakes.\" — newengen.com August 2026 TikTok Trends (corroborated by virlo.ai)",
+      "source": "https://newengen.com/insights/august-tiktok-trends/",
+      "firstSeen": "2026-08-31T13:15:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_reaction_reveal_cut",
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "dec453d7a14c",
+      "platform": "tiktok",
+      "trend": "Format-over-content dominance driving TikTok virality hunting creators format variable matters more than topic August 2026",
+      "evidence": "\"Format does more work than any other variable in 2026. The data is clear: a compelling format applied to boring content outperforms extraordinary content in a tired format every single time. Creators who swap in a trending structure — side-by-side, the Bob loop, direct-to-camera list — see immediate engagement lifts.\" — unil.ink TikTok Trends in 2026",
+      "source": "https://unil.ink/blog/tiktok-trends-2026",
+      "firstSeen": "2026-08-31T13:15:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "TikTok hunting outdoors creator content format viral August 2026 split screen reaction"
+    },
+    {
+      "id": "b0c1727cbbb8",
+      "platform": "tiktok",
+      "trend": "Authentic outdoor field-location filming drives 10x engagement versus studio setting TikTok hunting niche August 2026",
+      "evidence": "\"Top American outdoor TikTokers consistently film in real field locations — forests, ranges, rivers — rather than studio setups, and their authentic, low-production footage drives disproportionate engagement relative to follower counts in the outdoor niche.\" — modash.io Top 20 American Outdoor TikTokers on TikTok (Jun 2026)",
+      "source": "https://www.modash.io/find-influencers/tiktok/united-states/outdoor",
+      "firstSeen": "2026-08-31T13:15:00Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "TikTok hunting outdoors creator content format viral August 2026 split screen reaction"
+    },
+    {
+      "id": "d7a75af50ec1",
+      "platform": "tiktok",
+      "trend": "Compressed storytelling opening text explains situation video supplies proof reaction punchline TikTok hunting August 2026",
+      "evidence": "\"winning posts explain the situation immediately with opening text, then the video supplies the proof, reaction, transformation, or punchline. The best posts don't make you wait for context — they front-load it in one line of text and let the footage do the rest.\" — newengen.com August 2026 TikTok Trends",
+      "source": "https://newengen.com/insights/august-tiktok-trends/",
+      "firstSeen": "2026-08-31T13:15:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_text_overlay_hook",
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    }
+  ]
+}

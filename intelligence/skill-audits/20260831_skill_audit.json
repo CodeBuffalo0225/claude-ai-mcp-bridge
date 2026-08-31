@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-08-31T13:15:00Z",
+  "weekOf": "2026-08-31",
+  "auditSource": "weekly-trend-refresh",
+  "existingBridgeTools": [
+    "edit_visual_velocity_pacing",
+    "edit_pas_hook_structure",
+    "edit_pattern_break_insert",
+    "edit_pov_transformation_cut",
+    "edit_split_screen_comparison",
+    "edit_text_overlay_hook",
+    "edit_split_screen_reaction",
+    "edit_reels_two_second_hook",
+    "edit_overhead_reveal_angle",
+    "edit_pov_text_exaggeration",
+    "edit_reformat_for_linkedin"
+  ],
+  "newCandidatesThisWeek": [
+    {
+      "tool": "edit_three_signal_hook",
+      "platform": "youtube",
+      "rationale": "Three-signal algorithm hook trifecta (visual stop + topic match + 70% completion pacing) is a newly documented compound editing pattern not covered by existing tools",
+      "trendId": "3afee225c2a8",
+      "priority": "HIGH"
+    },
+    {
+      "tool": "edit_bold_text_motion_hook",
+      "platform": "youtube",
+      "rationale": "Bold text overlay in first frame combined with movement-based hook is a distinct editing action from existing pacing/pattern tools",
+      "trendId": "fc79966f3e8c",
+      "priority": "HIGH"
+    },
+    {
+      "tool": "edit_reaction_reveal_cut",
+      "platform": "tiktok",
+      "rationale": "Reaction-reveal editing pattern (setup + reveal cut) is distinct from split-screen comparison and maps to the 'Seeing How My X Would Respond' viral format",
+      "trendId": "c05496d77a7c",
+      "priority": "MEDIUM"
+    },
+    {
+      "tool": "edit_three_panel_what_i_did",
+      "platform": "instagram",
+      "rationale": "Three-panel horizontal split (wore/went/did) is a new structural format requiring dedicated panel layout capability not in existing tool set",
+      "trendId": "15b31d9b614c",
+      "priority": "HIGH"
+    }
+  ],
+  "deprecationCandidates": [],
+  "summary": "4 new bridge tool candidates identified this week. Highest priority: edit_three_panel_what_i_did (Instagram 3-panel layout), edit_three_signal_hook (YouTube compound hook), edit_bold_text_motion_hook (YouTube first-frame overlay). No existing tools deprecated."
+}

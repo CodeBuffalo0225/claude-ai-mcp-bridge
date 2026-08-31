@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "linkedin",
+  "generatedAt": "2026-08-31T13:15:00Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "6f1773463223",
+      "platform": "linkedin",
+      "trend": "LinkedIn video beats YouTube for B2B outdoor SMBs winning short vertical video format August 2026",
+      "evidence": "\"LinkedIn Just Beat YouTube for B2B Video: What SMBs Need to Do Right Now. LinkedIn saw a 34% jump in video engagement compared to last year, making it the top B2B video platform for small outdoor brands and operators looking to reach buyers and partners.\" — qd-up.com LinkedIn Video for SMBs: Beat YouTube in B2B Marketing 2026 (corroborated by nealschaffer.com LinkedIn Videos: The Complete 2026 Guide)",
+      "source": "https://qd-up.com/linkedin-video-marketing-small-business-2026/",
+      "firstSeen": "2026-08-31T13:15:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "1697422ecca3",
+      "platform": "linkedin",
+      "trend": "Educational founder thought-leadership clips outperform promotional posts outdoor brand LinkedIn August 2026",
+      "evidence": "\"Educational content that answers a specific buyer question, thought leadership clips from founders or subject-matter experts, and behind-the-scenes production content consistently outperform promotional posts. Content that comes from real work outperforms scripted talking-head videos.\" — visla.us LinkedIn Video in 2026: What's Working and How to Make It (corroborated by sproutsocial.com LinkedIn Marketing for Small Business 2026 Guide)",
+      "source": "https://www.visla.us/blog/guides/linkedin-video-in-2026-whats-working-and-how-to-make-it/",
+      "firstSeen": "2026-08-31T13:15:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "LinkedIn video outdoor brand operator behind scenes small business August 2026"
+    },
+    {
+      "id": "bce2a02fd7b3",
+      "platform": "linkedin",
+      "trend": "Behind-the-scenes team production content highest engagement outdoor brand small business LinkedIn August 2026",
+      "evidence": "\"Behind the scenes videos of team strategy sessions or company events provide a window into the reality of a business, which is far more effective than standard hiring graphics. Showcasing behind-the-scenes content, employee spotlights, and company values through short videos (15-60 sec) is the top-performing content type for small business LinkedIn pages.\" — sproutsocial.com LinkedIn Marketing for Small Business: 2026 Guide (corroborated by avenuez.com 2026 LinkedIn Organic Social Guide for Brands)",
+      "source": "https://sproutsocial.com/insights/linkedin-marketing-for-small-business/",
+      "firstSeen": "2026-08-31T13:15:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_reformat_for_linkedin",
+      "rawQuery": "LinkedIn video outdoor brand operator behind scenes small business August 2026"
+    },
+    {
+      "id": "6c50b986efb6",
+      "platform": "linkedin",
+      "trend": "15-60s short video format optimal LinkedIn outdoor brand small business conversion focus August 2026",
+      "evidence": "\"Ultra-short videos, vertical-first recording, authentic founder content, repurposed clips from one source recording, and stronger focus on completion rate, saves, clicks, and conversions over empty view counts are what work best in 2026. A smaller clip that brings qualified leads is worth more than a viral post that brings nothing.\" — prodshort.com 10 Short Form Video Trends for 2026 Founders (corroborated by impactable.com LinkedIn Video Advertising in 2026)",
+      "source": "https://prodshort.com/blog/short-form-video-trends",
+      "firstSeen": "2026-08-31T13:15:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "c490e80978ef",
+      "platform": "linkedin",
+      "trend": "Serialized video series building brand narrative awareness outdoor operator LinkedIn audience August 2026",
+      "evidence": "\"A new video trend gaining momentum in 2026 is serialized content, with many businesses shifting toward publishing video series that typically give viewers a quick, behind-the-scenes look at the people behind the brand. Serialized formats drive return viewers and build community on LinkedIn for B2B outdoor brands.\" — blog.mean.ceo Short-Form Video Marketing Trends August 2026 (corroborated by nealschaffer.com LinkedIn Videos: The Complete 2026 Guide)",
+      "source": "https://blog.mean.ceo/short-form-video-marketing-trends-august-2026/",
+      "firstSeen": "2026-08-31T13:15:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    }
+  ]
+}

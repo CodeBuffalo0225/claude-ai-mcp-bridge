@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "instagram",
+  "generatedAt": "2026-08-31T13:15:00Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "15b31d9b614c",
+      "platform": "instagram",
+      "trend": "What I Did three-panel Reel format wore went did documented hunt activity perfect outdoor hunting creators August 2026",
+      "evidence": "\"The 'What I Did' trend is a three-panel Reel format with the screen split into horizontal sections showing what someone wore, where they went, and what they did. This format is simple, aesthetic, and easy to follow, making it perfect for documenting anything from a vacation to a casual day out — or a hunt, a range day, or a backcountry trip.\" — socialbee.com The latest Instagram trends (August 26, 2026) (corroborated by newengen.com Instagram Trends: August 2026)",
+      "source": "https://socialbee.com/blog/instagram-trends/",
+      "firstSeen": "2026-08-31T13:15:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_three_panel_what_i_did",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "8bebf2fcb0b4",
+      "platform": "instagram",
+      "trend": "Fast-cut edits with two-second hook dominating Instagram Reels reach outdoor lifestyle hunting August 2026",
+      "evidence": "\"Short-form Reels with strong hooks are dominating reach, with the first two seconds deciding everything. Niche-specific content is outperforming broad, general posts, and fast-cut edits are consistently outperforming slower, cinematic cuts.\" — later.com Top Instagram Reels Trends to Try in 2026 (corroborated by anijam.ai Instagram Reels Trends 2026)",
+      "source": "https://later.com/blog/instagram-reels-trends/",
+      "firstSeen": "2026-08-31T13:15:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_reels_two_second_hook",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "7dd112e3f9f5",
+      "platform": "instagram",
+      "trend": "Direct-to-camera storytime format driving engagement outdoor hunting brand creators Instagram Reels August 2026",
+      "evidence": "\"Direct-to-camera 'storytime' videos are among the highest engagement formats on Instagram Reels in August 2026, with creators sharing authentic narratives — a bad hunt day, a gear failure, a shot gone wrong — driving massive comment engagement.\" — socialpilot.co Instagram Reels Trends: Trending Audio This Week 2026 (corroborated by manychat.com The 2026 Instagram Trends Creators and Marketers Are Actually Doing)",
+      "source": "https://www.socialpilot.co/blog/instagram-reels-trends",
+      "firstSeen": "2026-08-31T13:15:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "Instagram Reels outdoor hunting firearms creator format trending August 2026"
+    },
+    {
+      "id": "dac8e0e68e29",
+      "platform": "instagram",
+      "trend": "Niche-specific content outperforming broad content Instagram Reels hunting outdoor accounts gaining reach August 2026",
+      "evidence": "\"Niche-specific content is outperforming broad, general posts on Instagram Reels. Hunting and outdoor lifestyle accounts with focused content are seeing above-average reach relative to follower counts compared to general lifestyle creators.\" — later.com Top Instagram Reels Trends to Try in 2026 (corroborated by creatorflow.so 8 Instagram Trends That Are Defining 2026 for Creators)",
+      "source": "https://later.com/blog/instagram-reels-trends/",
+      "firstSeen": "2026-08-31T13:15:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "2baf1832218f",
+      "platform": "instagram",
+      "trend": "Authentic rural lifestyle integration alongside firearms gear content driving broader audience crossover Instagram August 2026",
+      "evidence": "\"Some firearms-focused channels integrate everyday rural life alongside gear and shooting content rather than pure tactical or competitive shooting, and these accounts can attract audiences that defy typical niche stereotypes — growing faster than pure-topic accounts.\" — creatordb.app Guns / Country / Videos: Instagram Stats & Audience",
+      "source": "https://creatordb.app/creatorstats/rifle/",
+      "firstSeen": "2026-08-31T13:15:00Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "Instagram Reels outdoor hunting firearms creator format trending August 2026"
+    }
+  ]
+}
