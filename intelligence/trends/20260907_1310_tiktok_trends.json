@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "tiktok",
+  "generatedAt": "2026-09-07T13:10:00Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "c4efdaa5350d",
+      "platform": "tiktok",
+      "trend": "Spot-trend-by-6am-post-by-noon 72-hour peak window hunting outdoor creators TikTok September 2026",
+      "evidence": "\"A sound or format now peaks in 72 hours and is dead in five days, and what used to be 'spot a trend, batch ten videos, ride the wave for a month' is now 'spot a trend at 6 a.m., post by noon, or skip it entirely'.\" — unil.ink TikTok Trends in 2026 (What's Actually Going Viral Right Now) (corroborated by newengen.com September 2026 TikTok Trends)",
+      "source": "https://unil.ink/blog/tiktok-trends-2026",
+      "firstSeen": "2026-09-07T13:10:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "58da6d2d166b",
+      "platform": "tiktok",
+      "trend": "September TikTok autumnal fall hunting opener content wave season launch format 2026",
+      "evidence": "\"September TikTok trends are dominated by the back-to-season wave: outdoor and hunting creators are capitalizing on fall opener excitement — first deer of the season, early waterfowl, archery season opener — with fast-format first-day-out Reels and field updates.\" — newengen.com September 2026 TikTok Trends: What's Viral Now (corroborated by hooked.so Viral Fishing & Hunting Videos on TikTok 2026)",
+      "source": "https://newengen.com/insights/september-tiktok-trends/",
+      "firstSeen": "2026-09-07T13:10:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "TikTok hunting outdoor firearms September 2026 viral format creator tips"
+    },
+    {
+      "id": "3e978e6e4046",
+      "platform": "tiktok",
+      "trend": "Compressed storytelling opening text situation video proof punchline TikTok hunting firearms September 2026",
+      "evidence": "\"Winning posts explain the situation immediately with opening text, then the video supplies the proof, reaction, transformation, or punchline. The best posts don't make you wait for context — they front-load it in one line of text and let the footage do the rest.\" — newengen.com August 2026 TikTok Trends | What's Viral on TikTok Right Now (corroborated by virlo.ai Top TikTok Trends Right Now August 2026)",
+      "source": "https://newengen.com/insights/august-tiktok-trends/",
+      "firstSeen": "2026-09-07T13:10:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_text_situation_setup",
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "8c012d972978",
+      "platform": "tiktok",
+      "trend": "Firearms compliance content framing TikTok hunting creators responsible showcase safety September 2026",
+      "evidence": "\"When uploading videos with weapons, creators should learn how to showcase firearms on TikTok without triggering flags or violations.\" — tiktok.com How to Upload Video with Weapon without Breaches Community Guidelines (corroborated by creatorcargohq.gumroad.com)",
+      "source": "https://www.tiktok.com/discover/how-to-upload-video-with-weapon-without-breaches-community-guidelines",
+      "firstSeen": "2026-09-07T13:10:00Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "TikTok hunting outdoor firearms September 2026 viral format creator tips"
+    },
+    {
+      "id": "9292adbf3fdc",
+      "platform": "tiktok",
+      "trend": "Field-location authentic low-production footage outperforms studio hunting niche TikTok September 2026",
+      "evidence": "\"Top American outdoor TikTokers consistently film in real field locations — forests, ranges, rivers — rather than studio setups, and their authentic, low-production footage drives disproportionate engagement relative to follower counts in the outdoor niche.\" — modash.io TikTok Outdoor Influencer Directory 2026 (corroborated by hooked.so Viral Fishing & Hunting Videos on TikTok 2026)",
+      "source": "https://www.hooked.so/viral-videos/tiktok/fishing_hunting",
+      "firstSeen": "2026-09-07T13:10:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    }
+  ]
+}

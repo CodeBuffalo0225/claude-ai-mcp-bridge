@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "instagram",
+  "generatedAt": "2026-09-07T13:10:00Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "356430e4b969",
+      "platform": "instagram",
+      "trend": "Three-panel What-I-Did horizontal split Reel wore-went-did format hunting outdoors September 2026",
+      "evidence": "\"The 'What I Did' trend turns a day or trip into a clean, three-panel Reel with the screen split into horizontal sections showing what was worn, where someone went, and what they did, ate, or bought.\" — socialbee.com The Latest Instagram Trends (September 2, 2026) (corroborated by later.com Top Instagram Reels Trends to Try in 2026)",
+      "source": "https://socialbee.com/blog/instagram-trends/",
+      "firstSeen": "2026-09-07T13:10:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_three_panel_horizontal_split",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "2b1f77ef436a",
+      "platform": "instagram",
+      "trend": "Yellow Font Theory emotionally honest caption overlay hook hunting outdoor Instagram Reels September 2026",
+      "evidence": "\"The yellow font trend is based on Yellow Font Theory, the idea that yellow text signals an emotionally vulnerable or deeply honest message.\" — socialbee.com The Latest Instagram Trends (September 2, 2026) (corroborated by newengen.com Instagram Trends: September 2026)",
+      "source": "https://socialbee.com/blog/instagram-trends/",
+      "firstSeen": "2026-09-07T13:10:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_yellow_font_caption_overlay",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "4abd8d1e94e4",
+      "platform": "instagram",
+      "trend": "Comment-section-engineered content strategy hunting gear creators Instagram Reels September 2026",
+      "evidence": "\"Comment sections engineered as part of content — top creators are deliberately seeding questions and CTAs in their captions and first comment to drive reply volume, which boosts Reels reach in the September 2026 algorithm.\" — newengen.com Instagram Trends: September 2026 — Updated Weekly (corroborated by later.com Top Instagram Reels Trends to Try in 2026)",
+      "source": "https://newengen.com/insights/instagram-trends/",
+      "firstSeen": "2026-09-07T13:10:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "81411c9cd9dc",
+      "platform": "instagram",
+      "trend": "Series-based niche hunting firearms Reels builds long-term audience Instagram September 2026",
+      "evidence": "\"Series-based content building long-term growth — niche-specific content outperforming broad posts. Hunting and outdoor gear brands that publish recurring Reels series (e.g., 'Field Ready Friday', 'One Shot One Kill') see compound follower growth over single-post viral strategies.\" — later.com Top Instagram Reels Trends to Try in 2026 (corroborated by thesocialcontentfactory.com Instagram Reel Trends 2026)",
+      "source": "https://later.com/blog/instagram-reels-trends/",
+      "firstSeen": "2026-09-07T13:10:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "f7724be3fc5a",
+      "platform": "instagram",
+      "trend": "Camera POV innovation scroll-stop hunting outdoor Instagram Reels September 2026",
+      "evidence": "\"Camera POV innovation creating scroll-stop moments — strong hooks dominating reach. Outdoor creators are using unusual POV angles (barrel-mounted, tree-stand overhead, boots-eye-view) to create visual novelty that stops the scroll in the first half-second.\" — thesocialcontentfactory.com Instagram Reel Trends 2026 (corroborated by lightreel.ai What Is Trending on Instagram — August 2026)",
+      "source": "https://thesocialcontentfactory.com/reel-trends",
+      "firstSeen": "2026-09-07T13:10:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_pov_angle_scroll_stop",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    }
+  ]
+}

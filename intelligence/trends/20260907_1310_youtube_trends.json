@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "youtube",
+  "generatedAt": "2026-09-07T13:10:00Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "b3d86b0d20f6",
+      "platform": "youtube",
+      "trend": "Cut-every-1.5-seconds pacing with movement-based open for hunting outdoor YouTube Shorts September 2026",
+      "evidence": "\"Keep things moving with cuts — if top-performing videos have a cut every 1.5 seconds, aim for that pacing. Strong hooks and clean edits help viewers stay, while clear metadata helps YouTube understand what the Short is about.\" — conthunt.app How to Edit YouTube Shorts: The Ultimate 2026 Strategy (corroborated by klipa.ai YouTube Shorts Trends 2026: Your Ultimate Playbook)",
+      "source": "https://conthunt.app/blog/how-to-edit-youtube-shorts",
+      "firstSeen": "2026-09-07T13:10:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_rapid_cut_pacing",
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "6c6f6de18f96",
+      "platform": "youtube",
+      "trend": "September seasonal hook routine-reset content strategy for hunting outdoor firearms Shorts 2026",
+      "evidence": "\"September matters because people are back in routine, which makes this a strong month for useful content, seasonal hooks, and recurring formats.\" — blog.mean.ceo Viral YouTube Video Trends September 2026 (corroborated by joinbrands.com How to Create YouTube Shorts That Go Viral in 2026)",
+      "source": "https://blog.mean.ceo/viral-youtube-video-trends-september-2026/",
+      "firstSeen": "2026-09-07T13:10:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "520046aec965",
+      "platform": "youtube",
+      "trend": "POV before-after transformation reveal format top performing hunting outdoor Shorts September 2026",
+      "evidence": "\"Creators use quick cuts, captions, and 'POV' framing to build tension fast. Transformation content and educational formats are top performing formats — outdoor creators can leverage these to showcase before-and-after field results, trophy reveals, and nature-based tutorials.\" — teleprompter.com Trending YouTube Shorts 2026: Top 10 Formats",
+      "source": "https://www.teleprompter.com/blog/trending-youtube-shorts",
+      "firstSeen": "2026-09-07T13:10:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_pov_transformation_cut",
+      "rawQuery": "YouTube Shorts hunting firearms creator hook pacing editing trends September 2026"
+    },
+    {
+      "id": "2faa36c83714",
+      "platform": "youtube",
+      "trend": "Hybrid Shorts-to-long-form funnel strategy hunting creators link Shorts to deep gear review September 2026",
+      "evidence": "\"YouTube Shorts + Long-Form Strategy: The 2026 Hybrid Growth Guide shows creators how to use Shorts as a discovery layer — a hook or highlight from a longer video — that funnels viewers into full episodes for deeper engagement, monetization, and community building.\" — influenceflow.io YouTube Shorts + Long-Form Strategy: 2026 Hybrid Growth Guide",
+      "source": "https://influenceflow.io/resources/youtube-shorts-and-long-form-video-strategy-the-complete-2026-creators-guide-1/",
+      "firstSeen": "2026-09-07T13:10:00Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_shorts_to_longform_clip",
+      "rawQuery": "YouTube Shorts hunting firearms creator hook pacing editing trends September 2026"
+    },
+    {
+      "id": "20456eb47c03",
+      "platform": "youtube",
+      "trend": "Bold first-frame text overlay plus trending audio for hunting firearms Shorts algorithm stop-scroll September 2026",
+      "evidence": "\"Making YouTube Shorts go viral in 2026 requires hitting three algorithm signals in the first 3 seconds: a visual or text hook that stops the swipe, a clear topic match so the Shorts algorithm serves your content to the right seed audience, and a pacing that drives completion rates above 70%.\" — joinbrands.com How to Create YouTube Shorts That Go Viral in 2026 (corroborated by prapermedia.com Viral YouTube Shorts 2026: Hooks, Trends & Tips)",
+      "source": "https://joinbrands.com/blog/how-to-create-youtube-shorts/",
+      "firstSeen": "2026-09-07T13:10:00Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_first_frame_text_hook",
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    }
+  ]
+}

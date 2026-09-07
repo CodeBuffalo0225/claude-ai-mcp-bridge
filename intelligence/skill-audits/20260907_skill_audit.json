@@ -1,0 +1,76 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-09-07T13:10:00Z",
+  "weekOf": "2026-09-07",
+  "auditSource": "weekly-trend-refresh",
+  "existingBridgeTools": [
+    "edit_visual_velocity_pacing",
+    "edit_pas_hook_structure",
+    "edit_pattern_break_insert",
+    "edit_pov_transformation_cut",
+    "edit_split_screen_comparison",
+    "edit_text_overlay_hook",
+    "edit_split_screen_reaction",
+    "edit_reels_two_second_hook",
+    "edit_overhead_reveal_angle",
+    "edit_pov_text_exaggeration",
+    "edit_reformat_for_linkedin",
+    "edit_three_signal_hook",
+    "edit_bold_text_motion_hook",
+    "edit_reaction_reveal_cut",
+    "edit_three_panel_what_i_did"
+  ],
+  "newCandidatesThisWeek": [
+    {
+      "tool": "edit_rapid_cut_pacing",
+      "platform": "youtube",
+      "rationale": "1.5-second cut cadence is now a documented benchmark for YouTube Shorts — this is a distinct pacing-enforcement tool not covered by existing pattern-break or pacing tools",
+      "trendId": "b3d86b0d20f6",
+      "priority": "HIGH"
+    },
+    {
+      "tool": "edit_shorts_to_longform_clip",
+      "platform": "youtube",
+      "rationale": "Hybrid Shorts-to-long-form funnel requires a clip-extraction and timestamp-link operation that maps Shorts back to source long-form footage — new editing capability not in existing set",
+      "trendId": "2faa36c83714",
+      "priority": "MEDIUM"
+    },
+    {
+      "tool": "edit_first_frame_text_hook",
+      "platform": "youtube",
+      "rationale": "First-frame bold text overlay combined with trending audio is a distinct compound action (text + audio sync on frame 0) that differs from existing edit_text_overlay_hook (which applies mid-video)",
+      "trendId": "20456eb47c03",
+      "priority": "HIGH"
+    },
+    {
+      "tool": "edit_text_situation_setup",
+      "platform": "tiktok",
+      "rationale": "Compressed storytelling front-load pattern (opening text card → video proof → punchline) is a structural format requiring text-card generation and sequencing not covered by existing tools",
+      "trendId": "3e978e6e4046",
+      "priority": "HIGH"
+    },
+    {
+      "tool": "edit_three_panel_horizontal_split",
+      "platform": "instagram",
+      "rationale": "Three-panel horizontal split (wore/went/did) is a distinct layout requiring horizontal split-screen with three equal panels — different from existing vertical split-screen tools",
+      "trendId": "356430e4b969",
+      "priority": "HIGH"
+    },
+    {
+      "tool": "edit_yellow_font_caption_overlay",
+      "platform": "instagram",
+      "rationale": "Yellow Font Theory demands a specific styling (yellow, high-contrast, emotionally-coded font) applied as caption overlay — a distinct caption styling action not in the existing toolset",
+      "trendId": "2b1f77ef436a",
+      "priority": "MEDIUM"
+    },
+    {
+      "tool": "edit_pov_angle_scroll_stop",
+      "platform": "instagram",
+      "rationale": "Unusual POV angle crop/reframe (barrel-mount, tree-stand, boots-eye) for scroll-stop effect is a new angle-selection and crop operation for unconventional camera positions",
+      "trendId": "f7724be3fc5a",
+      "priority": "MEDIUM"
+    }
+  ],
+  "deprecationCandidates": [],
+  "summary": "7 new bridge tool candidates identified this week. Highest priority: edit_rapid_cut_pacing (YouTube 1.5s cut benchmark), edit_first_frame_text_hook (YouTube frame-0 compound hook), edit_text_situation_setup (TikTok front-load storytelling structure), edit_three_panel_horizontal_split (Instagram 3-panel layout — distinct from prior vertical split tools). No existing tools deprecated. Fall hunting season content wave signals a high-volume posting period for outdoor creators across all platforms through November."
+}
