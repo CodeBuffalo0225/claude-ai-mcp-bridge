@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "linkedin",
+  "generatedAt": "2026-09-14T13:08:28Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "f8eb80820e42",
+      "platform": "linkedin",
+      "trend": "Raw unpolished single-take founder video outdoor brand LinkedIn September 2026",
+      "evidence": "\"Raw content beats polished campaigns, especially single-take videos and unscripted founder or employee clips. Polished brand theater is losing ground, and raw, human, specific content is winning attention, trust, and sales conversations.\" — startups.co.uk Top 6 Social Media Trends For Businesses: September 2026 (corroborated by blog.mean.ceo Short-Form Video Marketing Trends September 2026 and slateteams.com Social Media Trends: What Will Shape 2026)",
+      "source": "https://startups.co.uk/news/social-media-trends-september/",
+      "firstSeen": "2026-09-14T13:08:28Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_linkedin_raw_founder_cut",
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business September 2026"
+    },
+    {
+      "id": "9de560344e74",
+      "platform": "linkedin",
+      "trend": "Serialized video series format outdoor brand thought leadership LinkedIn 2026",
+      "evidence": "\"Social platforms are shifting toward series-style content, rewarding creators who keep viewers watching, not just clicking once. Users will see a new video trend gain momentum in 2026: serialized content, with many businesses shifting toward publishing video series.\" — blog.mean.ceo Short-Form Video Marketing Trends September 2026 (corroborated by socialmediaexaminer.com LinkedIn Discovery Strategy and Video Series Strategy and busylike.com LinkedIn Video Strategy: The 2026 Enterprise Playbook)",
+      "source": "https://blog.mean.ceo/short-form-video-marketing-trends-september-2026/",
+      "firstSeen": "2026-09-14T13:08:28Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_linkedin_series_episode_format",
+      "rawQuery": "LinkedIn video series outdoor brand founder story small business September 2026"
+    },
+    {
+      "id": "5b1fb2890a48",
+      "platform": "linkedin",
+      "trend": "Employee advocacy trust-building outdoor small business LinkedIn September 2026",
+      "evidence": "\"Employee advocacy is gaining weight, because people trust people inside companies more than faceless logos. Comments are becoming content, and posts built to trigger discussion often travel further.\" — startups.co.uk Top 6 Social Media Trends For Businesses: September 2026 (corroborated by blog.mean.ceo Social Media Trends September 2026 Startup Edition)",
+      "source": "https://startups.co.uk/news/social-media-trends-september/",
+      "firstSeen": "2026-09-14T13:08:28Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business September 2026"
+    },
+    {
+      "id": "d41be56441c1",
+      "platform": "linkedin",
+      "trend": "Story-first branded documentary founder profile outdoor brand LinkedIn September 2026",
+      "evidence": "\"Big, emotional, story-first films are becoming important — branded documentaries, founder stories, mission-driven athlete profiles — where the goal is not to sell anything directly but to build belief.\" — roosmith.com How to Use Video Content to Actually Grow Your Outdoor Brand (corroborated by vidico.com 12 Best Founder Video Examples That Build Trust 2026 and busylike.com LinkedIn Video Strategy: The 2026 Enterprise Playbook)",
+      "source": "https://roosmith.com/blog/use-video-content-for-outdoor-brands",
+      "firstSeen": "2026-09-14T13:08:28Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_linkedin_narrative_documentary",
+      "rawQuery": "LinkedIn video series outdoor brand founder story small business September 2026"
+    },
+    {
+      "id": "422f1f44590a",
+      "platform": "linkedin",
+      "trend": "LinkedIn video engagement 34 percent year-over-year short-form vertical outdoor brands 2026",
+      "evidence": "\"LinkedIn saw a 34% jump in video engagement compared to last year. If your brand plans to focus on LinkedIn, short-form video is worth prioritizing — it's become the primary format for thought leadership, recruitment content, and industry-specific influencer collaborations.\" — sbdc.uh.edu 2026 Social Media Trends Small Businesses Should Leverage (corroborated by blog.mean.ceo Current Social Media Trends September 2026 and iqfluence.io Social Media Trends 2026)",
+      "source": "https://www.sbdc.uh.edu/sbdc/2026-social-media-trends-small-business.asp",
+      "firstSeen": "2026-09-14T13:08:28Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business September 2026"
+    }
+  ]
+}

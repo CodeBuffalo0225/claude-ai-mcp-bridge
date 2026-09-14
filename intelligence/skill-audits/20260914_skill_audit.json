@@ -1,0 +1,108 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-09-14T13:08:28Z",
+  "weekOf": "2026-09-14",
+  "auditSource": "weekly-trend-refresh",
+  "existingBridgeTools": [
+    "edit_visual_velocity_pacing",
+    "edit_pas_hook_structure",
+    "edit_pattern_break_insert",
+    "edit_pov_transformation_cut",
+    "edit_split_screen_comparison",
+    "edit_text_overlay_hook",
+    "edit_split_screen_reaction",
+    "edit_reels_two_second_hook",
+    "edit_overhead_reveal_angle",
+    "edit_pov_text_exaggeration",
+    "edit_reformat_for_linkedin",
+    "edit_three_signal_hook",
+    "edit_bold_text_motion_hook",
+    "edit_reaction_reveal_cut",
+    "edit_three_panel_what_i_did",
+    "edit_rapid_cut_pacing",
+    "edit_first_frame_text_hook",
+    "edit_text_situation_setup",
+    "edit_three_panel_horizontal_split"
+  ],
+  "newCandidatesThisWeek": [
+    {
+      "tool": "edit_movement_text_compound_hook",
+      "platform": "youtube",
+      "rationale": "Movement-first 1-second hook combined with bold text overlay in the same first frame is a distinct compound action: it requires a motion-trigger (visual change) synchronised with a text overlay render at frame 0 — different from existing edit_first_frame_text_hook (text only) and edit_bold_text_motion_hook (motion applied mid-video)",
+      "trendId": "66f684d55d0f",
+      "priority": "HIGH"
+    },
+    {
+      "tool": "edit_gear_reveal_transformation",
+      "platform": "youtube",
+      "rationale": "Hunting-niche before-after gear/trophy reveal requiring a specific POV cut structure (build-up → reveal moment → result) targeting field results, trophy reveals, and gear unboxings — extends edit_pov_transformation_cut with hunting-specific reveal sequencing and caption templates",
+      "trendId": "77b48f55781d",
+      "priority": "HIGH"
+    },
+    {
+      "tool": "edit_tiktok_longform_sequence",
+      "platform": "tiktok",
+      "rationale": "1-3 minute TikTok format assembly is a distinct workflow: longer retention-arc pacing (chapter breaks at 30s intervals, re-hook mid-video) not covered by short-form tools which assume sub-60s clips",
+      "trendId": "0599b1341d42",
+      "priority": "HIGH"
+    },
+    {
+      "tool": "edit_pov_dayinlife_hunt",
+      "platform": "tiktok",
+      "rationale": "POV day-in-life hunting format requires a specific sequencing template (morning prep → field → result → recap) with time-of-day text cards and ambient audio transitions — a hunting-specific variant of generic day-in-life templates not in the current tool set",
+      "trendId": "53a78ff39cad",
+      "priority": "MEDIUM"
+    },
+    {
+      "tool": "edit_authentic_raw_cut",
+      "platform": "tiktok",
+      "rationale": "Deliberate 'unedited' style for TikTok requires a specific minimal-processing preset: single continuous take with natural audio, no music, no color grade, minimal caption, no transitions — the opposite of existing editing tools and a new style profile the Bridge does not currently have",
+      "trendId": "b68c78e95771",
+      "priority": "HIGH"
+    },
+    {
+      "tool": "edit_two_second_instagram_hook",
+      "platform": "instagram",
+      "rationale": "Instagram's 2-second algorithm weight (vs TikTok's 3-second window) requires a tighter hook-timing profile: hook element must land by frame 48 (at 24fps) instead of frame 72 — this is a distinct timing-enforcement tool for Instagram-specific exports, not covered by existing hook tools which use 3-second benchmarks",
+      "trendId": "b9c8c895765d",
+      "priority": "HIGH"
+    },
+    {
+      "tool": "edit_linkedin_raw_founder_cut",
+      "platform": "linkedin",
+      "rationale": "LinkedIn raw founder video requires a distinct export profile: portrait crop with static frame, no music, no captions, no transitions, minimal color correction — signals authenticity to LinkedIn algorithm; a new style preset for the LinkedIn platform not covered by edit_reformat_for_linkedin (which handles layout only)",
+      "trendId": "f8eb80820e42",
+      "priority": "HIGH"
+    },
+    {
+      "tool": "edit_linkedin_series_episode_format",
+      "platform": "linkedin",
+      "rationale": "Serialized LinkedIn video series requires episode numbering overlays, a consistent intro/outro bumper template, and series-metadata tagging in the export — a recurring-format production workflow not in the existing toolset",
+      "trendId": "9de560344e74",
+      "priority": "MEDIUM"
+    },
+    {
+      "tool": "edit_linkedin_narrative_documentary",
+      "platform": "linkedin",
+      "rationale": "Story-first branded documentary pacing for LinkedIn: slower cut rhythm (average 4-6 seconds per cut), B-roll-heavy structure, interview-style sound design, and narrative arc sequencing — distinct from all existing short-form hook-driven tools",
+      "trendId": "d41be56441c1",
+      "priority": "MEDIUM"
+    }
+  ],
+  "deprecationCandidates": [],
+  "persistingCandidatesFromPriorWeek": [
+    {
+      "tool": "edit_shorts_to_longform_clip",
+      "platform": "youtube",
+      "weeksSignaled": 2,
+      "note": "Returned again this week (trendId eee3953d61db) — hybrid Shorts-to-long-form funnel strategy is a persistent signal. Recommend escalating to HIGH priority for scaffolding."
+    },
+    {
+      "tool": "edit_text_situation_setup",
+      "platform": "tiktok",
+      "weeksSignaled": 2,
+      "note": "Front-load text-card compressed storytelling returned for second consecutive week (trendId ad46c6f70ff1). Persistent signal — elevated to scaffold priority."
+    }
+  ],
+  "summary": "9 new bridge tool candidates identified this week. Highest priority: edit_movement_text_compound_hook (YouTube 1-second compound hook — motion + text, distinct from prior text-only tool), edit_gear_reveal_transformation (YouTube hunting trophy/gear reveal sequence), edit_tiktok_longform_sequence (TikTok 1-3 min format assembly), edit_authentic_raw_cut (TikTok deliberate no-edit style), edit_two_second_instagram_hook (Instagram 2-second vs TikTok 3-second timing difference), edit_linkedin_raw_founder_cut (LinkedIn authenticity preset). Two prior candidates persist for a second week: edit_shorts_to_longform_clip and edit_text_situation_setup — recommend treating as HIGH priority. Fall deer season (Sept–Nov) is peak content period for hunting/outdoor niche across all platforms; hook and pacing pressure will intensify through October."
+}

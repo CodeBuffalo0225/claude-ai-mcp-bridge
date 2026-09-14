@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "youtube",
+  "generatedAt": "2026-09-14T13:08:28Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "3fa0462e850a",
+      "platform": "youtube",
+      "trend": "Suppressor-friendly content wave — quiet hunting rifle revolution YouTube Shorts fall 2026",
+      "evidence": "\"The industry is treating quieter shooting like a full-category trend, with new suppressor-friendly ammunition releases and hunting-focused suppressors hitting the market. Hunters are likely to notice threaded muzzles, more optics options, and more discussion about making rifles easier on the ears without giving up field usefulness.\" — theavidoutdoorsman.com SHOT Show 2026 reveals the gear trends hunters will see everywhere this fall (corroborated by outdoorsg.com Firearms News September 2026 Special Hunting Issue)",
+      "source": "https://theavidoutdoorsman.com/shot-show-2026-reveals-the-gear-trends-hunters-will-see-everywhere-this-fall/",
+      "firstSeen": "2026-09-14T13:08:28Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week September 2026"
+    },
+    {
+      "id": "f969f888e7d3",
+      "platform": "youtube",
+      "trend": "September routine-reset seasonal hook strategy hunting outdoor firearms YouTube Shorts 2026",
+      "evidence": "\"September matters because people are back in routine, which makes this a strong month for useful content, seasonal hooks, and recurring formats.\" — blog.mean.ceo Viral YouTube Video Trends September 2026 (corroborated by joinbrands.com How to Create YouTube Shorts That Go Viral in 2026 and klipa.ai YouTube Shorts Trends 2026: Your Ultimate Playbook)",
+      "source": "https://blog.mean.ceo/viral-youtube-video-trends-september-2026/",
+      "firstSeen": "2026-09-14T13:08:28Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week September 2026"
+    },
+    {
+      "id": "66f684d55d0f",
+      "platform": "youtube",
+      "trend": "Movement-first 1-second hook with bold text overlay hunting outdoor YouTube Shorts September 2026",
+      "evidence": "\"In Shorts, you have about one second to stop the scroll, making your opening hook the most critical part of your video. Effective hook techniques include starting with movement or visual change (not static)... adding bold text overlay in the first frame. Making YouTube Shorts go viral in 2026 requires hitting three algorithm signals in the first 3 seconds: a visual or text hook that stops the swipe, a clear topic match so the Shorts algorithm serves your content to the right seed audience, and a pacing that drives completion rates above 70%.\" — teleprompter.com Trending YouTube Shorts 2026: Top 10 Formats (corroborated by joinbrands.com and prapermedia.com)",
+      "source": "https://www.teleprompter.com/blog/trending-youtube-shorts",
+      "firstSeen": "2026-09-14T13:08:28Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_movement_text_compound_hook",
+      "rawQuery": "YouTube Shorts hunting firearms creator hook pacing editing trends September 2026"
+    },
+    {
+      "id": "77b48f55781d",
+      "platform": "youtube",
+      "trend": "Gear reveal before-after transformation format hunting firearms Shorts fall 2026",
+      "evidence": "\"Creators use quick cuts, captions, and 'POV' framing to build tension fast. Transformation content and educational formats are top performing formats — outdoor creators can leverage these to showcase before-and-after field results, trophy reveals, and nature-based tutorials.\" — teleprompter.com Trending YouTube Shorts 2026: Top 10 Formats (corroborated by klipa.ai YouTube Shorts Trends 2026: Your Ultimate Playbook)",
+      "source": "https://www.teleprompter.com/blog/trending-youtube-shorts",
+      "firstSeen": "2026-09-14T13:08:28Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_gear_reveal_transformation",
+      "rawQuery": "YouTube Shorts hunting firearms creator hook pacing editing trends September 2026"
+    },
+    {
+      "id": "eee3953d61db",
+      "platform": "youtube",
+      "trend": "Hybrid Shorts-to-long-form funnel strategy deer season hunting creators September 2026",
+      "evidence": "\"YouTube Shorts + Long-Form Strategy: The 2026 Hybrid Growth Guide shows creators how to use Shorts as a discovery layer — a hook or highlight from a longer video — that funnels viewers into full episodes for deeper engagement, monetization, and community building.\" — influenceflow.io YouTube Shorts + Long-Form Strategy: 2026 Hybrid Growth Guide",
+      "source": "https://influenceflow.io/resources/youtube-shorts-and-long-form-video-strategy-the-complete-2026-creators-guide-1/",
+      "firstSeen": "2026-09-14T13:08:28Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_shorts_to_longform_clip",
+      "rawQuery": "YouTube Shorts hunting firearms creator hook pacing editing trends September 2026"
+    }
+  ]
+}

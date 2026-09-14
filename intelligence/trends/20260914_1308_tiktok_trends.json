@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "tiktok",
+  "generatedAt": "2026-09-14T13:08:28Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "0599b1341d42",
+      "platform": "tiktok",
+      "trend": "Longer-form 1-3 minute TikTok format outperforming 15-second clips outdoor hunting creators fall 2026",
+      "evidence": "\"Longer-form video (1–3 minutes) now outperforms 15-second clips on watch time, retention, and FYP distribution. Additionally, AI lip-sync, AI voiceover, and AI-generated carousel images are flooding the platform — and the algorithm is still rewarding them when the hook holds.\" — teleprompter.com TikTok Trends 2026: What Creators Must Know Next (corroborated by blog.hootsuite.com 11 of the most important TikTok trends to watch in 2026 and kolsprite.com Top TikTok Video Trends in 2026)",
+      "source": "https://www.teleprompter.com/blog/tiktok-trends",
+      "firstSeen": "2026-09-14T13:08:28Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_tiktok_longform_sequence",
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week September 2026"
+    },
+    {
+      "id": "53a78ff39cad",
+      "platform": "tiktok",
+      "trend": "POV storytelling day-in-life format hunting outdoor TikTok creators fall 2026",
+      "evidence": "\"TikTok trends fall into three main categories: Format trends like POV storytelling, before-and-after transformations, and 'Day in my life' videos, along with meme and audio trends.\" — kolsprite.com Top TikTok Video Trends in 2026: Viral Content, TikTok Memes & Growth Strategies (corroborated by clipchamp.com TikTok's biggest trends right now 2026 and hootsuite.com 11 of the most important TikTok trends to watch in 2026)",
+      "source": "https://www.kolsprite.com/blog/tiktok-video-trends-2026",
+      "firstSeen": "2026-09-14T13:08:28Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_pov_dayinlife_hunt",
+      "rawQuery": "TikTok hunting outdoor creator editing format trends fall 2026 viral"
+    },
+    {
+      "id": "493486321310",
+      "platform": "tiktok",
+      "trend": "Niche comment-hunting discovery strategy sub-50k outdoor creator TikTok 2026",
+      "evidence": "\"The ones winning are the ones who stopped chasing trends after they hit the For You Page and started hunting them in the comments of niche creators with under 50k followers.\" — unil.ink TikTok Trends in 2026 (What's Actually Going Viral Right Now)",
+      "source": "https://unil.ink/blog/tiktok-trends-2026",
+      "firstSeen": "2026-09-14T13:08:28Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "TikTok hunting outdoor creator editing format trends fall 2026 viral"
+    },
+    {
+      "id": "b68c78e95771",
+      "platform": "tiktok",
+      "trend": "Unedited authentic single-take phone clips hunting outdoor TikTok creators fall 2026",
+      "evidence": "\"Audiences will gravitate toward content that feels spontaneous, with quick clips on phones, even 'unedited' ones, able to go viral. The best videos feel focused and easy to follow.\" — ecomdymedia.com Top 10 trending TikTok content ideas for 2026 (corroborated by clipchamp.com TikTok's biggest trends right now 2026 and hootsuite.com 11 of the most important TikTok trends to watch in 2026)",
+      "source": "https://ecomdymedia.com/blog/top-10-trending-tiktok-content-ideas-for-2026",
+      "firstSeen": "2026-09-14T13:08:28Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_authentic_raw_cut",
+      "rawQuery": "TikTok hunting outdoor creator editing format trends fall 2026 viral"
+    },
+    {
+      "id": "ad46c6f70ff1",
+      "platform": "tiktok",
+      "trend": "Front-load situation setup text card compressed storytelling TikTok hunting outdoor fall 2026",
+      "evidence": "\"Format is doing more work than any other variable in 2026. The best videos feel focused and easy to follow.\" — teleprompter.com TikTok Trends 2026: What Creators Must Know Next. September TikTok trend data from newengen.com September 2026 TikTok Trends: What's Viral Now confirms opening text card → video proof → punchline structure is dominating niche creator FYP distribution.",
+      "source": "https://newengen.com/insights/september-tiktok-trends/",
+      "firstSeen": "2026-09-14T13:08:28Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_text_situation_setup",
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week September 2026"
+    }
+  ]
+}
