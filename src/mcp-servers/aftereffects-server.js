@@ -468,6 +468,8 @@ class AfterEffectsMCPServer {
   // ── SERVER START ───────────────────────────────────────────────────────
 
   async start() {
+    // Connect the bridge to After Effects' CEP WebSocket before accepting commands
+    await this.bridge.connect(['aftereffects']);
     const transport = new StdioServerTransport();
     await this.server.connect(transport);
     logger.success('After Effects MCP Server running on stdio');
