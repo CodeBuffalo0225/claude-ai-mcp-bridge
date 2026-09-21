@@ -1,0 +1,100 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-09-21T13:07:46Z",
+  "weekOf": "2026-09-21",
+  "auditSource": "weekly-trend-refresh",
+  "existingBridgeTools": [
+    "edit_visual_velocity_pacing",
+    "edit_pas_hook_structure",
+    "edit_pattern_break_insert",
+    "edit_pov_transformation_cut",
+    "edit_split_screen_comparison",
+    "edit_text_overlay_hook",
+    "edit_split_screen_reaction",
+    "edit_reels_two_second_hook",
+    "edit_overhead_reveal_angle",
+    "edit_pov_text_exaggeration",
+    "edit_reformat_for_linkedin",
+    "edit_three_signal_hook",
+    "edit_bold_text_motion_hook",
+    "edit_reaction_reveal_cut",
+    "edit_three_panel_what_i_did",
+    "edit_rapid_cut_pacing",
+    "edit_first_frame_text_hook",
+    "edit_text_situation_setup",
+    "edit_three_panel_horizontal_split"
+  ],
+  "newCandidatesThisWeek": [
+    {
+      "tool": "edit_three_signal_70pct_hook",
+      "platform": "youtube",
+      "rationale": "Compound hook requiring three simultaneous algorithm signals in first 3 seconds (visual stop-scroll + topic match metadata + completion-arc pacing above 70%) — distinct from existing edit_three_signal_hook which targets general hooks; this variant specifically enforces the 70% completion-rate threshold as an edit constraint, requiring pacing decisions throughout the full clip not just the opening",
+      "trendId": "ef943f7f97f7",
+      "priority": "HIGH"
+    },
+    {
+      "tool": "edit_completion_rate_cut",
+      "platform": "youtube",
+      "rationale": "Completion-optimised cut template that applies tight scripting, zero dead-air trimming, and cadence-matching throughout the full Short — targeting >70% watch-through as the primary output metric; separate from hook-only tools because it governs the entire clip timeline, not just the opening frame",
+      "trendId": "61bc703f6ee3",
+      "priority": "HIGH"
+    },
+    {
+      "tool": "edit_shop_cta_overlay",
+      "platform": "tiktok",
+      "rationale": "TikTok Shop native CTA overlay: timed Shop Now button prompt synced to product reveal moment, with caption copy optimised for retargeting-eligible viewers; requires a specific overlay timing and caption template that doesn't exist in current tools — distinct from generic text overlays because it must match TikTok Shop's placement spec and conversion intent framing",
+      "trendId": "79d789d3d9a1",
+      "priority": "HIGH"
+    },
+    {
+      "tool": "edit_gear_check_reveal_sequence",
+      "platform": "tiktok",
+      "rationale": "Pre-hunt loadout gear-check format: flat-lay or hold-up product reveal in named sequence (item 1 → item 2 → final hero item), each with lower-third name tag and price/link area — a policy-safe firearms-niche alternative to range/field footage; the sequencing template and lower-third spec are not covered by existing reveal tools",
+      "trendId": "0fc18a8b8845",
+      "priority": "MEDIUM"
+    },
+    {
+      "tool": "edit_reels_completion_arc",
+      "platform": "instagram",
+      "rationale": "Instagram-specific completion-arc editing template: hook at frame 0, retention bump at the 50% mark (re-hook or surprise), and a payoff in the final 2 seconds that rewards watch-to-end — enforced as a structural template with mandatory beat positions; different from YouTube completion tools because Instagram's algorithm weights completion independently and the 50%-beat rule is platform-specific",
+      "trendId": "0eb03fe6dcd0",
+      "priority": "HIGH"
+    },
+    {
+      "tool": "edit_pov_field_camera",
+      "platform": "instagram",
+      "rationale": "First-person field POV edit template for hunting Reels: helmet/chest-mount or handheld walk-in footage with stabilisation preset, ambient audio preservation, and timed location/situation text card — a hunting-specific POV profile that preserves natural sound (wind, brush, wildlife) as a feature rather than replacing it with music, distinct from edit_pov_transformation_cut which uses music and titles",
+      "trendId": "62a38bfebebd",
+      "priority": "HIGH"
+    },
+    {
+      "tool": "edit_silent_autoplay_caption_burn",
+      "platform": "linkedin",
+      "rationale": "LinkedIn silent-autoplay caption burning: word-by-word or sentence-by-sentence burned-in subtitle track optimised for muted viewing, with LinkedIn's square/portrait crop spec and professional caption styling (no emoji, no wave-form, clean sans-serif) — a distinct export profile for LinkedIn's professional environment vs existing caption tools tuned for TikTok/Reels aesthetics",
+      "trendId": "892761919180",
+      "priority": "HIGH"
+    }
+  ],
+  "deprecationCandidates": [],
+  "persistingCandidatesFromPriorWeek": [
+    {
+      "tool": "edit_gear_reveal_transformation",
+      "platform": "youtube",
+      "weeksSignaled": 2,
+      "note": "Gear reveal / transformation content resurfaces this week via TikTok gear-check format (trendId 0fc18a8b8845) — two consecutive weeks of hunting gear reveal signals across YouTube and TikTok. The new edit_gear_check_reveal_sequence (TikTok variant) is a sibling tool; recommend scaffolding both together as a gear-reveal tool family."
+    },
+    {
+      "tool": "edit_shorts_to_longform_clip",
+      "platform": "youtube",
+      "weeksSignaled": 3,
+      "note": "Hybrid Shorts-to-long-form funnel strategy has signaled for 3 consecutive weeks. No direct trendId this week but the serialized Shorts format (trendId 20a4e7f7c377) is a structural dependency of the same content strategy. Escalate to CRITICAL scaffold priority."
+    },
+    {
+      "tool": "edit_movement_text_compound_hook",
+      "platform": "youtube",
+      "weeksSignaled": 2,
+      "note": "Motion + text compound hook from week of 20260914 (trendId 66f684d55d0f) is complemented this week by the three-signal hook signal (trendId ef943f7f97f7) — both enforce a compound first-frame action. The new edit_three_signal_70pct_hook partially overlaps; consider merging or clearly delineating scope before scaffolding."
+    }
+  ],
+  "summary": "7 new bridge tool candidates identified this week. Highest priority: edit_three_signal_70pct_hook (YouTube completion-enforced compound hook), edit_completion_rate_cut (full-clip completion-rate optimisation), edit_shop_cta_overlay (TikTok Shop native CTA timing), edit_reels_completion_arc (Instagram 3-beat completion arc), edit_pov_field_camera (hunting field POV with ambient audio), edit_silent_autoplay_caption_burn (LinkedIn muted-autoplay caption burn). Notable platform development: YouTube's September 2026 policy barring weapons/ammunition from ALL sponsored content is a significant niche signal — hunting and firearms creators must restructure sponsored integrations, which may require CutPilot to flag sponsored-segment placement for compliance. Three prior candidates persist: edit_gear_reveal_transformation (2 weeks), edit_shorts_to_longform_clip (3 weeks — escalate to CRITICAL), edit_movement_text_compound_hook (2 weeks — scope overlap with new edit_three_signal_70pct_hook). Peak deer season (late September through November) will intensify content output across all four platforms — expect higher hook-pressure and gear-reveal signal volume for at least 8 more weeks."
+}

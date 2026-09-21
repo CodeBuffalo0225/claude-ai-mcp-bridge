@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "youtube",
+  "generatedAt": "2026-09-21T13:07:46Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "f3791db5a516",
+      "platform": "youtube",
+      "trend": "YouTube branded content policy bars weapons/ammunition from sponsored Shorts — impacts firearms creators using brand deals September 2026",
+      "evidence": "\"YouTube updated its branded content policies in September 2026 to bar 'weapons or ammunition' from any content on YouTube influenced by a brand partner in exchange for something of value. This represents a significant restriction for firearms creators using sponsorships.\" — shootingnewsweekly.com Now We Know Why YouTube Tightened Its Restrictions on Gun Content Again (corroborated by shootingnewsweekly.com reporting on policy enforcement timeline)",
+      "source": "https://www.shootingnewsweekly.com/media/now-we-know-why-youtube-tightened-its-restrictions-on-gun-content-again/",
+      "firstSeen": "2026-09-21T13:07:46Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "ef943f7f97f7",
+      "platform": "youtube",
+      "trend": "Three-signal hook within 3 seconds: visual hook + topic match + 70% completion pacing for hunting Shorts fall 2026",
+      "evidence": "\"Making YouTube Shorts go viral in 2026 requires hitting three algorithm signals in the first 3 seconds: a visual or text hook that stops the swipe, a clear topic match so the Shorts algorithm serves your content to the right seed audience, and a pacing that drives completion rates above 70%.\" — joinbrands.com How to Create YouTube Shorts That Go Viral in 2026 (corroborated by teleprompter.com Trending YouTube Shorts 2026: Top 10 Formats and prapermedia.com Viral YouTube Shorts 2026)",
+      "source": "https://joinbrands.com/blog/how-to-create-youtube-shorts/",
+      "firstSeen": "2026-09-21T13:07:46Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_three_signal_70pct_hook",
+      "rawQuery": "YouTube Shorts hunting firearms creator hook pacing editing trends September 2026"
+    },
+    {
+      "id": "20a4e7f7c377",
+      "platform": "youtube",
+      "trend": "Serialized how-to hunting Shorts format — recurring series driving subscriber growth and retention fall 2026",
+      "evidence": "\"Strong scripting, tight pacing, and clean delivery make Shorts feel like a series viewers want to follow. Trending topics for fall 2026 cluster around fast comprehension and formats people instantly recognize — outdoor and hunting creators can leverage recurring episode formats (gear check, shot review, field tip of the week) to build subscriber momentum heading into peak deer season.\" — klipa.ai YouTube Shorts Trends 2026: Your Ultimate Playbook (corroborated by blog.mean.ceo Viral YouTube Video Trends September 2026)",
+      "source": "https://klipa.ai/en/blog/youtube-shorts-trends-2026_151",
+      "firstSeen": "2026-09-21T13:07:46Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "61bc703f6ee3",
+      "platform": "youtube",
+      "trend": "Tight scripting and clean delivery optimized for >70% watch-through on YouTube Shorts deer season 2026",
+      "evidence": "\"Strong hooks and clean edits help viewers stay, while clear metadata helps YouTube understand what the Short is about. In the world of Shorts, you have about one second to stop the scroll — if that first second is weak, the rest doesn't matter because no one will stick around.\" — conthunt.app How to Edit YouTube Shorts: The Ultimate 2026 Strategy (corroborated by teleprompter.com and lunabloomai.com)",
+      "source": "https://conthunt.app/blog/how-to-edit-youtube-shorts",
+      "firstSeen": "2026-09-21T13:07:46Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_completion_rate_cut",
+      "rawQuery": "YouTube Shorts hunting firearms creator hook pacing editing trends September 2026"
+    },
+    {
+      "id": "1dd3c686befd",
+      "platform": "youtube",
+      "trend": "Deer season pre-rut urgency hook — August-September hunting creators leveraging seasonal timing as scroll-stop hook",
+      "evidence": "\"September matters because people are back in routine, which makes this a strong month for useful content, seasonal hooks, and recurring formats. For hunting creators, the pre-rut August–September window is peak buying intent — whitetail content strategy peaks at pre-rut content in August–September.\" — blog.mean.ceo Viral YouTube Video Trends September 2026 (corroborated by modernoutdoormedia.com How to Market a Hunting Brand in 2026)",
+      "source": "https://blog.mean.ceo/viral-youtube-video-trends-september-2026/",
+      "firstSeen": "2026-09-21T13:07:46Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "hunting outdoor brands Instagram TikTok content strategy fall 2026 deer season"
+    }
+  ]
+}

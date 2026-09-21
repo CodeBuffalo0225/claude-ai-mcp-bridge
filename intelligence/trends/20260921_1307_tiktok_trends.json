@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "tiktok",
+  "generatedAt": "2026-09-21T13:07:46Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "79d789d3d9a1",
+      "platform": "tiktok",
+      "trend": "TikTok Shop integration for hunting/outdoor gear — UGC-style product demos with Shop Now retargeting fall 2026",
+      "evidence": "\"Brands can use TikTok Shop for quick-turn items like apparel, gloves, socks, drinkware, and multi-tools, and run 'Shop Now' retargeting ads to viewers who watched videos but didn't purchase. Short-form video will remain the cornerstone of outdoor brand marketing in 2026, allowing brands to deliver engaging, authentic stories that capture attention quickly and encourage sharing.\" — modernoutdoormedia.com How to Market a Hunting Brand in 2026 (corroborated by kellybrandmanagement.com Social Media Trends Outdoor Retailers 2026)",
+      "source": "https://modernoutdoormedia.com/how-to-market-a-hunting-brand-in-2026/",
+      "firstSeen": "2026-09-21T13:07:46Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_shop_cta_overlay",
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "c7cc81bb9439",
+      "platform": "tiktok",
+      "trend": "#deerhunting and fall hunting gear content wave on TikTok — pre-rut season peak September 2026",
+      "evidence": "\"#deerhunting is an active trending hashtag on TikTok with a growing content wave ahead of peak rut season. 'Summer is almost over — hunting season' discovery content is surfacing on TikTok trending pages as creators begin pre-rut content pushes.\" — tiktok.com/tag/deerhunting trending page (corroborated by tiktok.com/discover/summer-is-almost-over-hunting-season and hooked.so Viral Fishing & Hunting Videos on TikTok 2026)",
+      "source": "https://www.tiktok.com/tag/deerhunting",
+      "firstSeen": "2026-09-21T13:07:46Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "4b751dd49dc0",
+      "platform": "tiktok",
+      "trend": "Authenticity and UGC over polished brand content for hunting/outdoor TikTok — raw field footage outperforms studio edits",
+      "evidence": "\"User-generated content (UGC) will outperform polished brand content in 2026, as outdoor consumers trust real people who show real experiences. High-impact UGC types for outdoor sporting goods include customers showcasing their hunting or fishing trips. Despite TikTok's censorship of firearms and dead animals, the opportunity is substantial — it gives creators level ground with bigger names and provides organic reach advantages.\" — deercampdigital.com Strategies for Selling Hunting and Fishing Gear (corroborated by kellybrandmanagement.com and guidefitter.com Hunters on TikTok)",
+      "source": "https://deercampdigital.com/strategies-for-selling-hunting-and-fishing-gear/",
+      "firstSeen": "2026-09-21T13:07:46Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "hunting outdoor brands Instagram TikTok content strategy fall 2026 deer season"
+    },
+    {
+      "id": "b7cdbb42947b",
+      "platform": "tiktok",
+      "trend": "Trending fall seasonal audio pairing for TikTok hunting content September 2026",
+      "evidence": "\"Trending TikTok sounds and viral trends update weekly in September 2026, with seasonal audio cycles accelerating as fall content waves build. Creators who pair field footage with trending sounds see measurable lift in reach during the algorithm's weekly reset.\" — socialpilot.co Trending TikTok Sounds & Viral Trends in September 2026 (corroborated by elements.envato.com TikTok Trends 2026 this month)",
+      "source": "https://www.socialpilot.co/blog/tiktok-trends",
+      "firstSeen": "2026-09-21T13:07:46Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "0fc18a8b8845",
+      "platform": "tiktok",
+      "trend": "Hunting gear must-haves gear-check reveal format on TikTok — pre-hunt loadout content trending fall 2026",
+      "evidence": "\"Hunting Gear Must Haves is an active TikTok discovery trend with creators showcasing pre-hunt loadout gear checks — items laid flat or displayed in sequence before heading into the field. This format mirrors the broader product-reveal trend while staying within platform content policies by avoiding weapon-fire footage.\" — tiktok.com/discover/hunting-gear-must-haves trending page (corroborated by hooked.so Viral Fishing & Hunting Videos on TikTok 2026)",
+      "source": "https://www.tiktok.com/discover/hunting-gear-must-haves",
+      "firstSeen": "2026-09-21T13:07:46Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_gear_check_reveal_sequence",
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    }
+  ]
+}
