@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "linkedin",
+  "generatedAt": "2026-09-28T13:19:39Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "f11cc3d1a89e",
+      "platform": "linkedin",
+      "trend": "LinkedIn serialized behind-the-scenes video — outdoor brands using weekly episode series to show operations and team culture fall 2026",
+      "evidence": "\"Users will see a new video trend gain momentum in 2026: serialized content. Many businesses are shifting toward publishing video series that give viewers a quick, behind-the-scenes look at the people behind the brand to showcase day-to-day operations and workplace culture. For outdoor brands, this maps onto weekly field-prep, gear-assembly, and hunt-debrief series formats.\" — sbdc.uh.edu 2026 Social Media Trends Small Businesses Should Leverage (corroborated by slateteams.com Social Media Trends: What Will Shape 2026)",
+      "source": "https://www.sbdc.uh.edu/sbdc/2026-social-media-trends-small-business.asp",
+      "firstSeen": "2026-09-28T13:19:39Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "51588131b164",
+      "platform": "linkedin",
+      "trend": "LinkedIn 2026 quality-over-virality shift — outdoor and firearms brands building loyal professional niche followings with authentic content",
+      "evidence": "\"Brands are shifting toward quality over viral quantity, with micro-influencers with tight communities driving higher engagement and conversions. Social media users in 2026 will increasingly look for meaningful interaction, not just viral content — outdoor and hunting brands benefit from building loyal professional niche followings on LinkedIn.\" — iqfluence.io Social Media Trends 2026 for Influencer Marketing (corroborated by shoutoutstudio.com Video Marketing Trends 2026)",
+      "source": "https://iqfluence.io/public/blog/social-trends",
+      "firstSeen": "2026-09-28T13:19:39Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "LinkedIn video outdoor hunting firearms brand content strategy fall 2026"
+    },
+    {
+      "id": "20671ad4fce0",
+      "platform": "linkedin",
+      "trend": "15-30 second LinkedIn video sweet spot — outdoor and firearms brands targeting professional buyers with concise native clips fall 2026",
+      "evidence": "\"For most platforms, 15-30 seconds is the sweet spot for maximum engagement, though educational content can last 60–90 seconds while maintaining engagement. LinkedIn's video format rewards concise, value-dense clips that respect the professional audience's limited attention window — outdoor brands targeting wholesale buyers and trade partners benefit from tight, respectful cuts.\" — benchmarkemail.com 5 Winning Tactics for Short-Form Video Marketing Trends in 2026 (corroborated by prodshort.com 10 Short Form Video Trends for 2026 Founders)",
+      "source": "https://www.benchmarkemail.com/blog/short-form-video-marketing-trends/",
+      "firstSeen": "2026-09-28T13:19:39Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_linkedin_15_30s_cut",
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "482597bbac2b",
+      "platform": "linkedin",
+      "trend": "Platform-customized LinkedIn video 3x text engagement — outdoor brands tailoring professional-audience cuts separate from TikTok/Reels reposts",
+      "evidence": "\"Creating one video and pushing it everywhere is a costly mistake brands still make. Each platform has unique audience behaviors, content formats, and algorithm preferences. LinkedIn video posts earn 3x the engagement of text-only content — and native LinkedIn videos with burned-in captions are essential for silent-scroll autoplay environments where most viewers never unmute.\" — slateteams.com Social Media Trends: What Will Shape 2026 (corroborated by sbdc.uh.edu and iqfluence.io Social Media Trends 2026)",
+      "source": "https://slateteams.com/blog/social-media-trends-2026",
+      "firstSeen": "2026-09-28T13:19:39Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "12f4ad93641d",
+      "platform": "linkedin",
+      "trend": "LinkedIn video 34% engagement jump 2026 — small outdoor businesses using native video for B2B partner and wholesale buyer reach",
+      "evidence": "\"LinkedIn saw a 34% jump in video engagement compared to last year. LinkedIn video posts earn 3x the engagement of text-only content. For small outdoor businesses — archery brands, ammunition manufacturers, optics companies — native LinkedIn video is emerging as the primary channel for reaching wholesale buyers and trade partners heading into the fall purchasing cycle.\" — sbdc.uh.edu 2026 Social Media Trends Small Businesses Should Leverage (corroborated by kinexmedia.com Video Marketing Trends 2026)",
+      "source": "https://www.sbdc.uh.edu/sbdc/2026-social-media-trends-small-business.asp",
+      "firstSeen": "2026-09-28T13:19:39Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "LinkedIn video outdoor hunting firearms brand content strategy fall 2026"
+    }
+  ]
+}

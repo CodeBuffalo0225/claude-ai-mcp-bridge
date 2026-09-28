@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "tiktok",
+  "generatedAt": "2026-09-28T13:19:39Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "6f04eace08d3",
+      "platform": "tiktok",
+      "trend": "Fall deer season \"Summer is almost over, hunting season\" hook pattern peaking on TikTok discovery late September 2026",
+      "evidence": "\"Crisp fall mornings signal deer season, which hunters celebrate as the change in weather approaches. The 'Summer is almost over — hunting season' discovery hook pattern is surfacing on TikTok trending discovery pages with hunters beginning pre-rut content pushes in late September 2026.\" — tiktok.com/discover/summer-is-almost-over-hunting-season (corroborated by tiktok.com/discover/content-strategy-for-2026 fall content calendar guidance)",
+      "source": "https://www.tiktok.com/discover/summer-is-almost-over-hunting-season",
+      "firstSeen": "2026-09-28T13:19:39Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "f5bffe5ccf08",
+      "platform": "tiktok",
+      "trend": "TikTok 2026 Emotional ROI and authenticity signals — UGC field footage outperforms polished brand video for hunting creators",
+      "evidence": "\"The 2026 report identifies three core signals: audiences moving away from fantasy toward realism, curiosity-driven discovery, and 'Emotional ROI' where buyers use TikTok as a verification hub before purchasing. TikTok's algorithm has evolved significantly heading into 2026, rewarding authenticity, consistency, and strategic alignment with audience expectations rather than generic content.\" — influenceflow.io TikTok Content Ideas: The Complete Creators Guide for 2026 (corroborated by deercampdigital.com strategies for selling hunting and fishing gear)",
+      "source": "https://influenceflow.io/resources/tiktok-content-ideas-the-complete-creators-guide-for-2026/",
+      "firstSeen": "2026-09-28T13:19:39Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "TikTok hunting outdoor creator content strategy fall deer season October 2026"
+    },
+    {
+      "id": "18c6686ad650",
+      "platform": "tiktok",
+      "trend": "Hunting TikTok content creation courses trending — how to film hunts with storytelling arc and viewer retention structure",
+      "evidence": "\"Filming courses teach creators how to film hunts from start to finish, build budgets for filming gear, prioritize equipment, and keep viewers engaged through storytelling and engagement tips on TikTok. The demand for hunting filming instruction reflects a maturing creator class that wants structured narrative — start-to-end story arc, not just clips.\" — tiktok.com/discover/how-to-start-making-hunting-content",
+      "source": "https://www.tiktok.com/discover/how-to-start-making-hunting-content",
+      "firstSeen": "2026-09-28T13:19:39Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_hunt_film_story_arc",
+      "rawQuery": "TikTok hunting outdoor creator content strategy fall deer season October 2026"
+    },
+    {
+      "id": "3d99aa4c69ee",
+      "platform": "tiktok",
+      "trend": "Trending fall TikTok sounds paired with hunting field footage — weekly sound cycles driving algorithmic lift for outdoor creators October 2026",
+      "evidence": "\"Trending TikTok sounds and viral trends update weekly in September 2026, with seasonal audio cycles accelerating as fall content waves build. Creators who pair field footage with trending sounds see measurable lift in reach during the algorithm's weekly reset.\" — socialpilot.co Trending TikTok Sounds & Viral Trends in September 2026",
+      "source": "https://www.socialpilot.co/blog/tiktok-trends",
+      "firstSeen": "2026-09-28T13:19:39Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "6fb0e43ac32d",
+      "platform": "tiktok",
+      "trend": "Hunting TikTok micro-influencers under 200K followers driving higher community engagement than mega-creators for outdoor gear brands",
+      "evidence": "\"Top hunting TikTok creators in 2026 include @katelynarmstr0ng (205.1K), @morgannpresleyy (182.8K), @outdoors_allie (167.3K) — micro-community accounts driving outsized engagement relative to their follower count. Despite TikTok's censorship of firearms and dead animals, the opportunity is substantial — it gives creators level ground with bigger names and provides organic reach advantages for niche outdoor gear brands.\" — creators.feedspot.com Top 10 Hunting TikTok Influencers in 2026 (corroborated by deercampdigital.com strategies for selling hunting and fishing gear)",
+      "source": "https://creators.feedspot.com/hunting_tiktok_influencers/",
+      "firstSeen": "2026-09-28T13:19:39Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    }
+  ]
+}

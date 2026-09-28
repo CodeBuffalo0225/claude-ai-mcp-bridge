@@ -1,0 +1,107 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-09-28T13:19:39Z",
+  "weekOf": "2026-09-28",
+  "auditSource": "weekly-trend-refresh",
+  "existingBridgeTools": [
+    "edit_visual_velocity_pacing",
+    "edit_pas_hook_structure",
+    "edit_pattern_break_insert",
+    "edit_pov_transformation_cut",
+    "edit_split_screen_comparison",
+    "edit_text_overlay_hook",
+    "edit_split_screen_reaction",
+    "edit_reels_two_second_hook",
+    "edit_overhead_reveal_angle",
+    "edit_pov_text_exaggeration",
+    "edit_reformat_for_linkedin",
+    "edit_three_signal_hook",
+    "edit_bold_text_motion_hook",
+    "edit_reaction_reveal_cut",
+    "edit_three_panel_what_i_did",
+    "edit_rapid_cut_pacing",
+    "edit_first_frame_text_hook",
+    "edit_text_situation_setup",
+    "edit_three_panel_horizontal_split",
+    "edit_three_signal_70pct_hook",
+    "edit_completion_rate_cut",
+    "edit_shop_cta_overlay",
+    "edit_gear_check_reveal_sequence",
+    "edit_reels_completion_arc",
+    "edit_pov_field_camera",
+    "edit_silent_autoplay_caption_burn"
+  ],
+  "newCandidatesThisWeek": [
+    {
+      "tool": "edit_two_second_visual_hook",
+      "platform": "youtube",
+      "rationale": "YouTube Shorts 2026 has compressed the effective hook window to 2 seconds — before the existing edit_reels_two_second_hook (Instagram-tuned) and edit_three_signal_70pct_hook (3-second compound hook). This is a YouTube-specific 2-second stop-scroll template: visual-only promise in frame 0-2s with no title card, no intro, optimised for Shorts' vertical-swipe context. Distinct from Reels variant in pacing spec and metadata-match requirements unique to YouTube's Shorts algorithm.",
+      "trendId": "c0308397b459",
+      "priority": "HIGH"
+    },
+    {
+      "tool": "edit_beat_cadence_pacing",
+      "platform": "youtube",
+      "rationale": "Structured beat-every-1.5s editing cadence: punch-ins, b-roll inserts, and visual-cue timing enforced at 1.5–3 second intervals throughout the full clip to maintain retention beyond the hook. Not covered by edit_rapid_cut_pacing (which handles rapid montage) or edit_completion_rate_cut (which governs full-clip completion arc) — this tool specifically enforces the beat-timing grid as an edit template, making it usable as a standalone rhythm layer on any hunting clip regardless of narrative structure.",
+      "trendId": "14c0aa244446",
+      "priority": "HIGH"
+    },
+    {
+      "tool": "edit_hunt_film_story_arc",
+      "platform": "tiktok",
+      "rationale": "Structured narrative arc for hunting film clips: start-to-finish story structure (pre-hunt setup → field action → outcome reveal) with audience-retention checkpoints — matching the emerging demand from TikTok hunting creation courses. Distinct from edit_pov_field_camera (POV framing tool) and edit_reels_completion_arc (platform-completion-rate tool) because this governs the story skeleton of a full hunt sequence rather than a camera angle or completion metric. Fills gap for creators wanting CutPilot to auto-structure multi-clip hunt footage into a coherent narrative arc.",
+      "trendId": "18c6686ad650",
+      "priority": "MEDIUM"
+    },
+    {
+      "tool": "edit_flop_core_fail_reveal",
+      "platform": "instagram",
+      "rationale": "Flop-Core Instagram Reels template: structures a 'failure reveal' clip — missed shot, gear fail, or unexpected field moment — with specific caption framing ('I can't believe I…'), reaction cut structure, and original-audio-first edit spec that avoids copyrighted music restrictions on business accounts. Distinct from edit_reaction_reveal_cut (which handles product/information reveal reactions) because Flop-Core requires the failure event as the primary content unit, not a reaction overlay. A significant new Instagram format appearing in September 2026 tracked by multiple sources.",
+      "trendId": "e1e4c367d8b3",
+      "priority": "HIGH"
+    },
+    {
+      "tool": "edit_rating_hook_reveal",
+      "platform": "instagram",
+      "rationale": "'10/10 Habits' rating-hook template: structures a short-form clip around a numeric rating reveal hook ('I give this [gear/tip/habit] a 10/10 because…') with a specific title-card spec for the rating number, a 2-second hold on the score before the reveal, and a CTA comment-prompt at the end ('What would you rate it?'). Not covered by existing hook tools — the numeric-rating reveal structure is a distinct hook mechanic that combines information-delivery with interactive comment-bait, both absent from current tools.",
+      "trendId": "6e4f40c5caa2",
+      "priority": "HIGH"
+    },
+    {
+      "tool": "edit_product_demo_field_reveal",
+      "platform": "instagram",
+      "rationale": "UGC-style field-condition product demo template: structures a hunting gear Reels demo with ambient field audio preserved, natural lighting treatment (no studio correction), affiliate-link caption spec, and a 3-beat reveal (problem → product → field test result). Distinct from edit_gear_check_reveal_sequence (TikTok flat-lay format with lower-third tags) because this is an Instagram-specific field-demo profile with UGC aesthetic intentionally preserved — no colour grade, raw sound — to match the authenticity signal driving Instagram algorithm reach in this niche.",
+      "trendId": "9905914afffe",
+      "priority": "MEDIUM"
+    },
+    {
+      "tool": "edit_linkedin_15_30s_cut",
+      "platform": "linkedin",
+      "rationale": "LinkedIn-optimised 15–30 second cut profile: trims any source clip to the 15–30s sweet spot with LinkedIn's square/portrait crop, burned-in professional captions (no emoji, clean sans-serif), silent-autoplay-first audio mix, and a value-dense opening 3 seconds targeting professional buyers. Partially overlaps edit_reformat_for_linkedin (which handles format/crop conversion) but adds the duration-enforcement constraint and the professional-buyer edit posture (cut for attention efficiency, not entertainment pacing) as a distinct export spec for B2B outdoor brands.",
+      "trendId": "20671ad4fce0",
+      "priority": "HIGH"
+    }
+  ],
+  "deprecationCandidates": [],
+  "persistingCandidatesFromPriorWeek": [
+    {
+      "tool": "edit_gear_reveal_transformation",
+      "platform": "youtube",
+      "weeksSignaled": 3,
+      "note": "Gear reveal/transformation content resurfaces again — the new edit_product_demo_field_reveal (Instagram UGC field demo, trendId 9905914afffe) is a sibling format on a second platform. Three consecutive weeks of hunting gear reveal signals across YouTube, TikTok, and now Instagram. Recommend scaffolding edit_gear_reveal_transformation, edit_gear_check_reveal_sequence, and edit_product_demo_field_reveal as a coordinated gear-reveal tool family."
+    },
+    {
+      "tool": "edit_shorts_to_longform_clip",
+      "platform": "youtube",
+      "weeksSignaled": 4,
+      "note": "Hybrid Shorts-to-long-form funnel strategy signals for the 4th consecutive week (trendId b92bfa77692c). CRITICAL scaffold priority. This is now one of the most persistently signaled missing capabilities in the audit history. Recommend prioritising scaffold before next weekly run."
+    },
+    {
+      "tool": "edit_movement_text_compound_hook",
+      "platform": "youtube",
+      "weeksSignaled": 3,
+      "note": "Motion + text compound hook persisting for 3 weeks. This week's edit_two_second_visual_hook (trendId c0308397b459) and edit_beat_cadence_pacing (trendId 14c0aa244446) both address overlapping scope. Recommend resolving whether edit_movement_text_compound_hook merges into edit_two_second_visual_hook or remains a distinct compound-motion variant before scaffolding."
+    }
+  ],
+  "summary": "7 new bridge tool candidates identified this week. Highest priority: edit_two_second_visual_hook (YouTube 2s stop-scroll hook — window has compressed vs prior 3s spec), edit_beat_cadence_pacing (1.5s visual beat grid for full-clip retention), edit_flop_core_fail_reveal (new Instagram Flop-Core failure-moment format — multiple sources corroborate September 2026 emergence), edit_rating_hook_reveal (10/10 rating-hook Reels format — interactive comment-bait mechanic not in current tools), edit_linkedin_15_30s_cut (LinkedIn professional-buyer 15–30s cut profile distinct from existing reformat tool). New format signals: Flop-Core (Instagram failure reveals) and 10/10 Habits (rating hooks) are the two freshest Instagram formats this week — both are policy-safe for firearms/hunting niche and should be scaffolded before they peak. Peak rut season (October–November) is now 2 weeks away — expect maximum hook-pressure and gear-reveal signal volume. Three persistent candidates: edit_gear_reveal_transformation (3 weeks — now cross-platform with Instagram sibling signal), edit_shorts_to_longform_clip (4 weeks — CRITICAL, recommend immediate scaffold), edit_movement_text_compound_hook (3 weeks — scope conflict with new edit_two_second_visual_hook needs resolution)."
+}

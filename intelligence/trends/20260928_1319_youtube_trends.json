@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "youtube",
+  "generatedAt": "2026-09-28T13:19:39Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "c0308397b459",
+      "platform": "youtube",
+      "trend": "Hyper-focused 2-second hook with visual promise — YouTube Shorts hook window narrows to 2 seconds for hunting creators October 2026",
+      "evidence": "\"In 2026, if you don't capture attention in the first two seconds, you've already lost, with the most dominant trend being the hyper-focus on the 'viral hook' — a short, powerful segment, typically lasting around 15 seconds, that defines your entire video. Every high-performing Short follows the same skeleton: Hook (0–2s) - a visual or verbal promise strong enough to stop the scroll, and Setup (2–8s) - context delivered fast with no intros or logos.\" — vortexxcel.com YouTube Shorts Editing Guide: How to Edit Shorts That Go Viral (2026) (corroborated by joinbrands.com How to Create YouTube Shorts That Go Viral in 2026 and conthunt.app How to Edit YouTube Shorts: The Ultimate 2026 Strategy)",
+      "source": "https://vortexxcel.com/youtube-shorts-editing-guide/",
+      "firstSeen": "2026-09-28T13:19:39Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_two_second_visual_hook",
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "14c0aa244446",
+      "platform": "youtube",
+      "trend": "Beat-every-1.5-seconds editing cadence with punch-ins and b-roll drives retention on YouTube Shorts hunting content October 2026",
+      "evidence": "\"Retention improves when viewers always have a reason to keep watching — every few seconds should offer a new visual cue, piece of information, or small payoff, with a new visual beat every 1–2 seconds. Cut for pace with beats every 1.5–3 seconds, then add punch-ins and b-roll to maintain momentum throughout the entire clip.\" — conthunt.app How to Edit YouTube Shorts: The Ultimate 2026 Strategy (corroborated by vortexxcel.com YouTube Shorts Editing Guide 2026 and prapermedia.com Viral YouTube Shorts 2026)",
+      "source": "https://conthunt.app/blog/how-to-edit-youtube-shorts",
+      "firstSeen": "2026-09-28T13:19:39Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_beat_cadence_pacing",
+      "rawQuery": "YouTube Shorts hunting firearms creator hook pacing editing trends October 2026"
+    },
+    {
+      "id": "b92bfa77692c",
+      "platform": "youtube",
+      "trend": "Hybrid Shorts-to-long-form niche growth strategy — hunting creators using Shorts as top-of-funnel subscriber driver October 2026",
+      "evidence": "\"YouTube Shorts and long-form video strategy: The Complete 2026 Creator's Guide — niche growth for creators using Shorts as a top-of-funnel discovery engine that converts viewers to long-form subscribers. Hunting creators who publish Shorts as previews or chapter hooks for full hunts drive measurable long-form subscriber momentum heading into peak rut season.\" — influenceflow.io YouTube Shorts and Long-Form Video Strategy: The Complete 2026 Creator's Guide",
+      "source": "https://influenceflow.io/resources/youtube-shorts-and-long-form-video-strategy-the-complete-2026-creators-guide-1/",
+      "firstSeen": "2026-09-28T13:19:39Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "YouTube Shorts hunting firearms creator hook pacing editing trends October 2026"
+    },
+    {
+      "id": "700c51f6f34b",
+      "platform": "youtube",
+      "trend": "New hunting gun 2026 gear spotlight — carbon-fiber barrels and threaded muzzles dominating firearms product Shorts content",
+      "evidence": "\"Standout New Hunting Guns of 2026: Recurring trends include carbon-fiber barrels and threaded muzzles, as well as optic rails and accessory-ready fore-ends — providing hunting creators with fresh gear-spotlight content pegs heading into deer season. Firearms manufacturers leaning into accessories to protect profitability drives a wave of product-reveal and unboxing Shorts.\" — americanhunter.org Standout New Hunting Guns of 2026 (An Official Journal of the NRA)",
+      "source": "https://www.americanhunter.org/content/standout-new-hunting-guns-of-2026/",
+      "firstSeen": "2026-09-28T13:19:39Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "8b7abf1961bd",
+      "platform": "youtube",
+      "trend": "Fast-comprehension instant-recognition editing templates dominating YouTube Shorts hunting and outdoor content fall 2026",
+      "evidence": "\"Trending YouTube Shorts cluster around fast comprehension, strong retention, rewatch loops, and formats people instantly recognize. Trending topics for fall 2026 cluster around fast comprehension and formats people instantly recognize — outdoor and hunting creators can leverage recurring episode formats (gear check, shot review, field tip of the week) to build subscriber momentum heading into peak deer season.\" — anijam.ai YouTube Shorts Trends 2026: What's Actually Going Viral (corroborated by teleprompter.com Trending YouTube Shorts 2026: Top 10 Formats)",
+      "source": "https://www.anijam.ai/blog/youtube-shorts-trends/",
+      "firstSeen": "2026-09-28T13:19:39Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    }
+  ]
+}

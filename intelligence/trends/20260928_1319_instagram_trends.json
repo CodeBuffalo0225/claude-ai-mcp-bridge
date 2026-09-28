@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "instagram",
+  "generatedAt": "2026-09-28T13:19:39Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "e1e4c367d8b3",
+      "platform": "instagram",
+      "trend": "Flop-Core Instagram Reels format — hunting creators posting missed shots and gear fail moments to drive authentic engagement fall 2026",
+      "evidence": "\"'Flop-Core' — creators post their failures and embarrassing moments instead of their wins with original audio. For hunting creators this maps naturally onto missed shots, gear failures, weather disasters, and unexpected field moments — a policy-safe format that drives authentic engagement and comment section activity.\" — socialpilot.co Instagram Reels Trends: Trending Audio This Week 2026 (corroborated by socialbee.com The latest Instagram trends September 23, 2026 and buffer.com 13 Trending Sounds on Instagram in September 2026)",
+      "source": "https://www.socialpilot.co/blog/instagram-reels-trends",
+      "firstSeen": "2026-09-28T13:19:39Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_flop_core_fail_reveal",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "6e4f40c5caa2",
+      "platform": "instagram",
+      "trend": "\"10/10 Habits\" rating-hook Reels format — hunting tip or gear belief scored a perfect 10, trending on Instagram September 2026",
+      "evidence": "\"'10/10 Habits' — a rating-hook format for sharing a habit, tip, or belief you'd score a perfect 10. For hunting creators, this surfaces naturally as a '10/10 piece of gear', '10/10 pre-hunt routine', or '10/10 field tip' — a low-effort hook that converts hunting knowledge into high-watch-through clips.\" — socialbee.com The latest Instagram trends (September 23, 2026) (corroborated by socialpilot.co Instagram Reels Trends: Trending Audio This Week 2026)",
+      "source": "https://socialbee.com/blog/latest-instagram-trends/",
+      "firstSeen": "2026-09-28T13:19:39Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_rating_hook_reveal",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "b509d6cda82b",
+      "platform": "instagram",
+      "trend": "Earth Wind & Fire \"September\" and fall trending audio pairings driving hunting/outdoor Reels reach into rut season October 2026",
+      "evidence": "\"Earth, Wind & Fire's 'September' and seasonal audio pairings are trending on Instagram for fall transition content — hunting and outdoor creators entering pre-rut season can pair field footage with this trending audio for algorithmic lift. Seasonal audio cycles are accelerating as fall content waves build heading into October rut season.\" — heyorca.com 2026 trending TikTok and Instagram Reels audio (updated weekly) (corroborated by socialbee.com The latest Instagram trends September 23, 2026 and buffer.com Trending Sounds on Instagram September 2026)",
+      "source": "https://www.heyorca.com/blog/trending-audio-for-reels-tiktok",
+      "firstSeen": "2026-09-28T13:19:39Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "Instagram Reels hunting outdoor brand trending audio format October 2026"
+    },
+    {
+      "id": "554ea2da7950",
+      "platform": "instagram",
+      "trend": "Completion-rate-first Reels editing — hook at frame 0, retention bump at 50% mark, payoff reward at end driving algorithmic reach for hunting content",
+      "evidence": "\"Instagram measures completion rate above almost everything else — if someone swipes away early, the post gets buried; if they watch to the end, it gets pushed. Short-form Reels with strong hooks, comment sections engineered as part of content, and series-based formats are dominating reach.\" — later.com Top Instagram Reels Trends to Try in 2026 (Updated Weekly) (corroborated by thesocialcontentfactory.com Instagram Reel Trends 2026 | Viral Hooks, Formats & Audio)",
+      "source": "https://later.com/blog/instagram-reels-trends/",
+      "firstSeen": "2026-09-28T13:19:39Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "9905914afffe",
+      "platform": "instagram",
+      "trend": "UGC-style hunting gear product demo Reels with affiliate links dominating outdoor brand Instagram accounts October 2026",
+      "evidence": "\"Instagram Reels is a game-changer for outdoor businesses looking to increase engagement and reach new audiences, with hunting gear brands using Reels to showcase products with UGC-style presentation, affiliate links, and field-condition product testing — niche-specific content outperforming broad general posts.\" — deercampdigital.com How to Use Instagram Reels to Promote Hunting Gear",
+      "source": "https://deercampdigital.com/promote-hunting-gear-instagram-reels/",
+      "firstSeen": "2026-09-28T13:19:39Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_product_demo_field_reveal",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    }
+  ]
+}
