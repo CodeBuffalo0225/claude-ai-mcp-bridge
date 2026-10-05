@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "youtube",
+  "generatedAt": "2026-10-05T13:21:16Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "0ac84340dc94",
+      "platform": "youtube",
+      "trend": "Heartbeat-stop-scroll 15-second viral hook skeleton: Hook 0-2s visual promise + Setup 2-8s context dominates YouTube Shorts October 2026",
+      "evidence": "\"In 2026, if you don't capture attention in the first two seconds, you've already lost. The most dominant trend is the hyper-focus on the 'viral hook'—a short, powerful, and endlessly repeatable segment, typically lasting around 15 seconds, that defines your entire video. Every high-performing Short follows the same skeleton: Hook (0–2s) - a visual or verbal promise strong enough to stop the scroll, and Setup (2–8s) - context delivered fast with no intros or logos.\" — upmyviews.com YouTube Shorts Strategy (2026): Hooks, Looping & Swipe-Stopping Editing (corroborated by prapermedia.com Viral YouTube Shorts 2026: Hooks, Trends & Tips and klipa.ai YouTube Shorts Trends 2026)",
+      "source": "https://upmyviews.com/youtube-shorts-strategy-2026/",
+      "firstSeen": "2026-10-05T13:21:16Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_15s_hook_skeleton",
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "00a7756b2ae7",
+      "platform": "youtube",
+      "trend": "Visual-element change every 2-3 seconds drives YouTube Shorts retention for hunting creators October 2026 -- clean pacing over excessive cuts",
+      "evidence": "\"Clean pacing often works better than excessive cuts. The key is to remove dead space and make each second feel intentional. More specifically, every 2–3 seconds, you should change at least one element: camera angle/crop, on-screen text, b-roll, zoom, background element, pace, or visual pattern.\" — upmyviews.com YouTube Shorts Strategy (2026): Hooks, Looping & Swipe-Stopping Editing (corroborated by teleprompter.com Trending YouTube Shorts 2026: Top 10 Formats and blog.lunabloomai.com YouTube Short Video Viral: Your 2026 Playbook)",
+      "source": "https://upmyviews.com/youtube-shorts-strategy-2026/",
+      "firstSeen": "2026-10-05T13:21:16Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_element_change_cadence_pacing",
+      "rawQuery": "YouTube Shorts hunting firearms creator hook pacing editing trends October 2026"
+    },
+    {
+      "id": "be711d91140c",
+      "platform": "youtube",
+      "trend": "Loop-optimized Shorts closing-shot-matches-opening-frame completion strategy for outdoor and hunting YouTube Shorts October 2026",
+      "evidence": "\"Shorts in 2026 are less about 'going viral' once and more about building a repeatable system: strong hooks, clean pacing, intentional looping, and a clear next step that turns a quick swipe into a subscriber.\" — upmyviews.com YouTube Shorts Strategy 2026 (corroborated by toptal.com YouTube Shorts Length in 2026: How Long to Go Viral and blog.lunabloomai.com YouTube Short Video Viral: Your 2026 Playbook)",
+      "source": "https://upmyviews.com/youtube-shorts-strategy-2026/",
+      "firstSeen": "2026-10-05T13:21:16Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_loop_close_match_open",
+      "rawQuery": "YouTube Shorts hunting firearms creator hook pacing editing trends October 2026"
+    },
+    {
+      "id": "8542aa2acd09",
+      "platform": "youtube",
+      "trend": "Peak rut season repeatable-series format -- gear check, field tip, shot review -- drives subscriber momentum YouTube Shorts October 2026",
+      "evidence": "\"Trending topics for fall 2026 cluster around fast comprehension and formats people instantly recognize — outdoor and hunting creators can leverage recurring episode formats (gear check, shot review, field tip of the week) to build subscriber momentum heading into peak deer season.\" — anijam.ai YouTube Shorts Trends 2026: What's Actually Going Viral (corroborated by teleprompter.com Trending YouTube Shorts 2026: Top 10 Formats and influenceflow.io YouTube Shorts and Long-Form Video Strategy: The Complete 2026 Creator's Guide)",
+      "source": "https://www.anijam.ai/blog/youtube-shorts-trends/",
+      "firstSeen": "2026-10-05T13:21:16Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "2624a551af80",
+      "platform": "youtube",
+      "trend": "Made on YouTube 2026 native multi-track Shorts timeline and collaboration features reshaping hunting creator production workflow",
+      "evidence": "\"Made On YouTube 2026: All Announcements & New Features — YouTube Blog. New native multi-track timeline editing and creator collaboration tools introduced at Made on YouTube 2026 event, expanding what short-form creators can produce natively within the platform.\" — blog.youtube Made On YouTube 2026: All Announcements & New Features",
+      "source": "https://blog.youtube/news-and-events/innovation-youtube-era-made-on-viewers-creators/",
+      "firstSeen": "2026-10-05T13:21:16Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-10-05T13:21:16Z",
+  "weekOf": "2026-10-05",
+  "auditSource": "weekly-trend-refresh",
+  "note": "orchestrator.ts / agents/ not present in repo — audit written directly from trend signals; existing-tool list not re-derived from code.",
+  "newCandidatesThisWeek": [
+    { "tool": "edit_15s_hook_skeleton", "platform": "youtube", "rationale": "Hook (0-2s) + Setup (2-8s) skeleton template for ~15s Shorts.", "trendId": "0ac84340dc94", "priority": "HIGH" },
+    { "tool": "edit_element_change_cadence_pacing", "platform": "youtube", "rationale": "Enforce a change in crop/text/b-roll/zoom every 2-3 seconds.", "trendId": "00a7756b2ae7", "priority": "HIGH" },
+    { "tool": "edit_loop_close_match_open", "platform": "youtube", "rationale": "Loop-friendly ending that matches the opening frame.", "trendId": "be711d91140c", "priority": "MEDIUM" },
+    { "tool": "edit_countdown_opener_reveal", "platform": "tiktok", "rationale": "Deer-season countdown POV template; peak season relevance.", "trendId": "0a0a90f6271f", "priority": "HIGH" },
+    { "tool": "edit_humor_pov_perspective_cut", "platform": "tiktok", "rationale": "Deer-POV comedy format with perspective cuts and captions.", "trendId": "56bba5496958", "priority": "MEDIUM" },
+    { "tool": "edit_field_debrief_15s", "platform": "tiktok", "rationale": "15-second post-hunt debrief format.", "trendId": "cce7798a216e", "priority": "MEDIUM" },
+    { "tool": "edit_compliance_thumbnail_reframe", "platform": "tiktok", "rationale": "Reframe/blur visible firearms in thumbnails and key frames to avoid TikTok image-recognition flags.", "trendId": "b5868c1891ad", "priority": "HIGH" },
+    { "tool": "edit_ugc_raw_authenticity_grade", "platform": "instagram", "rationale": "Raw/UGC look preset: minimal grade, ambient audio preserved.", "trendId": "ed7431598ee9", "priority": "MEDIUM" },
+    { "tool": "edit_compact_story_reveal", "platform": "instagram", "rationale": "Problem -> field test -> payoff under 30s structure.", "trendId": "44de12a7e0c6", "priority": "HIGH" },
+    { "tool": "edit_seasonal_montage_aesthetic", "platform": "instagram", "rationale": "Fall seasonal montage preset for saves/shares.", "trendId": "0dd520be2a02", "priority": "LOW" },
+    { "tool": "edit_founder_to_camera_30s", "platform": "linkedin", "rationale": "30s talking-to-camera cut with captions and strong opening line.", "trendId": "c2e99a46ac15", "priority": "MEDIUM" },
+    { "tool": "edit_linkedin_sub90s_captions", "platform": "linkedin", "rationale": "Sub-90s cut with burned-in captions and hook.", "trendId": "e882d0269c1f", "priority": "MEDIUM" }
+  ],
+  "deprecationCandidates": [],
+  "summary": "12 bridge tool candidates flagged this week (5 HIGH). Top: edit_compliance_thumbnail_reframe (TikTok firearms image-recognition moderation), edit_countdown_opener_reveal (peak deer season), edit_15s_hook_skeleton and edit_element_change_cadence_pacing (YouTube Shorts). Flag only; no scaffolding run."
+}

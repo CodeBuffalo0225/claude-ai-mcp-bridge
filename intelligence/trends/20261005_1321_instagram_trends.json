@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "instagram",
+  "generatedAt": "2026-10-05T13:21:16Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "ed7431598ee9",
+      "platform": "instagram",
+      "trend": "Raw unpolished authenticity outperforms high-production Instagram Reels for hunting and outdoor creators October 2026",
+      "evidence": "\"Raw, unpolished content is outperforming high-production posts, and short-form Reels with strong hooks are dominating reach. Niche-specific content is outperforming broad, general posts. A practical content mix for most creators in 2026 is 60-70% Reels, 20-30% carousels, and 10% or less static posts.\" — creatorflow.so 8 Instagram Trends That Are Defining 2026 for Creators (corroborated by later.com Top Instagram Reels Trends to Try in 2026 and sproutsocial.com 20 Instagram Trends for Your Strategy in 2026)",
+      "source": "https://creatorflow.so/blog/instagram-trends-2026-creators-marketers/",
+      "firstSeen": "2026-10-05T13:21:16Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_ugc_raw_authenticity_grade",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "44de12a7e0c6",
+      "platform": "instagram",
+      "trend": "Quick compact storytelling Reels -- problem to field test to payoff in under 30 seconds -- driving outdoor discovery on Instagram October 2026",
+      "evidence": "\"Instagram's clearest trend this week is a structural shift where creators are turning ordinary problems, personal stakes and seasonal rituals into compact stories before revealing a product, process or payoff. Reels dominate discovery, while quick storytelling formats and candid behind-the-scenes clips dominate reach for outdoor and niche creators.\" — newengen.com Instagram Trends: October 2026 (corroborated by later.com Top Instagram Reels Trends 2026 and mysocialboutique.co Instagram Trends for September 2026)",
+      "source": "https://newengen.com/insights/instagram-trends/",
+      "firstSeen": "2026-10-05T13:21:16Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_compact_story_reveal",
+      "rawQuery": "Instagram Reels hunting firearms outdoor creator trends format October 2026"
+    },
+    {
+      "id": "40d838d05a54",
+      "platform": "instagram",
+      "trend": "Micro and nano-influencer activation dominates firearms and hunting gear brand Instagram Reels strategy -- 5.6% engagement rate benchmark October 2026",
+      "evidence": "\"The trend is shifting toward micro- and nano-influencers — creators with smaller but highly engaged audiences who often have closer relationships with their followers, making their endorsements more impactful. Firearms and outdoor lifestyle creators are best activated via Instagram Reels and Stories, with engagement on Instagram running around 5.6%.\" — creatordb.app Guns / Country / Videos: Instagram Stats & Audience (corroborated by creatorflow.so 8 Instagram Trends Defining 2026 and sproutsocial.com 20 Instagram Trends 2026)",
+      "source": "https://creatordb.app/creatorstats/rifle/",
+      "firstSeen": "2026-10-05T13:21:16Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "Instagram Reels hunting firearms outdoor creator trends format October 2026"
+    },
+    {
+      "id": "0f04d1b0e89b",
+      "platform": "instagram",
+      "trend": "Meta paid-ad restriction surge on hunting weapons and ammo forces brands to pivot to organic Reels content strategy October 2026",
+      "evidence": "\"Platform restrictions are the defining challenge of hunting brand marketing in 2026, as Meta restricts the promotion of hunting weapons and ammunition, severely limiting paid reach for brands in the firearms and ammunition verticals. This forces a pivot to organic Reels as the primary awareness channel.\" — modernoutdoormedia.com How to Market a Hunting Brand in 2026 (corroborated by garrisoneverest.com 5 Firearms Marketing Alternatives and giantpartners.com Firearm Marketing Guide)",
+      "source": "https://modernoutdoormedia.com/how-to-market-a-hunting-brand-in-2026/",
+      "firstSeen": "2026-10-05T13:21:16Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "0dd520be2a02",
+      "platform": "instagram",
+      "trend": "Seasonal fall foliage field footage aesthetic montage Reels driving saves and shares for hunting and outdoor Instagram creators October 2026",
+      "evidence": "\"Instagram trends favor seasonal aesthetic montages, flash-style edits, and scrapbook-style recaps. Popular formats include quick storytelling Reels, candid behind-the-scenes clips, carousel posts designed for saves and shares. Seasonal rituals are top-performing peg for outdoor creators heading into fall.\" — newengen.com Instagram Trends: October 2026 (corroborated by later.com Top Instagram Reels Trends to Try in 2026 Updated Weekly)",
+      "source": "https://newengen.com/insights/instagram-trends/",
+      "firstSeen": "2026-10-05T13:21:16Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_seasonal_montage_aesthetic",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "tiktok",
+  "generatedAt": "2026-10-05T13:21:16Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "0a0a90f6271f",
+      "platform": "tiktok",
+      "trend": "Deer season countdown POV TikTok format drives peak hunting community engagement -- #deerseason #bowhunting countdown content October 2026",
+      "evidence": "\"TikTok creators like RackLog are capitalizing on October deer season with countdown content, encouraging followers to share if they're ready for October hunting. The hunting community is very active on the platform with dedicated hashtags. The hashtags #huntingtiktok, #deerhunting, #bowhunting, and #deerseason appear consistently across viral hunting content in October 2026.\" — TikTok discover pages #deerseason, #huntersoftiktok, Hunting Season Coming Up (corroborated by tiktok.com tag/hunting with 2.7M posts and hooked.so Viral Fishing & Hunting Videos on TikTok 2026)",
+      "source": "https://www.tiktok.com/discover/hunting-season-coming-up",
+      "firstSeen": "2026-10-05T13:21:16Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_countdown_opener_reveal",
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "56bba5496958",
+      "platform": "tiktok",
+      "trend": "Humor-forward deer-POV comedy format -- what deer think about hunters -- dominating #deerhunter #hunting TikTok reach October 2026",
+      "evidence": "\"'What deer talk about when you're not around' humorous videos about whitetail deer and bowhunting dominate hunting TikTok content during deer season. The format consistently drives high engagement with the #deerhunter and #hunting communities on TikTok.\" — TikTok discover Funny Deer Talking about The Hunter, Opening Day of Deer Season Funny, Hunting Season Memes (corroborated by hooked.so Viral Fishing & Hunting Videos on TikTok 2026)",
+      "source": "https://www.tiktok.com/discover/funny-deer-talking-about-the-hunter",
+      "firstSeen": "2026-10-05T13:21:16Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_humor_pov_perspective_cut",
+      "rawQuery": "TikTok hunting outdoors bowhunting viral content format October 2026 deer season"
+    },
+    {
+      "id": "cce7798a216e",
+      "platform": "tiktok",
+      "trend": "Post-hunt 15-second field debrief clarity format driving educational hunting TikTok engagement October 2026",
+      "evidence": "\"Educational content like 'Post Hunt Clarity' uses short 15-second explanations of hunting education and networking opportunities within the #hunting #bowhunting #deer #viral #outdoors space. The format drives high engagement among dedicated hunting communities.\" — TikTok discover Hunting Post, guidefitter.com Hunters on TikTok by Fisher Neal (corroborated by feedspot.com Top 10 Hunting TikTok Influencers in 2026)",
+      "source": "https://www.guidefitter.com/blog/hunters-on-tiktok-by-fisher-neal",
+      "firstSeen": "2026-10-05T13:21:16Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_field_debrief_15s",
+      "rawQuery": "TikTok hunting outdoors bowhunting viral content format October 2026 deer season"
+    },
+    {
+      "id": "b5868c1891ad",
+      "platform": "tiktok",
+      "trend": "TikTok AI image-recognition firearms crackdown forces hunting creators to frame-shift away from visible gun imagery in thumbnails October 2026",
+      "evidence": "\"TikTok's community guidelines for hunting content are strict and reinforced by AI filters that scan for violations and image-recognition technology that recognizes prohibited images, such as hunting rifles. Content moderation is the defining challenge affecting how hunting and firearms creators post on TikTok.\" — guidefitter.com Hunters on TikTok by Fisher Neal (corroborated by August 2026 TikTok Trends newengen.com and tiktok.com tag/gun)",
+      "source": "https://www.guidefitter.com/blog/hunters-on-tiktok-by-fisher-neal",
+      "firstSeen": "2026-10-05T13:21:16Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_compliance_thumbnail_reframe",
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "e2c9c76e0fb9",
+      "platform": "tiktok",
+      "trend": "Female bowhunter POV archery deer season surge -- bow hunter girl creator format driving community growth October 2026",
+      "evidence": "\"Content from female hunters sharing bowhunting and archery updates during deer season is surging. Top hunting creators include Katelyn Armstrong (205.1K followers) and Allie D'Andrea (167.3K followers). TikTok's Bow Hunter Girl discover page reflects sustained audience engagement with female POV hunting content.\" — feedspot.com Top 10 Hunting TikTok Influencers in 2026 (corroborated by tiktok.com discover/bow-hunter-girl)",
+      "source": "https://creators.feedspot.com/hunting_tiktok_influencers/",
+      "firstSeen": "2026-10-05T13:21:16Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    }
+  ]
+}
