@@ -1,24 +1,34 @@
 // ============================================================================
-//  Adobe Bridge — WebSocket Communication Layer
-//  Connects MCP servers to Adobe Premiere Pro and After Effects
-//  via CEP panel WebSocket endpoints running inside each app.
+//  Adobe Bridge — facade over per-app HostAdapters.
+//
+//  Connects MCP servers to Adobe Premiere Pro and After Effects. The public
+//  API (send/sendJob/executeScript/info/reloadJsx/connect/on/getStatus) is
+//  what every upper layer uses; HOW commands reach the host app is a
+//  HostAdapter's business. Today that's CepWebSocketAdapter (CEP panel);
+//  when Adobe retires CEP, set adapter 'uxp' per app and implement
+//  adapters/uxp-adapter.js — nothing else changes.
+//  Contract: docs/host-adapter-protocol.md.
 // ============================================================================
 
-import WebSocket from 'ws';
 import { Logger } from '../utils/logger.js';
+import { CepWebSocketAdapter } from './adapters/cep-ws-adapter.js';
+import { UxpAdapter } from './adapters/uxp-adapter.js';
+import { harvestDirectory } from '../style-learning/project-harvester.js';
+import { analyzeStyle } from '../style-learning/style-analyzer.js';
+import { saveProfile, loadProfile, clearProfile } from '../style-learning/style-profile-store.js';
 
 const logger = new Logger('AdobeBridge');
 
-// ── Default ports for the CEP bridge panels ──────────────────────────────
+// ── Default ports for the bridge transports ──────────────────────────────
 const DEFAULT_PORTS = {
   premiere: 8081,
   aftereffects: 8082,
 };
 
-// ── Reconnection settings ────────────────────────────────────────────────
-const RECONNECT_INTERVAL = 3000;
-const MAX_RECONNECT_ATTEMPTS = 20;
-const REQUEST_TIMEOUT = 30000;
+const ADAPTERS = {
+  cep: CepWebSocketAdapter,
+  uxp: UxpAdapter,
+};
 
 class AdobeBridge {
   constructor(config = {}) {
@@ -26,118 +36,59 @@ class AdobeBridge {
       premierePort: config.premierePort || DEFAULT_PORTS.premiere,
       afterEffectsPort: config.afterEffectsPort || DEFAULT_PORTS.aftereffects,
       host: config.host || 'localhost',
+      // Per-app transport: { premiere: 'cep'|'uxp', aftereffects: ... }.
+      // Env vars BRIDGE_ADAPTER_PREMIERE / BRIDGE_ADAPTER_AFTEREFFECTS override.
+      adapters: config.adapters || {},
       ...config,
     };
 
-    this.connections = {
-      premiere: null,
-      aftereffects: null,
-    };
-
-    this.pendingRequests = new Map();
-    this.requestId = 0;
-    this.reconnectAttempts = { premiere: 0, aftereffects: 0 };
     this.eventListeners = new Map();
+    this.adapters = {
+      premiere: this._createAdapter('premiere'),
+      aftereffects: this._createAdapter('aftereffects'),
+    };
+  }
+
+  _createAdapter(app) {
+    const envKey = app === 'premiere' ? 'BRIDGE_ADAPTER_PREMIERE' : 'BRIDGE_ADAPTER_AFTEREFFECTS';
+    const kind = process.env[envKey] || this.config.adapters[app] || 'cep';
+    const AdapterClass = ADAPTERS[kind];
+    if (!AdapterClass) {
+      throw new Error(`Unknown bridge adapter '${kind}' for ${app} (available: ${Object.keys(ADAPTERS).join(', ')})`);
+    }
+    if (kind !== 'cep') logger.info(`${app}: using '${kind}' adapter`);
+
+    return new AdapterClass({
+      appName: app,
+      host: this.config.host,
+      port: app === 'premiere' ? this.config.premierePort : this.config.afterEffectsPort,
+      hooks: {
+        onServerCommand: (message, reply) => this._handleServerCommand(message, reply),
+        onEvent: (event, data) => this._emitEvent(app, event, data),
+      },
+    });
   }
 
   // ── CONNECTION MANAGEMENT ──────────────────────────────────────────────
 
   async connect(apps = ['premiere', 'aftereffects']) {
-    const promises = apps.map((app) => this._connectToApp(app));
-    const results = await Promise.allSettled(promises);
+    const results = await Promise.allSettled(apps.map((app) => this.adapters[app].connect()));
 
     results.forEach((result, i) => {
       if (result.status === 'fulfilled') {
         logger.success(`Connected to ${apps[i]}`);
       } else {
         logger.warn(`Could not connect to ${apps[i]}: ${result.reason?.message}`);
-        logger.info(`  Make sure the CEP bridge panel is running in ${apps[i]}`);
-        logger.info(`  Expected WebSocket at ws://${this.config.host}:${this._getPort(apps[i])}`);
+        logger.info(`  Make sure the bridge panel/plugin is running in ${apps[i]}`);
       }
     });
   }
 
-  async _connectToApp(app) {
-    const port = this._getPort(app);
-    const url = `ws://${this.config.host}:${port}`;
-
-    return new Promise((resolve, reject) => {
-      const ws = new WebSocket(url);
-      const timeout = setTimeout(() => {
-        ws.close();
-        reject(new Error(`Connection to ${app} timed out`));
-      }, 5000);
-
-      ws.on('open', () => {
-        clearTimeout(timeout);
-        this.connections[app] = ws;
-        this.reconnectAttempts[app] = 0;
-        logger.info(`WebSocket connected: ${app} (${url})`);
-        this._setupMessageHandler(app, ws);
-        resolve(ws);
-      });
-
-      ws.on('error', (err) => {
-        clearTimeout(timeout);
-        reject(err);
-      });
-
-      ws.on('close', () => {
-        this.connections[app] = null;
-        this._scheduleReconnect(app);
-      });
-    });
-  }
-
-  _getPort(app) {
-    return app === 'premiere' ? this.config.premierePort : this.config.afterEffectsPort;
-  }
-
-  _setupMessageHandler(app, ws) {
-    ws.on('message', (data) => {
-      try {
-        const message = JSON.parse(data.toString());
-
-        // Handle responses to pending requests
-        if (message.id && this.pendingRequests.has(message.id)) {
-          const { resolve, reject, timeout } = this.pendingRequests.get(message.id);
-          clearTimeout(timeout);
-          this.pendingRequests.delete(message.id);
-
-          if (message.error) {
-            reject(new Error(message.error));
-          } else {
-            resolve(message.result);
-          }
-        }
-
-        // Handle event broadcasts from Adobe apps
-        if (message.event) {
-          this._emitEvent(app, message.event, message.data);
-        }
-      } catch (err) {
-        logger.error(`Failed to parse message from ${app}:`, err.message);
-      }
-    });
-  }
-
-  _scheduleReconnect(app) {
-    if (this.reconnectAttempts[app] >= MAX_RECONNECT_ATTEMPTS) {
-      logger.warn(`Max reconnect attempts reached for ${app}`);
-      return;
+  async disconnect() {
+    for (const [app, adapter] of Object.entries(this.adapters)) {
+      await adapter.disconnect();
+      logger.info(`Disconnected from ${app}`);
     }
-
-    this.reconnectAttempts[app]++;
-    const delay = RECONNECT_INTERVAL * Math.min(this.reconnectAttempts[app], 5);
-
-    setTimeout(async () => {
-      logger.info(`Reconnecting to ${app} (attempt ${this.reconnectAttempts[app]})...`);
-      try {
-        await this._connectToApp(app);
-      } catch {
-        // Will reschedule via close handler
-      }
-    }, delay);
   }
 
   // ── SEND COMMANDS ──────────────────────────────────────────────────────
@@ -147,29 +98,34 @@ class AdobeBridge {
    * @param {string} app - 'premiere' or 'aftereffects'
    * @param {string} command - Dot-notation command (e.g., 'timeline.addClip')
    * @param {object} params - Command parameters
+   * @param {object} opts - { timeoutMs } per-call timeout override
    * @returns {Promise<any>} - Command result
    */
-  async send(app, command, params = {}) {
-    const ws = this.connections[app];
+  async send(app, command, params = {}, opts = {}) {
+    const adapter = this.adapters[app];
+    if (!adapter) throw new Error(`Unknown app: ${app}`);
+    return adapter.send(command, params, opts);
+  }
 
-    if (!ws || ws.readyState !== WebSocket.OPEN) {
-      // In development/simulation mode, return simulated responses
-      logger.warn(`No connection to ${app} — running in simulation mode`);
-      return this._simulateResponse(app, command, params);
+  /**
+   * Run a long command as a host-side async job: the host replies with a
+   * jobId immediately, then we poll _jobStatus until it finishes. Use for
+   * anything that can outlive the request timeout (full-timeline grades,
+   * exports, renders). maxWaitMs bounds the total polling time.
+   */
+  async sendJob(app, command, params = {}, { pollMs = 2000, maxWaitMs = 600000 } = {}) {
+    const start = await this.send(app, command, { ...params, _async: true });
+    if (!start || !start.jobId) {
+      // Host predates async-job support — result came back synchronously.
+      return start;
     }
-
-    const id = ++this.requestId;
-    const message = JSON.stringify({ id, command, params });
-
-    return new Promise((resolve, reject) => {
-      const timeout = setTimeout(() => {
-        this.pendingRequests.delete(id);
-        reject(new Error(`Request to ${app} timed out: ${command}`));
-      }, REQUEST_TIMEOUT);
-
-      this.pendingRequests.set(id, { resolve, reject, timeout });
-      ws.send(message);
-    });
+    const deadline = Date.now() + maxWaitMs;
+    while (Date.now() < deadline) {
+      await new Promise((r) => setTimeout(r, pollMs));
+      const status = await this.send(app, '_jobStatus', { jobId: start.jobId });
+      if (status.done) return status.result;
+    }
+    throw new Error(`Job ${start.jobId} (${command}) still running after ${maxWaitMs / 1000}s — check the ${app} panel log`);
   }
 
   /**
@@ -177,6 +133,21 @@ class AdobeBridge {
    */
   async executeScript(app, script) {
     return this.send(app, '_eval', { script });
+  }
+
+  /**
+   * Preflight handshake: which JSX/plugin build + handlers are live.
+   */
+  async info(app) {
+    return this.send(app, '_info', {});
+  }
+
+  /**
+   * Hot-reload the host-side script layer (no Premiere/AE restart).
+   * Returns the freshly loaded version + handler list.
+   */
+  async reloadJsx(app) {
+    return this.send(app, '_reloadJsx', {}, { timeoutMs: 15000 });
   }
 
   // ── EVENT SYSTEM ───────────────────────────────────────────────────────
@@ -195,66 +166,72 @@ class AdobeBridge {
     listeners.forEach((cb) => cb(data));
   }
 
-  // ── SIMULATION (when Adobe apps aren't connected) ──────────────────────
+  // ── HOST-INITIATED COMMANDS (style learning) ──────────────────────────
+  // The panel/plugin can send US commands (Analyze buttons in the panel UI).
+  // These are app-agnostic — any adapter surfaces them through the same hook.
 
-  _simulateResponse(app, command, params) {
-    // Provides realistic mock responses for development and testing
-    const simulations = {
-      'project.open': { name: params.path?.split('/').pop() || 'Project', sequences: ['Main Sequence'] },
-      'project.create': { path: `${params.path}/${params.name}.prproj`, name: params.name },
-      'project.getInfo': {
-        name: 'My Project',
-        path: '/projects/my-project.prproj',
-        sequences: [{ name: 'Main Sequence', duration: 300, trackCount: { video: 4, audio: 4 } }],
-        mediaCount: 12,
-        bins: ['Footage', 'Audio', 'Graphics'],
-      },
-      'project.save': { path: params.saveAs || '/projects/saved.prproj' },
-      'project.importMedia': { imported: params.files || [] },
-      'timeline.create': { name: params.name, id: `seq_${Date.now()}` },
-      'timeline.getState': {
-        name: 'Main Sequence',
-        duration: 300,
-        playheadPosition: 0,
-        videoTracks: [
-          { index: 0, clips: [{ name: 'Clip 1', start: 0, end: 45, source: 'footage_01.mp4' }] },
-          { index: 1, clips: [] },
-        ],
-        audioTracks: [
-          { index: 0, clips: [{ name: 'Audio 1', start: 0, end: 45 }] },
-          { index: 1, clips: [] },
-        ],
-        markers: [],
-      },
-      'timeline.addClip': { clipId: `clip_${Date.now()}` },
-      'export.media': { estimatedTime: '~5 minutes', jobId: `job_${Date.now()}` },
-      'export.frame': { path: params.outputPath },
-    };
-
-    const key = command;
-    return Promise.resolve(simulations[key] || { success: true, command, params, simulated: true });
+  _handleServerCommand(message, reply) {
+    switch (message.command) {
+      case 'ANALYZE_STYLE_DIR':
+        this._handleAnalyzeStyleDir(message, reply);
+        return;
+      case 'GET_STYLE_PROFILE':
+        reply({ id: message.id, result: loadProfile() });
+        return;
+      case 'CLEAR_STYLE_PROFILE':
+        clearProfile();
+        reply({ id: message.id, result: { success: true } });
+        return;
+      default:
+        logger.warn(`Unhandled host-initiated command: ${message.command}`);
+    }
   }
 
-  // ── DISCONNECT ─────────────────────────────────────────────────────────
-
-  async disconnect() {
-    for (const [app, ws] of Object.entries(this.connections)) {
-      if (ws) {
-        ws.close();
-        this.connections[app] = null;
-        logger.info(`Disconnected from ${app}`);
-      }
+  _handleAnalyzeStyleDir(message, reply) {
+    const { dirPath } = message.params || {};
+    if (!dirPath) {
+      reply({ id: message.id, event: 'STYLE_ANALYSIS_ERROR', data: { message: 'No dirPath provided' } });
+      return;
     }
-    this.pendingRequests.clear();
+
+    // Run asynchronously so the bridge stays responsive
+    (async () => {
+      try {
+        logger.info(`Style analysis started for: ${dirPath}`);
+        const analyses = await harvestDirectory(dirPath);
+        if (analyses.length === 0) {
+          reply({ id: message.id, event: 'STYLE_ANALYSIS_ERROR', data: { message: 'No sequences found in directory' } });
+          return;
+        }
+        const profile = await analyzeStyle(analyses);
+        saveProfile(profile);
+        reply({
+          id: message.id,
+          event: 'STYLE_ANALYSIS_COMPLETE',
+          data: {
+            profile_name: profile.profile_name,
+            style_summary: profile.style_summary,
+            analyzed_project_count: profile.analyzed_project_count,
+            analyzed_sequence_count: profile.analyzed_sequence_count,
+            generated_at: profile.generated_at,
+          },
+        });
+      } catch (err) {
+        logger.error(`Style analysis failed: ${err.message}`);
+        reply({ id: message.id, event: 'STYLE_ANALYSIS_ERROR', data: { message: err.message } });
+      }
+    })();
   }
 
   // ── STATUS ─────────────────────────────────────────────────────────────
 
   getStatus() {
+    const premiere = this.adapters.premiere.getStatus();
+    const aftereffects = this.adapters.aftereffects.getStatus();
     return {
-      premiere: this.connections.premiere?.readyState === WebSocket.OPEN ? 'connected' : 'disconnected',
-      aftereffects: this.connections.aftereffects?.readyState === WebSocket.OPEN ? 'connected' : 'disconnected',
-      pendingRequests: this.pendingRequests.size,
+      premiere: premiere.state,
+      aftereffects: aftereffects.state,
+      pendingRequests: premiere.pendingRequests + aftereffects.pendingRequests,
     };
   }
 }
