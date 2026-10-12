@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-10-12T13:19:33Z",
+  "weekOf": "2026-10-12",
+  "auditSource": "weekly-trend-refresh",
+  "note": "orchestrator.ts / agents/ not present in repo — audit written directly from trend signals; existing-tool list not re-derived from code.",
+  "newCandidatesThisWeek": [
+    { "tool": "edit_struggle_payoff_outdoor_cut", "platform": "youtube", "rationale": "Cut dead filler (establishing shots, leaves-crunching narration) and jump to struggle/action, then resolve with payoff shot. Hunting-specific pacing template.", "trendId": "aab06a834e94", "priority": "HIGH" },
+    { "tool": "edit_15s_hook_skeleton", "platform": "youtube", "rationale": "Hook (0-2s) + Setup (2-8s) skeleton template for ~15s Shorts. Confirmed as still dominant in October 2026.", "trendId": "7a5059b8bd90", "priority": "HIGH" },
+    { "tool": "edit_element_change_cadence_pacing", "platform": "youtube", "rationale": "Enforce a change in crop/text/b-roll/zoom every 2-3 seconds to hold Shorts retention.", "trendId": "7034c8b45fcd", "priority": "HIGH" },
+    { "tool": "edit_compliance_safe_framing_youtube", "platform": "youtube", "rationale": "Reframe or blur visible firearm imagery in key frames and thumbnails to avoid YouTube policy flags for hunting/firearms creators.", "trendId": "7332b3d37e74", "priority": "HIGH" },
+    { "tool": "edit_countdown_opener_reveal", "platform": "tiktok", "rationale": "Deer-season countdown POV template; '11 days till bow season' format. Peak season relevance.", "trendId": "6fdd03980884", "priority": "HIGH" },
+    { "tool": "edit_humor_pov_perspective_cut", "platform": "tiktok", "rationale": "Deer-POV comedy format with perspective cuts and caption overlays for the 'what deer think about hunters' skit format.", "trendId": "f7610ef465e4", "priority": "MEDIUM" },
+    { "tool": "edit_niche_hook_reel_opener", "platform": "instagram", "rationale": "Strong niche-specific hook in the first 2-3 frames of a Reel; whitetail/waterfowl-specific opener rather than generic outdoor. Supports 117% watch-time growth trend.", "trendId": "aa8a0bc4ed42", "priority": "HIGH" },
+    { "tool": "edit_seasonal_montage_aesthetic", "platform": "instagram", "rationale": "Fall acoustic audio + changing-leaves field footage montage preset that drives Saves for outdoor Instagram creators.", "trendId": "49f7fbb93dad", "priority": "MEDIUM" },
+    { "tool": "edit_linkedin_native_vertical_captions", "platform": "linkedin", "rationale": "Native vertical video export with burned-in captions and brand logo visible in first frame for LinkedIn algorithm optimization.", "trendId": "a68cbd33741c", "priority": "HIGH" },
+    { "tool": "edit_founder_to_camera_30s", "platform": "linkedin", "rationale": "30s talking-to-camera cut with captions, strong opening line, and concrete takeaway for outdoor founder thought leadership.", "trendId": "c8ba0c34cf06", "priority": "MEDIUM" },
+    { "tool": "edit_batch_clip_library_export", "platform": "linkedin", "rationale": "Batch-export multiple social-ready clips from a single shoot session with pre-planned vertical framing — enables weekly LinkedIn posting workflow for small outdoor brands.", "trendId": "3e6b2d853ac6", "priority": "MEDIUM" }
+  ],
+  "deprecationCandidates": [],
+  "summary": "11 bridge tool candidates flagged this week (5 HIGH). Top new signals: edit_compliance_safe_framing_youtube (YouTube policy pressure on hunting/firearms accelerating), edit_struggle_payoff_outdoor_cut (pacing template for removing filler in hunting Shorts), edit_niche_hook_reel_opener (Instagram Reels watch-time up 117% YoY — niche hooks key), edit_linkedin_native_vertical_captions (LinkedIn native video push). edit_15s_hook_skeleton and edit_element_change_cadence_pacing carry forward from prior weeks as still-dominant YouTube signals. Flag only; no scaffolding run."
+}

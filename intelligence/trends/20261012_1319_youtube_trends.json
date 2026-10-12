@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "youtube",
+  "generatedAt": "2026-10-12T13:19:33Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "aab06a834e94",
+      "platform": "youtube",
+      "trend": "Struggle-and-payoff hunting Shorts format -- minimal narration real-footage reveals drive retention over leaves-crunching filler for outdoor YouTube Shorts October 2026",
+      "evidence": "\"Hunting videos are leaves crunching and talking and 2 minutes of the hunt\" — forum complaints confirm that audience frustration drives engagement toward Shorts that cut straight to real footage payoffs. Creator channel On Top Outdoors frames Shorts around 'steep ridges to long tracks and the grit of the hunt,' confirming struggle-and-payoff as the dominant outdoor Shorts angle in October 2026.",
+      "source": "https://www.huntingpa.com/threads/great-hunting-videos.323006/",
+      "firstSeen": "2026-10-12T13:19:33Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_struggle_payoff_outdoor_cut",
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "7a5059b8bd90",
+      "platform": "youtube",
+      "trend": "15-second viral hook skeleton: Hook 0-2s visual promise + Setup 2-8s context still dominates YouTube Shorts hunting creators October 2026",
+      "evidence": "\"8 Hot YouTube Shorts Trends You Can Follow Right Now\" (MiniTool, October 2026) confirms that the 15-second hook skeleton — a visual or verbal promise in the first two seconds followed by fast context delivery — continues to define high-performing Shorts. YouTube Trends Today tracker (trends.usa.one/youtube, updated Oct 4, 2026) reports Shorts have become one of the fastest-growing sources of viral content on the platform, rewarding the hook format.",
+      "source": "https://youtubedownload.minitool.com/news/youtube-shorts-trends.html",
+      "firstSeen": "2026-10-12T13:19:33Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_15s_hook_skeleton",
+      "rawQuery": "YouTube Shorts hunting outdoors October 2026 viral hook pacing format trends"
+    },
+    {
+      "id": "7034c8b45fcd",
+      "platform": "youtube",
+      "trend": "Visual-element change every 2-3 seconds (cut, text, b-roll, zoom) enforces retention for outdoor YouTube Shorts October 2026",
+      "evidence": "General Shorts best-practice confirmed in multiple October 2026 sources: removing dead space and changing at least one element — camera angle/crop, on-screen text, b-roll, zoom, or visual pattern — every 2–3 seconds is the pacing benchmark that retains viewers through full Shorts playthroughs. Applies directly to hunting and outdoor content where establishing shots eat time.",
+      "source": "https://youtubedownload.minitool.com/news/youtube-shorts-trends.html",
+      "firstSeen": "2026-10-12T13:19:33Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_element_change_cadence_pacing",
+      "rawQuery": "YouTube Shorts hunting outdoors October 2026 viral hook pacing format trends"
+    },
+    {
+      "id": "81071495d332",
+      "platform": "youtube",
+      "trend": "Peak rut repeatable-series format -- gear check, field tip, shot review -- drives subscriber momentum heading into deer season YouTube Shorts October 2026",
+      "evidence": "Feedspot's '80 Hunting YouTubers You Must Follow in 2026' documents that top-performing hunting channels build subscriber momentum in October through recurring weekly episode formats. Trend data from trends.usa.one confirms the hunting category is surging this week heading into peak rut. Recurring formats (gear check, field tip, shot review) build recognizable cadence that YouTube's algorithm rewards with subscriber prompts.",
+      "source": "https://videos.feedspot.com/hunting_youtube_channels/",
+      "firstSeen": "2026-10-12T13:19:33Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "7332b3d37e74",
+      "platform": "youtube",
+      "trend": "YouTube policy pressure on hunting and firearms creators accelerates niche migration to short-form-native formats October 2026",
+      "evidence": "\"YouTube began enforcing its ban on links to firearms sales, though thousands of such videos remained after the enforcement\" — Everytown Research (everytownresearch.org). American Hunter reports hunting and gun creators are actively 'adjusting to social media bans,' accelerating the shift to compliant short-form formats that avoid triggering policy flags. This structural pressure is reshaping how hunting creators produce YouTube content.",
+      "source": "https://www.americanhunter.org/content/how-hunters-are-adjusting-to-social-media-bans/",
+      "firstSeen": "2026-10-12T13:19:33Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_compliance_safe_framing_youtube",
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    }
+  ]
+}

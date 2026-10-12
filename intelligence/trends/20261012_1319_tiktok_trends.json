@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "tiktok",
+  "generatedAt": "2026-10-12T13:19:33Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "6fdd03980884",
+      "platform": "tiktok",
+      "trend": "Deer season countdown POV content -- 11 days till bow season countdown clips -- driving pre-rut community engagement TikTok October 2026",
+      "evidence": "\"11 days till my favorite season begins\" and \"ten more days\" countdown clips with bowhunting and archery-brand tags appearing prominently on TikTok's 'Hunting Season Coming Up' discover page (tiktok.com/discover/hunting-season-coming-up). Countdown format drives comment sharing and follow engagement from the hunting community during the peak pre-rut window in October 2026.",
+      "source": "https://www.tiktok.com/discover/hunting-season-coming-up",
+      "firstSeen": "2026-10-12T13:19:33Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_countdown_opener_reveal",
+      "rawQuery": "TikTok hunting deer season October 2026 viral format trends bowhunting"
+    },
+    {
+      "id": "f7610ef465e4",
+      "platform": "tiktok",
+      "trend": "Humor-forward deer-talking-about-the-hunter comedy skit format dominating #huntingtok #funnyhunting TikTok reach October 2026",
+      "evidence": "\"'What deer talk about when you're not around' humorous videos about whitetail deer and bowhunting dominate hunting TikTok content during deer season. The format consistently drives high engagement with the #deerhunter and #hunting communities on TikTok.\" (guidefitter.com, Hunters on TikTok). TikTok's 'Funny Deer Talking about The Hunter' discover page (tiktok.com/discover/funny-deer-talking-about-the-hunter) confirms active October 2026 activity for this skit format.",
+      "source": "https://www.tiktok.com/discover/funny-deer-talking-about-the-hunter",
+      "firstSeen": "2026-10-12T13:19:33Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_humor_pov_perspective_cut",
+      "rawQuery": "TikTok hunting deer season October 2026 viral format trends bowhunting"
+    },
+    {
+      "id": "74b63d3abe30",
+      "platform": "tiktok",
+      "trend": "Pre-season prep checklist content -- scouting gear check safety tip -- reliably earns saves and follows on hunting TikTok October 2026",
+      "evidence": "TikTok discover page actively surfaces a 'Hunting Pre-Season Checklist' content cluster for the month before deer season, featuring scouting updates, gear checks, and safety reminders. This utility-forward format reliably earns saves (save rate is TikTok's primary algorithmic signal), driving follows for hunting creators in October 2026.",
+      "source": "https://www.tiktok.com/tag/huntingtiktok",
+      "firstSeen": "2026-10-12T13:19:33Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "TikTok hunting deer season October 2026 viral format trends bowhunting"
+    },
+    {
+      "id": "9205a244782f",
+      "platform": "tiktok",
+      "trend": "Trophy-prompt community engagement clips -- show me your biggest buck -- driving high comment volume in hunting TikTok October 2026",
+      "evidence": "Creator-driven community prompts asking followers to share their biggest buck appear on TikTok discover feeds and reach tens of thousands of views and comments during October 2026 peak hunting season. #tiktokhunters and #deerhunting discover pages show active trophy-prompt clips as a high-engagement format in this week's feeds.",
+      "source": "https://www.tiktok.com/tag/tiktokhunters",
+      "firstSeen": "2026-10-12T13:19:33Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "186ab6de6695",
+      "platform": "tiktok",
+      "trend": "Women bowhunters #womenwhohunt #blondesdoitbetter POV archery format surging in follower growth and engagement TikTok October 2026",
+      "evidence": "\"A growing presence is visible, with hashtags like #womenwhohunt and #blondesdoitbetter appearing on discover pages for bowhunting posts with over 11,000 likes.\" (WebSearch, TikTok discover pages, October 2026). Female bowhunter POV and archery content is an accelerating format in October 2026, as documented in both the Bow Hunter Girl discover page and Feedspot's hunting TikTok influencer list (creators with 167K–205K followers).",
+      "source": "https://www.tiktok.com/discover/bow-hunter-girl",
+      "firstSeen": "2026-10-12T13:19:33Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    }
+  ]
+}

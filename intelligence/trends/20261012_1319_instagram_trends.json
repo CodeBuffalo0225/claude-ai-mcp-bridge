@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "instagram",
+  "generatedAt": "2026-10-12T13:19:33Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "aa8a0bc4ed42",
+      "platform": "instagram",
+      "trend": "Reels watch-time up 117 percent YoY -- niche outdoor storytelling with strong hooks outperforms broad general posts Instagram October 2026",
+      "evidence": "\"The average time people spend watching a Reel went up 117% compared to 2025. Niche-specific content is outperforming broad, general posts. Short-form Reels with strong hooks are dominating reach.\" (SocialBee, 'The latest Instagram trends,' October 7, 2026). For hunting creators, waterfowl or whitetail-specific content will outperform general 'outdoor lifestyle' framing.",
+      "source": "https://socialbee.com/blog/latest-instagram-trends/",
+      "firstSeen": "2026-10-12T13:19:33Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_niche_hook_reel_opener",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "76256f20e4c4",
+      "platform": "instagram",
+      "trend": "Series-based recurring season content outperforms one-off viral Reels for long-term audience growth outdoor Instagram October 2026",
+      "evidence": "\"Series-based content building long-term audience growth over one-off viral posts\" named as October 2026's clearest Instagram engagement pattern in multiple tracker reports (Later.com 'Top Instagram Reels Trends to Try in 2026,' NapoleonCat 'Top Instagram Reels Trends Right Now October 2026'). A recurring hunt-season or field-series format delivers compounding reach as followers return for each episode.",
+      "source": "https://later.com/blog/instagram-reels-trends/",
+      "firstSeen": "2026-10-12T13:19:33Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "Instagram Reels hunting outdoors October 2026 trending content strategy creators"
+    },
+    {
+      "id": "49f7fbb93dad",
+      "platform": "instagram",
+      "trend": "Fall seasonal acoustic audio layered over field footage and changing-leaves aesthetic driving saves and shares outdoor Instagram October 2026",
+      "evidence": "\"Seasonal audio: an acoustic track that layers over changing leaves, fall menus, and cozy product shots\" identified as trending audio format for October 2026 in multiple Instagram trend roundups (Newengen 'Instagram Trends: October 2026 — Updated Weekly,' Lightreel 'What Is Trending on Instagram — October 2026 Weekly Report'). Fall aesthetic montages with trending audio drive Saves — Instagram's top algorithmic signal — for outdoor creators.",
+      "source": "https://newengen.com/insights/instagram-trends/",
+      "firstSeen": "2026-10-12T13:19:33Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_seasonal_montage_aesthetic",
+      "rawQuery": "Instagram Reels hunting outdoors October 2026 trending content strategy creators"
+    },
+    {
+      "id": "fb0506fadae9",
+      "platform": "instagram",
+      "trend": "Micro and nano outdoor influencer activations outperform macro creators for hunting gear brand engagement Instagram October 2026",
+      "evidence": "\"The trend is shifting toward micro- and nano-influencers — creators with smaller but highly engaged audiences. Firearms and outdoor lifestyle creators are best activated via Instagram Reels and Stories, with engagement on Instagram running around 5.6%.\" (Metricool '10 Instagram Trends Backed By Real Data in 2026'; corroborated by Modash 'Top 20 American Outdoor Influencers on Instagram, Sep 2026' showing a mix of waterfowl and whitetail nano-creators).",
+      "source": "https://metricool.com/instagram-trends/",
+      "firstSeen": "2026-10-12T13:19:33Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "4fa673cb0d26",
+      "platform": "instagram",
+      "trend": "7-9 PM peak-engagement window for hunting Reels -- strategic timing plus strong hook compound reach for outdoor creators Instagram October 2026",
+      "evidence": "\"7 to 9 PM is when engagement is highest, any day of the week\" — confirmed by October 2026 Instagram analytics data in SocialBee's trend report. For hunting creators posting field footage from morning hunts, batching posts for 7–9 PM delivery and leading with a strong hook compounds the algorithmic reach benefit of peak-window timing.",
+      "source": "https://socialbee.com/blog/latest-instagram-trends/",
+      "firstSeen": "2026-10-12T13:19:33Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "Instagram Reels hunting outdoors October 2026 trending content strategy creators"
+    }
+  ]
+}
