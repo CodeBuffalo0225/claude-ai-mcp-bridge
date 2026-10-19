@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-10-19T13:22:36Z",
+  "weekOf": "2026-10-19",
+  "auditSource": "weekly-trend-refresh",
+  "note": "orchestrator.ts / agents/ not present in repo — audit written directly from trend signals; existing-tool list not re-derived from code.",
+  "newCandidatesThisWeek": [
+    {
+      "tool": "edit_reaction_split_screen",
+      "platform": "youtube",
+      "rationale": "Expert Reacts format confirmed active in firearms Shorts this week. Split-screen or side-by-side reaction layout for firearm expert commentary over original footage.",
+      "trendId": "b53403980b27",
+      "priority": "HIGH"
+    },
+    {
+      "tool": "edit_hook_first_pacing",
+      "platform": "youtube",
+      "rationale": "Hook visual/verbal promise in first 0-2s continues to be confirmed as dominant pacing pattern for all Shorts niches including outdoor/firearms. Carry-forward from prior weeks; still HIGH priority.",
+      "trendId": "0ff51845d621",
+      "priority": "HIGH"
+    },
+    {
+      "tool": "edit_compliance_safe_framing_youtube",
+      "platform": "youtube",
+      "rationale": "Policy pressure on hunting/firearms creators continues to accelerate. Reframe or blur visible firearm imagery in key frames and thumbnails to avoid YouTube policy flags. Carry-forward.",
+      "trendId": "22eb0c0b7733",
+      "priority": "HIGH"
+    },
+    {
+      "tool": "edit_range_day_quick_cut",
+      "platform": "tiktok",
+      "rationale": "Range-day and first-time-shooting formats dominate TikTok #gun tag (1M+ posts). Quick-cut template for range day sequences with energy pacing.",
+      "trendId": "df71be74bb83",
+      "priority": "MEDIUM"
+    },
+    {
+      "tool": "edit_compliance_safe_framing_tiktok",
+      "platform": "tiktok",
+      "rationale": "Creators actively seeking TikTok compliance guidance for weapon content. Platform-specific compliance framing tool to auto-blur or reframe shots that may trigger TikTok guidelines.",
+      "trendId": "1e329c9cbedf",
+      "priority": "HIGH"
+    },
+    {
+      "tool": "edit_reaction_overlay_reels",
+      "platform": "instagram",
+      "rationale": "'My Reaction To' format named as standout Reels format October 2026. Overlay reaction footage (talking head in corner) on top of existing firearm review or hunting footage for Reels.",
+      "trendId": "da560a18a654",
+      "priority": "MEDIUM"
+    },
+    {
+      "tool": "edit_hook_first_pacing",
+      "platform": "instagram",
+      "rationale": "Strong hook + short Reels under 30s confirmed as dominant reach driver for outdoor Instagram October 2026. Same tool as YouTube variant, applied to Reels format constraints.",
+      "trendId": "abae9f891e98",
+      "priority": "HIGH"
+    },
+    {
+      "tool": "edit_auto_captions_linkedin",
+      "platform": "linkedin",
+      "rationale": "85%+ of LinkedIn video watched without sound — multiple HIGH-confidence sources confirm burned-in captions are non-negotiable for outdoor brand LinkedIn content. Auto-caption tool with LinkedIn style formatting.",
+      "trendId": "9c43754b15ef",
+      "priority": "HIGH"
+    },
+    {
+      "tool": "edit_linkedin_hook_rewriter",
+      "platform": "linkedin",
+      "rationale": "TikTok/Reels hooks confirmed to fall flat on LinkedIn's professional audience. Auto-rewrite first-5-second hook text for LinkedIn tone when cross-posting outdoor/hunting content.",
+      "trendId": "9214434d65c6",
+      "priority": "MEDIUM"
+    }
+  ],
+  "deprecationCandidates": [],
+  "summary": "9 bridge tool candidates flagged this week (5 HIGH). Top new signals: edit_reaction_split_screen (Expert Reacts format active in firearms YouTube Shorts), edit_compliance_safe_framing_tiktok (platform compliance pressure growing on TikTok), edit_auto_captions_linkedin (85%+ silent-viewing confirmed HIGH confidence), edit_linkedin_hook_rewriter (cross-post hook rewriting needed for professional LinkedIn audience), edit_hook_first_pacing (carries forward, still dominant on both YouTube and Instagram). Orchestrator / Agent 2 not run — orchestrator.ts absent from repo. Flag only; no scaffolding run."
+}

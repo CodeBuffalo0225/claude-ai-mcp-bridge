@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "instagram",
+  "generatedAt": "2026-10-19T13:22:36Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "febf68f87ecd",
+      "platform": "instagram",
+      "trend": "Raw unpolished outdoor content beats high-production Reels — authenticity-first editing wins for firearms niche October 2026",
+      "evidence": "\"Instagram Trends: October 2026 — Updated Weekly\" (newengen.com) reports that raw, unpolished content is beating high-production posts on Reels, confirming authenticity-first editing is the dominant strategy for outdoor and firearms creators this month.",
+      "source": "https://newengen.com/insights/instagram-trends/",
+      "firstSeen": "2026-10-19T13:22:36Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "da560a18a654",
+      "platform": "instagram",
+      "trend": "My Reaction To format — standout viral Reels format in early October 2026 for firearms and outdoor creators",
+      "evidence": "\"Instagram Reels Trends October 2026: Full Roundup\" (latestforum.com) names \"My Reaction To\" as one of the standout Reels formats in early October 2026, alongside \"Upside Down\" transitions and \"GRWM Loading\" — a format directly adaptable to firearms review and hunting-reaction content.",
+      "source": "https://latestforum.com/instagram-reels-trends-october-2026-roundup/",
+      "firstSeen": "2026-10-19T13:22:36Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_reaction_overlay_reels",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "9438cdb3355d",
+      "platform": "instagram",
+      "trend": "Gun influencer engagement highest among smaller accounts — micro-niche firearms Instagram advantage October 2026",
+      "evidence": "\"Top 80 Gun Influencers in 2026\" (influencersworship.com) ranks Tim Kennedy, Matt Carriker, and Michael Jones at the top but notes engagement is highest among smaller accounts, not the largest — confirming micro-niche firearms creators outperform mass accounts on Instagram engagement metrics.",
+      "source": "https://influencersworship.com/gun_instagram_influencers/",
+      "firstSeen": "2026-10-19T13:22:36Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "b5ea16b34740",
+      "platform": "instagram",
+      "trend": "#guns and #huntingrifle hashtag ecosystem — trending tags for Instagram Reels in firearms niche 2026",
+      "evidence": "\"#guns Hashtags: 10+ Trending Tags for Instagram Reels (2026)\" (iqhashtags.com) confirms an active trending hashtag ecosystem for the firearms niche on Instagram Reels, providing a structured tagging strategy for hunting and outdoor creators.",
+      "source": "https://iqhashtags.com/hashtags/hashtag/guns",
+      "firstSeen": "2026-10-19T13:22:36Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "abae9f891e98",
+      "platform": "instagram",
+      "trend": "Strong hook plus short Reels under 30 seconds driving reach for outdoor firearms content October 2026",
+      "evidence": "October 2026 Instagram weekly tracker (newengen.com) states \"short-form Reels with strong hooks are dominating reach\" this month, and that raw content is outperforming polished production — directly applicable to hunting and outdoor short-form content strategy.",
+      "source": "https://newengen.com/insights/instagram-trends/",
+      "firstSeen": "2026-10-19T13:22:36Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_hook_first_pacing",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    }
+  ]
+}

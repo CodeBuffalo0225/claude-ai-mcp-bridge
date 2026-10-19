@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "youtube",
+  "generatedAt": "2026-10-19T13:22:36Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "b53403980b27",
+      "platform": "youtube",
+      "trend": "Firearms expert reaction Shorts format — Expert Reacts split-screen driving viral engagement for gun creators October 2026",
+      "evidence": "\"THIS WEEK: Firearms Expert Reacts to MORE WARDOGS\" and \"Firearms Expert Reacts To MORE Of Your Clips!\" both surfaced in YouTube Shorts search results this week, confirming the Expert Reacts format is actively circulating in the firearms niche.",
+      "source": "https://www.youtube.com/shorts/RXQndDm_dEE",
+      "firstSeen": "2026-10-19T13:22:36Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_reaction_split_screen",
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "2f90a6bb88c0",
+      "platform": "youtube",
+      "trend": "Biggest trend in hunting rifle industry — product-focused biggest trend hook frame driving curiosity clicks in outdoor Shorts October 2026",
+      "evidence": "\"Biggest Trend in the Hunting Rifle Industry\" YouTube Short surfaced in trending search results this week, confirming that product-reveal framing with \"biggest trend\" in the title drives curiosity clicks for hunting rifle content.",
+      "source": "https://www.youtube.com/shorts/NjjNwI2xbXI",
+      "firstSeen": "2026-10-19T13:22:36Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "0ff51845d621",
+      "platform": "youtube",
+      "trend": "10 Viral YouTube Shorts hook patterns — hook visual promise in first 0–2 seconds dominates outdoor content October 2026",
+      "evidence": "\"10 Viral YouTube Shorts Everyone Watched This Week\" (trends.usa.one, updated Oct 2026) confirms hook-first pacing — a visual or verbal promise in the first two seconds — continues to define high-performing Shorts across niches including hunting and outdoor.",
+      "source": "https://trends.usa.one/16-top-10-viral-youtube-shorts-this-week-and-why-they-blew-up.html",
+      "firstSeen": "2026-10-19T13:22:36Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_hook_first_pacing",
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "22eb0c0b7733",
+      "platform": "youtube",
+      "trend": "Hunting and firearms creators adapting to YouTube policy pressure — compliance-safe short-form framing October 2026",
+      "evidence": "\"How Hunters are Adjusting to Social Media Bans\" (American Hunter, 2026) reports hunting and gun creators are actively adjusting to platform content rules, accelerating the shift toward compliant short-form formats that avoid triggering policy flags on YouTube.",
+      "source": "https://www.americanhunter.org/content/how-hunters-are-adjusting-to-social-media-bans/",
+      "firstSeen": "2026-10-19T13:22:36Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_compliance_safe_framing_youtube",
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "db6b08090be2",
+      "platform": "youtube",
+      "trend": "100 Gun YouTubers 2026 — high-engagement short-form channel growth in firearms niche persists October 2026",
+      "evidence": "Feedspot's \"100 Gun YouTubers You Must Follow in 2026\" confirms firearms remains a high-engagement vertical on YouTube with active creator growth in the short-form space heading into Q4 2026.",
+      "source": "https://videos.feedspot.com/gun_youtube_channels/",
+      "firstSeen": "2026-10-19T13:22:36Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    }
+  ]
+}

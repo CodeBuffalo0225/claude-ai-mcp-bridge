@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "linkedin",
+  "generatedAt": "2026-10-19T13:22:36Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "b1501307dfa8",
+      "platform": "linkedin",
+      "trend": "Native short-form vertical video 30–90 seconds gets algorithmic priority over external links on LinkedIn 2026",
+      "evidence": "\"LinkedIn Video Strategy: How to Use Short-Form Video in 2026\" (linkedinpreview.com) states native uploads receive dramatically more reach than external video links, with one source claiming 50-80% less reach for non-native uploads — confirming native vertical short-form is the required format for outdoor brands on LinkedIn.",
+      "source": "https://linkedinpreview.com/blog/linkedin-video-strategy-2026",
+      "firstSeen": "2026-10-19T13:22:36Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "c43ccf36a827",
+      "platform": "linkedin",
+      "trend": "Founder-led 13–15 second educational clips drive engagement for outdoor brands on LinkedIn 2026",
+      "evidence": "\"Top 14 LinkedIn Trends To Watch in 2026\" (blog.gainapp.com) and multiple other 2026 sources confirm that putting founders or brand leaders on camera for concise educational insights of 13–15 seconds is the standout format driving engagement on LinkedIn — applicable to outdoor brand and small business creators.",
+      "source": "https://blog.gainapp.com/top-linkedin-trends/",
+      "firstSeen": "2026-10-19T13:22:36Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "9c43754b15ef",
+      "platform": "linkedin",
+      "trend": "Captions required — 85 percent of LinkedIn video watched without sound drives subtitle-first editing for outdoor brands 2026",
+      "evidence": "\"60+ Social Media Video Statistics To Know in 2026\" (sproutsocial.com) states more than 85% of social video is watched without sound in public settings — confirmed across multiple 2026 sources, making burnt-in captions a non-negotiable element for outdoor brand LinkedIn content.",
+      "source": "https://sproutsocial.com/insights/social-media-video-statistics/",
+      "firstSeen": "2026-10-19T13:22:36Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_auto_captions_linkedin",
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "9214434d65c6",
+      "platform": "linkedin",
+      "trend": "Format rewriting needed — TikTok and Reels style hooks fall flat with professional audience for outdoor brands on LinkedIn 2026",
+      "evidence": "\"Short-Form Video Trends Dominating 2026\" (thepalm.social) explicitly states \"A TikTok or Reels trend will often fall flat with a professional audience, so hooks and calls to action usually need rewriting for LinkedIn\" — directly applicable to outdoor and hunting creators cross-posting to LinkedIn.",
+      "source": "https://www.thepalm.social/blog/short-form-video-trends-2026",
+      "firstSeen": "2026-10-19T13:22:36Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_linkedin_hook_rewriter",
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "1cb63d161f28",
+      "platform": "linkedin",
+      "trend": "LinkedIn video under 90 seconds gets 3x organic reach vs text posts — benchmark for outdoor brand short-form 2026",
+      "evidence": "\"80+ LinkedIn Video Statistics for 2026\" (zebracat.ai) reports LinkedIn video content gets 3x more reach than static posts — corroborated across multiple vendor sources including Sprout Social, establishing under-90-second video as the clear benchmark for outdoor brand organic reach on the platform.",
+      "source": "https://www.zebracat.ai/post/linkedin-video-statistics",
+      "firstSeen": "2026-10-19T13:22:36Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    }
+  ]
+}

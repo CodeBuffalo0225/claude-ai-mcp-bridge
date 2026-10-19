@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "tiktok",
+  "generatedAt": "2026-10-19T13:22:36Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "3b469ed44abe",
+      "platform": "tiktok",
+      "trend": "#huntingrifle tag format — deer-hunting rifle comparison clips drive steady engagement on TikTok October 2026",
+      "evidence": "TikTok #huntingrifle tag page is active with deer-hunting and rifle comparison clips as of the search this week, confirming hunting rifle content maintains a dedicated audience on TikTok heading into the October rut season.",
+      "source": "https://www.tiktok.com/tag/huntingrifle",
+      "firstSeen": "2026-10-19T13:22:36Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "df71be74bb83",
+      "platform": "tiktok",
+      "trend": "#gun and #shootingguns million-post tags — range videos and first-time-shooting formats dominate TikTok firearms October 2026",
+      "evidence": "The #gun tag has over a million posts and features deer-hunting clips alongside range and airsoft content; #shootingguns tag is also active. \"First time shooting\" and range-day formats are recurring high-engagement structures within these tags.",
+      "source": "https://www.tiktok.com/tag/gun",
+      "firstSeen": "2026-10-19T13:22:36Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_range_day_quick_cut",
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "1e329c9cbedf",
+      "platform": "tiktok",
+      "trend": "Compliance-first framing — creators learning to post weapon content within TikTok community guidelines October 2026",
+      "evidence": "\"How to Upload Video with Weapon without Breaches Community Guidelines\" TikTok discover page (active) confirms creators are actively producing and searching for compliance guidance, signaling a platform-wide shift toward policy-aware framing in firearms content.",
+      "source": "https://www.tiktok.com/discover/how-to-upload-video-with-weapon-without-breaches-community-guidelines?lang=en",
+      "firstSeen": "2026-10-19T13:22:36Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_compliance_safe_framing_tiktok",
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "8a38fa23a506",
+      "platform": "tiktok",
+      "trend": "Top firearms influencers on TikTok — small creator high-engagement micro-niche model dominates firearms niche October 2026",
+      "evidence": "Collabstr \"Top 42 Firearms Influencers\" list (2026) shows that accounts with 1M+ followers exist but engagement concentrates in smaller, tighter-niche creators — confirming that micro-niche content strategy outperforms mass-reach in the firearms vertical on TikTok.",
+      "source": "https://collabstr.com/top-influencers/firearms",
+      "firstSeen": "2026-10-19T13:22:36Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "7c2e89afdce2",
+      "platform": "tiktok",
+      "trend": "Game-sound pairing — gun creators pair footage with game-related audio for virality on TikTok October 2026",
+      "evidence": "Search results confirm \"some creators pair gun content with game-related sounds\" as a recurring format on TikTok firearms content, suggesting crossover appeal with gaming audiences drives virality for outdoor shooting content.",
+      "source": "https://www.tiktok.com/tag/gun",
+      "firstSeen": "2026-10-19T13:22:36Z",
+      "confidence": "LOW",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    }
+  ]
+}
