@@ -1,0 +1,137 @@
+CutPilot Weekly Trend Digest — 2026-10-26
+Generated: 2026-10-26T13:05:41Z
+Niche: Hunting / Outdoors / Firearms / Outdoor Lifestyle
+Platforms: YouTube, TikTok, Instagram, LinkedIn
+================================================================================
+
+## YOUTUBE
+
+1. Sub-30-second YouTube Shorts with 2-second hooks dominate retention (October 2026)
+   Evidence: "tight 20–35 second runtimes drive completion" and hooks must land "under 2 seconds — roughly one sentence, 8–12 words spoken at a natural pace."
+   Source: https://influenceflow.io/resources/optimizing-youtube-shorts-the-complete-2026-masterclass-for-creators-and-brands/
+   CutPilot: YES (hook pacing) | Bridge candidate: edit_hook_first_pacing
+
+2. Pattern interrupt every 2-3 seconds — visual cuts and B-roll resets driving completion (October 2026)
+   Evidence: "pattern interrupts every two to three seconds" and "frequent visual resets" are the primary retention driver.
+   Source: https://shortgenius.com/blog/youtube-shorts-best-practices
+   CutPilot: YES (pacing/cuts) | Bridge candidate: edit_pattern_interrupt_cuts
+
+3. Secondary hook at 14-15 second mark extends watch time on hunting Shorts (October 2026)
+   Evidence: "a secondary hook around 14–15 seconds" to prevent mid-video drop-off.
+   Source: https://prapermedia.com/blog/make-viral-youtube-shorts/
+   CutPilot: YES (caption/hook placement) | Bridge: NO
+
+4. Contradiction formula hooks outperform greeting-first intros for firearms creators (2026)
+   Evidence: "Contradiction formula — contradict a common belief in your niche" top-performing hook type; "never start with hello or your channel name."
+   Source: https://ugccopilot.ai/hooks/youtube-shorts/
+   CutPilot: YES (hook style) | Bridge: NO
+
+5. Looping endings invite rewatch — cliffhanger-to-start edits gaining traction on outdoor Shorts (2026)
+   Evidence: "end on a cliffhanger referencing the beginning" to trigger loop replays — multiple sources corroborate as key watch-time strategy.
+   Source: https://blitzcutai.com/blog/best-youtube-shorts-hooks-2026
+   CutPilot: YES (edit structure) | Bridge candidate: edit_loop_ending_stitch
+
+================================================================================
+
+## TIKTOK
+
+1. #hunting tops TikTok Outdoor Recreation hashtag rankings — #deerhunting and #bowhunting trending October 10, 2026
+   Evidence: "#hunting at rank 1 in Outdoor Recreation, followed by #deerhunting and #bowhunting" — peak seasonal hunting content dominating TikTok's outdoor category.
+   Source: https://www.trendsmcp.ai/trending-categories/tiktok-hashtags-outdoor-recreation-trending-october-10-2026
+   CutPilot: NO (hashtag strategy) | Bridge: NO
+
+2. #deerseason and #huntingtiktok in TikTok Outdoor Recreation top 10 — seasonal content peaking October 2026
+   Evidence: Both #deerseason and #huntingtiktok confirmed top-10 Outdoor Recreation hashtags on TikTok Oct 9-10, 2026.
+   Source: https://www.trendsmcp.ai/trending-categories/tiktok-hashtags-outdoor-recreation-trending-october-9-2026
+   CutPilot: NO (hashtag strategy) | Bridge: NO
+
+3. "Someone's Gotta Hold It Down" trend on TikTok — adaptable to hunting partner/guide content (October 2026)
+   Evidence: NapoleonCat October 2026 trend roundup lists this active format — reliable anchor vs. others failing; adaptable to guide-vs-client or veteran-vs-novice hunting dynamics.
+   Source: https://napoleoncat.com/blog/tiktok-trends/
+   CutPilot: YES (format/structure) | Bridge candidate: edit_split_screen_reaction
+
+4. Whackfuq moment-of-harvest reaction format persists as TikTok hunting staple (2026)
+   Evidence: "some hunters have incorporated [Whackfuq] into the very moment they fire at game animals" — emotional reaction-at-harvest format continuing in 2026 algorithm.
+   Source: https://www.guidefitter.com/blog/hunters-on-tiktok-by-fisher-neal
+   CutPilot: YES (reaction overlay) | Bridge candidate: edit_reaction_overlay_moment
+
+5. Raw authentic outdoor footage outperforms polished production on TikTok hunting content (October 2026)
+   Evidence: Hooked.so viral hunting clips aggregator + NapoleonCat October report both confirm authenticity over production value.
+   Source: https://www.hooked.so/viral-videos/tiktok/fishing_hunting
+   CutPilot: YES (edit style guidance) | Bridge: NO
+
+================================================================================
+
+## INSTAGRAM
+
+1. Raw unpolished outdoor content beats high-production Reels — authenticity-first wins for firearms niche (October 2026)
+   Evidence: "raw, unpolished content is beating high-production posts on Reels" — New Engen October 2026 weekly tracker.
+   Source: https://newengen.com/insights/instagram-trends/
+   CutPilot: YES (edit style) | Bridge: NO
+
+2. "My Reaction To" format — standout viral Reels format in early October 2026 for firearms/outdoor creators
+   Evidence: Named as one of the standout Reels formats in early October 2026 alongside Upside Down transitions and GRWM Loading.
+   Source: https://latestforum.com/instagram-reels-trends-october-2026-roundup/
+   CutPilot: YES (format) | Bridge candidate: edit_reaction_overlay_reels
+
+3. GRWM Loading and Upside Down transition formats dominating Reels reach (October 2026)
+   Evidence: Both named as top-performing Reels formats in the October 2026 roundup — adaptable to hunting-gear prep and camp setup.
+   Source: https://latestforum.com/instagram-reels-trends-october-2026-roundup/
+   CutPilot: YES (transition style) | Bridge candidate: edit_upside_down_transition
+
+4. #guns and #huntingrifle hashtag ecosystem — trending tags for Instagram Reels in firearms niche (2026)
+   Evidence: 7.8M total posts and 374 new posts daily for #guns; structured tagging ecosystem confirmed active.
+   Source: https://iqhashtags.com/hashtags/hashtag/guns
+   CutPilot: NO (metadata/distribution) | Bridge: NO
+
+5. Alarm-clock performative distress format — highest-engagement Reels format Oct 17-24, 2026
+   Evidence: Lightreel.ai October 2026 weekly report (Oct 17–24) highlights this as the top-performing comedic reaction format — adaptable to early-morning hunting wake-up content.
+   Source: https://lightreel.ai/blogs/whats-trending-on-instagram
+   CutPilot: YES (format) | Bridge: NO
+
+================================================================================
+
+## LINKEDIN
+
+1. Founder/person-led short-form video beats polished brand content — outdoor brand owners sharing lessons outperform ads (2026)
+   Evidence: "A founder sharing a hard-earned lesson often draws more attention than a glossy commercial. Authenticity is beating polish." (mean.ceo, August 2026)
+   Source: https://blog.mean.ceo/short-form-video-marketing-trends-august-2026/
+   CutPilot: YES (edit style guidance) | Bridge: NO
+
+2. Serialized short-form video series outperform one-off posts on LinkedIn (2026)
+   Evidence: "Series beat isolated posts. Viewers return when they know what category of answer they will get from you."
+   Source: https://blog.mean.ceo/short-form-video-marketing-trends-august-2026/
+   CutPilot: YES (content structure) | Bridge: NO
+
+3. LinkedIn video engagement up 34% year-over-year — outdoor industry underrepresented (2026)
+   Evidence: "LinkedIn saw a 34% jump in video engagement compared to last year." (Sprout Social 2026 trends report)
+   Source: https://sproutsocial.com/insights/social-media-trends/
+   CutPilot: NO (platform opportunity signal) | Bridge: NO
+
+4. Repurposing customer calls/demos into platform-specific clips — standard LinkedIn strategy for outdoor brands (2026)
+   Evidence: "One recording — a customer call or demo — can be cut into several platform-specific clips."
+   Source: https://blog.mean.ceo/short-form-video-marketing-trends-august-2026/
+   CutPilot: YES (multi-platform cut workflow) | Bridge candidate: edit_repurpose_multiplatform_cut
+
+5. Local discovery short-form video growing on LinkedIn — "If you're in [location], watch this" format (2026)
+   Evidence: "short-form video used for local business discovery" with "If you're in [location], watch this" format driving reach for service businesses.
+   Source: https://www.netlz.com/blog/7-social-media-marketing-trends-for-2026/
+   CutPilot: NO (distribution strategy) | Bridge: NO
+
+================================================================================
+
+BRIDGE CANDIDATES THIS WEEK (bridgeRelevant=true signals):
+  - edit_hook_first_pacing       (youtube: 2-second hook structure)
+  - edit_pattern_interrupt_cuts  (youtube: visual reset every 2-3s)
+  - edit_loop_ending_stitch      (youtube: cliffhanger loop ending)
+  - edit_split_screen_reaction   (tiktok: Someone's Gotta Hold It Down)
+  - edit_reaction_overlay_moment (tiktok: Whackfuq harvest reaction)
+  - edit_reaction_overlay_reels  (instagram: My Reaction To)
+  - edit_upside_down_transition  (instagram: Upside Down transition)
+  - edit_repurpose_multiplatform_cut (linkedin: one-recording multi-cut)
+
+NOTE: orchestrator.ts and agent files (agent2-platform-strategist.ts) were not found in
+this repository. Steps 6 (Agent 2 platform rules regeneration) and 7 (skill audit via
+--skill-audit flag) were skipped. Platform rule regeneration and skill audit should be
+run manually once the orchestrator is available.
+================================================================================

@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "tiktok",
+  "generatedAt": "2026-10-26T13:05:41Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "afe3ae078aea",
+      "platform": "tiktok",
+      "trend": "#hunting tops TikTok Outdoor Recreation hashtag rankings — #deerhunting and #bowhunting trending October 10 2026",
+      "evidence": "\"Outdoor Recreation trending today: Oct 10, 2026\" (trendsmcp.ai) places #hunting at rank 1 in Outdoor Recreation, followed by #deerhunting and #bowhunting — confirming peak seasonal hunting content is dominating TikTok's outdoor category heading into late October.",
+      "source": "https://www.trendsmcp.ai/trending-categories/tiktok-hashtags-outdoor-recreation-trending-october-10-2026",
+      "firstSeen": "2026-10-26T13:05:41Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "TikTok hunting outdoors viral October 2026 short-form video format trends"
+    },
+    {
+      "id": "eca40ed25cae",
+      "platform": "tiktok",
+      "trend": "#deerseason and #huntingtiktok in TikTok Outdoor Recreation top 10 — seasonal hunting content peaking October 2026",
+      "evidence": "\"Today's Outdoor Recreation hashtags: Oct 9, 2026\" (trendsmcp.ai) confirms both #deerseason and #huntingtiktok in the top-10 Outdoor Recreation hashtags on TikTok for early-mid October 2026, signaling the deer-season content window is now fully active.",
+      "source": "https://www.trendsmcp.ai/trending-categories/tiktok-hashtags-outdoor-recreation-trending-october-9-2026",
+      "firstSeen": "2026-10-26T13:05:41Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "TikTok hunting outdoors viral October 2026 short-form video format trends"
+    },
+    {
+      "id": "2f2178aa22b7",
+      "platform": "tiktok",
+      "trend": "Someone Gotta Hold It Down trend on TikTok October 2026 adaptable to hunting partner guide content",
+      "evidence": "\"Current TikTok Trends To Try Right Now - October 2026\" (napoleoncat.com) lists the 'Someone's gotta hold it down' trend as active this month. The format, showing one person as the reliable anchor while others fail, is directly adaptable to guide-vs-client or veteran-vs-novice hunting content.",
+      "source": "https://napoleoncat.com/blog/tiktok-trends/",
+      "firstSeen": "2026-10-26T13:05:41Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_split_screen_reaction",
+      "rawQuery": "TikTok hunting outdoors viral October 2026 short-form video format trends"
+    },
+    {
+      "id": "4e86175bbdd0",
+      "platform": "tiktok",
+      "trend": "Whackfuq moment-of-harvest reaction format persists as TikTok hunting content staple 2026",
+      "evidence": "GuideFitter article \"Hunters on TikTok\" (guidefitter.com) reports: 'some hunters have incorporated [Whackfuq] into the very moment they fire at game animals, sometimes hitting, sometimes missing' — confirming this emotional reaction-at-harvest format continues as a recurring TikTok hunting format, boosted by the algorithm keeping such content within niche audiences.",
+      "source": "https://www.guidefitter.com/blog/hunters-on-tiktok-by-fisher-neal",
+      "firstSeen": "2026-10-26T13:05:41Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_reaction_overlay_moment",
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "6c2c4cd7572e",
+      "platform": "tiktok",
+      "trend": "Raw authentic outdoor footage outperforms polished production on TikTok hunting content October 2026",
+      "evidence": "\"Viral Fishing & Hunting Videos on TikTok 2026\" (hooked.so) aggregates top-performing hunting and outdoor clips on TikTok; combined with NapoleonCat's October 2026 trend report noting authenticity-first content driving engagement, raw field footage consistently outranks produced outdoor content.",
+      "source": "https://www.hooked.so/viral-videos/tiktok/fishing_hunting",
+      "firstSeen": "2026-10-26T13:05:41Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "TikTok hunting outdoors viral October 2026 short-form video format trends"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "instagram",
+  "generatedAt": "2026-10-26T13:05:41Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "febf68f87ecd",
+      "platform": "instagram",
+      "trend": "Raw unpolished outdoor content beats high-production Reels — authenticity-first editing wins for firearms niche October 2026",
+      "evidence": "\"Instagram Trends: October 2026 — Updated Weekly\" (newengen.com) reports: 'raw, unpolished content is beating high-production posts on Reels, confirming authenticity-first editing is the dominant strategy for outdoor and firearms creators this month.'",
+      "source": "https://newengen.com/insights/instagram-trends/",
+      "firstSeen": "2026-10-26T13:05:41Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "da560a18a654",
+      "platform": "instagram",
+      "trend": "My Reaction To format — standout viral Reels format in early October 2026 for firearms and outdoor creators",
+      "evidence": "\"Instagram Reels Trends October 2026: Full Roundup\" (latestforum.com) names 'My Reaction To' as one of the standout Reels formats in early October 2026, alongside 'Upside Down' transitions and 'GRWM Loading' — a format directly adaptable to firearms review and hunting-reaction content.",
+      "source": "https://latestforum.com/instagram-reels-trends-october-2026-roundup/",
+      "firstSeen": "2026-10-26T13:05:41Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_reaction_overlay_reels",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "89b304c87181",
+      "platform": "instagram",
+      "trend": "GRWM Loading and Upside Down transition formats dominating Reels reach October 2026 — adaptable to gear prep hunting content",
+      "evidence": "\"Instagram Reels Trends October 2026: Full Roundup\" (latestforum.com) lists 'GRWM Loading' (Get Ready With Me prep format) and 'Upside Down' transitions as top-performing Reels formats this month. Both are directly adaptable to hunting-gear prep and camp setup content for outdoor creators.",
+      "source": "https://latestforum.com/instagram-reels-trends-october-2026-roundup/",
+      "firstSeen": "2026-10-26T13:05:41Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_upside_down_transition",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "b5ea16b34740",
+      "platform": "instagram",
+      "trend": "#guns and #huntingrifle hashtag ecosystem — trending tags for Instagram Reels in firearms niche 2026",
+      "evidence": "\"#guns Hashtags: 10+ Trending Tags for Instagram Reels (2026)\" (iqhashtags.com) confirms an active trending hashtag ecosystem for the firearms niche on Instagram Reels, with 7.8M total posts and 374 new posts daily for #guns — providing a structured tagging strategy for hunting and outdoor creators.",
+      "source": "https://iqhashtags.com/hashtags/hashtag/guns",
+      "firstSeen": "2026-10-26T13:05:41Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "6402048b776f",
+      "platform": "instagram",
+      "trend": "Alarm-clock performative distress format Oct 17-24 2026 highest engagement week of October on Instagram Reels",
+      "evidence": "\"What Is Trending on Instagram — October 2026 Weekly Report\" (lightreel.ai) covering Oct 17–24 highlights 'alarm-clock performative distress videos' as the highest-engagement Reels format that week — a comedic reaction format adaptable to early-morning hunting wake-up content.",
+      "source": "https://lightreel.ai/blogs/whats-trending-on-instagram",
+      "firstSeen": "2026-10-26T13:05:41Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    }
+  ]
+}

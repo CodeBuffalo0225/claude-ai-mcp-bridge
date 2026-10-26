@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "youtube",
+  "generatedAt": "2026-10-26T13:05:41Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "1696af3016d4",
+      "platform": "youtube",
+      "trend": "Sub-30-second YouTube Shorts with 2-second hooks dominate retention for firearms and hunting creators October 2026",
+      "evidence": "\"Optimizing YouTube Shorts: The 2026 Masterclass\" (influenceflow.io) states: 'tight 20–35 second runtimes drive completion' and that hooks must land 'under 2 seconds — roughly one sentence, 8–12 words spoken at a natural pace.' Multiple creator-guidance sources corroborate this for the outdoor niche.",
+      "source": "https://influenceflow.io/resources/optimizing-youtube-shorts-the-complete-2026-masterclass-for-creators-and-brands/",
+      "firstSeen": "2026-10-26T13:05:41Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_hook_first_pacing",
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "0bcc0a53cc56",
+      "platform": "youtube",
+      "trend": "Pattern interrupt every 2-3 seconds — visual cuts and B-roll resets driving completion on outdoor Shorts October 2026",
+      "evidence": "\"10 YouTube Shorts Best Practices for 2026\" (shortgenius.com) recommends 'pattern interrupts every two to three seconds' and 'frequent visual resets' as the primary retention driver. Corroborated by conthunt.app: 'YouTube Shorts Best Practices 2026: Hooks, Posting, Retention.'",
+      "source": "https://shortgenius.com/blog/youtube-shorts-best-practices",
+      "firstSeen": "2026-10-26T13:05:41Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_pattern_interrupt_cuts",
+      "rawQuery": "YouTube Shorts hunting outdoors trending October 2026 creator hooks pacing"
+    },
+    {
+      "id": "3b18d0a8e803",
+      "platform": "youtube",
+      "trend": "Secondary hook at 14-15 second mark extends watch time on hunting Shorts October 2026",
+      "evidence": "\"Viral YouTube Shorts 2026: Hooks, Trends & Tips\" (prapermedia.com) specifies 'a secondary hook around 14–15 seconds' as a best practice to prevent mid-video drop-off, directly applicable to hunt-action or gear-demo Shorts.",
+      "source": "https://prapermedia.com/blog/make-viral-youtube-shorts/",
+      "firstSeen": "2026-10-26T13:05:41Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "YouTube Shorts hunting outdoors trending October 2026 creator hooks pacing"
+    },
+    {
+      "id": "996825365364",
+      "platform": "youtube",
+      "trend": "Contradiction formula hooks outperform greeting-first intros for firearms creators on YouTube Shorts 2026",
+      "evidence": "\"12 Viral Hooks for YouTube Shorts (2026)\" (ugccopilot.ai) describes the 'Contradiction formula — contradict a common belief in your niche' as a top-performing hook type, and explicitly states 'never start with hello or your channel name.' Outdoor and firearms creators who open with weapon-myth busting or counterintuitive takes benefit directly.",
+      "source": "https://ugccopilot.ai/hooks/youtube-shorts/",
+      "firstSeen": "2026-10-26T13:05:41Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "YouTube Shorts hunting outdoors trending October 2026 creator hooks pacing"
+    },
+    {
+      "id": "3f92d7e98617",
+      "platform": "youtube",
+      "trend": "Looping endings invite rewatch — cliffhanger-to-start edits gaining traction on outdoor YouTube Shorts 2026",
+      "evidence": "\"Best YouTube Shorts Hooks (2026)\" (blitzcutai.com) recommends 'end on a cliffhanger referencing the beginning' to trigger loop replays. Multiple 2026 creator-guide sources corroborate looping as a key watch-time strategy, highly applicable to hunt-moment Shorts.",
+      "source": "https://blitzcutai.com/blog/best-youtube-shorts-hooks-2026",
+      "firstSeen": "2026-10-26T13:05:41Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_loop_ending_stitch",
+      "rawQuery": "YouTube Shorts hunting outdoors trending October 2026 creator hooks pacing"
+    }
+  ]
+}
