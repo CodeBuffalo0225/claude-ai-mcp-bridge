@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "instagram",
+  "generatedAt": "2026-11-02T13:04:33Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "86a4d0a13f6e",
+      "platform": "instagram",
+      "trend": "Trending audio pairing for outdoor Reels — original audio or voiceover recommended for hunting how-to content while pop tracks stay for entertainment November 2026",
+      "evidence": "Hootsuite 'Instagram Reels for business in 2026: Best practices + examples' states 'use trending audio for entertaining or community-focused Reels, and original audio or a voiceover for anything educational.' SocialBee (Oct 29, 2026) confirms trending pop tracks (Taylor Swift 'august', 'Patient Zero') dominate entertainment Reels while educational hunting content benefits from original voice-over audio.",
+      "source": "https://blog.hootsuite.com/instagram-reels/",
+      "firstSeen": "2026-11-02T13:04:33Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_audio_track_swap",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "b78249ccf9d9",
+      "platform": "instagram",
+      "trend": "Raw low-production style Reels gaining reach for outdoor hunting creators — unpolished field clips outperforming studio-produced content on Instagram November 2026",
+      "evidence": "blog.mean.ceo 'Instagram Trends: November 2026' cites 'raw, low-production videos' as the leading format gaining organic reach. later.com 'Top Instagram Reels Trends to Try in 2026 (Updated Weekly)' corroborates the authenticity signal, noting the algorithm rewards completion over production value. Outdoor and hunting content is naturally suited to this format.",
+      "source": "https://blog.mean.ceo/instagram-trends-november-2026",
+      "firstSeen": "2026-11-02T13:04:33Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "Instagram Reels hunting outdoors creator November 2026 trending format audio"
+    },
+    {
+      "id": "5b8a993d1680",
+      "platform": "instagram",
+      "trend": "Hunting gear how-to Reels format performing well for firearms brands on Instagram 2026 — step-by-step demo structure driving saves and shares",
+      "evidence": "deercampdigital.com 'How to Use Instagram Reels to Promote Hunting Gear' recommends 'How-To Videos and trending sounds' as the top-performing format for hunting gear brands. gallucci.net 2024 outdoor brand guide (format guidance still current) shows trending audio plus step-by-step demo structure maximizes saves as an engagement signal.",
+      "source": "https://deercampdigital.com/promote-hunting-gear-instagram-reels/",
+      "firstSeen": "2026-11-02T13:04:33Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "853da3bcd317",
+      "platform": "instagram",
+      "trend": "Short Reels under 30 seconds with fast hooks dominating outdoor content on Instagram — algorithm favoring completion-rate signals for hunting niche November 2026",
+      "evidence": "newengen.com 'Instagram Trends: October 2026 — Updated Weekly' states 'the clearest signals came from Reels' and notes short Reels with fast hooks driving highest completion. lightreel.ai 'What Is Trending on Instagram — October 2026 Weekly Report' corroborates sub-30 second runtimes as the algorithm sweet spot for niche outdoor content.",
+      "source": "https://newengen.com/insights/instagram-trends/",
+      "firstSeen": "2026-11-02T13:04:33Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "Instagram Reels hunting outdoors creator November 2026 trending format audio"
+    },
+    {
+      "id": "13da19142a03",
+      "platform": "instagram",
+      "trend": "Creator vs business account audio gap on Instagram — outdoor hunting creators using creator accounts to access full music library for trending audio November 2026",
+      "evidence": "Hootsuite 'Instagram Reels for business in 2026' and DashSocial 'Trending Instagram Reels Songs (October 2026)' both note 'trending songs are often limited for business accounts; creator accounts get full access to Instagram's entire music library.' Outdoor and hunting creators switching to creator account type to unlock trending audio library for higher-reach Reels.",
+      "source": "https://www.dashsocial.com/blog/trending-instagram-reels-songs",
+      "firstSeen": "2026-11-02T13:04:33Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "Instagram Reels hunting outdoors creator November 2026 trending format audio"
+    }
+  ]
+}

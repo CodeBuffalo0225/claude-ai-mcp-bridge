@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "youtube",
+  "generatedAt": "2026-11-02T13:04:33Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "5b40cb914622",
+      "platform": "youtube",
+      "trend": "First 1-3 second hook opens mid-action with no greeting or logo — dominant retention driver for outdoor and firearms Shorts November 2026",
+      "evidence": "influenceflow.io 2026 Shorts guide states 'hooks must land under 2 seconds — roughly one sentence, 8–12 words spoken at a natural pace' and OpusClip blog confirms '50-60% of viewers who drop off do so within the first three seconds.' Multiple 2026 creator guides for outdoor niche corroborate mid-action openings as best practice.",
+      "source": "https://influenceflow.io/resources/best-practices-for-youtube-shorts-the-ultimate-2026-creator-guide/",
+      "firstSeen": "2026-11-02T13:04:33Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_hook_first_pacing",
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "44e024a6a245",
+      "platform": "youtube",
+      "trend": "Flat middle-third pacing kills Shorts retention — outdoor creators adding visual and info beats every 2-3 seconds to survive algorithm November 2026",
+      "evidence": "influencers-time.com 'YouTube Shorts Discovery: Hook, Pacing, and Payoff' identifies 'flat pacing in the middle third is the single biggest drop-off zone' and recommends 'add a new visual or information beat every few seconds.' scalelab.com '41 Tips to Make YouTube Shorts Go Viral in 2026' corroborates with multi-beat pacing guidance.",
+      "source": "https://www.influencers-time.com/youtube-shorts-discovery-structuring-hook-pacing-and-payoff/",
+      "firstSeen": "2026-11-02T13:04:33Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_pattern_interrupt_cuts",
+      "rawQuery": "YouTube Shorts hunting outdoors November 2026 hook style pacing creator tips"
+    },
+    {
+      "id": "7fcc1b2d0b69",
+      "platform": "youtube",
+      "trend": "2x speed viewing growing — outdoor firearms Shorts now engineered to land hooks and payoffs at fast playback speed November 2026",
+      "evidence": "influencers-time.com 'YouTube Shorts at 2x Speed: Redesign Hooks & Pacing' reports a large share of watch time happens at 2x speed, citing 'internal creator surveys,' and recommends auditing hooks at 2x as a production test. Hunting and firearms creators with dense spoken content particularly affected.",
+      "source": "https://www.influencers-time.com/youtube-shorts-at-2x-speed-how-to-redesign-hooks-and-pacing-2/",
+      "firstSeen": "2026-11-02T13:04:33Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "YouTube Shorts hunting outdoors November 2026 hook style pacing creator tips"
+    },
+    {
+      "id": "45ceee3a40ab",
+      "platform": "youtube",
+      "trend": "GunTube facing new AI-policy restrictions on YouTube — firearms creators pivoting to lifestyle framing and on-range action to avoid suppression November 2026",
+      "evidence": "Shooting News Weekly (published ~1 day ago): 'firearms-related content faces restrictions in YouTube's AI tools.' GATDaily 'GunTube is Under Fire Again... Still... Always' documents new policy against branded firearm content. Creators responding by shifting from direct product promotion to range-action and lifestyle framing.",
+      "source": "https://shootingnewsweekly.com/media/youtube-is-censoring-firearms-in-new-ways",
+      "firstSeen": "2026-11-02T13:04:33Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "5b9626d0b42d",
+      "platform": "youtube",
+      "trend": "Payoff-withholding loop edit — outdoor Shorts ending on unresolved beat triggers rewatch and boosts completion metric November 2026",
+      "evidence": "crescitaly.com 'YouTube growth strategy: 7 Shorts Hooks That Scale' and influenceflow.io 2026 guide both recommend 'holding the payoff until the end to encourage rewatches' and 'making the payoff match the hook promise.' Applicable to hunt-moment and gear-reveal Shorts. Multiple 2026 creator-guide sources corroborate loop-edit tactics.",
+      "source": "https://blog.crescitaly.com/youtube-shorts-hooks-curiosity-loops/",
+      "firstSeen": "2026-11-02T13:04:33Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_loop_ending_stitch",
+      "rawQuery": "YouTube Shorts hunting outdoors November 2026 hook style pacing creator tips"
+    }
+  ]
+}

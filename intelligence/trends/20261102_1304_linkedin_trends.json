@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "linkedin",
+  "generatedAt": "2026-11-02T13:04:33Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "1ea76413aff9",
+      "platform": "linkedin",
+      "trend": "Founder-led authentic video content outperforms branded outdoor company posts on LinkedIn — personal POV from owner or guide drives up to 315% higher engagement 2026",
+      "evidence": "kometmedia.com 'A LinkedIn Video Strategy for Founders & CEOs' and loopvolt.io 'How to Grow on LinkedIn as a Founder or Solopreneur (2026 Playbook)' both cite 'founder-led content can drive up to 315% more engagement than brand content.' Applicable to outdoor brand owners and guide businesses posting from personal accounts versus company pages.",
+      "source": "https://www.kometmedia.com/blogs/linkedin-video-strategy-for-founders-ceos",
+      "firstSeen": "2026-11-02T13:04:33Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "ffc97431a5f5",
+      "platform": "linkedin",
+      "trend": "Under-90-second LinkedIn clips reach 68% completion — outdoor small business owners prioritizing short expert-tip format over long demos 2026",
+      "evidence": "growwithghost.io 'LinkedIn Video Strategy 2026' reports 'short-form LinkedIn videos under 90 seconds achieve average completion rates of 68%, compared to 34% for videos over 3 minutes, based on analysis of 2,400 B2B videos posted in 2025.' fluxnote.io and parmonic.com 2026 LinkedIn guides corroborate 45–90 second sweet spot for B2B short-form.",
+      "source": "https://www.growwithghost.io/blog/linkedin-video-strategy-2026-short-form-long-form-and-live-video-compared",
+      "firstSeen": "2026-11-02T13:04:33Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "LinkedIn video outdoor small business brand founder short-form November 2026 engagement"
+    },
+    {
+      "id": "4cce99865d70",
+      "platform": "linkedin",
+      "trend": "Single field session or webinar yields 6-10 repurposed LinkedIn clips — batch production from outdoor brand events maximizes content ROI for small business 2026",
+      "evidence": "prodshort.com '10 Short Form Video Trends for 2026 Founders' states 'a single 45-minute webinar recording typically yields 6–10 standalone short-form clips.' loopvolt.io LinkedIn founder playbook recommends 'repurposing a single webinar into several clips' as the highest-ROI content strategy for solo operators. Directly applicable to outdoor brand events, guide clinics, and field days.",
+      "source": "https://prodshort.com/blog/short-form-video-trends",
+      "firstSeen": "2026-11-02T13:04:33Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_longform_clip_splitter",
+      "rawQuery": "LinkedIn video outdoor small business brand founder short-form November 2026 engagement"
+    },
+    {
+      "id": "679911e77235",
+      "platform": "linkedin",
+      "trend": "Low-production phone video preferred over polished corporate footage on LinkedIn — outdoor brand authenticity signal resonates with B2B outdoor buyers 2026",
+      "evidence": "nealschaffer.com 'LinkedIn Videos: The Complete 2026 Guide to B2B Video Success' states 'LinkedIn data shows emotional, natural-looking videos get 78% more engagement than staged corporate footage.' lexiconn.in 'Short-Form Founder Video Guide for SME Leaders' specifies 'your phone, decent lighting, and something worth saying is enough.' Multiple 2026 LinkedIn video guides corroborate low-production preference.",
+      "source": "https://nealschaffer.com/linkedin-videos/",
+      "firstSeen": "2026-11-02T13:04:33Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "LinkedIn video outdoor small business brand founder short-form November 2026 engagement"
+    },
+    {
+      "id": "35e840b625af",
+      "platform": "linkedin",
+      "trend": "LinkedIn short-form video acts as top-of-funnel awareness for outdoor brands — 12% short-form action rate vs 28% long-form suggests content mix strategy 2026",
+      "evidence": "fluxnote.io 'LinkedIn Video Strategy [2026]' reports 'only 12% of short-form video viewers take meaningful next steps (downloading resources, booking calls, etc.) compared to 28% for long-form content.' Hootsuite 2026 social trends analysis corroborates LinkedIn as a B2B awareness channel. Outdoor brands should treat short clips as discovery, not conversion, and mix in longer educational content.",
+      "source": "https://fluxnote.io/guides/linkedin-video-strategy-2026",
+      "firstSeen": "2026-11-02T13:04:33Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    }
+  ]
+}

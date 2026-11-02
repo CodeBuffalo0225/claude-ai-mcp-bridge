@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-11-02T13:04:33Z",
+  "weekOf": "2026-11-02",
+  "auditSource": "weekly-trend-refresh",
+  "note": "orchestrator.ts / agents/ not present in repo — audit written directly from trend signals; existing-tool list not re-derived from code.",
+  "newCandidatesThisWeek": [
+    {
+      "tool": "edit_hook_first_pacing",
+      "platform": "youtube",
+      "rationale": "1-3 second mid-action hook confirmed again as dominant retention driver for outdoor and firearms Shorts November 2026. Multiple 2026 creator guides corroborate 50-60% of viewers drop off in first 3s. Carry-forward HIGH priority — still the top CutPilot edit signal.",
+      "trendId": "5b40cb914622",
+      "priority": "HIGH"
+    },
+    {
+      "tool": "edit_pattern_interrupt_cuts",
+      "platform": "youtube",
+      "rationale": "New corroborating source November 2026: flat middle-third is 'the single biggest drop-off zone' per influencers-time.com. Visual and info beats every 2-3 seconds confirmed as survival tactic for algorithm. Carry-forward from prior weeks, still HIGH.",
+      "trendId": "44e024a6a245",
+      "priority": "HIGH"
+    },
+    {
+      "tool": "edit_loop_ending_stitch",
+      "platform": "youtube",
+      "rationale": "Payoff-withholding loop edit confirmed by multiple 2026 Shorts guides: ending on unresolved beat triggers rewatch, boosting completion metric. Directly applicable to hunt-moment and gear-reveal Shorts. Carry-forward.",
+      "trendId": "5b9626d0b42d",
+      "priority": "HIGH"
+    },
+    {
+      "tool": "edit_product_teardown_reveal",
+      "platform": "tiktok",
+      "rationale": "NEW candidate November 2026: carbon-fiber barrels and modular gear (American Hunter 2026 dominant gear trends) are being featured in TikTok teardown and demo format. Short-form product reveal sequence template with reveal-hold pacing for outdoor gear drops.",
+      "trendId": "dd984d22314a",
+      "priority": "MEDIUM"
+    },
+    {
+      "tool": "edit_audio_track_swap",
+      "platform": "instagram",
+      "rationale": "NEW candidate November 2026: Instagram Reels audio strategy splits by content type — trending pop for entertainment, original/voiceover for hunting how-to. A tool that auto-detects content type and suggests/swaps appropriate audio track would directly serve this split.",
+      "trendId": "86a4d0a13f6e",
+      "priority": "MEDIUM"
+    },
+    {
+      "tool": "edit_longform_clip_splitter",
+      "platform": "linkedin",
+      "rationale": "NEW candidate November 2026: field sessions and webinars yield 6-10 repurposed LinkedIn clips (prodshort.com, loopvolt.io). A tool that segments a long field recording into standalone short clips with proper LinkedIn length constraints (45-90s) would address the highest-ROI content workflow for outdoor small business owners.",
+      "trendId": "4cce99865d70",
+      "priority": "MEDIUM"
+    }
+  ],
+  "deprecationCandidates": [],
+  "summary": "6 bridge tool candidates this week (3 HIGH, 3 MEDIUM). Top carry-forward: edit_hook_first_pacing, edit_pattern_interrupt_cuts, edit_loop_ending_stitch — all confirmed again with fresh November 2026 sources. NEW this week: edit_product_teardown_reveal (TikTok gear teardown format; carbon-fiber and modular hardware trending), edit_audio_track_swap (Instagram Reels audio bifurcation confirmed), edit_longform_clip_splitter (LinkedIn batch-clip repurposing from field sessions). Orchestrator / Agent 2 not run — orchestrator.ts absent from repo. Flag only; no scaffolding run."
+}
