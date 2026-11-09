@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-11-09T13:05:48Z",
+  "weekOf": "2026-11-09",
+  "auditSource": "weekly-trend-refresh",
+  "note": "orchestrator.ts / agents/ not present in repo — audit written directly from trend signals; existing-tool list not re-derived from code.",
+  "newCandidatesThisWeek": [
+    {
+      "tool": "edit_hook_first_pacing",
+      "platform": "youtube",
+      "rationale": "CARRY-FORWARD HIGH: Mid-action sub-2s hook confirmed again as dominant retention driver for outdoor and firearms Shorts November 2026. influenceflow.io and OpusClip both cite 50-60% viewer drop-off in first 3s. Fresh sources this week corroborate with 2026 masterclass guides. Remains the #1 CutPilot edit signal.",
+      "trendId": "be2bb0b1bb37",
+      "priority": "HIGH"
+    },
+    {
+      "tool": "edit_pattern_interrupt_cuts",
+      "platform": "youtube",
+      "rationale": "CARRY-FORWARD HIGH: Flat middle-third pacing identified as 'the single biggest drop-off zone' again this week via influencers-time.com and narrationbox.com. New source adds per-format beat tables (1.5-3s cuts for high-energy outdoor content). Still the second-highest outdoor Shorts edit signal.",
+      "trendId": "85ee8a758bb5",
+      "priority": "HIGH"
+    },
+    {
+      "tool": "edit_loop_ending_stitch",
+      "platform": "youtube",
+      "rationale": "CARRY-FORWARD HIGH: Payoff-withholding loop edit confirmed again via crescitaly.com and OpusClip. Hook–Escalation–Payoff–CTA/Loop structure identified as dominant completion-rate driver for hunt-moment and gear-reveal Shorts. Fresh corroboration this week from multiple 2026 sources.",
+      "trendId": "57e325c3e58d",
+      "priority": "HIGH"
+    },
+    {
+      "tool": "edit_reveal_moment_cut",
+      "platform": "tiktok",
+      "rationale": "NEW candidate November 9 2026: 'Found this while...' discovery-moment hook dominating outdoor TikTok. Applies directly to hunting (shot reveal, track discovery, field find). A tool that identifies the peak reveal frame and auto-cuts a 3s pre-reveal lead-in would match this format precisely.",
+      "trendId": "9eead49255a6",
+      "priority": "MEDIUM"
+    },
+    {
+      "tool": "edit_product_demo_overlay",
+      "platform": "tiktok",
+      "rationale": "NEW candidate November 9 2026: TikTok Shop field-use and live-demo content converting highest for outdoor gear creators. A tool that inserts a product-name or spec overlay timed to the demo moment in a field-use clip would serve TikTok Shop integration for hunting gear brands.",
+      "trendId": "38c52d696b6d",
+      "priority": "MEDIUM"
+    },
+    {
+      "tool": "edit_caption_hook_overlay",
+      "platform": "instagram",
+      "rationale": "NEW candidate November 9 2026: First-line payoff hook structure — stating the outcome in the first visible caption line — driving Instagram Reels completion rates. A tool that burns in a styled caption overlay in the first 1-2s of a Reel from the creator's script would directly implement this trend.",
+      "trendId": "111cf477c2d0",
+      "priority": "MEDIUM"
+    },
+    {
+      "tool": "edit_before_after_split",
+      "platform": "instagram",
+      "rationale": "NEW candidate November 9 2026: Before-and-after gear demo Reels (camo layering, waterproofing, rifle setup) outperforming talking-head content. A split-screen or sequential before/after edit tool would directly serve this dominant outdoor brand Instagram format.",
+      "trendId": "83222cb39fc5",
+      "priority": "MEDIUM"
+    },
+    {
+      "tool": "edit_product_tag_cta_insert",
+      "platform": "instagram",
+      "rationale": "NEW candidate November 9 2026: Shoppable tags on outdoor gear demo Reels gaining momentum as Instagram integrates in-video commerce. A tool that inserts a branded CTA frame with tag-ready visual at the payoff moment of a gear demo clip would serve outdoor retail brands' shoppable Reels workflow.",
+      "trendId": "e8de25640381",
+      "priority": "LOW"
+    }
+  ],
+  "deprecationCandidates": [],
+  "summary": "8 bridge tool candidates this week (3 HIGH carry-forward, 4 MEDIUM new, 1 LOW new). Carry-forward: edit_hook_first_pacing, edit_pattern_interrupt_cuts, edit_loop_ending_stitch — all confirmed with fresh November 9 2026 sources. NEW this week: edit_reveal_moment_cut (TikTok discovery-moment hook for hunt reveals), edit_product_demo_overlay (TikTok Shop field-use demo overlay for gear creators), edit_caption_hook_overlay (Instagram first-line caption burn-in for Reels completion), edit_before_after_split (Instagram before/after gear demo split-screen), edit_product_tag_cta_insert (Instagram shoppable CTA frame insert). Orchestrator / Agent 2 not run — orchestrator.ts absent from repo. Flag only; no scaffolding run."
+}

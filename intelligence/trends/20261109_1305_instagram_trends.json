@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "instagram",
+  "generatedAt": "2026-11-09T13:05:48Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "d01a0c6bcdee",
+      "platform": "instagram",
+      "trend": "Reels plus carousel combined strategy for outdoor hunting brands: Reels drive discovery reach, carousels convert new followers November 2026",
+      "evidence": "skedsocial.com 'How to increase Instagram engagement for brands in 2026' and spunk.pics 'Instagram Content Strategy 2026' both recommend 'using Reels to find new viewers and carousels to convert them into followers' as the dominant outdoor-brand playbook. Recommended weekly cadence: 2-3 Reels plus 2-3 carousels. Multiple 2026 sources corroborate the two-format split.",
+      "source": "https://skedsocial.com/blog/how-to-increase-instagram-engagement",
+      "firstSeen": "2026-11-09T13:05:48Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "111cf477c2d0",
+      "platform": "instagram",
+      "trend": "First-line payoff hook structure — state the outcome in the first visible caption line — driving completion rates in hunting Reels November 2026",
+      "evidence": "influenceflow.io 'Improving Instagram Engagement: 2026 Strategy Guide' advises 'stating the payoff in the first line on screen' as the primary completion-rate driver; corroborated by fluxnote.io 'Instagram Reels Strategy 2026' noting that completion rate weighs heavily in the algorithm and 'a longer Reel that viewers finish can beat a short one they skip.' Directly applicable to hunt-reveal and gear-review Reels.",
+      "source": "https://influenceflow.io/resources/improving-instagram-engagement-a-complete-2026-strategy-guide/",
+      "firstSeen": "2026-11-09T13:05:48Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_caption_hook_overlay",
+      "rawQuery": "Instagram Reels hunting outdoor gear video content strategy 2026 engagement"
+    },
+    {
+      "id": "83222cb39fc5",
+      "platform": "instagram",
+      "trend": "Before-and-after gear demo Reels (camo layering, waterproofing, rifle setup) outperforming talking-head content for outdoor hunting brands 2026",
+      "evidence": "kellybrandmanagement.com '2026 Social Media Trends Outdoor Retailers Should Use' recommends 'gear demos, before-and-after videos (waterproofing, cleaning, repacking)' and 'staff using gear outdoors filmed on trails, camps, and ranges.' unruledagency.com 'How Outdoor Brands Can Improve Social Engagement' corroborates transformation-format video outperforming static and talking-head Reels for hunting and outdoor brands.",
+      "source": "https://www.kellybrandmanagement.com/social-media-trends-outdoor-retailers-grow-online-sales-drive-store-traffic/",
+      "firstSeen": "2026-11-09T13:05:48Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_before_after_split",
+      "rawQuery": "Instagram Reels hunting outdoor gear video content strategy 2026 engagement"
+    },
+    {
+      "id": "d625d78c7b15",
+      "platform": "instagram",
+      "trend": "UGC-challenge content format: hunting brands launching follower clip challenges (\"in action\" field footage) for organic reach on Reels November 2026",
+      "evidence": "deercampdigital.com 'How to Use Instagram Reels to Promote Hunting Gear' recommends 'an in-action challenge where followers post their own gear clips' as a trust-building UGC play; corroborated by skedsocial.com and kontentino.com guides identifying 'user-generated content of customers\\'s hunting and fishing trips' as 'repeatedly recommended for trust' in 2026 outdoor brand strategies.",
+      "source": "https://deercampdigital.com/promote-hunting-gear-instagram-reels/",
+      "firstSeen": "2026-11-09T13:05:48Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "Instagram Reels hunting outdoor gear video content strategy 2026 engagement"
+    },
+    {
+      "id": "e8de25640381",
+      "platform": "instagram",
+      "trend": "Shoppable tags on outdoor gear demo Reels gaining momentum as Instagram integrates in-video commerce for hunting and firearms brands 2026",
+      "evidence": "kellybrandmanagement.com '2026 Social Media Trends Outdoor Retailers' explicitly recommends 'shoppable tags on product videos' for hunting and outdoor retail brands; iqhashtags.com confirms #guns at 7.8M posts with 'very high competition' on Instagram as of November 2026, indicating sustained volume that shoppable content can capture. shootingindustry.com 'Is Social Media Still Important for Retailers in 2026?' affirms Instagram as a primary commerce channel for firearms and outdoor retail.",
+      "source": "https://www.kellybrandmanagement.com/social-media-trends-outdoor-retailers-grow-online-sales-drive-store-traffic/",
+      "firstSeen": "2026-11-09T13:05:48Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_product_tag_cta_insert",
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    }
+  ]
+}

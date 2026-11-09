@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "tiktok",
+  "generatedAt": "2026-11-09T13:05:48Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "9123000c81d3",
+      "platform": "tiktok",
+      "trend": "#hunting ranked #1 TikTok Outdoor Recreation hashtag during peak deer season October-November 2026 with #deerhunting and #bowhunting in top 10",
+      "evidence": "trendsmcp.ai daily tracker showed #hunting at rank 1 in TikTok Outdoor Recreation category on both October 9 and October 10 2026; top 10 also included #deerhunting, #bowhunting, #campinggear, #deerseason, #huntingtiktok, #kayak, and #whitetail. 'hunting held rank 1 versus the prior board.' Peak deer-season timing amplifies hunting content visibility through November.",
+      "source": "https://www.trendsmcp.ai/trending-categories/tiktok-hashtags-outdoor-recreation-trending-october-10-2026",
+      "firstSeen": "2026-11-09T13:05:48Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "9eead49255a6",
+      "platform": "tiktok",
+      "trend": "Discovery-moment hook format — \"Found this while...\" or mid-hunt reveal opens — dominating outdoor and hunting TikTok engagement November 2026",
+      "evidence": "rockhounding.org '12 Best TikTok Trends for Rockhounding Creators in 2026' reports 'starting with a Found this while... hook and building the video around the discovery moment' as dominant outdoor-niche hook; directly applicable to hunting (shot reveal, track discovery, field find). Pattern corroborated by multiple 2026 outdoor creator strategy guides emphasizing curiosity-gap openers.",
+      "source": "https://rockhounding.org/rockhounding-articles/tiktok-rockhounding-trends-2026",
+      "firstSeen": "2026-11-09T13:05:48Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_reveal_moment_cut",
+      "rawQuery": "TikTok hunting outdoor lifestyle creator content strategy November 2026 trends"
+    },
+    {
+      "id": "38c52d696b6d",
+      "platform": "tiktok",
+      "trend": "TikTok Shop field-use and live-demo content format converting highest for hunting gear creators November 2026",
+      "evidence": "hubfluence.io 'TikTok Shop Outdoor Sporting Creator Report' states 'field-use and demo content converts' as the top-performing product integration format for outdoor and sporting-goods TikTok Shop creators. Trend aligns with #campinggear and gear-demo content ranking in Oct 2026 hashtag boards.",
+      "source": "https://www.hubfluence.io/blog/tiktok-shop-outdoor-sporting-creator-report",
+      "firstSeen": "2026-11-09T13:05:48Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_product_demo_overlay",
+      "rawQuery": "TikTok hunting outdoor lifestyle creator content strategy November 2026 trends"
+    },
+    {
+      "id": "82d0179624d3",
+      "platform": "tiktok",
+      "trend": "Backcountry and camp-life combo content expanding reach for public-land hunting creators on TikTok November 2026",
+      "evidence": "tryklint.ai 'Top 41 Outdoor Influencers Nov 2026' notes 'hunting influencers often film backcountry and public-land hunts along with the camp life around them' as a core content strategy expanding beyond the shot moment. Top creators including The Hunting Public and Woodsbound Outdoors identified as exemplars of this hybrid format driving multi-demographic reach.",
+      "source": "https://tryklint.ai/influencers/outdoor/",
+      "firstSeen": "2026-11-09T13:05:48Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "TikTok hunting outdoor lifestyle creator content strategy November 2026 trends"
+    },
+    {
+      "id": "ca0f5cf2d44f",
+      "platform": "tiktok",
+      "trend": "Bowhunting and whitetail deer season content surging on TikTok in October-November 2026 driven by #deerhunting and #whitetail hashtag spikes",
+      "evidence": "modash.io 'Top 20 American Outdoor TikTokers Sep 2026' and 'Top 20 Male Outdoor Influencers Oct 2026' show bowhunting and deer-season accounts dominating average-view rankings; trendsmcp.ai confirms #whitetail at rank 9 and #deerhunting in top 10 on Oct 9-10 boards. Seasonal peak expected to hold through November rut and gun-season overlap.",
+      "source": "https://www.modash.io/find-influencers/tiktok/united-states/outdoor",
+      "firstSeen": "2026-11-09T13:05:48Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    }
+  ]
+}

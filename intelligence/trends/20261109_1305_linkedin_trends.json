@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "linkedin",
+  "generatedAt": "2026-11-09T13:05:48Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "5ceceaf918fa",
+      "platform": "linkedin",
+      "trend": "Native LinkedIn short-form video receiving 3-5x organic reach vs text posts for outdoor industry B2B brands November 2026",
+      "evidence": "fluxnote.io 'LinkedIn Video Strategy 2026' states 'LinkedIn gives native short-form video a dedicated feed and 3-5x the organic reach of text posts.' garrisoneverest.com 'Outdoor Brand Marketing Predictions and Digital Strategies for 2026' corroborates short-form video as central to outdoor B2B marketing, citing TikTok, Reels, and LinkedIn Shorts as the highest-engagement formats for outdoor brands reaching retail and wholesale buyers.",
+      "source": "https://fluxnote.io/guides/linkedin-video-strategy-2026",
+      "firstSeen": "2026-11-09T13:05:48Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "6a93b58b47cd",
+      "platform": "linkedin",
+      "trend": "Founder and field-operator led unscripted video outperforming polished corporate production for outdoor brands on LinkedIn November 2026",
+      "evidence": "coronium.io 'How to Adapt to the New Video Trend on LinkedIn 2026' states 'LinkedIn audiences prefer real, genuine content over polished productions' and that 'human faces often outperform logos.' results-formula.com 'LinkedIn Video Personal Branding 2026' and sparksocialagency.com '5 Authentic Content Ideas Brands Should Try in 2026' both recommend 'unscripted, authentic video' for outdoor and service brands; deercampdigital.com 'Video Content Marketing for Outdoor Brands' adds 'authenticity does not require poor production.'",
+      "source": "https://www.coronium.io/blog/linkedin-video-trend-adaptation-guide",
+      "firstSeen": "2026-11-09T13:05:48Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "LinkedIn video strategy outdoor brands authenticity 2026 short-form"
+    },
+    {
+      "id": "b6aeee68bbf1",
+      "platform": "linkedin",
+      "trend": "45-75 second sweet-spot LinkedIn short-form video length driving strongest completion and engagement for outdoor industry stories 2026",
+      "evidence": "growwithghost.io 'LinkedIn Video Strategy 2026: Short-Form, Long-Form, and Live Video Compared' identifies 45-75 second range as the optimal short-form length sweet spot. results-formula.com suggests 30 seconds to 2 minutes. Guidance converges on sub-90-second content for outdoor brand case studies, field operator stories, and gear launches on LinkedIn.",
+      "source": "https://www.growwithghost.io/blog/linkedin-video-strategy-2026-short-form-long-form-and-live-video-compared",
+      "firstSeen": "2026-11-09T13:05:48Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "LinkedIn video strategy outdoor brands authenticity 2026 short-form"
+    },
+    {
+      "id": "ddd219e319c8",
+      "platform": "linkedin",
+      "trend": "AI-generated content flood making authentic human-face outdoor video more valuable and differentiated on LinkedIn November 2026",
+      "evidence": "brillcreations.com 'Why Short-Form Video Will Dominate Digital Marketing in 2026' states 'as AI-generated content spreads, human-made content gains value' — particularly for outdoor and firearms brands where trust and credibility are core purchase drivers. averi.ai '10 Content Marketing Trends That Will Define 2026' corroborates AI-saturation as a differentiator for authentic human-led video.",
+      "source": "https://brillcreations.com/why-short-form-video-will-dominate-digital-marketing-in-2026/",
+      "firstSeen": "2026-11-09T13:05:48Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "LinkedIn video strategy outdoor brands authenticity 2026 short-form"
+    },
+    {
+      "id": "24e373bdd39d",
+      "platform": "linkedin",
+      "trend": "Outdoor and sporting-goods brands embedding vertical short-form clips on owned channels as hedge against LinkedIn algorithm volatility 2026",
+      "evidence": "blog.mean.ceo 'Short-Form Video Marketing Trends November 2026' reports 'brands are embedding vertical clips on pages they control, partly because platform algorithms and account restrictions are unpredictable.' kihanmarketing.com 'Social Media Trends Small Business 2026' recommends consistency over virality, citing 3-4 short-form posts per week with cross-publishing to owned properties as the safest growth path for small outdoor brands.",
+      "source": "https://blog.mean.ceo/short-form-video-marketing-trends-november-2026/",
+      "firstSeen": "2026-11-09T13:05:48Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    }
+  ]
+}
