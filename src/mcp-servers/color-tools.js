@@ -63,6 +63,26 @@ export function registerColorTools(server, bridge) {
     { ...targetShape, timeSec: z.number().min(0), apply: z.boolean().default(false), preserveMood: z.boolean().default(false).describe('Keep the shot\'s colour cast (golden hour, etc.)'), allowNonWorkingSequence: z.boolean().default(false) },
     wrap(async ({ sequenceName, trackIndex, clipIndex, ...o }) => ok(await wf.correctPrimary({ sequenceName, trackIndex, clipIndex, instance: 0 }, o))));
 
+  server.tool('color_solve',
+    'Editor-intent closed loop: set ONE scriptable Lumetri control (e.g. basic.exposure, basic.temperature, basic.contrast, basic.blacks, creative.vibrance) until a MEASURED metric reaches a target YOU state with a reason — e.g. "use the highlight headroom: luma.p99 → 0.85". Writes, re-renders, re-measures; returns every measurement, a skin check and a before|after render. Use when the primary step has no neutral/clipping evidence to act on.',
+    {
+      ...targetShape,
+      instance: z.number().int().min(0).default(0),
+      timeSec: z.number().min(0),
+      control: z.string(),
+      metric: z.enum(['luma.p50', 'luma.p99', 'luma.p1', 'luma.spread', 'wb.blueYellow', 'wb.magentaGreen', 'clip.highlights', 'clip.shadows', 'chroma.p50', 'skin.0.lumaP50', 'skin.0.chromaP50', 'skin.0.vectorscopeAngle', 'skin.1.lumaP50', 'skin.1.chromaP50']),
+      targetValue: z.number(),
+      tolerance: z.number().positive(),
+      probeStep: z.number().refine((v) => v !== 0, 'probeStep must be non-zero'),
+      bounds: z.tuple([z.number(), z.number()]).optional(),
+      reason: z.string().min(10).describe('Why this target — recorded in the result and the decision log'),
+      allowNonWorkingSequence: z.boolean().default(false),
+    },
+    wrap(async ({ sequenceName, trackIndex, clipIndex, instance, ...o }) => {
+      const r = await wf.solveToTarget({ sequenceName, trackIndex, clipIndex, instance }, { ...o, targetValue: o.targetValue });
+      return { ...ok(r), isError: !r.applied };
+    }));
+
   server.tool('color_build_curve_lut',
     'Workflow step 6 (curves): design a gentle master S-curve FROM THE FRAME (pivot at skin or scene median, strength reduced until shadows are not crushed and highlights not clipped), render an engine preview and bake a .cube LUT. Premiere curves are not scriptable — load the LUT in Lumetri ▸ Creative ▸ Look.',
     { ...frameSource, strength: z.number().min(0.05).max(1).default(0.35) },

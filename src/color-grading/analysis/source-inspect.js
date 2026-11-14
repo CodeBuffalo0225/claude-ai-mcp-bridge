@@ -70,9 +70,14 @@ function normaliseTransfer(t) {
 /** Decode Premiere's getColorSpace() payload. */
 export function parsePremiereColorSpace(cs) {
   if (!cs || cs.empty) return null;
+  // Premiere's own log colour management uses Adobe-extended codes beyond
+  // H.273 (live, 26.5.2: "Sony S-Log3/S-Gamut3.Cine" = transfer 1001,
+  // primaries 1012, scene-referred; ACEScct = 900/1001). Recognise log by
+  // the name Premiere resolves, not by guessing codes.
+  const isLog = /log/i.test(cs.name || '') && cs.transferCharacteristic >= 900;
   return {
     name: cs.name || null,
-    transfer: H273_TRANSFER[cs.transferCharacteristic] || `h273:${cs.transferCharacteristic}`,
+    transfer: isLog ? 'log' : (H273_TRANSFER[cs.transferCharacteristic] || `h273:${cs.transferCharacteristic}`),
     primaries: H273_PRIMARIES[cs.primaries] || `h273:${cs.primaries}`,
     matrix: H273_MATRIX[cs.matrixEquation] || `h273:${cs.matrixEquation}`,
     sceneReferred: !!cs.isSceneReferred,
@@ -118,6 +123,9 @@ export function inspectSource({ premiere, ffmpeg, lumetri = {}, sequence = {}, d
   if (declaredEncoding) {
     encoding = declaredEncoding;
     evidence.push(`Encoding declared by the editor: ${declaredEncoding}.`);
+  } else if (pr?.transfer === 'log') {
+    encoding = `log_premiere_managed:${pr.name}`;
+    evidence.push(`Premiere log colour management is interpreting the media as "${pr.name}".`);
   } else if (tagTransfer === 'hlg') encoding = 'hlg';
   else if (tagTransfer === 'pq') encoding = 'pq';
   else if (tagTransfer === 'bt709' || tagTransfer === 'srgb') encoding = 'sdr_rec709';
@@ -133,7 +141,8 @@ export function inspectSource({ premiere, ffmpeg, lumetri = {}, sequence = {}, d
   const hdrSource = encoding === 'hlg' || encoding === 'pq';
   const logSource = typeof encoding === 'string' && encoding.startsWith('log');
   const transformNeeded = hdrSource || logSource;
-  const colorManaged = !!(pr && (hdrSource ? pr.transfer === encoding : false));
+  const premiereLog = typeof encoding === 'string' && encoding.startsWith('log_premiere_managed');
+  const colorManaged = !!(pr && (hdrSource ? pr.transfer === encoding : premiereLog));
   const steps = [];
   if (!transformNeeded) {
     steps.push('Display-referred SDR source: no technical input transform. Grade directly.');
@@ -146,6 +155,9 @@ export function inspectSource({ premiere, ffmpeg, lumetri = {}, sequence = {}, d
       ? `Premiere colour-manages ${encoding.toUpperCase()} → sequence working space. Do NOT add a conversion LUT on top.`
       : `Set the clip interpretation to ${encoding.toUpperCase()} (Interpret Footage ▸ Color Management) so Premiere performs the transform once.`);
     steps.push(`Delivery decides the target: SDR Rec.709 output needs tone-mapping (sequence/export colour settings); HDR output needs an HDR sequence working space.`);
+  } else if (premiereLog) {
+    if (lumetri.inputLutSelected) warnings.push(`DOUBLE TRANSFORM RISK: Premiere already colour-manages "${pr.name}" AND a Lumetri Input LUT is selected. Remove the LUT.`);
+    steps.push(`Premiere colour-manages "${pr.name}" → sequence working space${sequence?.workingColorSpace ? ` (${sequence.workingColorSpace})` : ''}. This is the one technical transform — do NOT add a log→709 LUT.`);
   } else if (logSource) {
     steps.push(lumetri.inputLutSelected
       ? 'A Lumetri Input LUT is selected — confirm it is the camera vendor\'s log→Rec.709 LUT for this exact profile. Do not add a second technical LUT.'

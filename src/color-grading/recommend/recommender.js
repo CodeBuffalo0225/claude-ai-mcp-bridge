@@ -274,6 +274,9 @@ export function metricOf(frame, metric) {
   if (metric === 'clip.shadows') return frame.stats.clipping.shadows;
   if (metric === 'luma.spread') return frame.stats.luma.p95 - frame.stats.luma.p5;
   if (metric === 'luma.p50') return frame.stats.luma.p50;
+  if (metric === 'luma.p99') return frame.stats.luma.p99;
+  if (metric === 'luma.p1') return frame.stats.luma.p1;
+  if (metric === 'chroma.p50') return frame.stats.saturation.chromaP50;
   const m = metric.match(/^skin\.(\d+)\.(lumaP50|chromaP50|vectorscopeAngle)$/);
   if (m) {
     const s = frame.faces?.[Number(m[1])]?.skin?.stats;

@@ -53,7 +53,9 @@ export class PremiereColorActions {
     const base = outPath.replace(/\.png$/i, '');
     fs.mkdirSync(path.dirname(base), { recursive: true });
     if (fs.existsSync(`${base}.png`)) fs.unlinkSync(`${base}.png`); // our own previous export of this exact path
-    const r = await this._send('color.exportFrame', { sequenceName, timeSec, outPath: base });
+    // 4K colour-managed (log → tone-mapped) renders can exceed the default
+    // 30 s request timeout on the first frame (seen live, Premiere 26.5.2).
+    const r = await this._send('color.exportFrame', { sequenceName, timeSec, outPath: base }, { timeoutMs: 180000 });
     if (!r.ok) throw new Error(`exportFramePNG returned false at ${r.timecode}`);
     await waitForFile(`${base}.png`);
     return { path: `${base}.png`, timecode: r.timecode, sequence: r.sequence };
@@ -130,8 +132,15 @@ export class PremiereColorActions {
     this.guardWorkingCopy(target.sequenceName, allowNonWorkingSequence);
     const def = LUMETRI_CONTROLS[control];
     if (!def) throw new Error(`${control} is not a scriptable control`);
-    const probe = await this.probe(target);
-    if (!probe.props) throw new Error('No Lumetri on target instance — apply something first (ensure)');
+    let probe = await this.probe(target);
+    if (!probe.props) {
+      // Ungraded clip: add the Lumetri instance first (same ensure path as
+      // applyLumetri). Found live: correct_primary on a fresh clip used to
+      // fail here while its caller still reported applied:true.
+      await this.applyLumetri(target, [], { allowNonWorkingSequence, ensure: true });
+      probe = await this.probe(target);
+      if (!probe.props) throw new Error(`Lumetri instance ${target.instance || 0} could not be added to the clip`);
+    }
     const snap = await this.snapshot(target, `before-solve-${control}`);
     const x0 = (await this._readControl(target, control)) ?? def.neutral;
     let n = 0;

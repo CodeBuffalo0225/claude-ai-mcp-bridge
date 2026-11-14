@@ -528,3 +528,73 @@ test('MCP: colour tools are registered; capabilities answer offline; writes refu
   assert.match(w.content[0].text, /Refusing to write/);
   await c.close();
 });
+
+// ── fixes found grading the S-Log3 test sequences live (2026-11-14) ─────
+import { ColorWorkflow } from '../src/color-grading/color-workflow.js';
+
+const SLOG3 = { empty: false, isSceneReferred: true, matrixEquation: 1, name: 'Sony S-Log3/S-Gamut3.Cine', primaries: 1012, transferCharacteristic: 1001 };
+
+test('inspect recognises Premiere log colour management as the one transform', () => {
+  const r = inspectSource({ premiere: SLOG3, ffmpeg: parseFfmpegVideoStream('  Stream #0:0: Video: h264 (High 4:2:2) (avc1), yuv422p10le(pc, progressive), 3840x2160, 23.98 fps'), sequence: { workingColorSpace: 'Rec. 709' } });
+  assert.equal(r.encoding, 'log_premiere_managed:Sony S-Log3/S-Gamut3.Cine');
+  assert.equal(r.transform.premiereColorManaged, true);
+  assert.equal(r.readyForCreativeGrade, true);
+  assert.match(r.transform.steps[0], /do NOT add a log→709 LUT/);
+  const dbl = inspectSource({ premiere: SLOG3, lumetri: { inputLutSelected: true } });
+  assert.ok(dbl.warnings.some((w) => /DOUBLE TRANSFORM/.test(w)));
+  assert.equal(dbl.readyForCreativeGrade, false);
+});
+
+test('solveControl adds Lumetri to an ungraded clip instead of failing', async () => {
+  let added = false;
+  const props = structuredClone(FIXTURE.props);
+  const br = {
+    async send(app, cmd, params) {
+      if (cmd === 'color.probeLumetri') return { sequence: params.sequenceName, clip: { trackIndex: 0, clipIndex: 0 }, lumetriCount: added ? 1 : 0, instance: 0, props: added ? structuredClone(props) : null };
+      if (cmd === 'color.setLumetriParams') {
+        if (params.ensure && !added) added = true;
+        return { added: true, results: params.writes.map((w) => { props[w.index].value = w.value; return { index: w.index, name: w.name, requested: w.value, before: 0, after: w.value, ok: true }; }) };
+      }
+      throw new Error(`unexpected ${cmd}`);
+    },
+  };
+  const a = new PremiereColorActions(br, { logDir: tmp() });
+  // No Premiere here: the frame export fails on purpose. What matters is
+  // that the missing-Lumetri path is handled BEFORE measuring starts.
+  a.exportFrame = async () => { throw new Error('no render in unit test'); };
+  const err = await a.solveControl({ sequenceName: '_WORKING_t', trackIndex: 0, clipIndex: 0, instance: 0 }, {
+    control: 'basic.tint', metric: 'wb.magentaGreen', targetValue: 0, tolerance: 0.004, probeStep: -5, timeSec: 1, workDir: tmp(),
+  }).catch((e) => e);
+  assert.equal(added, true, 'Lumetri was added before solving');
+  assert.match(err.message, /no render in unit test/, 'reached the measuring step instead of failing on "No Lumetri"');
+});
+
+test('a closed-loop step whose solves all fail is reported as not applied', async () => {
+  const wf = new ColorWorkflow({ send: async () => ({}) });
+  wf.actions.solveControl = async () => { throw new Error('boom'); };
+  wf.analyze = async () => ({ analysis: { frames: [{ path: '/x', stats: {}, faces: [] }] }, summary: { frames: [{}] } });
+  wf.compare = async () => ({ identical: true });
+  const r = await wf._applyClosedLoop({ sequenceName: '_WORKING_t' }, { recommendations: [{ id: 'wb.tint', route: 'closed_loop', solve: {} }] }, { timeSec: 1, workDir: tmp(), beforeFrame: { faces: [], stats: { luma: {}, clipping: {}, whiteBalance: { axes: {} }, saturation: {} } }, beforePath: '/x' });
+  assert.equal(r.applied, false);
+  assert.equal(r.status, 'failed');
+  assert.match(r.errors[0], /boom/);
+});
+
+test('metricOf covers the editor-intent metrics', () => {
+  const f = fakeFrame({ stats: { saturation: { chromaP50: 0.02 } } });
+  assert.equal(metricOf(f, 'luma.p99'), 0.95);
+  assert.equal(metricOf(f, 'luma.p1'), 0.05);
+  assert.equal(metricOf(f, 'chroma.p50'), 0.02);
+});
+
+test('MCP: color_solve is registered and demands a reason', async () => {
+  const srv = new PremiereProMCPServer({ send: async () => { throw new Error('no bridge'); } }, {});
+  const [a, b] = InMemoryTransport.createLinkedPair();
+  await srv.server.connect(a);
+  const c = new Client({ name: 't', version: '1' });
+  await c.connect(b);
+  assert.ok((await c.listTools()).tools.some((t) => t.name === 'color_solve'));
+  const r = await c.callTool({ name: 'color_solve', arguments: { sequenceName: '_WORKING_x', timeSec: 1, control: 'basic.exposure', metric: 'luma.p99', targetValue: 0.85, tolerance: 0.02, probeStep: 0.3, reason: 'short' } });
+  assert.equal(r.isError, true);
+  await c.close();
+});

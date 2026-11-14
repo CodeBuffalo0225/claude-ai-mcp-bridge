@@ -119,8 +119,14 @@ export class ColorWorkflow {
     }
     const after = await this.analyze([{ sequenceName: target.sequenceName, timeSec, label: 'after' }], { workDir });
     const cmp = await this.compare(beforePath, after.analysis.frames[0].path, path.join(workDir, 'before_after.png'), { note: `${target.sequenceName} @ ${timeSec}s — Premiere render, before | after` });
+    // FIX: `applied` used to be hard-coded true, even when every solve
+    // errored and the render was pixel-identical. Report what happened.
+    const errors = solved.filter((s) => s.error).map((s) => `${s.id}: ${s.error}`);
+    const anySolved = solved.some((s) => !s.error && s.measurements?.length);
     return {
-      applied: true,
+      applied: anySolved,
+      status: !solved.length ? 'nothing_to_apply' : errors.length === solved.length ? 'failed' : errors.length ? 'partial' : 'ok',
+      errors,
       recommendations: rec.recommendations,
       solved,
       skinCheck: skinChangeReport(baseline, after.analysis.frames[0]),
@@ -129,6 +135,21 @@ export class ColorWorkflow {
       after: after.summary.frames[0],
       workDir,
     };
+  }
+
+  /**
+   * Editor-intent closed loop: solve ONE scriptable control until a measured
+   * metric reaches a target the editor states (skill rule 2: targets may come
+   * from "the editor's stated amount"). Same evidence as the primary step:
+   * every measurement, skin check, before|after render, snapshot.
+   */
+  async solveToTarget(target, { control, metric, targetValue, tolerance, probeStep, bounds, timeSec, reason, allowNonWorkingSequence = false }) {
+    if (!reason) throw new Error('State the editorial reason for this target (reason) — it goes in the decision log');
+    const workDir = defaultWorkDir();
+    const before = await this.analyze([{ sequenceName: target.sequenceName, timeSec, label: 'before' }], { workDir });
+    const rec = { recommendations: [{ id: `intent.${control}`, title: reason, route: 'closed_loop', solve: { control, metric, target: targetValue, tolerance, probeStep, bounds, instance: target.instance ?? 0 } }] };
+    const out = await this._applyClosedLoop(target, rec, { timeSec, workDir, beforeFrame: before.analysis.frames[0], beforePath: before.analysis.frames[0].path, allowNonWorkingSequence });
+    return { reason, ...out };
   }
 
   // ── 6: curves → LUT (preview + bake) ───────────────────────────────────
