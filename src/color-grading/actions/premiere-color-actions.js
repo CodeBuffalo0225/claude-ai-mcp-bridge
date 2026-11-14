@@ -44,6 +44,27 @@ export class PremiereColorActions {
     }
   }
 
+  /**
+   * With more than one Lumetri on a clip, "instance 0" is ambiguous: the
+   * editor can reorder effects in the UI at any time. Found live: after a
+   * reorder, a solve defaulting to instance 0 wrote Tint into the LUT's
+   * Lumetri instead of the grade (reverted from its snapshot). Writes must
+   * name the instance explicitly once there are several.
+   */
+  async guardInstance(target) {
+    if (target.instance !== undefined && target.instance !== null) return;
+    const p = await this.probe({ ...target, instance: 0 });
+    if (p.lumetriCount > 1) {
+      const summary = [];
+      for (let i = 0; i < p.lumetriCount; i++) {
+        const q = i === 0 ? p : await this.probe({ ...target, instance: i });
+        const v = (name) => q.props?.find((x) => x.name === name && x.type === 'number')?.value;
+        summary.push(`#${i}: Exposure ${v('Exposure')}, Temperature ${v('Temperature')}, Tint ${v('Tint')}`);
+      }
+      throw new Error(`Clip has ${p.lumetriCount} Lumetri instances — say which one to write (instance). Current: ${summary.join(' | ')}`);
+    }
+  }
+
   // ── reads ────────────────────────────────────────────────────────────
   probe(target) { return this._send('color.probeLumetri', target); }
   sourceInfo(target) { return this._send('color.sourceInfo', target); }
@@ -108,6 +129,7 @@ export class PremiereColorActions {
    */
   async applyLumetri(target, ops, { allowNonWorkingSequence = false, secondaryKeyConfirmed = false, ensure = true, dryRun = false } = {}) {
     this.guardWorkingCopy(target.sequenceName, allowNonWorkingSequence);
+    await this.guardInstance(target);
     let probe = await this.probe(target);
     let added = false;
     if (!probe.props) {
@@ -138,6 +160,7 @@ export class PremiereColorActions {
    */
   async solveControl(target, { control, metric, targetValue, tolerance, probeStep, bounds, timeSec, workDir, allowNonWorkingSequence = false, detect = true }) {
     this.guardWorkingCopy(target.sequenceName, allowNonWorkingSequence);
+    await this.guardInstance(target);
     const def = LUMETRI_CONTROLS[control];
     if (!def) throw new Error(`${control} is not a scriptable control`);
     let probe = await this.probe(target);

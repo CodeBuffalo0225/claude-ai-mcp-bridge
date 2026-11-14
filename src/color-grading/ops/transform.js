@@ -183,7 +183,8 @@ export function compilePixelOps(ops) {
         return ([r, g, b]) => {
           const { h, s } = rgbToHsv(r, g, b);
           const y = luma(r, g, b);
-          const w = hueWindow(h, q.hueCenter, q.hueWidth) * inRange(s, q.satRange[0], q.satRange[1]) * inRange(y, lr[0], lr[1]);
+          const hw = q.hueWidth >= 360 ? 1 : hueWindow(h, q.hueCenter, q.hueWidth);
+          const w = hw * inRange(s, q.satRange[0], q.satRange[1]) * inRange(y, lr[0], lr[1]);
           if (!w) return [r, g, b];
           let o = [r, g, b];
           if (c.hueShiftDeg) { const hv = rgbToHsv(...o); o = hsvToRgb(hv.h + c.hueShiftDeg * w, hv.s, hv.v); }

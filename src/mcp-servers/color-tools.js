@@ -68,14 +68,14 @@ export function registerColorTools(server, bridge) {
 
   server.tool('color_correct_primary',
     'Workflow step 4: measure white balance (on near-neutral pixels) and grade-induced clipping/crushing, then (apply:true) solve Temperature/Tint/Whites/Blacks closed-loop — write, re-render, re-measure — and report skin change, a before|after Premiere render, and a snapshot to restore. Exposure is never pushed to a fixed target; subject brightness is reported for judgement.',
-    { ...targetShape, timeSec: z.number().min(0), apply: z.boolean().default(false), preserveMood: z.boolean().default(false).describe('Keep the shot\'s colour cast (golden hour, etc.)'), allowNonWorkingSequence: z.boolean().default(false) },
-    wrap(async ({ sequenceName, trackIndex, clipIndex, ...o }) => ok(await wf.correctPrimary({ sequenceName, trackIndex, clipIndex, instance: 0 }, o))));
+    { ...targetShape, instance: z.number().int().min(0).optional().describe("Required when the clip has more than one Lumetri"), timeSec: z.number().min(0), apply: z.boolean().default(false), preserveMood: z.boolean().default(false).describe('Keep the shot\'s colour cast (golden hour, etc.)'), allowNonWorkingSequence: z.boolean().default(false) },
+    wrap(async ({ sequenceName, trackIndex, clipIndex, ...o }) => ok(await wf.correctPrimary({ sequenceName, trackIndex, clipIndex, instance: o.instance }, o))));
 
   server.tool('color_solve',
     'Editor-intent closed loop: set ONE scriptable Lumetri control (e.g. basic.exposure, basic.temperature, basic.contrast, basic.blacks, creative.vibrance) until a MEASURED metric reaches a target YOU state with a reason — e.g. "use the highlight headroom: luma.p99 → 0.85". Writes, re-renders, re-measures; returns every measurement, a skin check and a before|after render. Use when the primary step has no neutral/clipping evidence to act on.',
     {
       ...targetShape,
-      instance: z.number().int().min(0).default(0),
+      instance: z.number().int().min(0).optional().describe("Required when the clip has more than one Lumetri"),
       timeSec: z.union([z.number().min(0), z.array(z.number().min(0)).min(1).max(8)]).describe('One time, or several: the metric is then the MEAN across them (a Lumetri value covers the whole clip)'),
       control: z.string(),
       metric: z.enum(['luma.p50', 'luma.p99', 'luma.p1', 'luma.spread', 'wb.blueYellow', 'wb.magentaGreen', 'clip.highlights', 'clip.shadows', 'chroma.p50', 'skin.0.lumaP50', 'skin.0.chromaP50', 'skin.0.vectorscopeAngle', 'skin.1.lumaP50', 'skin.1.chromaP50',
@@ -150,7 +150,7 @@ export function registerColorTools(server, bridge) {
     'Write scriptable Lumetri controls (see color_capabilities) on a clip\'s Lumetri instance. Snapshots first, reads back every value, reports anything skipped. Unscriptable controls (curves, wheels, HSL key, masks) are refused with their fallback.',
     {
       ...targetShape,
-      instance: z.number().int().min(0).default(0),
+      instance: z.number().int().min(0).optional().describe("Required when the clip has more than one Lumetri"),
       ops: z.array(z.object({ control: z.string(), value: z.number(), mode: z.enum(['absolute', 'delta']).default('absolute') })).min(1),
       secondaryKeyConfirmed: z.boolean().default(false).describe('Set only after you set the HSL Secondary key in the UI'),
       dryRun: z.boolean().default(false),

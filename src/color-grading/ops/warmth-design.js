@@ -19,6 +19,7 @@
 
 import { hsvToRgb, rgbToHsv, vectorscope, tonalWeights, circularStats, percentileSorted, angleDiff } from '../analysis/color-math.js';
 import { measureTonalCasts } from '../analysis/warmth.js';
+import { castAxes } from '../analysis/frame-stats.js';
 import { compilePixelOps } from './transform.js';
 
 const RANGE_KEY = { shadows: 'shadows', mids: 'midtones', highlights: 'highlights' };
@@ -189,6 +190,78 @@ export function designWarmHslSecondary(img, skinMasks, { saturation = -0.15 } = 
     evidence: { warmPixelsSampled: warm.length, keyHueCenter: round(center, 1), skinSatP90: round(skinP90, 3), satFloor: round(satLo, 3),
       meanKeyWeightInsideSkin: round(inN ? inS / inN : 0, 4), meanKeyWeightOutsideSkin: round(outN ? outS / outN : 0, 4) },
   };
+}
+
+/**
+ * Neutral balance on the greys only — an HSL Secondary keyed by LOW
+ * saturation (all hues), its ceiling below the skin's saturation, with a
+ * Cb/Cr push solved on the engine until the near-neutral pixels reach the
+ * target on the magenta↔green axis. For when a global Tint would have to
+ * trade skin for greys (live: neutralising the greys with Tint moved skin
+ * 8.3° toward red).
+ */
+export function designNeutralBalance(img, skinMasks, { targetMagentaGreen = -0.002, iterations = 6 } = {}) {
+  const n = img.width * img.height;
+  const skinSat = [];
+  for (let p = 0; p < n; p += 2) if (skinMasks.some((m) => m[p])) { const i = p * 3; skinSat.push(rgbToHsv(img.data[i] / 255, img.data[i + 1] / 255, img.data[i + 2] / 255).s); }
+  const skinP5 = skinSat.length ? percentileSorted(Float64Array.from(skinSat).sort(), 5) : 0.25;
+  const satHi = Math.max(0.06, Math.min(0.14, skinP5 - 0.06));
+  const neutralCast = (im) => {
+    let cb = 0, cr = 0, k = 0;
+    for (let i = 0; i < im.data.length; i += 6) {
+      const r = im.data[i] / 255, g = im.data[i + 1] / 255, b = im.data[i + 2] / 255;
+      const s = rgbToHsv(r, g, b).s, v = vectorscope(r, g, b);
+      if (s < 0.12 && v.y > 0.2 && v.y < 0.95 && Math.max(r, g, b) < 254 / 255) { cb += v.cb; cr += v.cr; k++; }
+    }
+    return k ? { cb: cb / k, cr: cr / k, n: k } : null;
+  };
+  const before = neutralCast(img);
+  if (!before || before.n < 200) return { op: null, reasons: ['too few near-neutral pixels to balance'] };
+  // Unit push direction = magenta primary in Cb/Cr.
+  const mag = vectorscope(1, 0, 1);
+  const dir = [mag.cb / mag.chroma, mag.cr / mag.chroma];
+  const mgOf = (c) => castAxesLocal(c.cb, c.cr);
+  const make = (amt) => ({
+    op: 'hslSecondary',
+    qualifier: { hueCenter: 0, hueWidth: 360, satRange: [0, round(satHi, 3)], lumaRange: [0.05, 0.98], softness: 0.03 },
+    correction: { saturation: 0, hueShiftDeg: 0, cb: round(dir[0] * amt, 5), cr: round(dir[1] * amt, 5) },
+  });
+  let a0 = 0, m0 = mgOf(before);
+  let a1 = 0.01, m1 = mgOf(neutralCast(applyOps(img, [make(a1)])));
+  const log = [{ amount: 0, magentaGreen: round(m0) }, { amount: a1, magentaGreen: round(m1) }];
+  for (let it = 0; it < iterations && Math.abs(m1 - targetMagentaGreen) > 0.0005; it++) {
+    const slope = (m1 - m0) / (a1 - a0);
+    if (!Number.isFinite(slope) || Math.abs(slope) < 1e-6) break;
+    const a2 = Math.max(-0.05, Math.min(0.05, a1 + (targetMagentaGreen - m1) / slope));
+    a0 = a1; m0 = m1; a1 = a2; m1 = mgOf(neutralCast(applyOps(img, [make(a1)])));
+    log.push({ amount: round(a1, 5), magentaGreen: round(m1) });
+  }
+  const op = make(a1);
+  const after = neutralCast(applyOps(img, [op]));
+  // Measured protection: how much of the push lands inside skin.
+  const fn = compilePixelOps([op]);
+  let inS = 0, inN = 0, outS = 0, outN = 0;
+  for (let p = 0, i = 0; p < n; p += 2, i += 6) {
+    const rgb = [img.data[i] / 255, img.data[i + 1] / 255, img.data[i + 2] / 255];
+    const o = fn(rgb);
+    const d = Math.abs(o[0] - rgb[0]) + Math.abs(o[1] - rgb[1]) + Math.abs(o[2] - rgb[2]);
+    if (skinMasks.some((m) => m[p])) { inS += d; inN++; } else { outS += d; outN++; }
+  }
+  return {
+    op,
+    evidence: {
+      neutralsBefore: { magentaGreen: round(mgOf(before)), blueYellow: round(castAxesLocal(before.cb, before.cr, true)) },
+      neutralsAfter: { magentaGreen: round(mgOf(after)), blueYellow: round(castAxesLocal(after.cb, after.cr, true)) },
+      skinSatP5: round(skinP5, 3), keySatCeiling: round(satHi, 3),
+      meanChangeInsideSkin: round(inN ? inS / inN : 0, 5), meanChangeOutsideSkin: round(outN ? outS / outN : 0, 5),
+      solve: log,
+    },
+  };
+}
+
+function castAxesLocal(cb, cr, blueYellow = false) {
+  const a = castAxes(cb, cr);
+  return blueYellow ? a.blueYellow : a.magentaGreen;
 }
 
 function round(x, d = 4) { return Math.round(x * 10 ** d) / 10 ** d; }

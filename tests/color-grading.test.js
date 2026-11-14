@@ -795,3 +795,39 @@ test('verifyLut: finds the Lumetri holding the Look', async () => {
   assert.equal(r.lutActive, true);
   assert.equal(r.instance, 1);
 });
+
+// ── greys fix + instance guard (2026-11-14, Travis: "the greys look a little green") ─
+import { designNeutralBalance } from '../src/color-grading/ops/warmth-design.js';
+
+test('writes refuse an unnamed instance once a clip has several Lumetri effects', async () => {
+  const props = structuredClone(FIXTURE.props);
+  const br = { async send(app, cmd, params) {
+    if (cmd === 'color.probeLumetri') return { sequence: params.sequenceName, clip: { trackIndex: 0, clipIndex: 0 }, lumetriCount: 2, instance: params.instance || 0, props: structuredClone(props) };
+    if (cmd === 'color.setLumetriParams') return { results: params.writes.map((w) => ({ index: w.index, name: w.name, requested: w.value, before: 0, after: w.value, ok: true })) };
+    throw new Error(cmd);
+  } };
+  const a = new PremiereColorActions(br, { logDir: tmp() });
+  await assert.rejects(a.applyLumetri({ sequenceName: '_WORKING_t', trackIndex: 0, clipIndex: 0 }, [{ op: 'lumetri', control: 'basic.tint', value: 1 }]), /2 Lumetri instances — say which one/);
+  const ok1 = await a.applyLumetri({ sequenceName: '_WORKING_t', trackIndex: 0, clipIndex: 0, instance: 1 }, [{ op: 'lumetri', control: 'basic.tint', value: 1 }]);
+  assert.equal(ok1.verified, true);
+});
+
+test('an all-hues HSL key reaches pure greys (which have no hue)', () => {
+  const fn = compilePixelOps([{ op: 'hslSecondary', qualifier: { hueCenter: 0, hueWidth: 360, satRange: [0, 0.1], lumaRange: [0, 1], softness: 0.02 }, correction: { saturation: 0, hueShiftDeg: 0, cb: 0, cr: 0.02 } }]);
+  const g = fn([0.5, 0.5, 0.5]);
+  assert.ok(g[0] > 0.5, 'grey got the push');
+  assert.deepEqual(fn([0.8, 0.5, 0.3]), [0.8, 0.5, 0.3], 'saturated colour untouched');
+});
+
+test('neutral balance moves green greys to neutral and leaves skin alone', () => {
+  const w = 60, h = 20, d = new Uint8Array(w * h * 3), mask = new Uint8Array(w * h);
+  for (let y = 0; y < h; y++) for (let x = 0; x < w; x++) {
+    const p = y * w + x;
+    if (x < 20) { d.set([200, 145, 120], p * 3); mask[p] = 1; } else { const v = 80 + 3 * (x - 20); d.set([v - 2, v + 3, v - 2], p * 3); }
+  }
+  const r = designNeutralBalance(rgbImage(w, h, d), [mask]);
+  assert.ok(r.evidence.neutralsBefore.magentaGreen < -0.004);
+  assert.ok(Math.abs(r.evidence.neutralsAfter.magentaGreen - -0.002) < 0.0015, JSON.stringify(r.evidence.neutralsAfter));
+  assert.ok(r.op.qualifier.satRange[1] < r.evidence.skinSatP5);
+  assert.ok(r.evidence.meanChangeInsideSkin < r.evidence.meanChangeOutsideSkin / 5);
+});

@@ -109,7 +109,7 @@ export class ColorWorkflow {
     const baseline = skinBaseline(beforeFrame);
     for (const r of rec.recommendations.filter((x) => x.route === 'closed_loop')) {
       try {
-        solved.push({ id: r.id, ...(await this.actions.solveControl({ ...target, instance: r.solve.instance ?? target.instance ?? 0 }, {
+        solved.push({ id: r.id, ...(await this.actions.solveControl({ ...target, instance: r.solve.instance ?? target.instance }, {
           control: r.solve.control, metric: r.solve.metric, targetValue: r.solve.target, tolerance: r.solve.tolerance,
           probeStep: r.solve.probeStep, bounds: r.solve.bounds, timeSec: solveTimes ?? timeSec, workDir, allowNonWorkingSequence,
         })) });
@@ -148,7 +148,7 @@ export class ColorWorkflow {
     const workDir = defaultWorkDir();
     const t0 = Array.isArray(timeSec) ? timeSec[0] : timeSec;
     const before = await this.analyze([{ sequenceName: target.sequenceName, timeSec: t0, label: 'before' }], { workDir });
-    const rec = { recommendations: [{ id: `intent.${control}`, title: reason, route: 'closed_loop', solve: { control, metric, target: targetValue, tolerance, probeStep, bounds, instance: target.instance ?? 0 } }] };
+    const rec = { recommendations: [{ id: `intent.${control}`, title: reason, route: 'closed_loop', solve: { control, metric, target: targetValue, tolerance, probeStep, bounds, instance: target.instance } }] };
     const out = await this._applyClosedLoop(target, rec, { timeSec: t0, solveTimes: timeSec, workDir, beforeFrame: before.analysis.frames[0], beforePath: before.analysis.frames[0].path, allowNonWorkingSequence });
     return { reason, ...out };
   }
@@ -382,7 +382,7 @@ export class ColorWorkflow {
       const cur = await this.analyze([{ sequenceName: t.sequenceName, timeSec: t.timeSec, label: `target_${t.clipIndex}` }], { workDir });
       const rec = recommendMatch(ref.analysis.frames[0], cur.analysis.frames[0], { pairs: t.pairs || [] });
       if (!apply) { out.push({ target: t, ...rec }); continue; }
-      out.push({ target: t, ...(await this._applyClosedLoop({ sequenceName: t.sequenceName, trackIndex: t.trackIndex ?? 0, clipIndex: t.clipIndex, instance: t.instance ?? 0 }, rec, { timeSec: t.timeSec, workDir, beforeFrame: cur.analysis.frames[0], beforePath: cur.analysis.frames[0].path, allowNonWorkingSequence })) });
+      out.push({ target: t, ...(await this._applyClosedLoop({ sequenceName: t.sequenceName, trackIndex: t.trackIndex ?? 0, clipIndex: t.clipIndex, instance: t.instance }, rec, { timeSec: t.timeSec, workDir, beforeFrame: cur.analysis.frames[0], beforePath: cur.analysis.frames[0].path, allowNonWorkingSequence })) });
     }
     return { reference: ref.summary.frames[0], results: out, workDir };
   }

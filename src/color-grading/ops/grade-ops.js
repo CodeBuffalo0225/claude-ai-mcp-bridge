@@ -60,7 +60,9 @@ export const HslSecondaryOp = z.object({
   op: z.literal('hslSecondary'),
   qualifier: z.object({
     hueCenter: z.number().min(0).max(360),
-    hueWidth: z.number().min(10).max(180),
+    // 360 = all hues, including pure greys (which have no hue) — for keys
+    // on neutrals by saturation alone.
+    hueWidth: z.number().min(10).max(360),
     satRange: range01,
     lumaRange: range01.default([0, 1]),
     softness: z.number().min(0.005).max(0.3).default(0.06),
