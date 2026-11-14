@@ -214,6 +214,62 @@ export class ColorWorkflow {
     };
   }
 
+  /**
+   * Is a manually loaded LUT actually active in Premiere, in which Lumetri,
+   * and does the render match the .cube? Script fields cannot show a
+   * Browse-loaded LUT (26.5.2), so this works from renders only:
+   *   1. positive control — nudge Exposure on the last instance, re-render
+   *      the same frame, restore: proves exports are live (not cached);
+   *   2. per Lumetri instance: Look intensity → 0, render, restore: the
+   *      instance whose toggle changes the render holds the Look LUT;
+   *   3. engine prediction = the .cube applied (trilinear) to the LUT-off
+   *      render, compared with the LUT-on render.
+   * Every write goes through applyLumetri (snapshot + read-back) and is restored.
+   */
+  async verifyLut(target, { timeSec, lutPath, allowNonWorkingSequence = false }) {
+    const { parseCube, applyCube } = await import('./ops/cube-lut.js');
+    const workDir = defaultWorkDir();
+    const render = async (label) => (await this.actions.exportFrame({ sequenceName: target.sequenceName, timeSec, outPath: path.join(workDir, label) })).path;
+    const set = (instance, control, value) => this.actions.applyLumetri({ ...target, instance }, [{ op: 'lumetri', control, value }], { allowNonWorkingSequence, ensure: false });
+    const mad = (a, b) => { let s = 0, m = 0; for (let i = 0; i < a.data.length; i++) { const d = Math.abs(a.data[i] - b.data[i]); s += d; if (d > m) m = d; } return { meanCodeValues: r(s / a.data.length), max: m }; };
+    const probe0 = await this.actions.probe({ ...target, instance: 0 });
+    const n = probe0.lumetriCount;
+    if (!n) return { lutActive: false, reason: 'clip has no Lumetri' };
+    const normalPath = await render('normal');
+    const normal = await decodeRGB(normalPath, { maxWidth: 1920 });
+    // 1. positive control
+    const last = n - 1;
+    const exp0 = (await this.actions.probe({ ...target, instance: last })).props.find((p) => p.name === 'Exposure' && p.type === 'number').value;
+    await set(last, 'basic.exposure', exp0 + 0.3);
+    const ctrl = await decodeRGB(await render('control'), { maxWidth: 1920 });
+    await set(last, 'basic.exposure', exp0);
+    const control = mad(normal, ctrl);
+    if (control.meanCodeValues < 0.5) return { lutActive: null, reason: 'positive control did not change the render — exports may be cached; result untrustworthy', control };
+    // 2. find the instance holding the Look
+    const perInstance = [];
+    let holder = null, offImg = null;
+    for (let i = 0; i < n; i++) {
+      const li = (await this.actions.probe({ ...target, instance: i })).props.find((p) => p.name === 'Intensity' && p.index > 30 && p.type === 'number').value;
+      await set(i, 'creative.lookIntensity', 0);
+      const img = await decodeRGB(await render(`look_off_${i}`), { maxWidth: 1920 });
+      await set(i, 'creative.lookIntensity', li);
+      const d = mad(normal, img);
+      perInstance.push({ instance: i, lookIntensity: li, renderChangeWhenOff: d });
+      if (d.meanCodeValues > 0.3 && (!holder || d.meanCodeValues > holder.d)) { holder = { i, d: d.meanCodeValues }; offImg = img; }
+    }
+    if (!holder) return { lutActive: false, reason: 'turning Look intensity off on every Lumetri leaves the render pixel-identical — no Look LUT is active on this clip', control, perInstance, frames: { normal: normalPath } };
+    // 3. compare with the .cube applied by the engine
+    let match = null;
+    if (lutPath) {
+      const pred = applyCube(offImg, parseCube(fs.readFileSync(lutPath, 'utf8')));
+      const predPath = await writePNG(pred, path.join(workDir, 'engine_prediction.png'));
+      match = { premiereVsPrediction: mad(normal, pred), premiereVsLutOff: mad(normal, offImg), predictionPath: predPath };
+      match.matches = match.premiereVsPrediction.meanCodeValues < Math.max(1, match.premiereVsLutOff.meanCodeValues * 0.35);
+    }
+    const cmp = await writeComparison(offImg, normal, path.join(workDir, 'lut_off_vs_on.png'), { labels: ['PREMIERE — LUT OFF', 'PREMIERE — LUT ON'] });
+    return { lutActive: true, instance: holder.i, runsAfterGrade: holder.i > 0 || n === 1, control, perInstance, match, comparison: cmp, workDir };
+  }
+
   // ── 6: curves → LUT (preview + bake) ───────────────────────────────────
   async buildCurveLut({ framePath, strength = 0.35, outDir = defaultWorkDir(), name = 'scurve' }) {
     const a = await analyzeFrames([{ path: framePath }]);

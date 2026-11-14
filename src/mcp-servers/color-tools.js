@@ -108,6 +108,14 @@ export function registerColorTools(server, bridge) {
       return ok(await wf.designWarmthLut({ framePaths, strength: p.strength, hslSaturation: p.hslSaturation }));
     }));
 
+  server.tool('color_verify_lut',
+    'After a .cube is loaded by hand (Lumetri ▸ Creative ▸ Look ▸ Browse): prove from renders whether it is active, in which Lumetri, and whether the render matches the .cube. Runs a positive control (exports not cached), toggles Look intensity per instance (snapshotted + restored), and compares with the .cube applied by the engine.',
+    { ...targetShape, timeSec: z.number().min(0).describe('Use a frame not exported before'), lutPath: z.string().optional(), allowNonWorkingSequence: z.boolean().default(false) },
+    wrap(async ({ sequenceName, trackIndex, clipIndex, timeSec, lutPath, allowNonWorkingSequence }) => {
+      const r = await wf.verifyLut({ sequenceName, trackIndex, clipIndex }, { timeSec, lutPath, allowNonWorkingSequence });
+      return { ...ok(r), isError: r.lutActive !== true || (r.match && !r.match.matches) };
+    }));
+
   server.tool('color_build_curve_lut',
     'Workflow step 6 (curves): design a gentle master S-curve FROM THE FRAME (pivot at skin or scene median, strength reduced until shadows are not crushed and highlights not clipped), render an engine preview and bake a .cube LUT. Premiere curves are not scriptable — load the LUT in Lumetri ▸ Creative ▸ Look.',
     { ...frameSource, strength: z.number().min(0.05).max(1).default(0.35) },

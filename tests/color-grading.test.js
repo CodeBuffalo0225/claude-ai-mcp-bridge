@@ -745,3 +745,53 @@ function hsvToRgbForTest(h) {
   const hh = (((h % 360) + 360) % 360) / 60, i = Math.floor(hh), f = hh - i, q = 1 - f, t = f;
   return [[1, t, 0], [q, 1, 0], [0, 1, t], [0, q, 1], [t, 0, 1], [1, 0, q]][i % 6];
 }
+
+// ── LUT verification from renders ─────────────────────────────────────────
+import { applyCube } from '../src/color-grading/ops/cube-lut.js';
+
+test('applyCube: identity LUT is a no-op; a baked LUT matches its ops within interpolation error', () => {
+  const img = solid(8, 8, [180, 120, 60]);
+  assert.deepEqual(Array.from(applyCube(img, parseCube(bakeCube([], { size: 17 }))).data), Array.from(img.data));
+  const ops = [{ op: 'hueVsSat', center: 30, width: 60, amount: -0.4 }];
+  const viaLut = applyCube(img, parseCube(bakeCube(ops, { size: 33 })));
+  const exact = applyOpsToImage(img, ops);
+  for (let i = 0; i < 3; i++) assert.ok(Math.abs(viaLut.data[i] - exact.data[i]) <= 3, `channel ${i}`);
+  assert.throws(() => applyCube(img, { size: 3, table: [] }), /malformed/);
+});
+
+function lutRig({ lutInInstance = null } = {}) {
+  const inst = [structuredClone(FIXTURE.props), structuredClone(FIXTURE.props)];
+  const br = { async send(app, cmd, params) {
+    const i = params.instance || 0;
+    if (cmd === 'color.probeLumetri') return { sequence: params.sequenceName, clip: { trackIndex: 0, clipIndex: 0 }, lumetriCount: 2, instance: i, props: structuredClone(inst[i]) };
+    if (cmd === 'color.setLumetriParams') return { results: params.writes.map((w) => { inst[i][w.index].value = w.value; return { index: w.index, name: w.name, requested: w.value, before: 0, after: w.value, ok: true }; }) };
+    throw new Error(cmd);
+  } };
+  const wf = new ColorWorkflow(br, { logDir: tmp() });
+  wf.actions.exportFrame = async ({ outPath }) => {
+    const { writePNG } = await import('../src/color-grading/analysis/image-io.js');
+    const exp = inst[1][19].value;
+    const lut = lutInInstance !== null && inst[lutInInstance][38].value > 0 ? 25 : 0;
+    const v = Math.round(90 + 30 * exp + lut);
+    const p = outPath + '.png';
+    await writePNG(solid(32, 32, [v, v, v]), p);
+    return { path: p };
+  };
+  return { wf, inst };
+}
+
+test('verifyLut: no Look active → lutActive:false, with a passing positive control; everything restored', async () => {
+  const { wf, inst } = lutRig();
+  const r = await wf.verifyLut({ sequenceName: '_WORKING_t', trackIndex: 0, clipIndex: 0 }, { timeSec: 1 });
+  assert.equal(r.lutActive, false);
+  assert.ok(r.control.meanCodeValues > 0.5);
+  assert.equal(inst[1][19].value, FIXTURE.props[19].value, 'exposure restored');
+  assert.equal(inst[0][38].value, FIXTURE.props[38].value, 'look intensity restored');
+});
+
+test('verifyLut: finds the Lumetri holding the Look', async () => {
+  const { wf } = lutRig({ lutInInstance: 1 });
+  const r = await wf.verifyLut({ sequenceName: '_WORKING_t', trackIndex: 0, clipIndex: 0 }, { timeSec: 1 });
+  assert.equal(r.lutActive, true);
+  assert.equal(r.instance, 1);
+});
