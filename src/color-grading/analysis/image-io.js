@@ -8,6 +8,10 @@
 // ============================================================================
 
 import sharp from 'sharp';
+import fs from 'node:fs';
+import nodePath from 'node:path';
+
+const ensureDir = (p) => fs.mkdirSync(nodePath.dirname(p), { recursive: true });
 
 /**
  * Decode an image to { width, height, data: Uint8Array RGB, scale }.
@@ -39,6 +43,7 @@ export function rgbImage(width, height, data) {
 }
 
 export async function writePNG(img, path) {
+  ensureDir(path);
   await sharp(Buffer.from(img.data.buffer, img.data.byteOffset, img.data.length), {
     raw: { width: img.width, height: img.height, channels: 3 },
   }).png().toFile(path);
@@ -53,6 +58,7 @@ export async function writeComparison(before, after, path, { labels = ['BEFORE',
   if (before.width !== after.width || before.height !== after.height) {
     throw new Error('before/after frames differ in size; export both from the same sequence');
   }
+  ensureDir(path);
   const w = before.width, h = before.height, gap = 4;
   const toBuf = (img) => sharp(Buffer.from(img.data.buffer, img.data.byteOffset, img.data.length), {
     raw: { width: img.width, height: img.height, channels: 3 },

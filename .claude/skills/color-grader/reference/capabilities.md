@@ -10,7 +10,9 @@ against the running app with evidence; "unit" = covered by `npm test` only.
 | Capability | Status | How | Evidence |
 |---|---|---|---|
 | Source encoding / colour space / bit depth / range | ✅ implemented | `ProjectItem.getColorSpace()` (H.273 codes) + ffmpeg stream tags + Lumetri Input LUT state | Live: Rec.709 1/1/1, 8-bit 420 tv |
-| Transform-pipeline / double-transform check | ✅ implemented (🟡 HDR/log paths unit-only) | `inspectSource` | Live for SDR; HLG/PQ/log need sample footage |
+| Transform-pipeline / double-transform check | ✅ implemented (🟡 HDR paths unit-only) | `inspectSource`; recognises Premiere log colour management | Live: SDR iPhone + Sony FX3 S-Log3; HLG/PQ need sample footage |
+| Camera-log technical transform (step 2) | ✅ implemented | `color_apply_source_transform` → `app.project.setLogColorManagement(true)`; Premiere applies the vendor transform from metadata (Sony S-Log3/S-Gamut3.Cine = codes 1001/1012); refuses non-log media | Live: both FX3 clips transformed; iPhone clip correctly refused |
+| Editor-intent closed loop | ✅ implemented | `color_solve`: one control → stated metric target + mandatory reason | Live: Exposure (hit_bound honestly at +2.5), Blacks re-solved against the darkest real shot |
 | Log-footage suspicion from histogram | 🟡 heuristic | lifted p1 + compressed range + low chroma → asks, never assumes | Unit |
 | Frame export (graded render) | ✅ implemented | QE `exportFramePNG` at the CTI; restores playhead + active sequence | Live |
 | Scopes: luma percentiles, clipping, WB cast, saturation, vectorscope | ✅ implemented (software) | `frame-stats.js` on exported frames — Lumetri's own scopes are not readable by script | Live |
@@ -90,11 +92,13 @@ documented, so every write is checked by read-back instead.
 
 ## Still needs footage-based validation
 
-- HDR (HLG/PQ) and camera-log sources: encoding detection and transform
-  advice are unit-tested only (no such sample in the project).
-- Multiple people in one frame, darker complexions, mixed colour temperature
-  on one face: the logic is per-face and adaptive, but the only live footage
-  was one person in daylight.
+- HDR (HLG/PQ) sources: encoding detection and transform advice are
+  unit-tested only. Camera log was validated live 2026-11-14 (Sony FX3
+  S-Log3/S-Gamut3.Cine, "Test Color" / "Test Color 2" sequences).
+- Darker complexions and mixed colour temperature on one face: the logic is
+  per-face and adaptive, but live footage so far is light-to-medium skin in
+  daylight, overcast and tungsten. Multiple people per frame were validated
+  live (2 faces at once, ceremony footage).
 - Loading a baked `.cube` in Lumetri ▸ Creative ▸ Look and confirming the
   Premiere render matches the engine preview (`color_compare`).
 - The masked face-lift apply (`confirmMaskTracked:true`) and the HSL-key

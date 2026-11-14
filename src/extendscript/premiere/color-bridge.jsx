@@ -14,7 +14,7 @@
 
 /* global app, qe, PremiereBridge, _findSequence, _secondsToTicks */
 
-var COLOR_BRIDGE_JSX_VERSION = "2026-11-14.c2";
+var COLOR_BRIDGE_JSX_VERSION = "2026-11-14.c3";
 
 function _cbSeq(params) {
   if (params && params.sequenceName) return _findSequence(params.sequenceName);
@@ -209,6 +209,36 @@ PremiereBridge["color.sourceInfo"] = function (params) {
     out.lumetri = { inputLutValues: inputLut, highDynamicRange: hdr };
   }
   return out;
+};
+
+// Step 2 — the ONE technical transform for camera-log media, done by
+// Premiere's own colour management (verified live on 26.5.2 with Sony FX3
+// S-Log3/S-Gamut3.Cine): app.project.setLogColorManagement(true) makes
+// Premiere read the camera's log metadata (getOriginalColorSpace becomes
+// e.g. "Sony S-Log3/S-Gamut3.Cine", transfer 1001 / primaries 1012). If the
+// item carries an explicit override that hides it, the override is set to
+// that detected native ColorSpace. Name-built ColorSpace objects do NOT
+// work (Premiere resolves by internal codes) — only the detected object.
+// Project-wide switch: affects log media only. Revert: setLogColorManagement(false).
+PremiereBridge["color.applyLogColorManagement"] = function (params) {
+  var seq = _cbSeq(params);
+  if (!seq) return { error: "Sequence not found: " + (params.sequenceName || "(active)") };
+  var r = _cbClip(seq, params);
+  if (r.error) return r;
+  var pi = r.clip.projectItem;
+  if (typeof app.project.setLogColorManagement !== "function") return { error: "app.project.setLogColorManagement is not available on this Premiere version" };
+  var before = pi.getColorSpace();
+  var ok = app.project.setLogColorManagement(true);
+  var original = pi.getOriginalColorSpace();
+  var isLog = /log/i.test(original.name || "") && original.transferCharacteristic >= 900;
+  if (!isLog) {
+    return { applied: false, reason: "Premiere does not detect log in this media's metadata (original = '" + original.name + "'). Not transforming; declare the camera profile or set Interpret Footage manually.", before: before, original: original, effective: pi.getColorSpace(), projectLogColorManagement: ok };
+  }
+  var overrode = false;
+  var eff = pi.getColorSpace();
+  if (eff.name !== original.name) { pi.setOverrideColorSpace(original); overrode = true; }
+  var after = pi.getColorSpace();
+  return { applied: after.name === original.name, before: before, original: original, effective: after, overrodeExplicitOverride: overrode, projectLogColorManagement: ok, media: pi.name };
 };
 
 PremiereBridge["color.listClips"] = function (params) {

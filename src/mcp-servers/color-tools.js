@@ -48,6 +48,14 @@ export function registerColorTools(server, bridge) {
     { ...targetShape, timeSec: z.number().optional(), declaredEncoding: z.string().optional().describe('Camera profile if known, e.g. "log_slog3", "log_applelog", "hlg", "sdr_rec709"') },
     wrap(async (p) => ok(await wf.inspect(p))));
 
+  server.tool('color_apply_source_transform',
+    'Workflow step 2 for camera-log media: turn on Premiere log colour management (app.project.setLogColorManagement) so Premiere applies the camera vendor transform from the clip metadata (e.g. Sony S-Log3/S-Gamut3.Cine → working space). Refuses when Premiere does not detect log in the media. Project-wide switch that only affects log media; revert with setLogColorManagement(false). Then re-run color_inspect_source.',
+    { ...targetShape, allowNonWorkingSequence: z.boolean().default(false) },
+    wrap(async ({ allowNonWorkingSequence, ...t }) => {
+      const r = await wf.actions.applyLogColorManagement(t, { allowNonWorkingSequence });
+      return { ...ok(r), isError: !r.applied };
+    }));
+
   server.tool('color_export_frame',
     'Export one rendered frame (current grade + all tracks) from a sequence via QE exportFramePNG. Returns the PNG path.',
     { sequenceName: z.string(), timeSec: z.number().min(0), outPath: z.string().optional() },

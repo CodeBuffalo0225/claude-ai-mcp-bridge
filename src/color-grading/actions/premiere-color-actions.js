@@ -49,6 +49,14 @@ export class PremiereColorActions {
   sourceInfo(target) { return this._send('color.sourceInfo', target); }
   listClips(sequenceName) { return this._send('color.listClips', { sequenceName }); }
 
+  /** Step 2 for camera log: Premiere log colour management (project-wide, log media only). */
+  async applyLogColorManagement(target, { allowNonWorkingSequence = false } = {}) {
+    this.guardWorkingCopy(target.sequenceName, allowNonWorkingSequence);
+    const r = await this._send('color.applyLogColorManagement', target);
+    this._appendLog({ kind: 'source-transform', at: new Date().toISOString(), target, result: r, revert: 'app.project.setLogColorManagement(false)' });
+    return r;
+  }
+
   async exportFrame({ sequenceName, timeSec, outPath }) {
     const base = outPath.replace(/\.png$/i, '');
     fs.mkdirSync(path.dirname(base), { recursive: true });

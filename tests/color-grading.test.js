@@ -598,3 +598,30 @@ test('MCP: color_solve is registered and demands a reason', async () => {
   assert.equal(r.isError, true);
   await c.close();
 });
+
+test('source transform: refused (isError) when Premiere detects no log; logged when applied', async () => {
+  const mk = (applied) => ({ async send(app, cmd) { if (cmd === 'color.applyLogColorManagement') return applied ? { applied: true, effective: SLOG3, original: SLOG3 } : { applied: false, reason: 'no log detected' }; throw new Error(cmd); } });
+  const dir = tmp();
+  const a = new PremiereColorActions(mk(true), { logDir: dir });
+  await assert.rejects(a.applyLogColorManagement({ sequenceName: 'Source_Edit_YT' }), /Refusing/);
+  const r = await a.applyLogColorManagement({ sequenceName: '_WORKING_x', trackIndex: 0, clipIndex: 0 });
+  assert.equal(r.applied, true);
+  assert.match(fs.readFileSync(path.join(dir, 'actions.jsonl'), 'utf8'), /setLogColorManagement\(false\)/);
+  const srv = new PremiereProMCPServer(mk(false), {});
+  const [t1, t2] = InMemoryTransport.createLinkedPair();
+  await srv.server.connect(t1);
+  const c = new Client({ name: 't', version: '1' });
+  await c.connect(t2);
+  const out = await c.callTool({ name: 'color_apply_source_transform', arguments: { sequenceName: '_WORKING_x' } });
+  assert.equal(out.isError, true);
+  assert.match(out.content[0].text, /no log detected/);
+  await c.close();
+});
+
+test('comparison writer creates its output folder', async () => {
+  const { writeComparison } = await import('../src/color-grading/analysis/image-io.js');
+  const img = solid(4, 4, [10, 20, 30]);
+  const p = path.join(tmp(), 'nested', 'deeper', 'cmp.png');
+  await writeComparison(img, img, p);
+  assert.ok(fs.existsSync(p));
+});
