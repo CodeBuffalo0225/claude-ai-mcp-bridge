@@ -15,6 +15,7 @@ import { SoundEngineer } from '../sound-engineering/sound-engineer.js';
 import { ShortsCutter } from '../shorts-cutter/shorts-cutter.js';
 import { cleanSlowmoSpeed, designRamp, validateKeys, inferValueScale } from '../recipes/speed-ramp.js';
 import { Logger } from '../utils/logger.js';
+import { registerColorTools } from './color-tools.js';
 
 const logger = new Logger('PremiereMCP');
 
@@ -44,6 +45,7 @@ class PremiereProMCPServer {
     this._registerEditingTools();
     this._registerAIEditingTools();
     this._registerColorGradingTools();
+    registerColorTools(this.server, this.bridge); // skin-aware grading (color-tools.js)
     this._registerSoundEngineeringTools();
     this._registerShortsTools();
     this._registerExportTools();

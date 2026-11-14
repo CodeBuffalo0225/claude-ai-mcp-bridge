@@ -88,6 +88,34 @@ edit. After any .jsx change: bump `BRIDGE_JSX_VERSION`, `bridge_reload_jsx`, con
    infinite reconnect loop + rejects in-flight requests; reconnect timers are unref'd so
    they can't pin the process open.
 
+## ✅ SKIN-AWARE COLOUR GRADING — BUILT 2026-11-14 (branch feat/color-grading-skin-aware)
+
+Skill: `.claude/skills/color-grader/SKILL.md` (workflow, examples, hard rules) +
+`reference/capabilities.md` (what is implemented / partial / unavailable, with live
+evidence) + `reference/color-science.md` (sources). Code: `src/color-grading/{analysis,
+recommend,ops,actions}/`, handlers in `src/extendscript/premiere/color-bridge.jsx`
+(loaded by premiere-bridge.jsx), 13 `color_*` MCP tools in `src/mcp-servers/color-tools.js`.
+
+- **Live facts, Premiere 26.5.2:** Lumetri curves, Hue-vs curves, colour wheels, HSL key,
+  masks and mask tracking are NOT scriptable (opaque blobs / UI-only) → `.cube` LUT for
+  global ops, manual mask/key + scripted sliders for local ops. Basic/Creative/Vignette and
+  HSL-Secondary sliders ARE scriptable and are read back after every write.
+- **Bugs this fixed:** old `_applyLumetriToClip` used pre-26 slider names (Highlights,
+  Shadows, Whites, Blacks, Temperature never applied); preset `saturation: 10` hit
+  Lumetri's absolute 100-based Saturation → near grayscale; `export.frame` called the
+  non-existent DOM `exportFramePNG`; `color_match` returned a fabricated `confidence: 85`.
+  (A separate uncommitted name fix lives on `fix/lumetri-param-names` from another session.)
+- **QE gotchas:** `qe.project.getSequenceAt(i)` throws an uncatchable error — use
+  `getActiveSequence()` with activate + restore. QE `exportFramePNG(timecode, pathNoExt)` works.
+- **CutPilot-AI panel clobbers this bridge.** `~/Documents/CutPilot-AI` is symlinked into
+  CEP/extensions; opening its panel replaces the global `executeCommand` (symptoms: `_eval`
+  answers `{ok,result}`, `_info` missing, preflight fails). Close it, `bridge_reload_jsx`.
+- Face detection = Apple Vision via `tools/vision/detect-faces.swift`, compiled once to
+  `~/.cache/claude-ai-editor/` (tries every installed MacOSX SDK; the CLT default 26.2 SDK
+  doesn't match the 6.1.2 compiler on this Mac).
+- Writes refuse anything not named `_WORKING_*`; snapshots + `actions.jsonl` in `logs/color/`.
+  Test sequence left in the hunting-blind interview project: `_WORKING_color_skill_test` (safe to delete).
+
 ---
 
 ## ⚠️ BRIDGE BUGS — READ BEFORE TOUCHING ANYTHING (state as of 2026-05-21)
@@ -262,6 +290,8 @@ minimal_white | bold_yellow | karaoke_highlight | word_by_word | boxed | gradien
 - **Cinematic**: cinematic_teal_orange, cinematic_warm, cinematic_cold, blockbuster_action, indie_film, film_noir, vintage_film
 - **YouTube**: youtube_vibrant, youtube_clean, youtube_warm_cozy, youtube_dark_moody
 - **Social/Outdoor**: instagram_aesthetic (+ more)
+- Presets apply only scriptable Lumetri sliders; their `curves` / `colorWheels` / `hsl`
+  groups are reported as skipped. Grade people with the color-grader skill workflow.
 
 ---
 

@@ -997,13 +997,15 @@ var PremiereBridge = {
     };
   },
 
+  // FIX 2026-11-14: the DOM Sequence has no exportFramePNG (undefined on
+  // 26.5.2), so this always threw. Delegates to color.exportFrame (QE
+  // exportFramePNG at the CTI, verified live). outputPath may omit ".png".
   "export.frame": function(params) {
-    var seq = app.project.activeSequence;
-    if (seq) {
-      seq.setPlayerPosition(_secondsToTicks(params.time));
-      seq.exportFramePNG(params.time, params.outputPath);
-    }
-    return { path: params.outputPath };
+    var base = String(params.outputPath || "").replace(/\.png$/i, "");
+    if (!base) return { error: "outputPath required" };
+    var r = PremiereBridge["color.exportFrame"]({ sequenceName: params.sequenceName, timeSec: params.time || 0, outPath: base });
+    if (r.error) return r;
+    return { path: r.path, timecode: r.timecode, ok: r.ok };
   },
 
   // ── COLOR GRADING ─────────────────────────────────────────────
@@ -1217,6 +1219,7 @@ var PremiereBridge = {
     }
     return {
       jsxVersion: BRIDGE_JSX_VERSION,
+      colorBridgeVersion: (typeof COLOR_BRIDGE_JSX_VERSION !== "undefined") ? COLOR_BRIDGE_JSX_VERSION : null,
       app: "premiere",
       appVersion: app.version,
       handlers: handlers,
@@ -1514,4 +1517,13 @@ function executeCommand(commandStr) {
   } catch (e) {
     return JSON.stringify({ id: 0, error: "ExtendScript Error: " + e.message });
   }
+}
+
+// ── Colour grading handlers (color-bridge.jsx) ───────────────────────────
+// Kept in their own file; registered into PremiereBridge on load/reload.
+// _info reports COLOR_BRIDGE_JSX_VERSION alongside BRIDGE_JSX_VERSION.
+try {
+  $.evalFile(new File($.fileName).path + "/color-bridge.jsx");
+} catch (e) {
+  PremiereBridge["color._loadError"] = function() { return { error: "color-bridge.jsx failed to load: " + e.message }; };
 }
