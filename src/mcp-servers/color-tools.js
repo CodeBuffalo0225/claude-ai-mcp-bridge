@@ -76,9 +76,10 @@ export function registerColorTools(server, bridge) {
     {
       ...targetShape,
       instance: z.number().int().min(0).default(0),
-      timeSec: z.number().min(0),
+      timeSec: z.union([z.number().min(0), z.array(z.number().min(0)).min(1).max(8)]).describe('One time, or several: the metric is then the MEAN across them (a Lumetri value covers the whole clip)'),
       control: z.string(),
-      metric: z.enum(['luma.p50', 'luma.p99', 'luma.p1', 'luma.spread', 'wb.blueYellow', 'wb.magentaGreen', 'clip.highlights', 'clip.shadows', 'chroma.p50', 'skin.0.lumaP50', 'skin.0.chromaP50', 'skin.0.vectorscopeAngle', 'skin.1.lumaP50', 'skin.1.chromaP50']),
+      metric: z.enum(['luma.p50', 'luma.p99', 'luma.p1', 'luma.spread', 'wb.blueYellow', 'wb.magentaGreen', 'clip.highlights', 'clip.shadows', 'chroma.p50', 'skin.0.lumaP50', 'skin.0.chromaP50', 'skin.0.vectorscopeAngle', 'skin.1.lumaP50', 'skin.1.chromaP50',
+        'warmth.shadows.blueYellow', 'warmth.shadows.magentaGreen', 'warmth.mids.blueYellow', 'warmth.mids.magentaGreen', 'warmth.highlights.blueYellow', 'warmth.highlights.magentaGreen']),
       targetValue: z.number(),
       tolerance: z.number().positive(),
       probeStep: z.number().refine((v) => v !== 0, 'probeStep must be non-zero'),
@@ -89,6 +90,22 @@ export function registerColorTools(server, bridge) {
     wrap(async ({ sequenceName, trackIndex, clipIndex, instance, ...o }) => {
       const r = await wf.solveToTarget({ sequenceName, trackIndex, clipIndex, instance }, { ...o, targetValue: o.targetValue });
       return { ...ok(r), isError: !r.applied };
+    }));
+
+  server.tool('color_warmth_lut',
+    'Determine whether a shot is too warm/cool (multi-cue: tonal-range casts, skin vs skin line, warm dominance) and, if so, design tonal COLOUR WHEELS + an HSL SECONDARY (keyed on the dominant saturated warm hue, saturation floor above skin so faces are protected) from the frame, solve them on the engine, preview, and bake one .cube. Lumetri wheels/HSL key are not scriptable on 26.5.2 — load the .cube in a second Lumetri ▸ Creative ▸ Look, then color_compare against previewPath.',
+    { ...frameSource, times: z.array(z.number().min(0)).min(2).max(8).optional().describe('Design on several frames of sequenceName (recommended — the LUT covers the whole clip)'), strength: z.number().min(0.05).max(1).default(0.4), hslSaturation: z.number().min(-0.6).max(0.3).default(-0.15) },
+    wrap(async (p) => {
+      let framePaths;
+      if (p.times?.length) {
+        if (!p.sequenceName) throw new Error('times needs sequenceName');
+        const wd = defaultWorkDir();
+        framePaths = [];
+        for (const t of p.times) framePaths.push((await wf.actions.exportFrame({ sequenceName: p.sequenceName, timeSec: t, outPath: `${wd}/warmth_${t}` })).path);
+      } else {
+        framePaths = [await frameFrom(p)];
+      }
+      return ok(await wf.designWarmthLut({ framePaths, strength: p.strength, hslSaturation: p.hslSaturation }));
     }));
 
   server.tool('color_build_curve_lut',

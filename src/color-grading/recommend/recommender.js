@@ -277,6 +277,12 @@ export function metricOf(frame, metric) {
   if (metric === 'luma.p99') return frame.stats.luma.p99;
   if (metric === 'luma.p1') return frame.stats.luma.p1;
   if (metric === 'chroma.p50') return frame.stats.saturation.chromaP50;
+  const w = metric.match(/^warmth\.(shadows|mids|highlights)\.(blueYellow|magentaGreen)$/);
+  if (w) {
+    const c = frame.stats.warmth?.casts?.[w[1]];
+    if (!c) throw new Error(`no warmth measurement on this frame for ${metric}`);
+    return c[w[2]];
+  }
   const m = metric.match(/^skin\.(\d+)\.(lumaP50|chromaP50|vectorscopeAngle)$/);
   if (m) {
     const s = frame.faces?.[Number(m[1])]?.skin?.stats;

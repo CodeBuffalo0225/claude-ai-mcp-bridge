@@ -104,14 +104,14 @@ export class ColorWorkflow {
     return this._applyClosedLoop(target, rec, { timeSec, workDir, beforeFrame: frame, beforePath: frame.path, allowNonWorkingSequence });
   }
 
-  async _applyClosedLoop(target, rec, { timeSec, workDir, beforeFrame, beforePath, allowNonWorkingSequence }) {
+  async _applyClosedLoop(target, rec, { timeSec, solveTimes, workDir, beforeFrame, beforePath, allowNonWorkingSequence }) {
     const solved = [];
     const baseline = skinBaseline(beforeFrame);
     for (const r of rec.recommendations.filter((x) => x.route === 'closed_loop')) {
       try {
         solved.push({ id: r.id, ...(await this.actions.solveControl({ ...target, instance: r.solve.instance ?? target.instance ?? 0 }, {
           control: r.solve.control, metric: r.solve.metric, targetValue: r.solve.target, tolerance: r.solve.tolerance,
-          probeStep: r.solve.probeStep, bounds: r.solve.bounds, timeSec, workDir, allowNonWorkingSequence,
+          probeStep: r.solve.probeStep, bounds: r.solve.bounds, timeSec: solveTimes ?? timeSec, workDir, allowNonWorkingSequence,
         })) });
       } catch (e) {
         solved.push({ id: r.id, error: e.message });
@@ -146,10 +146,72 @@ export class ColorWorkflow {
   async solveToTarget(target, { control, metric, targetValue, tolerance, probeStep, bounds, timeSec, reason, allowNonWorkingSequence = false }) {
     if (!reason) throw new Error('State the editorial reason for this target (reason) — it goes in the decision log');
     const workDir = defaultWorkDir();
-    const before = await this.analyze([{ sequenceName: target.sequenceName, timeSec, label: 'before' }], { workDir });
+    const t0 = Array.isArray(timeSec) ? timeSec[0] : timeSec;
+    const before = await this.analyze([{ sequenceName: target.sequenceName, timeSec: t0, label: 'before' }], { workDir });
     const rec = { recommendations: [{ id: `intent.${control}`, title: reason, route: 'closed_loop', solve: { control, metric, target: targetValue, tolerance, probeStep, bounds, instance: target.instance ?? 0 } }] };
-    const out = await this._applyClosedLoop(target, rec, { timeSec, workDir, beforeFrame: before.analysis.frames[0], beforePath: before.analysis.frames[0].path, allowNonWorkingSequence });
+    const out = await this._applyClosedLoop(target, rec, { timeSec: t0, solveTimes: timeSec, workDir, beforeFrame: before.analysis.frames[0], beforePath: before.analysis.frames[0].path, allowNonWorkingSequence });
     return { reason, ...out };
+  }
+
+  /**
+   * Warmth: tonal colour wheels + HSL Secondary designed from THIS frame's
+   * measured residual cast, solved on the engine, previewed and baked to
+   * .cube (Lumetri wheels / HSL key are not scriptable on 26.5.2). Reports
+   * the warmth verdict before and after (engine), skin change and the
+   * HSL key's measured protection of the faces.
+   */
+  async designWarmthLut({ framePath, framePaths, strength = 0.4, hslSaturation = -0.15, useWheels = true, useHsl = true, outDir = defaultWorkDir(), name = 'warmth_wheels_hsl', bake = true }) {
+    const { designTonalWheels, designWarmHslSecondary } = await import('./ops/warmth-design.js');
+    const { measureTonalCasts, assessWarmth } = await import('./analysis/warmth.js');
+    const paths = framePaths?.length ? framePaths : [framePath];
+    framePath = paths[0];
+    const a = await analyzeFrames(paths.map((p) => ({ path: p })), { keepMasks: true });
+    const fr = a.frames[0];
+    // Clip-level decision: correct when the MAJORITY of sampled frames say so.
+    const verdicts = a.frames.map((f) => f.warmth.verdict);
+    const needs = a.frames.filter((f) => f.warmth.correct).length;
+    if (needs * 2 < a.frames.length) return { built: false, verdicts, reason: `only ${needs}/${a.frames.length} frames need a warmth correction` };
+    // Stack every sampled frame (same width) into one design sample so the
+    // wheels, the HSL key and the skin guard see the whole clip.
+    const stacked = stackImages(a.frames.map((f) => f._img));
+    const masks = stackMasks(a.frames);
+    const wheels = useWheels ? designTonalWheels(stacked, { strength, skinMasks: masks }) : null;
+    const hsl = useHsl ? designWarmHslSecondary(stacked, masks, { saturation: hslSaturation }) : { op: null };
+    const ops = [...(wheels ? [wheels.op] : []), ...(hsl.op ? [hsl.op] : [])];
+    if (!ops.length) return { built: false, reason: 'no ops designed', warmth: fr.warmth };
+    const baked = bake ? await this.previewAndBake({ framePath, ops, outDir, name }) : await this._previewOnly(framePath, ops, outDir, name);
+    // Per frame: verdict after, measured on the SAME pixels as before (see
+    // warmth.js) — no sample-migration artefact; skin change; clipping.
+    const perFrame = [];
+    for (let i = 0; i < a.frames.length; i++) {
+      const f = a.frames[i];
+      const sel = measureTonalCasts(f._img).selection;
+      const out = applyOpsToImage(f._img, ops);
+      const tmp = path.join(outDir, `${name}_engine_frame${i}.png`);
+      await writePNG(out, tmp);
+      const after = await analyzeFrames([{ path: tmp }]);
+      const same = measureTonalCasts(out, { selection: sel });
+      const v = assessWarmth(same, after.frames[0].faces.filter((x) => x.skin?.reliable).map((x) => x.skin.stats));
+      const fm = f.faces.filter((x) => x.skin?.mask).map((x) => x.skin.mask);
+      perFrame.push({
+        frame: paths[i], before: f.warmth.verdict, after: v.verdict,
+        midsBlueYellow: [f.warmth.casts.mids.blueYellow, same.casts.mids.blueYellow],
+        skin: skinChangeReport(skinBaseline(f), after.frames[0])[0] || null,
+        regions: fm.length ? regionDelta(f._img, out, fm) : null,
+        newlyClipped: safetyReport(f._img, ops).newlyClippedFraction,
+      });
+    }
+    return {
+      built: bake,
+      ops,
+      designedOn: `${a.frames.length} frame(s)`,
+      verdictsBefore: verdicts,
+      verdictsAfterEngine: perFrame.map((p) => p.after),
+      perFrame,
+      wheels: wheels && { op: wheels.op, residualByIteration: wheels.residualByIteration, skinGuard: wheels.skinGuard },
+      hslSecondary: hsl,
+      ...baked,
+    };
   }
 
   // ── 6: curves → LUT (preview + bake) ───────────────────────────────────
@@ -159,6 +221,12 @@ export class ColorWorkflow {
     const r0 = rec.recommendations[0];
     if (!r0.ops.length) return { built: false, ...rec };
     return { built: true, recommendation: r0, ...(await this.previewAndBake({ framePath, ops: r0.ops, outDir, name })) };
+  }
+
+  async _previewOnly(framePath, ops, outDir, name) {
+    const img = await decodeRGB(framePath);
+    const preview = applyOpsToImage(img, ops);
+    return { previewPath: await writePNG(preview, path.join(outDir, `${name}_engine_preview.png`)), safety: safetyReport(img, ops.filter((o) => o.op !== 'secondary')) };
   }
 
   async previewAndBake({ framePath, ops, outDir = defaultWorkDir(), name = 'grade', masks }) {
@@ -293,6 +361,34 @@ export class ColorWorkflow {
       identical: meanAbsDiff(b, a) === 0,
     };
   }
+}
+
+/** Stack same-width images vertically into one design sample. */
+export function stackImages(imgs) {
+  const w = imgs[0].width;
+  if (imgs.some((im) => im.width !== w)) throw new Error('frames must share a width to be designed together');
+  const h = imgs.reduce((s, im) => s + im.height, 0);
+  const data = new Uint8Array(w * h * 3);
+  let off = 0;
+  for (const im of imgs) { data.set(im.data, off); off += im.data.length; }
+  return { width: w, height: h, data, scale: imgs[0].scale, source: { stacked: imgs.length } };
+}
+
+/** Face skin masks of several frames, re-based into the stacked image. */
+export function stackMasks(frames) {
+  const total = frames.reduce((s, f) => s + f._img.width * f._img.height, 0);
+  const out = [];
+  let off = 0;
+  for (const f of frames) {
+    for (const fc of f.faces) {
+      if (!fc.skin?.mask) continue;
+      const m = new Uint8Array(total);
+      m.set(fc.skin.mask, off);
+      out.push(m);
+    }
+    off += f._img.width * f._img.height;
+  }
+  return out;
 }
 
 /** Mean luma change inside the masks vs outside them — isolation evidence. */

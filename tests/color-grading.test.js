@@ -625,3 +625,123 @@ test('comparison writer creates its output folder', async () => {
   await writeComparison(img, img, p);
   assert.ok(fs.existsSync(p));
 });
+
+// ── warmth: determine "too warm", tonal wheels, HSL Secondary (2026-11-14) ─
+import { assessWarmth, measureTonalCasts } from '../src/color-grading/analysis/warmth.js';
+import { wheelForCbCr, designTonalWheels, designWarmHslSecondary, SKIN_GUARD } from '../src/color-grading/ops/warmth-design.js';
+import { stackImages, stackMasks } from '../src/color-grading/color-workflow.js';
+
+const casts = (s, m, h) => ({ shadows: { blueYellow: s }, mids: { blueYellow: m }, highlights: { blueYellow: h } });
+
+test('warmth verdicts match the three live calibration cases', () => {
+  // Tungsten cabin interview (live: Test Color 2): cast in all ranges, skin toward red, 97% warm.
+  assert.equal(assessWarmth({ casts: casts(-0.0045, -0.0237, -0.0527), dominance: 0.974 }, [{ skinLineDeviationDeg: -6.6 }]).verdict, 'slightly_warm');
+  // Overcast ceremony: no consistent cast.
+  assert.equal(assessWarmth({ casts: casts(-0.006, -0.0084, -0.0236), dominance: 0.837 }, [{ skinLineDeviationDeg: 0.7 }]).verdict, 'neutral');
+  // Autumn woods daylight: warm scene, skin on the line, warm share not extreme → content.
+  assert.equal(assessWarmth({ casts: casts(-0.0432, -0.05, -0.0259), dominance: 0.849 }, [{ skinLineDeviationDeg: -0.2 }]).verdict, 'warm_content');
+  // No faces: dominance alone can confirm.
+  assert.equal(assessWarmth({ casts: casts(-0.01, -0.03, -0.05), dominance: 0.95 }, []).verdict, 'slightly_warm');
+});
+
+test('same-pixel measurement: desaturating warm objects cannot make the metric read warmer', () => {
+  // Grey wall (low chroma) + saturated orange wood.
+  const w = 40, h = 40, d = new Uint8Array(w * h * 3);
+  for (let p = 0; p < w * h; p++) { const c = p % 2 ? [200, 120, 60] : [128, 124, 118]; d.set(c, p * 3); }
+  const img = rgbImage(w, h, d);
+  const base = measureTonalCasts(img, { step: 1 });
+  const desat = compilePixelOps([{ op: 'hueVsSat', center: 25, width: 60, amount: -0.8 }]);
+  const out = new Uint8Array(d.length);
+  for (let i = 0; i < d.length; i += 3) { const o = desat([d[i] / 255, d[i + 1] / 255, d[i + 2] / 255]); out[i] = Math.round(o[0] * 255); out[i + 1] = Math.round(o[1] * 255); out[i + 2] = Math.round(o[2] * 255); }
+  const same = measureTonalCasts(rgbImage(w, h, out), { selection: base.selection });
+  assert.ok(same.casts.mids.blueYellow >= base.casts.mids.blueYellow - 1e-4, 'same pixels: not warmer');
+});
+
+test('HSL Secondary: qualifies by hue AND saturation, holds luma, leaves skin-saturation pixels alone', () => {
+  const op = { op: 'hslSecondary', qualifier: { hueCenter: 25, hueWidth: 50, satRange: [0.5, 1], lumaRange: [0, 1], softness: 0.04 }, correction: { saturation: -0.5, hueShiftDeg: 0, cb: 0, cr: 0 } };
+  assert.equal(validateOps([op]).ok.length, 1);
+  const fn = compilePixelOps([op]);
+  const wood = [0.8, 0.45, 0.15];   // HSV s ≈ 0.81 → keyed
+  const skin = [0.8, 0.62, 0.52];   // HSV s ≈ 0.35 → below floor
+  const L = ([r, g, b]) => 0.2126 * r + 0.7152 * g + 0.0722 * b;
+  const w2 = fn(wood);
+  assert.ok(Math.max(...w2) - Math.min(...w2) < 0.65 - 0.01, 'wood desaturated');
+  assert.ok(Math.abs(L(w2) - L(wood)) < 1e-6, 'luma held');
+  assert.deepEqual(fn(skin), skin, 'skin-saturation pixel untouched');
+  assert.deepEqual(fn([0.2, 0.4, 0.8]), [0.2, 0.4, 0.8], 'other hues untouched');
+});
+
+test('wheel for a Cb/Cr push points the right way and has the right size', () => {
+  const wh = wheelForCbCr(0.02, -0.01);
+  const c = hsvToRgbForTest(wh.hueDeg);
+  const v = vectorscope(...c);
+  const y = 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2];
+  const pushCb = wh.amount * (c[2] - y) / 1.8556, pushCr = wh.amount * (c[0] - y) / 1.5748;
+  assert.ok(Math.abs(pushCb - 0.02) < 0.002 && Math.abs(pushCr + 0.01) < 0.002, `push ${pushCb},${pushCr} at ${v.angle}`);
+  assert.equal(wheelForCbCr(0, 0), null);
+});
+
+test('tonal wheels reduce a uniform warm cast; the skin guard binds and is reported', () => {
+  // Gradient grey ramp with a warm cast + a skin patch.
+  const w = 64, h = 64, d = new Uint8Array(w * h * 3), mask = new Uint8Array(w * h);
+  for (let y = 0; y < h; y++) for (let x = 0; x < w; x++) {
+    const p = y * w + x, v = 30 + Math.round((x / w) * 190);
+    d.set([Math.min(255, v + 14), v + 4, Math.max(0, v - 14)], p * 3);
+    if (x > 20 && x < 40 && y > 20 && y < 40) { d.set([200, 140, 115], p * 3); mask[p] = 1; }
+  }
+  const img = rgbImage(w, h, d);
+  const free = designTonalWheels(img, { strength: 0.6, iterations: 6 });
+  assert.ok(free.after.mids.blueYellow > free.before.mids.blueYellow, 'mids cooled');
+  const guarded = designTonalWheels(img, { strength: 0.9, iterations: 6, skinMasks: [mask] });
+  assert.ok(guarded.skinGuard.scale <= 1);
+  assert.equal(guarded.skinGuard.limits.maxHueShiftDeg, SKIN_GUARD.maxHueShiftDeg);
+});
+
+test('HSL design keys warm saturated pixels outside faces, floor above skin saturation', () => {
+  const w = 60, h = 20, d = new Uint8Array(w * h * 3), mask = new Uint8Array(w * h);
+  for (let p = 0; p < w * h; p++) { if (p % w < 20) { d.set([200, 145, 120], p * 3); mask[p] = 1; } else d.set([210, 110, 40], p * 3); }
+  const r = designWarmHslSecondary(rgbImage(w, h, d), [mask]);
+  assert.ok(r.op.qualifier.satRange[0] > r.evidence.skinSatP90);
+  assert.ok(r.evidence.meanKeyWeightInsideSkin < 0.1 && r.evidence.meanKeyWeightOutsideSkin > 0.5);
+});
+
+test('frames stack into one design sample with masks re-based', () => {
+  const a = { _img: rgbImage(2, 1, new Uint8Array(6).fill(1)), faces: [{ skin: { mask: new Uint8Array([1, 0]) } }] };
+  const b = { _img: rgbImage(2, 1, new Uint8Array(6).fill(2)), faces: [{ skin: { mask: new Uint8Array([0, 1]) } }] };
+  const s = stackImages([a._img, b._img]);
+  assert.equal(s.height, 2);
+  assert.deepEqual(Array.from(s.data), [1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2]);
+  const m = stackMasks([a, b]);
+  assert.deepEqual(m.map((x) => Array.from(x)), [[1, 0, 0, 0], [0, 0, 0, 1]]);
+});
+
+test('solveControl over several frames solves on the MEAN metric', async () => {
+  const props = structuredClone(FIXTURE.props);
+  const br = { async send(app, cmd, params) {
+    if (cmd === 'color.probeLumetri') return { sequence: params.sequenceName, clip: { trackIndex: 0, clipIndex: 0 }, lumetriCount: 1, instance: 0, props: structuredClone(props) };
+    if (cmd === 'color.setLumetriParams') return { results: params.writes.map((w) => { props[w.index].value = w.value; return { index: w.index, name: w.name, requested: w.value, before: 0, after: w.value, ok: true }; }) };
+    throw new Error(cmd);
+  } };
+  const { writePNG } = await import('../src/color-grading/analysis/image-io.js');
+  const dir = tmp();
+  const a = new PremiereColorActions(br, { logDir: dir });
+  // Rendered brightness = 100 + 2·Exposure-slider units, frame 2 is 40 levels brighter.
+  a.exportFrame = async ({ timeSec, outPath }) => {
+    const v = Math.round(100 + 20 * props[19].value + (timeSec === 2 ? 40 : 0));
+    const p = outPath + '.png';
+    await writePNG(solid(16, 16, [v, v, v]), p);
+    return { path: p };
+  };
+  const r = await a.solveControl({ sequenceName: '_WORKING_t', trackIndex: 0, clipIndex: 0, instance: 0 }, {
+    control: 'basic.exposure', metric: 'luma.p50', targetValue: 160 / 255, tolerance: 0.01, probeStep: 0.5, timeSec: [1, 2], workDir: dir,
+  });
+  assert.equal(r.solvedOn, 'mean of 2 frames');
+  assert.equal(r.converged, true);
+  assert.ok(Math.abs(r.bestX - 2) < 0.15, `mean target hit at exposure ≈ 2 (got ${r.bestX})`);
+  assert.ok(r.perFrame.every((m) => Object.keys(m.byTime).length === 2), 'every frame measured each time');
+});
+
+function hsvToRgbForTest(h) {
+  const hh = (((h % 360) + 360) % 360) / 60, i = Math.floor(hh), f = hh - i, q = 1 - f, t = f;
+  return [[1, t, 0], [q, 1, 0], [0, 1, t], [0, q, 1], [t, 0, 1], [1, 0, q]][i % 6];
+}

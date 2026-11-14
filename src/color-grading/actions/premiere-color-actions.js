@@ -151,17 +151,28 @@ export class PremiereColorActions {
     }
     const snap = await this.snapshot(target, `before-solve-${control}`);
     const x0 = (await this._readControl(target, control)) ?? def.neutral;
+    // One Lumetri value covers the whole clip, so it may be solved against
+    // several frames: the metric is their MEAN (found live: a Temperature
+    // solved at the clip's least-warm frame left most of the clip warm).
+    const times = Array.isArray(timeSec) ? timeSec : [timeSec];
     let n = 0;
+    const perFrame = [];
     const measure = async (x) => {
       const w = await this.applyLumetri(target, [{ op: 'lumetri', control, value: x, mode: 'absolute' }], { allowNonWorkingSequence });
       if (!w.verified) throw new Error(`write of ${control}=${x} not verified: ${JSON.stringify(w.failed)}`);
-      const fr = await this.exportFrame({ sequenceName: target.sequenceName, timeSec, outPath: path.join(workDir, `solve_${safe(control)}_${n++}`) });
-      const a = await analyzeFrames([{ path: fr.path, time: timeSec }], { detect: detect && metric.startsWith('skin.') });
-      return metricOf(a.frames[0], metric);
+      const vals = [];
+      for (const t of times) {
+        const fr = await this.exportFrame({ sequenceName: target.sequenceName, timeSec: t, outPath: path.join(workDir, `solve_${safe(control)}_${n}_${t}`) });
+        const a = await analyzeFrames([{ path: fr.path, time: t }], { detect: detect && /^(skin|warmth)\./.test(metric) });
+        vals.push(metricOf(a.frames[0], metric));
+      }
+      n++;
+      perFrame.push({ x: Math.round(x * 1000) / 1000, byTime: Object.fromEntries(times.map((t, i) => [t, Math.round(vals[i] * 1e5) / 1e5])) });
+      return vals.reduce((s, v) => s + v, 0) / vals.length;
     };
     const res = await solveClosedLoop({ x0, measure, target: targetValue, tolerance, probeStep, bounds: bounds || def.uiRange, maxStep: (def.uiRange[1] - def.uiRange[0]) / 8 });
     if (res.finalWriteNeeded) await this.applyLumetri(target, [{ op: 'lumetri', control, value: res.bestX, mode: 'absolute' }], { allowNonWorkingSequence });
-    return { control, metric, snapshot: snap.file, ...res };
+    return { control, metric, snapshot: snap.file, solvedOn: times.length > 1 ? `mean of ${times.length} frames` : 'single frame', perFrame, ...res };
   }
 
   async _readControl(target, control) {

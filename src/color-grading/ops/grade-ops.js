@@ -50,6 +50,29 @@ export const WheelsOp = z.object({
   highlights: wheel.optional(),
 });
 
+// HSL Secondary — colour-qualified correction, the engine twin of Lumetri ▸
+// HSL Secondary (whose key cannot be set by script on 26.5.2). Qualifier =
+// raised-cosine hue window × soft saturation range × soft luma range.
+// Correction: chroma scaled around luma (brightness held), hue shift, and a
+// colour-balance push (Cb/Cr) like the HSL Secondary correction wheel.
+const range01 = z.tuple([unit, unit]);
+export const HslSecondaryOp = z.object({
+  op: z.literal('hslSecondary'),
+  qualifier: z.object({
+    hueCenter: z.number().min(0).max(360),
+    hueWidth: z.number().min(10).max(180),
+    satRange: range01,
+    lumaRange: range01.default([0, 1]),
+    softness: z.number().min(0.005).max(0.3).default(0.06),
+  }),
+  correction: z.object({
+    saturation: z.number().min(-0.8).max(0.8).default(0),
+    hueShiftDeg: z.number().min(-30).max(30).default(0),
+    cb: z.number().min(-0.05).max(0.05).default(0),
+    cr: z.number().min(-0.05).max(0.05).default(0),
+  }),
+});
+
 export const MaskSpec = z.object({
   kind: z.enum(['skin', 'faceTrack', 'manual']),
   faceIndex: z.number().int().min(0).default(0),
@@ -65,7 +88,7 @@ export const SecondaryOp = z.object({
   ops: z.array(z.lazy(() => PixelOp)).min(1),
 });
 
-export const PixelOp = z.discriminatedUnion('op', [CurveOp, HueVsSatOp, HueVsHueOp, HueVsLumaOp, WheelsOp]);
+export const PixelOp = z.discriminatedUnion('op', [CurveOp, HueVsSatOp, HueVsHueOp, HueVsLumaOp, WheelsOp, HslSecondaryOp]);
 export const GradeOp = z.union([LumetriOp, PixelOp, SecondaryOp]);
 
 export function validateOps(ops) {
@@ -78,4 +101,4 @@ export function validateOps(ops) {
   return { ok, rejected };
 }
 
-export const isPixelOp = (o) => ['curve', 'hueVsSat', 'hueVsHue', 'hueVsLuma', 'wheels'].includes(o.op);
+export const isPixelOp = (o) => ['curve', 'hueVsSat', 'hueVsHue', 'hueVsLuma', 'wheels', 'hslSecondary'].includes(o.op);

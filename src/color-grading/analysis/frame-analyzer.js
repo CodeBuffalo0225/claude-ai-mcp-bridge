@@ -9,6 +9,7 @@ import { computeFrameStats } from './frame-stats.js';
 import { detectFaces } from './face-detect.js';
 import { isolateSkin, qualifierLeakage } from './skin.js';
 import { trackFaces } from './face-track.js';
+import { measureTonalCasts, assessWarmth } from './warmth.js';
 
 const ANALYSIS_MAX_WIDTH = 1920;
 
@@ -51,12 +52,16 @@ export async function analyzeFrames(frames, { detect = true, detections, keepMas
     for (const fc of faces) {
       if (fc.skin?.qualifier) fc.skin.leakage = qualifierLeakage(img, fc.skin.qualifier, masks);
     }
+    const tonal = measureTonalCasts(img);
+    stats.warmth = { casts: tonal.casts, dominance: tonal.dominance };
+    const warmth = assessWarmth(tonal, faces.filter((fc) => fc.skin?.reliable).map((fc) => fc.skin.stats));
     results.push({
       label: f.label || `frame${i}`,
       path: f.path,
       time: f.time ?? null,
       size: { width: img.source.width, height: img.source.height, analysedWidth: img.width },
       stats,
+      warmth,
       faces,
       _img: keepMasks ? img : undefined,
     });
@@ -79,6 +84,7 @@ export function summarizeAnalysis(a) {
       clipping: mapR(f.stats.clipping, 4),
       whiteBalance: { method: f.stats.whiteBalance.method, confidence: r(f.stats.whiteBalance.confidence), ...mapR(f.stats.whiteBalance.axes, 4) },
       saturation: mapR(f.stats.saturation),
+      warmth: f.warmth && { verdict: f.warmth.verdict, reasons: f.warmth.reasons, cues: f.warmth.cues, casts: Object.fromEntries(Object.entries(f.warmth.casts).map(([k, v]) => [k, { blueYellow: v.blueYellow, magentaGreen: v.magentaGreen, lowEvidence: v.lowEvidence }])) },
       faces: f.faces.map((fc) => fc.error ? fc : ({
         bbox: mapR(fc.bbox, 0),
         landmarksConfidence: fc.landmarksConfidence && r(fc.landmarksConfidence),

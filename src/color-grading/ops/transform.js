@@ -11,7 +11,7 @@
 //  curve through increasing points can never overshoot, fold or invert.
 // ============================================================================
 
-import { clamp01, rgbToHsv, hsvToRgb, hueWindow, luma, tonalWeights, REC709 } from '../analysis/color-math.js';
+import { clamp01, rgbToHsv, hsvToRgb, hueWindow, luma, tonalWeights, smoothstep, vectorscope, REC709 } from '../analysis/color-math.js';
 import { percentileSorted } from '../analysis/color-math.js';
 import { CLIP_HIGH, CLIP_LOW } from '../analysis/frame-stats.js';
 
@@ -169,6 +169,27 @@ export function compilePixelOps(ops) {
             o[k] = clamp01(o[k]);
           }
           return o;
+        };
+      }
+      case 'hslSecondary': {
+        const q = op.qualifier, c = op.correction;
+        const soft = q.softness ?? 0.06;
+        const lr = q.lumaRange || [0, 1];
+        const inRange = (x, lo, hi) => smoothstep(lo - soft, lo, x) * (1 - smoothstep(hi, hi + soft, x));
+        // Cb/Cr push → RGB offset (BT.709 inverse, luma-neutral).
+        const dR = 1.5748 * (c.cr || 0);
+        const dB = 1.8556 * (c.cb || 0);
+        const dG = -(0.2126 * dR + 0.0722 * dB) / 0.7152;
+        return ([r, g, b]) => {
+          const { h, s } = rgbToHsv(r, g, b);
+          const y = luma(r, g, b);
+          const w = hueWindow(h, q.hueCenter, q.hueWidth) * inRange(s, q.satRange[0], q.satRange[1]) * inRange(y, lr[0], lr[1]);
+          if (!w) return [r, g, b];
+          let o = [r, g, b];
+          if (c.hueShiftDeg) { const hv = rgbToHsv(...o); o = hsvToRgb(hv.h + c.hueShiftDeg * w, hv.s, hv.v); }
+          if (c.saturation) { const yy = luma(...o); const k = Math.max(0, 1 + c.saturation * w); o = o.map((v) => yy + (v - yy) * k); }
+          o = [o[0] + dR * w, o[1] + dG * w, o[2] + dB * w];
+          return o.map(clamp01);
         };
       }
       default:
