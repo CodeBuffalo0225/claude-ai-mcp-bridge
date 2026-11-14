@@ -267,7 +267,17 @@ export class ColorWorkflow {
       match.matches = match.premiereVsPrediction.meanCodeValues < Math.max(1, match.premiereVsLutOff.meanCodeValues * 0.35);
     }
     const cmp = await writeComparison(offImg, normal, path.join(workDir, 'lut_off_vs_on.png'), { labels: ['PREMIERE — LUT OFF', 'PREMIERE — LUT ON'] });
-    return { lutActive: true, instance: holder.i, runsAfterGrade: holder.i > 0 || n === 1, control, perInstance, match, comparison: cmp, workDir };
+    // Whether the LUT acts on the GRADED image is decided by evidence: the
+    // render must equal the .cube applied to the LUT-off (graded) render.
+    // DOM component order is not proof of processing order (live 26.5.2:
+    // the LUT's Lumetri listed first, yet the render matched LUT-after-grade
+    // within 0.28 code values).
+    return {
+      lutActive: true, instance: holder.i,
+      appliedToGradedImage: match ? match.matches : null,
+      note: match ? null : 'pass lutPath to check the render against the .cube',
+      control, perInstance, match, comparison: cmp, workDir,
+    };
   }
 
   // ── 6: curves → LUT (preview + bake) ───────────────────────────────────
