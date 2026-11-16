@@ -1745,6 +1745,13 @@ CSInterface.prototype.getWindowTitle = function()
 
     cs.evalScript(script, function (result) {
       // CEP returns this literal string on eval failure
+      if (result === '' || result === 'undefined') { errTotal++; $errCount.textContent = errTotal; log('DEBUG: empty/undefined result for ' + command + ' — checking ExtendScript state...', 'error');
+        cs.evalScript('typeof executeCommand', function(typeResult) {
+          log('DEBUG: typeof executeCommand = "' + typeResult + '"', 'warn');
+          cs.evalScript('typeof AEBridge', function(bridgeResult) {
+            log('DEBUG: typeof AEBridge = "' + bridgeResult + '"', 'warn');
+          });
+        }); sendWS(ws, WebSocket, { id: id, error: 'ExtendScript returned empty for ' + command }); return; }
       if (result === 'EvalScript error.' || result === null || result === undefined) {
         errTotal++;
         $errCount.textContent = errTotal;
