@@ -1,0 +1,139 @@
+CutPilot Weekly Trend Digest — 2026-11-16
+Generated: 2026-11-16T13:06:09Z
+Platforms: YouTube, TikTok, Instagram, LinkedIn
+Niche: Hunting / Outdoors / Firearms / Outdoor Lifestyle
+
+================================================================================
+YOUTUBE
+================================================================================
+
+• TREND: 60%+ mobile viewers watch with sound off — text overlay hook is mandatory for outdoor/firearms Shorts November 2026
+  EVIDENCE: "Text overlays reinforce your verbal hook and ensure your message lands even when viewers watch with sound off, which happens more than 60% of the time on mobile." — influenceflow.io 2026 ultimate creator guide; corroborated by follownic.com hook strategy guide and vortexxcel.com 2026 Shorts editing guide.
+  SOURCE: https://influenceflow.io/resources/best-practices-for-youtube-shorts-the-ultimate-2026-creator-guide/
+  CONFIDENCE: HIGH | cutpilotRelevant: YES | bridgeRelevant: YES → edit_silent_view_caption_burn
+
+• TREND: GunTube creators pivoting to lifestyle framing to survive YouTube AI moderation November 2026
+  EVIDENCE: AmericanHunter.org documents the shift away from direct firearms product promotion toward hunting-lifestyle and range-action framing; GATDaily and Everytown Research confirm YouTube AI tools now restrict firearms-branded content in Shorts.
+  SOURCE: https://www.americanhunter.org/content/how-hunters-are-adjusting-to-social-media-bans/
+  CONFIDENCE: HIGH | cutpilotRelevant: YES | bridgeRelevant: NO
+
+• TREND: Military and ballistics stunt Shorts driving 10M+ views for firearms-adjacent outdoor creators November 2026
+  EVIDENCE: youthvid.com worldwide Shorts tracker: "Can a Gravestone Stop a 50 Cal Sniper Rifle?" (Yee Yee Life) ~10M views trending in 5 countries; "Why Each Paris Gun Shell Got Bigger and Bigger" (Kinetic Studios) 13M views — both trending week of Nov 16 2026.
+  SOURCE: https://youthvid.com/youtube-shorts/
+  CONFIDENCE: MEDIUM | cutpilotRelevant: YES | bridgeRelevant: NO
+
+• TREND: Retention benchmark at 70%+ average percentage viewed — outdoor Shorts below 50% signal hook or pacing failure November 2026
+  EVIDENCE: "Treat average percentage viewed around 70% or higher as healthy, and under 50% as a sign of a hook or pacing problem." — conthunt.app YouTube Shorts Best Practices 2026; corroborated by blitzreels.com and remotionvideo.com 2026 editing guides.
+  SOURCE: https://conthunt.app/blog/youtube-shorts-best-practices
+  CONFIDENCE: HIGH | cutpilotRelevant: YES | bridgeRelevant: YES → edit_retention_pacing_audit
+
+• TREND: Stop-scroll hooks in first 10 seconds now measured by frame-precise timing — outdoor creators logging hook durations November 2026
+  EVIDENCE: follownic.com and vortexxcel.com both describe frame-precise hook timing measurement, with creators building a 2-2.5-second hook window "before the critical 3-second mark"; narrationbox.com recommends 1.5–3s cuts for high-energy outdoor content.
+  SOURCE: https://follownic.com/blog/youtube-shorts-hook-strategy-10-seconds-to-stop-scrolls
+  CONFIDENCE: MEDIUM | cutpilotRelevant: YES | bridgeRelevant: YES → edit_hook_timing_enforcer
+
+================================================================================
+TIKTOK
+================================================================================
+
+• TREND: Bowhunting and whitetail rut season content peaking on TikTok #deerhunting and #bowhunting tags November 2026
+  EVIDENCE: TikTok hashtag pages for #deerhunting and #bowhunting show bowhunting and whitetail clips dominating November feeds during peak rut; Modash Oct 2026 confirms Chance Hoeting, Beau Brooks, and DBL Outdoors as peak-season engagement leaders.
+  SOURCE: https://www.modash.io/find-influencers/tiktok/hunting/male
+  CONFIDENCE: HIGH | cutpilotRelevant: NO | bridgeRelevant: NO
+
+• TREND: Hunt-reveal comedy format — deer ignoring hunters, bait fails, missed-shot reactions — driving highest TikTok engagement November 2026
+  EVIDENCE: Skyler Bradley comedy clip "deer ignoring hunters' bait" at 147.3K likes, 508 comments as top-performing hunting clip; hooked.so viral tracker confirms comedy-reveal as dominant format among top-performing outdoor TikToks.
+  SOURCE: https://www.hooked.so/viral-videos/tiktok/fishing_hunting
+  CONFIDENCE: MEDIUM | cutpilotRelevant: YES | bridgeRelevant: YES → edit_hunt_comedy_reveal
+
+• TREND: Custom rifle build content and grandpa rifle heritage story format growing on TikTok #huntingrifle tag November 2026
+  EVIDENCE: TikTok #huntingrifle tag shows custom-rifle builds with #guns and #2a companion tags and heritage "grandpa's rifle" hunt story posts; Mule Deer CHIP SHOT hunt clip demonstrates field-use-plus-story hybrid format.
+  SOURCE: https://www.tiktok.com/tag/huntingrifle
+  CONFIDENCE: MEDIUM | cutpilotRelevant: YES | bridgeRelevant: NO
+
+• TREND: Close-range tension-reaction clips outperforming pure shot footage on TikTok November 2026
+  EVIDENCE: TikTok #deer-shot discover page: "Would you be shaking" after a close-range shot at 73.4K likes — reaction-first framing outperforms raw footage; hooked.so viral tracker corroborates reaction-reveal as dominant engagement driver.
+  SOURCE: https://www.tiktok.com/discover/deer-shot?lang=en
+  CONFIDENCE: MEDIUM | cutpilotRelevant: YES | bridgeRelevant: YES → edit_tension_first_hook
+
+• TREND: Post-rut comedy micro-content surge in mid-November — funny deer hunter spike after gun season 2026
+  EVIDENCE: TikTok "funny deer hunter tiktok spike" discover page shows spiking comedy micro-content; "spike after gun season" joke clips tagged and surfacing, indicating a post-rut humor wave.
+  SOURCE: https://www.tiktok.com/discover/funny-deer-hunter-tiktok-spike?lang=en
+  CONFIDENCE: LOW | cutpilotRelevant: NO | bridgeRelevant: NO
+
+================================================================================
+INSTAGRAM
+================================================================================
+
+• TREND: Reels drive discovery, carousels convert — outdoor brands running 2-3 Reels plus 2-3 carousels per week format November 2026
+  EVIDENCE: influencers-time.com Outdoor Brand Format Playbook: "Reels handle the demonstrate the moment job while carousels handle the purchase justification"; skedsocial.com and spunk.pics both recommend weekly cadence of 2-3 Reels plus 2-3 carousels.
+  SOURCE: https://www.influencers-time.com/reels-and-carousels-an-outdoor-brand-format-playbook/
+  CONFIDENCE: HIGH | cutpilotRelevant: YES | bridgeRelevant: NO
+
+• TREND: How-to micro-Reels (binocular choice, hunting blind tips) outperforming lifestyle content for hunting gear brands November 2026
+  EVIDENCE: walkermediacompany.com and deercampdigital.com both recommend How-To videos such as "tips on choosing binoculars or using hunting blinds" as top-performing Instagram format; unruledagency.com confirms utility content outperforms lifestyle for purchase-consideration outdoor buyers.
+  SOURCE: https://www.walkermediacompany.com/social-media-marketing
+  CONFIDENCE: HIGH | cutpilotRelevant: YES | bridgeRelevant: YES → edit_how_to_step_overlay
+
+• TREND: Top outdoor brands averaging 0.33% Instagram engagement with Reels as number one format — moment-first hook now industry benchmark November 2026
+  EVIDENCE: RivalIQ analysis: outdoor brand median Instagram engagement at 0.33%; Burton Snowboards Reel hit 7.57% (22x median) using moment-first hook; dashsocial.com confirms Reels as top format across leading outdoor brand accounts.
+  SOURCE: https://www.rivaliq.com/blog/top-outdoor-brands-social-media/
+  CONFIDENCE: HIGH | cutpilotRelevant: YES | bridgeRelevant: NO
+
+• TREND: Meta ad restrictions on hunting and firearms forcing organic-first Reels strategy for outdoor brands November 2026
+  EVIDENCE: kellybrandmanagement.com: "Meta has strict rules around hunting and firearms content, so paid promotion needs caution"; gallucci.net outdoor-lifestyle blog recommends "community over vanity metrics" for Instagram where paid amplification is limited.
+  SOURCE: https://www.kellybrandmanagement.com/advertising-hunters-print-podcasts-social-media/
+  CONFIDENCE: HIGH | cutpilotRelevant: NO | bridgeRelevant: NO
+
+• TREND: Real-hunt field collaboration Reels documenting actual hunts with branded gear outperforming studio product shots November 2026
+  EVIDENCE: marsiliomedia.com and deercampdigital.com both recommend "collaborations that document real hunts with the gear in use" as top-performing Instagram format; rivaliq.com confirms authenticity-driven outdoor content outperforms product-only posts.
+  SOURCE: https://www.marsiliomedia.com/post/how-to-grow-your-outdoor-brand-on-instagram
+  CONFIDENCE: HIGH | cutpilotRelevant: YES | bridgeRelevant: YES → edit_field_authenticity_preset
+
+================================================================================
+LINKEDIN
+================================================================================
+
+• TREND: LinkedIn short-form video up 36% year-over-year — B2B outdoor brands seeing organic reach growth from native clips November 2026
+  EVIDENCE: linkedotter.com "LinkedIn Video Is Up 36% Year-Over-Year"; fluxnote.io confirms native short-form video receiving dedicated feed treatment and amplified organic reach versus text posts for B2B brands.
+  SOURCE: https://www.linkedotter.com/articles/what-should-b2b-outbound-teams-do-about-linkedin-video-36-percent-growth-2026
+  CONFIDENCE: HIGH | cutpilotRelevant: YES | bridgeRelevant: NO
+
+• TREND: 15-60 second LinkedIn video clip sweet spot for B2B outdoor brands — shorter than any other platform November 2026
+  EVIDENCE: shootsta.com identifies 15-60 seconds as the ROI sweet spot for B2B LinkedIn video; parmonic.com confirms vertical 9:16 at 15-60 seconds receives best organic distribution; clip-forge.io recommends 30-90 seconds — both shorter than YouTube's standard.
+  SOURCE: https://shootsta.com/blog/linkedin-video-strategy-in-2026-the-ultimate-b2b-guide
+  CONFIDENCE: HIGH | cutpilotRelevant: YES | bridgeRelevant: YES → edit_linkedin_short_clip_formatter
+
+• TREND: Individual account video outperforms company page video — outdoor operators sharing personal founder clips driving more reach November 2026
+  EVIDENCE: linkedotter.com: "short video from individual accounts reaches further than company-page video"; results-formula.com corroborates personal branding video outperforming brand pages; strategia-x.com attributes most deal flow to repurposed personal clips from operators in the field.
+  SOURCE: https://www.results-formula.com/post/linkedin-video-personal-branding-in-2026-strategies-that-work
+  CONFIDENCE: HIGH | cutpilotRelevant: YES | bridgeRelevant: NO
+
+• TREND: Repurposed short-form clips from long-form field content outperforming purpose-built LinkedIn posts for outdoor operators November 2026
+  EVIDENCE: parmonic.com recommends cutting webinars and long-form content into clips as primary reach driver; strategia-x.com credits "repurposed clips for most of recent deal flow"; shootsta.com confirms cut-down vertical clips as primary reach strategy.
+  SOURCE: https://info.parmonic.com/blog/linkedin-video-formats-in-2026-what-works-best-for-b2b-marketing
+  CONFIDENCE: HIGH | cutpilotRelevant: YES | bridgeRelevant: YES → edit_longform_to_linkedin_cut
+
+• TREND: Short-form LinkedIn video converts only 12% vs 28% for long-form — outdoor brands pairing short clips with calls to action November 2026
+  EVIDENCE: growwithghost.io "LinkedIn Video Strategy 2026": "only 12% of short-form viewers take a meaningful next step, versus 28% for long-form"; connectsafely.ai LinkedIn video best practices recommends pairing short hook clips with CTA link or longer content.
+  SOURCE: https://www.growwithghost.io/blog/linkedin-video-strategy-2026-short-form-long-form-and-live-video-compared/
+  CONFIDENCE: MEDIUM | cutpilotRelevant: YES | bridgeRelevant: YES → edit_linkedin_cta_endcard
+
+================================================================================
+BRIDGE-RELEVANT SIGNALS (potential new Bridge tools)
+================================================================================
+
+edit_silent_view_caption_burn   (youtube)   — Auto caption burn-in for sound-off viewing (60%+ mobile)
+edit_retention_pacing_audit     (youtube)   — Pacing audit flagging segments below 70% avg view retention
+edit_hook_timing_enforcer       (youtube)   — Frame-precise 2.5-second hook window enforcement
+edit_hunt_comedy_reveal         (tiktok)    — Comedy reveal timing: reaction-first cut + punchline structure
+edit_tension_first_hook         (tiktok)    — Tension/reaction moment placed at clip open vs raw shot footage
+edit_how_to_step_overlay        (instagram) — Step-by-step instructional text overlay for how-to micro-Reels
+edit_field_authenticity_preset  (instagram) — Raw field-use export preset for hunt collaboration Reels
+edit_linkedin_short_clip_formatter (linkedin) — 15-60s LinkedIn-optimized clip export with vertical 9:16 crop
+edit_longform_to_linkedin_cut   (linkedin)  — Long-form to LinkedIn short-clip splitter with CTA placement
+edit_linkedin_cta_endcard       (linkedin)  — CTA endcard insert for LinkedIn short-form conversion gap
+
+================================================================================
+END OF DIGEST
+================================================================================

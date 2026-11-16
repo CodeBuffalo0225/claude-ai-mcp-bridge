@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "youtube",
+  "generatedAt": "2026-11-16T13:06:09Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "641936264c84",
+      "platform": "youtube",
+      "trend": "60%+ mobile viewers watch with sound off — text overlay hook is mandatory for outdoor/firearms Shorts November 2026",
+      "evidence": "\"Text overlays reinforce your verbal hook and ensure your message lands even when viewers watch with sound off, which happens more than 60% of the time on mobile.\" — influenceflow.io 2026 ultimate creator guide; corroborated by follownic.com hook strategy guide and vortexxcel.com 2026 Shorts editing guide, both identifying sound-off text as a non-negotiable hook element.",
+      "source": "https://influenceflow.io/resources/best-practices-for-youtube-shorts-the-ultimate-2026-creator-guide/",
+      "firstSeen": "2026-11-16T13:06:09Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_silent_view_caption_burn",
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "761cdfbdba24",
+      "platform": "youtube",
+      "trend": "GunTube creators pivoting to lifestyle framing to survive YouTube AI moderation November 2026",
+      "evidence": "AmericanHunter.org 'How Hunters are Adjusting to Social Media Bans' documents the shift away from direct firearms product promotion toward hunting-lifestyle and range-action framing; GATDaily and Everytown Research both confirm YouTube's AI tools now restrict firearms-branded content in Shorts. Firearms creators filming the same hunts but removing brand tags and product links to maintain distribution.",
+      "source": "https://www.americanhunter.org/content/how-hunters-are-adjusting-to-social-media-bans/",
+      "firstSeen": "2026-11-16T13:06:09Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "9862da585c54",
+      "platform": "youtube",
+      "trend": "Military and ballistics stunt Shorts driving 10M+ views for firearms-adjacent outdoor creators November 2026",
+      "evidence": "youthvid.com worldwide Shorts tracker lists 'Can a Gravestone Stop a 50 Cal Sniper Rifle?' from Yee Yee Life trending at approximately 10M views across 5 countries; 'Why Each Paris Gun Shell Got Bigger and Bigger' from Kinetic Studios at 13M views — both ballistics-stunt and firearms-history formats trending in the week of November 16 2026.",
+      "source": "https://youthvid.com/youtube-shorts/",
+      "firstSeen": "2026-11-16T13:06:09Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral YouTube Shorts trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "db2d75372c1a",
+      "platform": "youtube",
+      "trend": "Retention benchmark at 70%+ average percentage viewed — outdoor Shorts below 50% signal hook or pacing failure November 2026",
+      "evidence": "conthunt.app YouTube Shorts Best Practices 2026: 'Treat average percentage viewed around 70% or higher as healthy, and under 50% as a sign of a hook or pacing problem.' Corroborated by blitzreels.com and remotionvideo.com 2026 editing guides, both citing 70% average view duration as the threshold separating algorithm-promoted from suppressed Shorts.",
+      "source": "https://conthunt.app/blog/youtube-shorts-best-practices",
+      "firstSeen": "2026-11-16T13:06:09Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_retention_pacing_audit",
+      "rawQuery": "YouTube Shorts hunting outdoors November 2026 hook style pacing creator tips"
+    },
+    {
+      "id": "49b26db5f5d5",
+      "platform": "youtube",
+      "trend": "Stop-scroll hooks in first 10 seconds now measured by frame-precise timing — outdoor creators logging hook durations November 2026",
+      "evidence": "follownic.com 'YouTube Shorts Hook Strategy: Stop Scrolls' and vortexxcel.com 2026 Shorts editing guide both describe frame-precise hook timing measurement, with creators building their opening in a dedicated 2-2.5-second hook window 'before the critical 3-second mark'; narrationbox.com hook pacing templates recommend per-format beat tables for high-energy outdoor content at 1.5–3s cuts.",
+      "source": "https://follownic.com/blog/youtube-shorts-hook-strategy-10-seconds-to-stop-scrolls",
+      "firstSeen": "2026-11-16T13:06:09Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_hook_timing_enforcer",
+      "rawQuery": "YouTube Shorts hunting outdoors November 2026 hook style pacing creator tips"
+    }
+  ]
+}

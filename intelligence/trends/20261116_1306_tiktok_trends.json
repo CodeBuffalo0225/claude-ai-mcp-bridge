@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "tiktok",
+  "generatedAt": "2026-11-16T13:06:09Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "70d257837b16",
+      "platform": "tiktok",
+      "trend": "Bowhunting and whitetail rut season content peaking on TikTok #deerhunting and #bowhunting tags November 2026",
+      "evidence": "TikTok hashtag pages for #deerhunting and #bowhunting show bowhunting and whitetail clips dominating November feeds during peak rut; Modash top male hunting influencers list (Oct 2026) confirms Chance Hoeting, Beau Brooks, and DBL Outdoors as peak-season engagement leaders for the hunting niche on TikTok.",
+      "source": "https://www.modash.io/find-influencers/tiktok/hunting/male",
+      "firstSeen": "2026-11-16T13:06:09Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    },
+    {
+      "id": "fbeeeb58673f",
+      "platform": "tiktok",
+      "trend": "Hunt-reveal comedy format — deer ignoring hunters, bait fails, missed-shot reactions — driving highest TikTok engagement November 2026",
+      "evidence": "Skyler Bradley TikTok comedy clip showing deer ignoring hunters' bait at 147.3K likes, 508 comments as top-performing hunting clip; hooked.so viral video tracker confirms comedy-reveal as dominant format among top-performing outdoor and hunting TikToks; humor-reveal distinct from pure hunt-footage as audience engagement driver.",
+      "source": "https://www.hooked.so/viral-videos/tiktok/fishing_hunting",
+      "firstSeen": "2026-11-16T13:06:09Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_hunt_comedy_reveal",
+      "rawQuery": "TikTok hunting firearms deer season November 2026 viral content creators"
+    },
+    {
+      "id": "6225dfc15fa4",
+      "platform": "tiktok",
+      "trend": "Custom rifle build content and grandpa rifle heritage story format growing on TikTok #huntingrifle tag November 2026",
+      "evidence": "TikTok #huntingrifle tag shows custom-rifle builds with #guns and #2a companion tags and heritage 'grandpa's rifle' hunt story posts gaining shares; Mule Deer CHIP SHOT hunt clip demonstrates field-use-plus-story hybrid format combining gear heritage narrative with hunt footage.",
+      "source": "https://www.tiktok.com/tag/huntingrifle",
+      "firstSeen": "2026-11-16T13:06:09Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "TikTok hunting firearms deer season November 2026 viral content creators"
+    },
+    {
+      "id": "4268e0d1d3fa",
+      "platform": "tiktok",
+      "trend": "Close-range tension-reaction clips outperforming pure shot footage on TikTok November 2026",
+      "evidence": "TikTok #deer-shot discover page shows creator asking 'Would you be shaking' after a close-range shot at 73.4K likes — demonstrating that reaction-first framing outperforms raw footage; hooked.so viral tracker corroborates reaction-reveal as dominant engagement driver versus unnarrated hunt clips.",
+      "source": "https://www.tiktok.com/discover/deer-shot?lang=en",
+      "firstSeen": "2026-11-16T13:06:09Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_tension_first_hook",
+      "rawQuery": "TikTok hunting firearms deer season November 2026 viral content creators"
+    },
+    {
+      "id": "45f7602a75b8",
+      "platform": "tiktok",
+      "trend": "Post-rut comedy micro-content surge in mid-November — funny deer hunter spike after gun season 2026",
+      "evidence": "TikTok 'funny deer hunter tiktok spike' discover page shows spiking comedy micro-content; 'spike after gun season' joke clips tagged and surfacing in mid-November 2026, indicating a post-rut humor wave where hunters recap failed hunts, close calls, and bloopers after peak rut activity ends.",
+      "source": "https://www.tiktok.com/discover/funny-deer-hunter-tiktok-spike?lang=en",
+      "firstSeen": "2026-11-16T13:06:09Z",
+      "confidence": "LOW",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral TikTok trends hunting outdoors firearms creators this week 2026"
+    }
+  ]
+}

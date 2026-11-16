@@ -1,0 +1,131 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-11-16T13:06:09Z",
+  "weekOf": "2026-11-16",
+  "auditSource": "weekly-trend-refresh",
+  "existingBridgeTools": [
+    "edit_visual_velocity_pacing",
+    "edit_pas_hook_structure",
+    "edit_pattern_break_insert",
+    "edit_pov_transformation_cut",
+    "edit_split_screen_comparison",
+    "edit_text_overlay_hook",
+    "edit_split_screen_reaction",
+    "edit_reels_two_second_hook",
+    "edit_overhead_reveal_angle",
+    "edit_pov_text_exaggeration",
+    "edit_reformat_for_linkedin",
+    "edit_three_signal_hook",
+    "edit_bold_text_motion_hook",
+    "edit_reaction_reveal_cut",
+    "edit_three_panel_what_i_did",
+    "edit_rapid_cut_pacing",
+    "edit_first_frame_text_hook",
+    "edit_text_situation_setup",
+    "edit_three_panel_horizontal_split",
+    "edit_movement_text_compound_hook",
+    "edit_gear_reveal_transformation",
+    "edit_tiktok_longform_sequence",
+    "edit_authentic_raw_cut",
+    "edit_two_second_instagram_hook",
+    "edit_linkedin_raw_founder_cut",
+    "edit_shorts_to_longform_clip",
+    "edit_hook_first_pacing",
+    "edit_pattern_interrupt_cuts",
+    "edit_loop_ending_stitch",
+    "edit_reveal_moment_cut",
+    "edit_product_demo_overlay",
+    "edit_caption_hook_overlay",
+    "edit_before_after_split",
+    "edit_product_tag_cta_insert"
+  ],
+  "newCandidatesThisWeek": [
+    {
+      "tool": "edit_silent_view_caption_burn",
+      "platform": "youtube",
+      "rationale": "60%+ of mobile YouTube Shorts views happen with sound off — this tool auto-burns synchronized captions onto the hook and key spoken moments for sound-off legibility. Distinct from edit_text_overlay_hook (which places a static opening text card) — this is a dynamic caption-burn pass synchronized to spoken audio throughout the clip.",
+      "trendId": "641936264c84",
+      "priority": "HIGH"
+    },
+    {
+      "tool": "edit_retention_pacing_audit",
+      "platform": "youtube",
+      "rationale": "70%+ average percentage viewed is the new benchmark threshold for algorithm-promoted Shorts; below 50% signals a hook or pacing failure. This is an audit-and-flag tool that identifies which segments fall below the retention threshold and proposes cut-point interventions — different from existing pacing tools which apply cuts uniformly without measuring retention impact.",
+      "trendId": "db2d75372c1a",
+      "priority": "HIGH"
+    },
+    {
+      "tool": "edit_hook_timing_enforcer",
+      "platform": "youtube",
+      "rationale": "Frame-precise 2–2.5 second hook window enforcement: analyzes the opening of a clip and flags or trims any element that extends the spoken hook beyond frame 60-72 (at 24fps). Distinct from existing hook tools which target content rather than enforcing timing constraints at the frame level.",
+      "trendId": "49b26db5f5d5",
+      "priority": "MEDIUM"
+    },
+    {
+      "tool": "edit_hunt_comedy_reveal",
+      "platform": "tiktok",
+      "rationale": "Comedy reveal structure for hunting TikTok: reaction shot or comedic moment placed at open, followed by setup context and punchline payoff — a specific sequencing template for humor-first outdoor content (deer ignoring bait, missed shots, bloopers). Distinct from edit_reaction_reveal_cut which uses the reaction-reveal structure for genuine hunt moments rather than comedy.",
+      "trendId": "fbeeeb58673f",
+      "priority": "MEDIUM"
+    },
+    {
+      "tool": "edit_tension_first_hook",
+      "platform": "tiktok",
+      "rationale": "Places the highest-tension moment (close-range shot, animal encounter, reaction) at the clip open with no setup context, then provides setup mid-clip via text card — achieves 'Would you be shaking' hook impact. Distinct from hunt_comedy_reveal (humorous) and reaction_reveal_cut (chronological reveal) in that it deliberately reorders the most tension-peak frame to the first 1-2 seconds.",
+      "trendId": "4268e0d1d3fa",
+      "priority": "HIGH"
+    },
+    {
+      "tool": "edit_how_to_step_overlay",
+      "platform": "instagram",
+      "rationale": "Step-by-step numbered text overlay for utility how-to Reels (binocular choice, hunting blind tips, camo layering) — a structured instructional caption template that generates Step 1 / Step 2 / Step 3 overlays synced to spoken beats. Different from edit_caption_hook_overlay (single payoff line at open) in providing multi-beat instructional scaffolding throughout the clip.",
+      "trendId": "aac81ae8b32d",
+      "priority": "HIGH"
+    },
+    {
+      "tool": "edit_field_authenticity_preset",
+      "platform": "instagram",
+      "rationale": "Raw field-use export preset for hunt collaboration Reels: minimal color correction, natural ambient audio preserved, no music, no graphic elements — signals authentic in-field content. Distinct from edit_authentic_raw_cut (TikTok deliberate no-edit style) in being specifically tuned for Instagram Reels export dimensions and the hunting-brand collaboration format (gear-in-use framing, no product isolation).",
+      "trendId": "4d5563b788e5",
+      "priority": "HIGH"
+    },
+    {
+      "tool": "edit_linkedin_short_clip_formatter",
+      "platform": "linkedin",
+      "rationale": "LinkedIn-specific 15-60 second clip formatter: enforces vertical 9:16 crop, duration trim to the 15-60s sweet spot, adds native-upload-safe encoding settings, and strips or adjusts elements that underperform on LinkedIn (music, flashy transitions, TikTok/Reels watermarks). Distinct from edit_reformat_for_linkedin (layout-only crop) in enforcing the duration constraint and LinkedIn-specific encoding.",
+      "trendId": "c9bd8c58cb9f",
+      "priority": "HIGH"
+    },
+    {
+      "tool": "edit_longform_to_linkedin_cut",
+      "platform": "linkedin",
+      "rationale": "Long-form to LinkedIn short-clip splitter: takes a webinar, field video, or long-form hunt documentary and identifies 15-60 second extractable clips with standalone context, adds intro/context text card to each, and exports a LinkedIn-ready clip set. A new multi-clip extraction workflow distinct from single-clip LinkedIn formatting tools.",
+      "trendId": "f388ff81d58c",
+      "priority": "HIGH"
+    },
+    {
+      "tool": "edit_linkedin_cta_endcard",
+      "platform": "linkedin",
+      "rationale": "CTA endcard insert addressing the 12% short-form LinkedIn conversion rate: adds a final 3-5 second endcard with a text CTA (link, comment prompt, or longer-video invite) synchronized to a spoken CTA line. Distinct from edit_linkedin_short_clip_formatter in operating at the end of the clip specifically to bridge the conversion gap identified in LinkedIn short-form analytics.",
+      "trendId": "a87267897b54",
+      "priority": "MEDIUM"
+    }
+  ],
+  "deprecationCandidates": [],
+  "persistingCandidatesFromPriorWeek": [
+    {
+      "tool": "edit_hook_first_pacing",
+      "platform": "youtube",
+      "weeksSignaled": 2,
+      "note": "Sub-2s mid-action hook auto-cut returned this week (trendId 641936264c84 / silent-view variant) and was present in 20261109 as edit_hook_first_pacing. Hook timing is a persistent weekly signal. Recommend treating as HIGH priority for scaffolding."
+    },
+    {
+      "tool": "edit_before_after_split",
+      "platform": "instagram",
+      "weeksSignaled": 2,
+      "note": "Before/after and field-authenticity framing returned this week (trendId 4d5563b788e5 / field_authenticity_preset) and was present in 20261109 as edit_before_after_split. Persistent signal across both Nov weeks — escalated to HIGH priority."
+    }
+  ],
+  "orchestratorNote": "orchestrator.ts not present in this repository — skill audit generated directly from trend signals by the weekly refresh job. Agent 2 (platform strategist) could not be invoked. Skill audit reflects manual synthesis of bridgeRelevant signals from all 4 platform TrendReports.",
+  "summary": "10 new bridge tool candidates identified this week. Highest priority: edit_silent_view_caption_burn (YouTube — 60%+ sound-off viewing, dynamic caption burn vs static text card), edit_retention_pacing_audit (YouTube — 70% avg view threshold enforcement), edit_tension_first_hook (TikTok — reorder peak-tension moment to frame 0), edit_how_to_step_overlay (Instagram — numbered instructional step overlays for utility how-to Reels), edit_field_authenticity_preset (Instagram — raw field-use export for hunt collaboration Reels), edit_linkedin_short_clip_formatter (LinkedIn — 15-60s duration enforcement + encoding), edit_longform_to_linkedin_cut (LinkedIn — multi-clip extraction from long-form field content). Two prior week candidates persist: edit_hook_first_pacing and edit_before_after_split. Mid-November is post-rut transition week — expect hunting content shift from rut-peak footage to post-hunt recap and gear prep content through end of November."
+}

@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "linkedin",
+  "generatedAt": "2026-11-16T13:06:09Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "472926ce5115",
+      "platform": "linkedin",
+      "trend": "LinkedIn short-form video up 36% year-over-year — B2B outdoor brands seeing organic reach growth from native clips November 2026",
+      "evidence": "linkedotter.com 'LinkedIn Video Is Up 36% Year-Over-Year: What B2B Outbound Teams Should Do Now in 2026' documents the platform-wide video growth trend; fluxnote.io confirms native short-form video receiving dedicated feed treatment and amplified organic reach versus text posts for B2B brands including outdoor operators.",
+      "source": "https://www.linkedotter.com/articles/what-should-b2b-outbound-teams-do-about-linkedin-video-36-percent-growth-2026",
+      "firstSeen": "2026-11-16T13:06:09Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    },
+    {
+      "id": "c9bd8c58cb9f",
+      "platform": "linkedin",
+      "trend": "15-60 second LinkedIn video clip sweet spot for B2B outdoor brands — shorter than any other platform November 2026",
+      "evidence": "shootsta.com 'LinkedIn Video Strategy 2026' identifies 15-60 seconds as the ROI sweet spot for B2B LinkedIn video; parmonic.com confirms vertical 9:16 at 15-60 seconds receives best organic distribution; clip-forge.io 'LinkedIn Short-Form Video Push in 2026' recommends 30-90 seconds — both shorter than YouTube's standard short-form window.",
+      "source": "https://shootsta.com/blog/linkedin-video-strategy-in-2026-the-ultimate-b2b-guide",
+      "firstSeen": "2026-11-16T13:06:09Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_linkedin_short_clip_formatter",
+      "rawQuery": "LinkedIn video strategy outdoor brands B2B November 2026 short form engagement"
+    },
+    {
+      "id": "cb27dceb7e81",
+      "platform": "linkedin",
+      "trend": "Individual account video outperforms company page video — outdoor operators sharing personal founder clips driving more reach November 2026",
+      "evidence": "linkedotter.com reports 'short video from individual accounts reaches further than company-page video'; results-formula.com 'LinkedIn Video Personal Branding in 2026' corroborates personal branding video outperforming brand pages; strategia-x.com attributes most deal flow to repurposed personal clips from operators in the field.",
+      "source": "https://www.results-formula.com/post/linkedin-video-personal-branding-in-2026-strategies-that-work",
+      "firstSeen": "2026-11-16T13:06:09Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "LinkedIn video strategy outdoor brands B2B November 2026 short form engagement"
+    },
+    {
+      "id": "f388ff81d58c",
+      "platform": "linkedin",
+      "trend": "Repurposed short-form clips from long-form field content outperforming purpose-built LinkedIn posts for outdoor operators November 2026",
+      "evidence": "parmonic.com 'LinkedIn Video Formats in 2026: What Works Best for B2B Marketing' recommends cutting webinars and long-form content into clips as the primary reach driver; strategia-x.com credits 'repurposed clips for most of recent deal flow'; shootsta.com confirms cut-down vertical clips as primary reach strategy for B2B outdoor brands.",
+      "source": "https://info.parmonic.com/blog/linkedin-video-formats-in-2026-what-works-best-for-b2b-marketing",
+      "firstSeen": "2026-11-16T13:06:09Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_longform_to_linkedin_cut",
+      "rawQuery": "LinkedIn video strategy outdoor brands B2B November 2026 short form engagement"
+    },
+    {
+      "id": "a87267897b54",
+      "platform": "linkedin",
+      "trend": "Short-form LinkedIn video converts only 12% vs 28% for long-form — outdoor brands pairing short clips with calls to action November 2026",
+      "evidence": "growwithghost.io 'LinkedIn Video Strategy 2026: Short-Form, Long-Form, and Live Video Compared' reports 'only 12% of short-form viewers take a meaningful next step, versus 28% for long-form'; connectsafely.ai LinkedIn video best practices recommends pairing short hook clips with a CTA link or longer content to bridge the conversion gap.",
+      "source": "https://www.growwithghost.io/blog/linkedin-video-strategy-2026-short-form-long-form-and-live-video-compared/",
+      "firstSeen": "2026-11-16T13:06:09Z",
+      "confidence": "MEDIUM",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_linkedin_cta_endcard",
+      "rawQuery": "viral LinkedIn short-form video trends outdoor brands small business 2026"
+    }
+  ]
+}

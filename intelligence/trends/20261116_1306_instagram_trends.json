@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "platform": "instagram",
+  "generatedAt": "2026-11-16T13:06:09Z",
+  "queryCostUsd": 0,
+  "signals": [
+    {
+      "id": "3cb6607b0b71",
+      "platform": "instagram",
+      "trend": "Reels drive discovery, carousels convert — outdoor brands running 2-3 Reels plus 2-3 carousels per week format November 2026",
+      "evidence": "influencers-time.com 'Reels and Carousels: Outdoor Brand Format Playbook' argues 'Reels handle the demonstrate the moment job while carousels handle the purchase justification — outdoor buys are high-consideration.' Corroborated by skedsocial.com and spunk.pics both recommending weekly cadence of 2-3 Reels plus 2-3 carousels for outdoor hunting brands.",
+      "source": "https://www.influencers-time.com/reels-and-carousels-an-outdoor-brand-format-playbook/",
+      "firstSeen": "2026-11-16T13:06:09Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "aac81ae8b32d",
+      "platform": "instagram",
+      "trend": "How-to micro-Reels (binocular choice, hunting blind tips) outperforming lifestyle content for hunting gear brands November 2026",
+      "evidence": "walkermediacompany.com and deercampdigital.com both recommend 'How-To videos such as tips on choosing binoculars or using hunting blinds' as top-performing Instagram format for hunting brands; unruledagency.com confirms utility content outperforms lifestyle for purchase-consideration outdoor buyers.",
+      "source": "https://www.walkermediacompany.com/social-media-marketing",
+      "firstSeen": "2026-11-16T13:06:09Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_how_to_step_overlay",
+      "rawQuery": "Instagram Reels hunting outdoor brands strategy November 2026 engagement"
+    },
+    {
+      "id": "f9c94a6c4872",
+      "platform": "instagram",
+      "trend": "Top outdoor brands averaging 0.33% Instagram engagement with Reels as number one format — moment-first hook now industry benchmark November 2026",
+      "evidence": "RivalIQ analysis puts outdoor brand median Instagram engagement at 0.33%; Burton Snowboards Reel hit 7.57% engagement (22x the outdoor brands median) using moment-first hook; dashsocial.com 'Peak Instagram Feeds From Top Outdoor Brands' confirms Reels are the top-performing format across leading outdoor brand accounts.",
+      "source": "https://www.rivaliq.com/blog/top-outdoor-brands-social-media/",
+      "firstSeen": "2026-11-16T13:06:09Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": false,
+      "rawQuery": "Instagram Reels hunting outdoor brands strategy November 2026 engagement"
+    },
+    {
+      "id": "442ed9b9e241",
+      "platform": "instagram",
+      "trend": "Meta ad restrictions on hunting and firearms forcing organic-first Reels strategy for outdoor brands November 2026",
+      "evidence": "kellybrandmanagement.com warns 'Meta has strict rules around hunting and firearms content, so paid promotion needs caution'; gallucci.net outdoor-lifestyle blog recommends 'community over vanity metrics' for Instagram where paid amplification is limited; opensourcedefense.substack.com documents gun-culture accounts building organic reach through consistent digestible tip content.",
+      "source": "https://www.kellybrandmanagement.com/advertising-hunters-print-podcasts-social-media/",
+      "firstSeen": "2026-11-16T13:06:09Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": false,
+      "bridgeRelevant": false,
+      "rawQuery": "viral Instagram Reels trends hunting outdoors firearms this week 2026"
+    },
+    {
+      "id": "4d5563b788e5",
+      "platform": "instagram",
+      "trend": "Real-hunt field collaboration Reels documenting actual hunts with branded gear outperforming studio product shots November 2026",
+      "evidence": "marsiliomedia.com and deercampdigital.com both recommend 'collaborations that document real hunts with the gear in use' as top-performing Instagram format; rivaliq.com data confirms authenticity-driven outdoor content outperforms product-only posts; unruledagency.com confirms 'transformation-format video outperforming static/talking-head Reels' for outdoor brands.",
+      "source": "https://www.marsiliomedia.com/post/how-to-grow-your-outdoor-brand-on-instagram",
+      "firstSeen": "2026-11-16T13:06:09Z",
+      "confidence": "HIGH",
+      "cutpilotRelevant": true,
+      "bridgeRelevant": true,
+      "suggestedBridgeTool": "edit_field_authenticity_preset",
+      "rawQuery": "Instagram Reels hunting outdoor brands strategy November 2026 engagement"
+    }
+  ]
+}
