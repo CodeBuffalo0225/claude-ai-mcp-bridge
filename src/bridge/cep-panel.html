@@ -1438,6 +1438,56 @@ CSInterface.prototype.getWindowTitle = function()
     #script-status.loaded { color: var(--success); border-color: #2d5a2d; background: #1a2e1a; }
     #script-status.error  { color: var(--error);   border-color: #5a1a1a; background: #2e1a1a; }
 
+    /* ── Style Profile ──────────────────────── */
+    #style-profile-section {
+      margin-top: 6px;
+      padding: 8px 10px;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+    }
+    #style-profile-header {
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+    #style-profile-status {
+      font-size: 11px;
+      color: var(--text);
+      line-height: 1.4;
+      margin-bottom: 6px;
+    }
+    #style-profile-meta {
+      font-size: 10px;
+      color: var(--text-dim);
+      margin-bottom: 6px;
+    }
+    #style-profile-actions {
+      display: flex;
+      gap: 6px;
+    }
+    #style-profile-actions button {
+      padding: 3px 8px;
+      font-size: 10px;
+      background: var(--bg3);
+      color: var(--text-dim);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    #style-profile-actions button:hover {
+      color: var(--text);
+      background: var(--bg);
+    }
+    #style-spinner {
+      font-size: 10px;
+      color: var(--accent);
+      margin-top: 4px;
+    }
+
     /* ── Log ────────────────────────────────── */
     #log-header {
       display: flex;
@@ -1538,6 +1588,18 @@ CSInterface.prototype.getWindowTitle = function()
 
   <div id="script-status">ExtendScript: waiting...</div>
 
+  <!-- ── Style Profile Section ──────────────────────────────────────── -->
+  <div id="style-profile-section">
+    <div id="style-profile-header">Style Profile</div>
+    <div id="style-profile-status">No style profile — click Analyze to learn from your existing work</div>
+    <div id="style-profile-meta" style="display:none"></div>
+    <div id="style-profile-actions">
+      <button id="analyze-btn">📂 Analyze Projects</button>
+      <button id="reanalyze-btn" style="display:none">🔄 Re-analyze</button>
+    </div>
+    <div id="style-spinner" style="display:none">Analyzing...</div>
+  </div>
+
   <div id="log-header">
     <span id="log-label">Command Log</span>
     <button id="clear-btn">Clear</button>
@@ -1585,11 +1647,21 @@ CSInterface.prototype.getWindowTitle = function()
   const $log        = document.getElementById('log');
   const $clearBtn   = document.getElementById('clear-btn');
 
+  // Style profile DOM refs
+  const $spStatus    = document.getElementById('style-profile-status');
+  const $spMeta      = document.getElementById('style-profile-meta');
+  const $analyzeBtn  = document.getElementById('analyze-btn');
+  const $reanalyzeBtn = document.getElementById('reanalyze-btn');
+  const $spSpinner   = document.getElementById('style-spinner');
+
   // ── State ──────────────────────────────────────────────────────────────
   let cmdTotal = 0;
   let errTotal = 0;
   let wss      = null;
   let scriptReady = false;
+  let jsxInfo  = null;   // { jsxVersion, handlers, handlerCount } from _info
+  let jobSeq   = 0;      // async job counter
+  const jobs   = {};     // jobId -> { done, startedAt, command, result?, error? }
 
   // ── UI Bootstrap ──────────────────────────────────────────────────────
   $badge.textContent = appLabel;
@@ -1604,22 +1676,53 @@ CSInterface.prototype.getWindowTitle = function()
 
   log('Loading: ' + jsxFile, 'info');
 
+  // After Effects' ExtendScript engine (ES3) has no built-in JSON — load a
+  // polyfill BEFORE the bridge so executeCommand can parse/stringify payloads.
+  // Premiere's engine already provides JSON, so it's only needed for AE.
+  var polyfillFile = extPath + '/src/extendscript/aftereffects/json2.jsx';
+  var polyfillLoad = isPremiere ? '' : '$.evalFile(' + JSON.stringify(polyfillFile) + '); ';
+
   // Use evalScript + $.evalFile() — CSInterface has no evalFile method
-  var evalFileScript = '$.evalFile(' + JSON.stringify(jsxFile) + '); typeof executeCommand === "function" ? "ok" : "fail"';
-  cs.evalScript(evalFileScript, function (result) {
-    if (result === 'EvalScript error.' || result === 'fail' || result === 'undefined' || !result) {
+  var evalFileScript = polyfillLoad + '$.evalFile(' + JSON.stringify(jsxFile) + '); typeof executeCommand === "function" ? "ok" : "fail"';
+
+  // Load (or RE-load, via _reloadJsx) the JSX bridge, then read the live
+  // version + handler set from its _info handler. The startup log always
+  // states which JSX build is actually in the engine — the antidote to the
+  // stale-JSX / nondeterministic-handlers bug.
+  function loadJsx(done) {
+    cs.evalScript(evalFileScript, function (result) {
+      if (result === 'EvalScript error.' || result === 'fail' || result === 'undefined' || !result) {
+        done(new Error('Could not load ExtendScript bridge from: ' + jsxFile));
+        return;
+      }
+      var infoCmd = JSON.stringify(JSON.stringify({ id: 0, command: '_info', params: {} }));
+      cs.evalScript('executeCommand(' + infoCmd + ')', function (infoRaw) {
+        var info = null;
+        try { info = JSON.parse(infoRaw).result || null; } catch (e) { /* pre-_info JSX */ }
+        jsxInfo = info;
+        done(null, info);
+      });
+    });
+  }
+
+  loadJsx(function (err, info) {
+    if (err) {
       $scriptSt.textContent = 'ExtendScript: FAILED — ' + jsxFile;
       $scriptSt.className = 'error';
       setStatus('error', 'ExtendScript bridge failed to load');
-      log('ERROR: Could not load ExtendScript bridge from: ' + jsxFile, 'error');
+      log('ERROR: ' + err.message, 'error');
       log('Check that the file exists at the path above.', 'error');
       return;
     }
 
     scriptReady = true;
-    $scriptSt.textContent = 'ExtendScript: loaded ✓ (' + (isPremiere ? 'Premiere' : 'AE') + ')';
-    $scriptSt.className = 'loaded';
-    log('ExtendScript bridge loaded successfully', 'success');
+    var vLabel = info
+      ? 'v' + info.jsxVersion + ', ' + info.handlerCount + ' handlers'
+      : 'version UNKNOWN (old JSX without _info is live)';
+    $scriptSt.textContent = 'ExtendScript: loaded ✓ (' + (isPremiere ? 'Premiere' : 'AE') + ', ' + vLabel + ')';
+    $scriptSt.className = info ? 'loaded' : 'error';
+    log('JSX loaded: ' + vLabel, info ? 'success' : 'warn');
+    if (info) log('Handlers: ' + info.handlers.join(', '), 'info');
     startServer();
   });
 
@@ -1706,7 +1809,71 @@ CSInterface.prototype.getWindowTitle = function()
 
     // Internal bridge commands — handled here, not in ExtendScript
     if (command === '_ping') {
-      sendWS(ws, WebSocket, { id: id, result: { pong: true, app: appLabel, port: WS_PORT } });
+      sendWS(ws, WebSocket, {
+        id: id,
+        result: {
+          pong: true,
+          app: appLabel,
+          port: WS_PORT,
+          scriptReady: scriptReady,
+          jsxVersion: jsxInfo ? jsxInfo.jsxVersion : null,
+          handlerCount: jsxInfo ? jsxInfo.handlerCount : null,
+        },
+      });
+      return;
+    }
+
+    // Re-evalFile the JSX bridge without restarting Premiere/AE. Replies with
+    // the freshly-loaded version + handler list so the caller can verify the
+    // new build actually took.
+    if (command === '_reloadJsx') {
+      log('Reloading ExtendScript bridge on request...', 'info');
+      loadJsx(function (err, info) {
+        if (err) {
+          sendWS(ws, WebSocket, { id: id, error: 'JSX reload failed: ' + err.message });
+          log('✗ JSX reload failed: ' + err.message, 'error');
+          return;
+        }
+        scriptReady = true;
+        var vLabel = info ? 'v' + info.jsxVersion + ', ' + info.handlerCount + ' handlers' : 'version UNKNOWN';
+        $scriptSt.textContent = 'ExtendScript: reloaded ✓ (' + vLabel + ')';
+        log('✓ JSX reloaded: ' + vLabel, 'success');
+        sendWS(ws, WebSocket, {
+          id: id,
+          result: {
+            reloaded: true,
+            jsxVersion: info ? info.jsxVersion : null,
+            handlerCount: info ? info.handlerCount : null,
+            handlers: info ? info.handlers : null,
+          },
+        });
+      });
+      return;
+    }
+
+    // Poll a long-running job started with params._async = true.
+    if (command === '_jobStatus') {
+      var job = jobs[params.jobId];
+      if (!job) {
+        sendWS(ws, WebSocket, { id: id, error: 'Unknown jobId: ' + params.jobId });
+        return;
+      }
+      if (!job.done) {
+        sendWS(ws, WebSocket, {
+          id: id,
+          result: { jobId: params.jobId, done: false, command: job.command, elapsedMs: Date.now() - job.startedAt },
+        });
+        return;
+      }
+      if (job.error) {
+        sendWS(ws, WebSocket, { id: id, error: job.error });
+      } else {
+        sendWS(ws, WebSocket, {
+          id: id,
+          result: { jobId: params.jobId, done: true, command: job.command, result: job.result },
+        });
+      }
+      delete jobs[params.jobId]; // one-shot: result collected
       return;
     }
 
@@ -1736,6 +1903,28 @@ CSInterface.prototype.getWindowTitle = function()
     $cmdCount.textContent = cmdTotal;
     log('\u2192 ' + command, 'cmd');
 
+    // \u2500\u2500 Async job mode: params._async = true \u2192 reply IMMEDIATELY with a
+    // jobId, run the command, stash the result for a later _jobStatus poll.
+    // This is how long ops (full-timeline grade, export, render) dodge the
+    // MCP request timeout. The ExtendScript engine is still single-threaded
+    // (the op runs to completion in the host app) but the WS reply no
+    // longer waits for it.
+    var jobId = null;
+    if (params._async === true) {
+      delete msg.params._async; // don't leak the flag into the JSX handler
+      jobId = 'job_' + (++jobSeq) + '_' + Date.now();
+      jobs[jobId] = { done: false, startedAt: Date.now(), command: command };
+      // Cap stored jobs: drop oldest finished ones beyond 20
+      var ids = Object.keys(jobs);
+      if (ids.length > 20) {
+        for (var d = 0; d < ids.length - 20; d++) {
+          if (jobs[ids[d]] && jobs[ids[d]].done) delete jobs[ids[d]];
+        }
+      }
+      sendWS(ws, WebSocket, { id: id, result: { jobId: jobId, async: true, command: command } });
+      log('\u21aa async job started: ' + jobId + ' (' + command + ')', 'info');
+    }
+
     // ── Serialize message for ExtendScript ─────────────────────────────
     // We JSON.stringify twice: once to get the JSON string, once to make
     // it a safe JS string literal that won't break when interpolated.
@@ -1744,36 +1933,40 @@ CSInterface.prototype.getWindowTitle = function()
     var script = 'executeCommand(' + scriptLiteral + ')';
 
     cs.evalScript(script, function (result) {
+      var failMsg = null;
+      var parsed = null;
+
       // CEP returns this literal string on eval failure
       if (result === 'EvalScript error.' || result === null || result === undefined) {
-        errTotal++;
-        $errCount.textContent = errTotal;
-        $errCount.style.color = 'var(--error)';
-        log('\u2717 ' + command + ': ExtendScript eval error', 'error');
-        sendWS(ws, WebSocket, { id: id, error: 'ExtendScript eval failed for: ' + command });
-        return;
-      }
-
-      var parsed;
-      try {
-        parsed = JSON.parse(result);
-      } catch (e) {
-        errTotal++;
-        $errCount.textContent = errTotal;
-        $errCount.style.color = 'var(--error)';
-        log('\u2717 ' + command + ': result parse error — ' + result.substring(0, 60), 'error');
-        sendWS(ws, WebSocket, { id: id, error: 'Could not parse ExtendScript result: ' + e.message });
-        return;
-      }
-
-      if (parsed.error) {
-        errTotal++;
-        $errCount.textContent = errTotal;
-        $errCount.style.color = 'var(--error)';
-        log('\u2717 ' + command + ': ' + parsed.error, 'error');
-        sendWS(ws, WebSocket, { id: parsed.id != null ? parsed.id : id, error: parsed.error });
+        failMsg = 'ExtendScript eval failed for: ' + command;
       } else {
-        log('\u2713 ' + command, 'success');
+        try {
+          parsed = JSON.parse(result);
+        } catch (e) {
+          failMsg = 'Could not parse ExtendScript result: ' + e.message + ' \u2014 ' + String(result).substring(0, 60);
+        }
+      }
+      if (!failMsg && parsed.error) failMsg = parsed.error;
+
+      if (failMsg) {
+        errTotal++;
+        $errCount.textContent = errTotal;
+        $errCount.style.color = 'var(--error)';
+        log('\u2717 ' + command + ': ' + failMsg, 'error');
+        if (jobId) {
+          jobs[jobId].done = true;
+          jobs[jobId].error = failMsg;
+        } else {
+          sendWS(ws, WebSocket, { id: (parsed && parsed.id != null) ? parsed.id : id, error: failMsg });
+        }
+        return;
+      }
+
+      log('\u2713 ' + command, 'success');
+      if (jobId) {
+        jobs[jobId].done = true;
+        jobs[jobId].result = parsed.result;
+      } else {
         sendWS(ws, WebSocket, { id: parsed.id != null ? parsed.id : id, result: parsed.result });
       }
     });
@@ -1828,6 +2021,86 @@ CSInterface.prototype.getWindowTitle = function()
     $errCount.textContent = '0';
     $errCount.style.color = 'var(--text-dim)';
   });
+
+  // ── Style Profile Logic ─────────────────────────────────────────────
+  function requestStyleProfile() {
+    if (!ws || ws.readyState !== WebSocket.OPEN) return;
+    sendWS(ws, WebSocket, { command: 'GET_STYLE_PROFILE', params: {} });
+  }
+
+  function updateStyleProfileUI(profile) {
+    if (!profile) {
+      $spStatus.textContent = 'No style profile \u2014 click Analyze to learn from your existing work';
+      $spMeta.style.display = 'none';
+      $reanalyzeBtn.style.display = 'none';
+      return;
+    }
+    $spStatus.textContent = (profile.profile_name || 'Unnamed') + ' \u2014 ' + (profile.style_summary || '');
+    var date = profile.generated_at || profile._savedAt || '';
+    if (date) date = new Date(date).toLocaleDateString();
+    $spMeta.textContent = 'Last analyzed: ' + date +
+      ' \u2022 ' + (profile.analyzed_project_count || '?') + ' projects' +
+      ' \u2022 ' + (profile.analyzed_sequence_count || '?') + ' sequences';
+    $spMeta.style.display = 'block';
+    if (profile.stale) {
+      $reanalyzeBtn.style.display = 'inline-block';
+    }
+  }
+
+  $analyzeBtn.addEventListener('click', function () {
+    // Use CEP folder picker if available, else prompt
+    var dirPath;
+    if (window.cep && window.cep.fs && window.cep.fs.showOpenDialog) {
+      var result = window.cep.fs.showOpenDialog(false, true, 'Select project folder', '');
+      if (result && result.data && result.data.length > 0) {
+        dirPath = result.data[0];
+      }
+    } else {
+      dirPath = prompt('Enter path to folder with .prproj files:');
+    }
+    if (!dirPath) return;
+
+    $spSpinner.style.display = 'block';
+    $spStatus.textContent = 'Analyzing projects...';
+    log('Style analysis started: ' + dirPath, 'info');
+    sendWS(ws, WebSocket, { command: 'ANALYZE_STYLE_DIR', params: { dirPath: dirPath } });
+  });
+
+  $reanalyzeBtn.addEventListener('click', function () {
+    $analyzeBtn.click();
+  });
+
+  // Listen for style analysis responses in the main message handler
+  var _origOnMessage = ws ? ws.onmessage : null;
+  function hookStyleMessages(wsRef) {
+    var prevHandler = wsRef.onmessage;
+    wsRef.addEventListener('message', function (evt) {
+      try {
+        var msg = JSON.parse(evt.data);
+        if (msg.event === 'STYLE_ANALYSIS_COMPLETE') {
+          $spSpinner.style.display = 'none';
+          updateStyleProfileUI(msg.data);
+          log('\u2713 Style profile saved: ' + (msg.data.profile_name || ''), 'success');
+        } else if (msg.event === 'STYLE_ANALYSIS_ERROR') {
+          $spSpinner.style.display = 'none';
+          $spStatus.textContent = 'Analysis failed: ' + (msg.data && msg.data.message || 'Unknown error');
+          log('\u2717 Style analysis error: ' + (msg.data && msg.data.message || ''), 'error');
+        } else if (msg.result && msg.result.profile_name) {
+          // Response from GET_STYLE_PROFILE
+          updateStyleProfileUI(msg.result);
+        }
+      } catch (e) { /* ignore parse errors for non-style messages */ }
+    });
+  }
+
+  // Hook after WS is connected (deferred check)
+  var _spInterval = setInterval(function () {
+    if (ws && ws.readyState === WebSocket.OPEN) {
+      hookStyleMessages(ws);
+      requestStyleProfile();
+      clearInterval(_spInterval);
+    }
+  }, 500);
 
 })();
 </script>

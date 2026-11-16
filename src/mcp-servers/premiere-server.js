@@ -13,6 +13,7 @@ import { AIEditor } from '../ai-editor/editor-engine.js';
 import { ColorGrader } from '../color-grading/color-grader.js';
 import { SoundEngineer } from '../sound-engineering/sound-engineer.js';
 import { ShortsCutter } from '../shorts-cutter/shorts-cutter.js';
+import { cleanSlowmoSpeed, designRamp, validateKeys, inferValueScale } from '../recipes/speed-ramp.js';
 import { Logger } from '../utils/logger.js';
 
 const logger = new Logger('PremiereMCP');
@@ -46,6 +47,8 @@ class PremiereProMCPServer {
     this._registerSoundEngineeringTools();
     this._registerShortsTools();
     this._registerExportTools();
+    this._registerRecipeTools();
+    this._registerBridgeTools();
     this._registerResourceProviders();
   }
 
@@ -163,6 +166,21 @@ class PremiereProMCPServer {
     );
 
     this.server.tool(
+      'timeline_duplicate',
+      'Clone an existing sequence — preserves ALL effects, color grades, transitions, markers, and clip arrangement. Use this BEFORE editing when the source has color grading you want to keep. Then use edit_delete_clip to carve down to the desired range. This is the only reliable way to keep grade work intact (timeline_add_clip pulls raw project items and bypasses grades).',
+      {
+        sourceName: z.string().describe('Name of the sequence to clone'),
+        destName: z.string().optional().describe('Name for the new sequence (default: source name + " Copy")'),
+        activate: z.boolean().default(true).describe('Make the new sequence active so subsequent edits target it'),
+      },
+      async (params) => {
+        const result = await this.bridge.send('premiere', 'timeline.duplicate', params);
+        if (result.error) throw new Error(result.error);
+        return { content: [{ type: 'text', text: `Duplicated "${result.sourceName}" → "${result.destName}"${result.activated ? ' (now active)' : ''}` }] };
+      }
+    );
+
+    this.server.tool(
       'timeline_add_clip',
       'Add a clip from project media to the timeline at a specific position. Set audioOnly=true to add only audio.',
       {
@@ -264,6 +282,38 @@ class PremiereProMCPServer {
     );
 
     this.server.tool(
+      'multicam_sync',
+      'Synchronize 2+ clips on the timeline using audio waveform, timecode, markers, or in/out points. Built for boat fishing footage where GoPro + phone + drone need to be aligned. Uses Premiere QE DOM synchronize() with fallback to menu command dialog. Default method = audio waveform.',
+      {
+        clipNames: z.array(z.string()).describe('Names of clips to synchronize (must be on the specified track)'),
+        trackIndex: z.number().default(0).describe('Video track to find clips on (0 = V1)'),
+        method: z.enum(['audio', 'timecode', 'markers', 'in_points', 'out_points']).default('audio').describe('Sync method. audio=waveform (best for boat footage), timecode=GoPro+phone if both have it, markers=manual marker alignment'),
+        syncTrackChannel: z.number().default(1).describe('Audio track channel for waveform sync (default 1)'),
+      },
+      async (params) => {
+        const result = await this.bridge.send('premiere', 'multicam.sync', params);
+        return { content: [{ type: 'text', text: JSON.stringify(result) }] };
+      }
+    );
+
+    this.server.tool(
+      'export_clip_audio',
+      'Export a sequence range to an audio-only WAV file. Use when you need to transcribe what was said in a clip range. Writes to a sandbox-accessible path so external tools (whisper/Python) can read it even when source media is on a restricted volume. Pair with the transcribe_wav.py helper at ~/.local/bin/.',
+      {
+        sequenceName: z.string().optional().describe('Sequence to export (default: active)'),
+        startSec: z.number().describe('Start time in sequence seconds'),
+        endSec: z.number().describe('End time in sequence seconds'),
+        outputPath: z.string().describe('Absolute WAV path. Use /tmp/ or ~/Downloads/cache/ — must be sandbox-writable'),
+        preset: z.enum(['wav_48k_16bit', 'aac_48k_128', 'aiff_48k']).default('wav_48k_16bit').describe('Audio export preset. wav_48k_16bit is whisper-optimal.'),
+      },
+      async (params) => {
+        // AME encode of the range — can outlive the 30s WS timeout on long clips
+        const result = await this.bridge.sendJob('premiere', 'export.clipAudio', params, { maxWaitMs: 600000 });
+        return { content: [{ type: 'text', text: JSON.stringify(result) }] };
+      }
+    );
+
+    this.server.tool(
       'edit_move_clip',
       'Move a clip to a new position or track',
       {
@@ -322,6 +372,7 @@ class PremiereProMCPServer {
         trackIndex: z.number().default(1),
         startTime: z.number(),
         duration: z.number().default(3),
+        mogrtPath: z.string().optional().describe('Path to a .mogrt template. Premiere 2024+ requires this for reliable scripted titles/captions — the text is written into the template\'s Source Text property.'),
         style: z.object({
           fontFamily: z.string().default('Arial Bold'),
           fontSize: z.number().default(72),
@@ -334,8 +385,26 @@ class PremiereProMCPServer {
         }).optional(),
       },
       async (params) => {
-        await this.bridge.send('premiere', 'edit.addText', params);
-        return { content: [{ type: 'text', text: `Added text "${params.text}" at ${params.startTime}s (${params.duration}s)` }] };
+        // FIX 2026-05-29: this used to print "Added text..." unconditionally,
+        // even when the bridge reported {added:false}. Now surface the truth.
+        const result = await this.bridge.send('premiere', 'edit.addText', params);
+        if (result && result.added) {
+          return { content: [{ type: 'text', text: `Added text "${params.text}" at ${params.startTime}s (${params.duration}s) via ${result.method}` }] };
+        }
+        const diag = result || {};
+        return {
+          content: [{
+            type: 'text',
+            text: `FAILED to add text "${params.text}". The bridge could not insert a title in this Premiere version.\n` +
+              `error: ${diag.error || 'unknown'}\n` +
+              `method0 (MOGRT): ${diag.method0Error || 'n/a'}\n` +
+              `method1 (native): ${diag.method1Error || 'n/a'}\n` +
+              `method2 (QE): ${diag.method2Error || 'n/a'}\n` +
+              `premiereVersion: ${diag.premiereVersion || 'unknown'}\n` +
+              (diag.hint ? `hint: ${diag.hint}` : ''),
+          }],
+          isError: true,
+        };
       }
     );
 
@@ -620,14 +689,13 @@ class PremiereProMCPServer {
       },
       async (params) => {
         const result = await this.colorGrader.applyPreset(params);
-        return {
-          content: [{
-            type: 'text',
-            text: `Color grade "${params.preset}" applied at ${params.intensity}%\n` +
-              `Scope: ${params.scope}\n` +
-              `Clips affected: ${result.clipsAffected}`,
-          }],
-        };
+        let text = `Color grade "${params.preset}" applied at ${params.intensity}%\n` +
+          `Scope: ${params.scope}\n` +
+          `Clips affected: ${result.clipsAffected}`;
+        if (result.failures && result.failures.length) {
+          text += `\nFailures (${result.failures.length}): ${result.failures.join('; ')}`;
+        }
+        return { content: [{ type: 'text', text }] };
       }
     );
 
@@ -1026,13 +1094,15 @@ class PremiereProMCPServer {
         useMediaEncoder: z.boolean().default(true),
       },
       async (params) => {
-        const result = await this.bridge.send('premiere', 'export.media', params);
+        // Long op: run as a panel-side async job so the encode can't hit the
+        // 30s WS timeout. Poll up to 20 min.
+        const result = await this.bridge.sendJob('premiere', 'export.media', params, { maxWaitMs: 1200000 });
         return {
           content: [{
             type: 'text',
-            text: `Export started: ${params.preset}\n` +
+            text: `Export finished: ${params.preset}\n` +
               `Output: ${params.outputPath}\n` +
-              `Estimated time: ${result.estimatedTime}`,
+              JSON.stringify(result),
           }],
         };
       }
@@ -1050,6 +1120,157 @@ class PremiereProMCPServer {
       async (params) => {
         const result = await this.bridge.send('premiere', 'export.frame', params);
         return { content: [{ type: 'text', text: `Frame exported: ${params.outputPath}` }] };
+      }
+    );
+  }
+
+  // ── RECIPES ────────────────────────────────────────────────────────────
+
+  _registerRecipeTools() {
+    this.server.tool(
+      'ramp_clip',
+      'Speed-ramp a clip in ONE call: probes + auto-calibrates the time-remap DOM, designs the keyframes from a named shape, applies them, and verifies by read-back. Shapes: punch_in (normal→slow on the beat→ease back), open_slow_rampout (open slow, over-crank out — put the transition at the tail), ramp_into_slow (fast head→slow landing), custom (pass keys). Use edit_speed_duration for uniform speed changes. Run on a WORKING COPY (timeline_duplicate) — never the master.',
+      {
+        sequenceName: z.string().optional().describe('Target sequence (default: active). Must be a working copy, not the master.'),
+        trackIndex: z.number().default(0).describe('Video track (0 = V1)'),
+        clipIndex: z.number().describe('Clip index on the track (from timeline_get_state)'),
+        shape: z.enum(['punch_in', 'open_slow_rampout', 'ramp_into_slow', 'custom']).default('punch_in'),
+        beatStart: z.number().optional().describe('Clip-relative seconds where the slow-mo lands (punch_in/ramp_into_slow)'),
+        beatEnd: z.number().optional().describe('Clip-relative seconds where the hold ends (punch_in) / hold length (open_slow_rampout)'),
+        slowSpeed: z.number().optional().describe('Slow-mo speed as multiplier (0.4 = 40%). Default: clean ratio from fps, else 0.4'),
+        fastSpeed: z.number().default(2.0).describe('Over-crank speed for rampout/into shapes'),
+        sourceFps: z.number().optional().describe('Clip fps (e.g. 59.94) — with timelineFps, picks the clean slow-mo ratio'),
+        timelineFps: z.number().optional().describe('Sequence fps (e.g. 23.976)'),
+        easeDuration: z.number().default(0.4).describe('Seconds of ease into/out of speed changes'),
+        smooth: z.boolean().default(true).describe('Bezier ease (cinematic). false = linear (hard/edgy)'),
+        keys: z.array(z.object({ time: z.number(), speed: z.number() })).optional()
+          .describe('shape=custom only: explicit clip-relative keys'),
+        clearExisting: z.boolean().default(false)
+          .describe('Remove existing speed keyframes first — use on a calibration retry after a failed attempt'),
+      },
+      async (params) => {
+        const fail = (text) => ({ content: [{ type: 'text', text }], isError: true });
+
+        // 1. Probe: is time remap reachable, what scale, how long is the clip
+        const probe = await this.bridge.send('premiere', 'edit.speedRampProbe', {
+          sequenceName: params.sequenceName,
+          trackIndex: params.trackIndex,
+          clipIndex: params.clipIndex,
+        });
+        if (probe.error) return fail(`Probe failed: ${probe.error}`);
+        if (!probe.timeRemapFound) {
+          return fail(`No Time Remapping on this clip. Components found: ${(probe.componentNames || []).join(', ')}\n${probe.note || ''}`);
+        }
+        const valueScale = inferValueScale(probe.speedCurrentValue);
+        if (!valueScale) {
+          return fail(`Could not calibrate: Speed reads ${probe.speedCurrentValue}. Ramp manually via premiere_eval after inspecting the DOM.`);
+        }
+        if (probe.keyCount > 0 && !params.clearExisting) {
+          return fail(`Clip already has ${probe.keyCount} speed keyframes. Refusing to stack ramps — retry with clearExisting:true to replace them (right after a failed calibration attempt), or pick another clip.`);
+        }
+        const clipDuration = probe.clip.durationSec;
+
+        // 2. Design the keys
+        let keys, decision;
+        if (params.shape === 'custom') {
+          if (!params.keys || params.keys.length < 2) return fail('shape=custom requires keys[] (≥2)');
+          keys = params.keys;
+          decision = 'custom keys supplied by caller';
+        } else {
+          const slowSpeed = params.slowSpeed ??
+            cleanSlowmoSpeed(params.sourceFps, params.timelineFps) ?? 0.4;
+          try {
+            ({ keys, decision } = designRamp({
+              shape: params.shape,
+              clipDuration,
+              slowSpeed,
+              fastSpeed: params.fastSpeed,
+              beatStart: params.beatStart,
+              beatEnd: params.beatEnd,
+              easeDuration: params.easeDuration,
+            }));
+          } catch (e) {
+            return fail(`Ramp design rejected: ${e.message} (clip is ${clipDuration.toFixed(2)}s)`);
+          }
+        }
+        const check = validateKeys(keys, clipDuration);
+        if (!check.ok) return fail(`Invalid keys: ${check.errors.join('; ')}`);
+
+        // 3. Apply + read back
+        const result = await this.bridge.send('premiere', 'edit.speedRamp', {
+          sequenceName: params.sequenceName,
+          trackIndex: params.trackIndex,
+          clipIndex: params.clipIndex,
+          keys,
+          valueScale,
+          timeBase: 'clip',
+          smooth: params.smooth,
+          clearExisting: params.clearExisting,
+        }, { timeoutMs: 60000 });
+
+        const lines = [
+          `Ramp ${result.success ? 'APPLIED' : 'FAILED'} on "${probe.clip.name}" (V${params.trackIndex + 1} clip ${params.clipIndex})`,
+          `Decision: ${decision}`,
+          `Keys: ${keys.map((k) => `${k.time}s→${Math.round(k.speed * 100)}%`).join('  ')}`,
+          `Calibration: valueScale=${valueScale} (probe read ${probe.speedCurrentValue}), timeBase=clip`,
+          `Applied ${result.applied?.length ?? 0}/${keys.length} keys, read back ${result.keyCountAfter ?? '?'} on the property, ${result.interpApplied ?? 0} bezier eases`,
+        ];
+        if (check.warnings.length) lines.push(`Warnings: ${check.warnings.join('; ')}`);
+        if (result.errors?.length) lines.push(`Errors: ${result.errors.join('; ')}`);
+        if (result.note) lines.push(result.note);
+        if (params.shape === 'open_slow_rampout' && result.success) {
+          lines.push('Next: edit_add_transition at this clip\'s END — the over-crank hides the cut.');
+        }
+        return { content: [{ type: 'text', text: lines.join('\n') }], ...(result.success ? {} : { isError: true }) };
+      }
+    );
+  }
+
+  // ── BRIDGE DIAGNOSTICS ─────────────────────────────────────────────────
+
+  _registerBridgeTools() {
+    this.server.tool(
+      'bridge_preflight',
+      'Health-check the Premiere bridge: panel reachable + which JSX build (version, handler list) is LIVE in the engine. Run before the first edit call of any session.',
+      {},
+      async () => {
+        const ping = await this.bridge.send('premiere', '_ping', {}, { timeoutMs: 5000 });
+        let info = null;
+        try {
+          info = await this.bridge.send('premiere', '_info', {}, { timeoutMs: 10000 });
+        } catch (e) {
+          return {
+            content: [{
+              type: 'text',
+              text: `Panel is up (${JSON.stringify(ping)}) but _info failed: ${e.message}\n` +
+                `A pre-2026-07 JSX is live — run bridge_reload_jsx or restart Premiere.`,
+            }],
+            isError: true,
+          };
+        }
+        return {
+          content: [{
+            type: 'text',
+            text: `Bridge OK — ${ping.app} on port ${ping.port}\n` +
+              `JSX version: ${info.jsxVersion} (Premiere ${info.appVersion})\n` +
+              `Handlers (${info.handlerCount}): ${info.handlers.join(', ')}`,
+          }],
+        };
+      }
+    );
+
+    this.server.tool(
+      'bridge_reload_jsx',
+      'Hot-reload the ExtendScript bridge inside the running Premiere — picks up .jsx edits WITHOUT quitting Premiere. Returns the freshly loaded version + handlers.',
+      {},
+      async () => {
+        const result = await this.bridge.reloadJsx('premiere');
+        return {
+          content: [{
+            type: 'text',
+            text: `JSX reloaded: v${result.jsxVersion} — ${result.handlerCount} handlers\n${(result.handlers || []).join(', ')}`,
+          }],
+        };
       }
     );
   }

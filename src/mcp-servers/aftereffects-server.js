@@ -8,8 +8,20 @@
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import { z } from 'zod';
+import { spawn } from 'child_process';
+import { existsSync, statSync } from 'fs';
 import { AdobeBridge } from '../bridge/adobe-bridge.js';
 import { Logger } from '../utils/logger.js';
+
+// Headless AE renderer — newest installed version wins. Renders in a separate
+// process so the AE UI stays free; no PNG-sequence + ffmpeg stitching needed.
+const AERENDER_CANDIDATES = [
+  '/Applications/Adobe After Effects 2026/aerender',
+  '/Applications/Adobe After Effects 2025/aerender',
+];
+function findAerender() {
+  return AERENDER_CANDIDATES.find((p) => existsSync(p)) || null;
+}
 
 const logger = new Logger('AfterEffectsMCP');
 
@@ -21,6 +33,9 @@ class AfterEffectsMCPServer {
       version: '1.0.0',
       description: 'AI Motion Graphics & VFX for Adobe After Effects — titles, intros, animations, compositing',
     });
+
+    this.renderJobs = new Map(); // jobId -> { proc, done, exitCode, log, outputPath, startedAt }
+    this.renderJobSeq = 0;
 
     this._registerAllTools();
   }
@@ -34,6 +49,56 @@ class AfterEffectsMCPServer {
     this._registerVFXTools();
     this._registerDynamicLinkTools();
     this._registerRenderTools();
+    this._registerBridgeTools();
+  }
+
+  // ── BRIDGE DIAGNOSTICS ─────────────────────────────────────────────────
+
+  _registerBridgeTools() {
+    this.server.tool(
+      'ae_bridge_preflight',
+      'Health-check the After Effects bridge: panel reachable + which JSX build (version, handler list) is LIVE. Run before the first AE call of any session.',
+      {},
+      async () => {
+        const ping = await this.bridge.send('aftereffects', '_ping', {}, { timeoutMs: 5000 });
+        let info = null;
+        try {
+          info = await this.bridge.send('aftereffects', '_info', {}, { timeoutMs: 10000 });
+        } catch (e) {
+          return {
+            content: [{
+              type: 'text',
+              text: `Panel is up (${JSON.stringify(ping)}) but _info failed: ${e.message}\n` +
+                `A pre-2026-07 JSX is live — run ae_bridge_reload_jsx or restart After Effects.`,
+            }],
+            isError: true,
+          };
+        }
+        return {
+          content: [{
+            type: 'text',
+            text: `Bridge OK — ${ping.app} on port ${ping.port}\n` +
+              `JSX version: ${info.jsxVersion} (AE ${info.appVersion})\n` +
+              `Handlers (${info.handlerCount}): ${info.handlers.join(', ')}`,
+          }],
+        };
+      }
+    );
+
+    this.server.tool(
+      'ae_bridge_reload_jsx',
+      'Hot-reload the ExtendScript bridge inside the running After Effects — picks up .jsx edits WITHOUT quitting AE.',
+      {},
+      async () => {
+        const result = await this.bridge.reloadJsx('aftereffects');
+        return {
+          content: [{
+            type: 'text',
+            text: `JSX reloaded: v${result.jsxVersion} — ${result.handlerCount} handlers\n${(result.handlers || []).join(', ')}`,
+          }],
+        };
+      }
+    );
   }
 
   // ── PROJECT ────────────────────────────────────────────────────────────
@@ -451,16 +516,128 @@ class AfterEffectsMCPServer {
   _registerRenderTools() {
     this.server.tool(
       'ae_render',
-      'Add composition to the render queue and start rendering',
+      'Render via the in-app Render Queue (blocks AE UI; prefer ae_render_headless). Fails honestly if the requested output template is not installed.',
       {
         compName: z.string().optional(),
         outputPath: z.string(),
-        format: z.enum(['prores_422', 'prores_4444', 'h264', 'h265', 'png_sequence', 'exr_sequence', 'gif']).default('prores_4444'),
-        quality: z.enum(['draft', 'standard', 'best']).default('best'),
+        format: z.enum(['prores_422', 'prores_4444', 'h264', 'h265', 'png_sequence', 'lossless']).default('prores_4444'),
       },
       async (params) => {
-        const result = await this.bridge.send('aftereffects', 'render.start', params);
-        return { content: [{ type: 'text', text: `Render started: ${params.format} → ${params.outputPath}` }] };
+        // In-app RQ render blocks the ExtendScript engine — run as async job
+        const result = await this.bridge.sendJob('aftereffects', 'render.start', params, { maxWaitMs: 1200000 });
+        const ok = result.fileExists;
+        return {
+          content: [{
+            type: 'text',
+            text: (ok ? 'Render complete' : 'Render finished but output file NOT found') +
+              `\nTemplate: ${result.appliedTemplate}\nOutput: ${params.outputPath}`,
+          }],
+          ...(ok ? {} : { isError: true }),
+        };
+      }
+    );
+
+    this.server.tool(
+      'ae_render_list_templates',
+      'List the output-module templates actually installed in this After Effects (what ae_render/aerender can use)',
+      { compName: z.string().optional() },
+      async (params) => {
+        const result = await this.bridge.send('aftereffects', 'render.listTemplates', params);
+        return { content: [{ type: 'text', text: `Installed templates:\n${result.templates.join('\n')}` }] };
+      }
+    );
+
+    this.server.tool(
+      'ae_render_headless',
+      'PREFERRED render path: save the project, then render the comp with the aerender CLI in a background process. No PNG sequences, no ffmpeg stitching, AE UI stays free. Returns a jobId — poll with ae_render_status.',
+      {
+        compName: z.string().describe('Composition to render'),
+        outputPath: z.string().describe('Output movie path (e.g. /tmp/intro.mov)'),
+        outputModule: z.string().default('Lossless').describe('AE output-module template name (check ae_render_list_templates). Lossless always exists; transcode after with ffmpeg if you need h264.'),
+        renderSettings: z.string().default('Best Settings'),
+        startFrame: z.number().optional(),
+        endFrame: z.number().optional(),
+      },
+      async (params) => {
+        const aerender = findAerender();
+        if (!aerender) {
+          return { content: [{ type: 'text', text: `aerender not found at: ${AERENDER_CANDIDATES.join(', ')}` }], isError: true };
+        }
+
+        // 1. Save the project so aerender sees the current state
+        const saved = await this.bridge.send('aftereffects', 'project.save', {});
+        if (saved.error || !saved.path) {
+          return { content: [{ type: 'text', text: `Could not save project before render: ${saved.error || 'no path'}` }], isError: true };
+        }
+
+        // 2. Spawn aerender detached from the AE UI
+        const args = [
+          '-project', saved.path,
+          '-comp', params.compName,
+          '-RStemplate', params.renderSettings,
+          '-OMtemplate', params.outputModule,
+          '-output', params.outputPath,
+        ];
+        if (params.startFrame !== undefined) args.push('-s', String(params.startFrame));
+        if (params.endFrame !== undefined) args.push('-e', String(params.endFrame));
+
+        const jobId = `aerender_${++this.renderJobSeq}_${Date.now()}`;
+        const job = { done: false, exitCode: null, log: '', outputPath: params.outputPath, startedAt: Date.now() };
+        this.renderJobs.set(jobId, job);
+
+        const proc = spawn(aerender, args);
+        job.proc = proc;
+        const capture = (buf) => {
+          job.log = (job.log + buf.toString()).slice(-8000); // keep the tail
+        };
+        proc.stdout.on('data', capture);
+        proc.stderr.on('data', capture);
+        proc.on('close', (code) => {
+          job.done = true;
+          job.exitCode = code;
+        });
+        proc.on('error', (err) => {
+          job.done = true;
+          job.exitCode = -1;
+          job.log += `\nSPAWN ERROR: ${err.message}`;
+        });
+
+        return {
+          content: [{
+            type: 'text',
+            text: `Headless render started (jobId: ${jobId})\n` +
+              `Project: ${saved.path}\nComp: ${params.compName}\nOutput: ${params.outputPath}\n` +
+              `Poll with ae_render_status.`,
+          }],
+        };
+      }
+    );
+
+    this.server.tool(
+      'ae_render_status',
+      'Check an ae_render_headless job: running/done, exit code, output file size, tail of the aerender log',
+      { jobId: z.string() },
+      async ({ jobId }) => {
+        const job = this.renderJobs.get(jobId);
+        if (!job) {
+          return { content: [{ type: 'text', text: `Unknown jobId: ${jobId}` }], isError: true };
+        }
+        const elapsed = ((Date.now() - job.startedAt) / 1000).toFixed(0);
+        let fileInfo = 'output file not present yet';
+        if (existsSync(job.outputPath)) {
+          fileInfo = `output file: ${(statSync(job.outputPath).size / 1e6).toFixed(1)} MB`;
+        }
+        if (!job.done) {
+          return { content: [{ type: 'text', text: `RUNNING (${elapsed}s) — ${fileInfo}\n...${job.log.slice(-500)}` }] };
+        }
+        const ok = job.exitCode === 0 && existsSync(job.outputPath);
+        return {
+          content: [{
+            type: 'text',
+            text: `${ok ? 'DONE' : 'FAILED'} (exit ${job.exitCode}, ${elapsed}s) — ${fileInfo}\n...${job.log.slice(-800)}`,
+          }],
+          ...(ok ? {} : { isError: true }),
+        };
       }
     );
   }
