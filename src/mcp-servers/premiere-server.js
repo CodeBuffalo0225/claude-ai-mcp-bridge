@@ -695,6 +695,9 @@ class PremiereProMCPServer {
         if (result.failures && result.failures.length) {
           text += `\nFailures (${result.failures.length}): ${result.failures.join('; ')}`;
         }
+        if (result.skipped && result.skipped.length) {
+          text += `\nSkipped params (${result.skipped.length}): ${result.skipped.join('; ')}`;
+        }
         return { content: [{ type: 'text', text }] };
       }
     );
@@ -741,7 +744,15 @@ class PremiereProMCPServer {
       },
       async (params) => {
         const result = await this.colorGrader.manualGrade(params);
-        return { content: [{ type: 'text', text: `Color adjustments applied. Modified: ${Object.keys(params).filter(k => k !== 'trackIndex' && k !== 'clipIndex').join(', ')}` }] };
+        // FIX 2026-11-14: report the values Premiere actually holds after the
+        // write, and flag anything skipped as an error — the old message
+        // echoed the request keys and claimed success even when the JSX set
+        // nothing (stale Lumetri param names on Premiere 26.x).
+        let text = result.applied.length
+          ? `Lumetri set (read back): ${result.applied.join(', ')}`
+          : 'No Lumetri parameters were set.';
+        if (result.skipped.length) text += `\nSKIPPED (${result.skipped.length}): ${result.skipped.join('; ')}`;
+        return { content: [{ type: 'text', text }], isError: result.skipped.length > 0 || result.applied.length === 0 };
       }
     );
 

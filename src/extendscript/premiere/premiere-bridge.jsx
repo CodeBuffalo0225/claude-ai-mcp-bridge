@@ -11,7 +11,7 @@
 
 // Bump on every edit to this file. `_info` reports it so the preflight can
 // verify which JSX build is actually live in the engine (stale-cache bug #10).
-var BRIDGE_JSX_VERSION = "2026-07-05.3";
+var BRIDGE_JSX_VERSION = "2026-11-14.1";
 
 // ── Premiere Pro DOM API Wrappers ────────────────────────────────────────
 
@@ -1023,7 +1023,7 @@ var PremiereBridge = {
 
     var r = _applyLumetriToClip(seq, qeSeq, trackIdx, clipIdx, settings);
     if (r.error) return r;
-    return { applied: r.applied, clipIndex: clipIdx };
+    return { applied: r.applied, skipped: r.skipped, clipIndex: clipIdx };
   },
 
   // FIX 2026-05-29: full-timeline grading used to loop in the MCP server,
@@ -1050,6 +1050,8 @@ var PremiereBridge = {
 
     var clipsAffected = 0;
     var failures = [];
+    var skippedSeen = {};
+    var skipped = [];
     for (var ti = 0; ti < tracksToDo.length; ti++) {
       var tIdx = tracksToDo[ti];
       var track = seq.videoTracks[tIdx];
@@ -1061,11 +1063,14 @@ var PremiereBridge = {
           failures.push("V" + tIdx + ":" + ci + " " + rr.error);
         } else {
           clipsAffected++;
+          for (var si = 0; si < rr.skipped.length; si++) {
+            if (!skippedSeen[rr.skipped[si]]) { skippedSeen[rr.skipped[si]] = 1; skipped.push(rr.skipped[si]); }
+          }
         }
       }
     }
 
-    return { clipsAffected: clipsAffected, failures: failures };
+    return { clipsAffected: clipsAffected, failures: failures, skipped: skipped };
   },
 
   // ── SPEED RAMP (time-remap keyframes; cutpilot-speed-ramp recipe) ──
@@ -1318,84 +1323,119 @@ function _applyLumetriToClip(seq, qeSeq, trackIdx, clipIdx, settings) {
   }
   var clip = track.clips[clipIdx];
 
-  // Add Lumetri Color via QE DOM if not already present.
-  try {
-    if (qeSeq) {
-      var qeTrack = qeSeq.getVideoTrackAt(trackIdx);
-      var qeClip = qeTrack.getItemAt(clipIdx);
-      qeClip.addVideoEffect(
+  // FIX 2026-11-14: only add Lumetri when the clip doesn't already carry one.
+  // The old code called addVideoEffect unconditionally, stacking a fresh
+  // Lumetri instance on every call (and grading only the first).
+  var lumetri = _findLumetri(clip);
+  if (!lumetri && qeSeq) {
+    try {
+      qeSeq.getVideoTrackAt(trackIdx).getItemAt(clipIdx).addVideoEffect(
         QEApplication.project.getVideoEffectByName("Lumetri Color")
       );
-    }
-  } catch(e) { /* may already have it */ }
-
-  var basicMap = {
-    "temperature": "Color Temperature",
-    "tint": "Tint",
-    "exposure": "Exposure",
-    "contrast": "Contrast",
-    "highlights": "Highlight",
-    "shadows": "Shadow",
-    "whites": "White",
-    "blacks": "Black"
-  };
-  var creativeMap = {
-    "vibrance": "Vibrance",
-    "saturation": "Saturation"
-  };
-
-  // Find Lumetri component on the clip
-  var components = clip.components;
-  var lumetri = null;
-  for (var ci = 0; ci < components.numItems; ci++) {
-    if (components[ci].displayName === "Lumetri Color") {
-      lumetri = components[ci];
-      break;
-    }
+    } catch(e) {}
+    lumetri = _findLumetri(clip);
   }
   if (!lumetri) return { error: "Lumetri Color effect not found on clip" };
 
+  // FIX 2026-11-14: Premiere 26.x renamed the Basic sliders ("Temperature",
+  // "Highlights", "Shadows", "Whites", "Blacks"); the old map used the
+  // pre-26 singular names, so every one of them silently no-op'd while the
+  // tool reported success. Each key now lists current name first, legacy
+  // names after, and is searched only inside its own Lumetri section —
+  // "Saturation" exists in Basic, Creative AND Vignette, and the old
+  // first-match lookup always hit Basic.
+  var MAP = {
+    basic: { section: "Basic Correction", keys: {
+      temperature: ["Temperature", "Color Temperature"],
+      tint:        ["Tint"],
+      exposure:    ["Exposure"],
+      contrast:    ["Contrast"],
+      highlights:  ["Highlights", "Highlight"],
+      shadows:     ["Shadows", "Shadow"],
+      whites:      ["Whites", "White"],
+      blacks:      ["Blacks", "Black"],
+      saturation:  ["Saturation"]
+    }},
+    creative: { section: "Creative", keys: {
+      fadeAmount:  ["Faded Film"],
+      sharpen:     ["Sharpen"],
+      vibrance:    ["Vibrance"],
+      saturation:  ["Saturation"]
+    }},
+    vignette: { section: "Vignette", keys: {
+      amount:      ["Amount"],
+      midpoint:    ["Midpoint"],
+      roundness:   ["Roundness"],
+      feather:     ["Feather"]
+    }}
+  };
+  // Curves and color wheels are opaque blob/colour params in the scripting
+  // DOM — not settable reliably. Report them as skipped, never as applied.
+  var UNSUPPORTED = { curves: 1, colorWheels: 1 };
+
   var applied = [];
+  var skipped = [];
 
-  if (settings && settings.basic) {
-    for (var key in settings.basic) {
-      var propName = basicMap[key];
-      if (!propName) continue;
-      for (var pi = 0; pi < lumetri.properties.numItems; pi++) {
-        var prop = lumetri.properties[pi];
-        if (prop.displayName === propName) {
-          try {
-            prop.setValue(settings.basic[key], true);
-            applied.push(key + "=" + settings.basic[key]);
-          } catch(e) {
-            applied.push(key + "=FAILED:" + e.message);
-          }
-          break;
-        }
+  for (var group in settings) {
+    if (!settings.hasOwnProperty(group)) continue;
+    if (UNSUPPORTED[group]) {
+      skipped.push(group + ": not scriptable in Lumetri DOM");
+      continue;
+    }
+    var spec = MAP[group];
+    if (!spec || typeof settings[group] !== "object") continue;
+    var range = _lumetriSectionRange(lumetri, spec.section);
+    for (var key in settings[group]) {
+      if (!settings[group].hasOwnProperty(key)) continue;
+      var names = spec.keys[key];
+      if (!names) { skipped.push(group + "." + key + ": unknown key"); continue; }
+      var prop = _lumetriProp(lumetri, range, names);
+      if (!prop) { skipped.push(group + "." + key + ": '" + names[0] + "' not found in " + spec.section); continue; }
+      try {
+        prop.setValue(settings[group][key], true);
+        var got = prop.getValue();
+        applied.push(group + "." + key + "=" + (Math.round(got * 1000) / 1000));
+      } catch(e) {
+        skipped.push(group + "." + key + ": setValue failed: " + e.message);
       }
     }
   }
 
-  if (settings && settings.creative) {
-    for (var cKey in settings.creative) {
-      var cPropName = creativeMap[cKey];
-      if (!cPropName) continue;
-      for (var cpi = 0; cpi < lumetri.properties.numItems; cpi++) {
-        var cProp = lumetri.properties[cpi];
-        if (cProp.displayName === cPropName) {
-          try {
-            cProp.setValue(settings.creative[cKey], true);
-            applied.push(cKey + "=" + settings.creative[cKey]);
-          } catch(e) {
-            applied.push(cKey + "=FAILED:" + e.message);
-          }
-          break;
-        }
-      }
+  return { applied: applied, skipped: skipped };
+}
+
+function _findLumetri(clip) {
+  for (var i = 0; i < clip.components.numItems; i++) {
+    if (clip.components[i].displayName === "Lumetri Color") return clip.components[i];
+  }
+  return null;
+}
+
+// [start, end) property-index range of a Lumetri section. Sections are the
+// group headers that appear in the flat property list.
+function _lumetriSectionRange(lumetri, sectionName) {
+  var HEADERS = { "Basic Correction":1, "Creative":1, "Curves":1,
+                  "Color Wheels & Match":1, "HSL Secondary":1, "Vignette":1 };
+  var n = lumetri.properties.numItems, start = -1;
+  for (var i = 0; i < n; i++) {
+    var dn = lumetri.properties[i].displayName;
+    if (start < 0) {
+      if (dn === sectionName) start = i + 1;
+    } else if (HEADERS[dn]) {
+      return { start: start, end: i };
     }
   }
+  return start < 0 ? null : { start: start, end: n };
+}
 
-  return { applied: applied };
+function _lumetriProp(lumetri, range, names) {
+  if (!range) return null;
+  for (var ni = 0; ni < names.length; ni++) {
+    for (var i = range.start; i < range.end; i++) {
+      if (lumetri.properties[i].displayName === names[ni]) return lumetri.properties[i];
+    }
+  }
+  return null;
 }
 
 // Find a built-in .sqpreset matching requested dimensions + frame rate.

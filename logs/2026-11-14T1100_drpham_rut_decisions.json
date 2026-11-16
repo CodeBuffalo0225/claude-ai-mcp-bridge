@@ -1,0 +1,45 @@
+{
+  "project": "Dr Pham Hunting.prproj",
+  "sourceSequence": "IMG_9809",
+  "workingSequence": "DrPham_GA_Rut_YT",
+  "format": "YouTube long-form 16:9, 1280x720 sequence, ~2:35 target",
+  "timestamp": "2026-11-14T11:00:00-05:00",
+  "grade": {
+    "method": "Lumetri via premiere_eval, values read back (color_manual_grade JSX uses stale param names on PPro 26.5 — see report)",
+    "sharedLook": {"fadedFilm": 6, "sharpen": 8, "vignette": -0.6/-0.8, "vignetteMidpoint": 55, "vignetteFeather": 65},
+    "perClip": {
+      "IMG_9809": "talking head, foliage spill: temp+6 tint+5 hl-30 sh+12 vib+14",
+      "IMG_9826": "flat overcast dusk: temp+12 contrast+22 blacks-15 vib+18",
+      "IMG_9838": "hazy green midday: temp+8 tint+8 contrast+16 hl-25",
+      "IMG_9832": "golden backlight: hl-28 sh+12 vib+8",
+      "IMG_9831": "golden, heavy red clay: hl-30 sat 90"
+    }
+  },
+  "storyOrder": "light-driven: afternoon set-up -> midday activity -> golden hour bucks -> last-light buck at feeder",
+  "selections": [
+    {"n":1,"clip":"IMG_9831.MOV","in":11.0,"out":16.2,"momentType":"action","rationale":"Cold-open hook: buck chasing a doe (rut behavior confirmed by zoom at 12.5s).","approved":null},
+    {"n":2,"clip":"IMG_9826.MOV","in":33.0,"out":38.0,"momentType":"reveal","rationale":"Hook payoff: mature buck stares into the lens at last light. Best single frame in the footage.","approved":null},
+    {"n":3,"clip":"IMG_9809.MOV","in":0.0,"out":53.6,"momentType":"talent","rationale":"Brief: 'He opens, let him talk.' Full intro kept uncut: glassing (title over it), time, county, plan for a 3-hour sit.","approved":null},
+    {"n":4,"clip":"IMG_9838.MOV","in":0.0,"out":14.8,"momentType":"atmosphere","rationale":"Midday sun on the field; his whispered 'Good activity, one chasing' (10.7s) captioned.","approved":null},
+    {"n":5,"clip":"IMG_9832.MOV","in":0.0,"out":11.0,"momentType":"process","rationale":"Golden hour, deer far out; 'There's one buck, there's another one coming out to the right side' captioned.","approved":null},
+    {"n":6,"clip":"IMG_9832.MOV","in":33.0,"out":41.0,"momentType":"reveal","rationale":"Buck stepping out by the pine. Stops before 41.66s (silent tail Whisper mis-read as speech).","approved":null},
+    {"n":7,"clip":"IMG_9831.MOV","in":3.0,"out":24.5,"momentType":"action","rationale":"Full chase in context + his line 'I'm so glad I got this on the video' (20.5s) — emotional high.","approved":null},
+    {"n":8,"clip":"IMG_9826.MOV","in":9.5,"out":41.0,"momentType":"payoff","rationale":"Last light: does on the feeder, buck walks in and holds. Starts after the camera zoom at ~9s.","approved":null},
+    {"n":9,"clip":"IMG_9826.MOV","in":41.0,"out":45.8,"momentType":"outro","rationale":"Wide pull-out; end card over it.","approved":null}
+  ],
+  "excluded": [
+    {"what":"IMG_9809 'big, big, big bugs' line as text","why":"Whisper mis-hearing of 'bucks' — kept in his audio, never put on screen"},
+    {"what":"IMG_9832 41.66-44.08 'Thanks for watching!'","why":"Whisper hallucination on silence (no_speech 0.80)"},
+    {"what":"Scripted transitions/fades","why":"Bridge rule: hang or render solid white — hard cuts only"},
+    {"what":"Music","why":"No licensed track supplied — none added"}
+  ],
+  "graphics": [
+    "Title over glassing shot: DR. EDWARD PHAM / RUT HUNT · SOUTHERN GEORGIA",
+    "Lower third: DR. EDWARD PHAM / TALBOT COUNTY, GEORGIA",
+    "Tag: IN THE STAND · 2:40 PM (his words)",
+    "Tag: DARK BY ~6:00 · 3-HOUR SIT (his words)",
+    "Chapter tags: MIDDAY / GOLDEN HOUR / LAST LIGHT",
+    "Quote captions for the 3 whispered field lines",
+    "End card: THE RUT IS ON · TEAM BUFFALO OUTDOORS · SUBSCRIBE"
+  ]
+}

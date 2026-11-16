@@ -271,6 +271,7 @@ class ColorGrader {
         clipsAffected: result.clipsAffected ?? 0,
         preset: presetData.name,
         failures: result.failures || [],
+        skipped: result.skipped || [],
       };
     }
 
@@ -297,11 +298,14 @@ class ColorGrader {
     if (colorWheels) settings.colorWheels = colorWheels;
     if (vignette) settings.vignette = vignette;
 
-    await this.bridge.send('premiere', 'color.applyLumetri', {
+    const result = await this.bridge.send('premiere', 'color.applyLumetri', {
       trackIndex, clipIndex, settings,
     });
+    if (result?.error) throw new Error(`Lumetri grade failed: ${result.error}`);
 
-    return { success: true };
+    // FIX 2026-11-14: return what the JSX actually set (read back from the
+    // DOM) and what it skipped, instead of a blanket { success: true }.
+    return { applied: result?.applied || [], skipped: result?.skipped || [] };
   }
 
   async colorMatch(params) {
