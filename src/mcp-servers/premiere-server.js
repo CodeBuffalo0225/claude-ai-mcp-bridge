@@ -16,6 +16,7 @@ import { ShortsCutter } from '../shorts-cutter/shorts-cutter.js';
 import { cleanSlowmoSpeed, designRamp, validateKeys, inferValueScale } from '../recipes/speed-ramp.js';
 import { Logger } from '../utils/logger.js';
 import { registerColorTools } from './color-tools.js';
+import { registerMotionTools } from './motion-tools.js';
 
 const logger = new Logger('PremiereMCP');
 
@@ -46,6 +47,7 @@ class PremiereProMCPServer {
     this._registerAIEditingTools();
     this._registerColorGradingTools();
     registerColorTools(this.server, this.bridge); // skin-aware grading (color-tools.js)
+    registerMotionTools(this.server, this.bridge); // keyframed transitions, text, SFX (motion-tools.js)
     this._registerSoundEngineeringTools();
     this._registerShortsTools();
     this._registerExportTools();
@@ -348,7 +350,7 @@ class PremiereProMCPServer {
 
     this.server.tool(
       'edit_add_transition',
-      'Add a video transition between clips',
+      'DEPRECATED — scripted QE transitions hang or render white on Premiere 26.x, and this tool used to report success without applying anything. Use motion_transition_apply (cross_dissolve→crossDissolve, dip_to_black→dipToBlack, zoom→zoomPush, push→whipPan, wipe→featheredWipe). Always returns an error naming the replacement.',
       {
         trackIndex: z.number(),
         clipIndex: z.number(),
@@ -361,8 +363,9 @@ class PremiereProMCPServer {
         duration: z.number().default(0.5).describe('Transition duration in seconds'),
       },
       async (params) => {
-        await this.bridge.send('premiere', 'edit.addTransition', params);
-        return { content: [{ type: 'text', text: `Added ${params.transitionType} (${params.duration}s) at ${params.position} of clip` }] };
+        const map = { cross_dissolve: 'crossDissolve', film_dissolve: 'crossDissolve', additive_dissolve: 'crossDissolve', dip_to_black: 'dipToBlack', zoom: 'zoomPush', push: 'whipPan', slide: 'whipPan', wipe: 'featheredWipe' };
+        const alt = map[params.transitionType];
+        return { content: [{ type: 'text', text: `ERROR: edit_add_transition is not supported (Premiere's scripted transitions hang or render white). ${alt ? `Use motion_transition_apply {name:"${alt}", trackIndex:${params.trackIndex}, clipIndex:${params.clipIndex}, durationSec:${params.duration}}` : `No keyframed equivalent for ${params.transitionType}; see motion_recipes.`}` }], isError: true };
       }
     );
 

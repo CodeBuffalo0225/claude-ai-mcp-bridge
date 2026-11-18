@@ -20,7 +20,11 @@ const ensureDir = (p) => fs.mkdirSync(nodePath.dirname(p), { recursive: true });
  */
 export async function decodeRGB(path, { maxWidth } = {}) {
   const meta = await sharp(path).metadata();
-  let pipeline = sharp(path).removeAlpha().toColourspace('srgb');
+  // QE exportFramePNG writes RGBA: where nothing sits under a faded/moving
+  // layer the PNG is transparent with UN-premultiplied colour. Composite
+  // over black (what the Program monitor shows) — removeAlpha() would read
+  // a 50%-opacity frame as fully opaque (found live 2026-11-17).
+  let pipeline = sharp(path).flatten({ background: '#000000' }).toColourspace('srgb');
   let scale = 1;
   if (maxWidth && meta.width > maxWidth) {
     scale = maxWidth / meta.width;

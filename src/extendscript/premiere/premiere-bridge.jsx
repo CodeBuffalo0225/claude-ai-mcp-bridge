@@ -631,19 +631,12 @@ var PremiereBridge = {
   },
 
   "edit.addTransition": function(params) {
-    // Apply transition via QE DOM
-    if (typeof QEApplication !== "undefined") {
-      var qeSeq = QEApplication.project.getActiveSequence();
-      var track = qeSeq.getVideoTrackAt(params.trackIndex);
-      if (track) {
-        var clip = track.getItemAt(params.clipIndex);
-        if (clip) {
-          var transitionName = _getTransitionName(params.transitionType);
-          clip.addTransition(transitionName, params.position === "start", params.duration);
-        }
-      }
-    }
-    return { applied: true };
+    // FIX 2026-11-17: the old handler called QE clip.addTransition with the
+    // wrong signature and ALWAYS returned {applied:true} (it lied). Scripted
+    // QE transitions hang or render solid white on Premiere 26.x, so
+    // transitions are built from keyframes instead: motion_transition_apply
+    // (motion-bridge.jsx handlers, src/motion/). Fail honestly here.
+    return { error: "edit.addTransition is not supported by script on this Premiere build (QE transitions hang / render white). Use the motion_transition_apply tool (keyframe-built crossDissolve, blurDissolve, dipToBlack, zoomPush, whipPan, featheredWipe)." };
   },
 
   "edit.addText": function(params) {
@@ -1220,6 +1213,7 @@ var PremiereBridge = {
     return {
       jsxVersion: BRIDGE_JSX_VERSION,
       colorBridgeVersion: (typeof COLOR_BRIDGE_JSX_VERSION !== "undefined") ? COLOR_BRIDGE_JSX_VERSION : null,
+      motionBridgeVersion: (typeof MOTION_BRIDGE_JSX_VERSION !== "undefined") ? MOTION_BRIDGE_JSX_VERSION : null,
       app: "premiere",
       appVersion: app.version,
       handlers: handlers,
@@ -1526,4 +1520,12 @@ try {
   $.evalFile(new File($.fileName).path + "/color-bridge.jsx");
 } catch (e) {
   PremiereBridge["color._loadError"] = function() { return { error: "color-bridge.jsx failed to load: " + e.message }; };
+}
+
+// ── Motion handlers (motion-bridge.jsx): keyframed transitions, text in/out,
+// audio fades, clip placement. _info reports MOTION_BRIDGE_JSX_VERSION.
+try {
+  $.evalFile(new File($.fileName).path + "/motion-bridge.jsx");
+} catch (e) {
+  PremiereBridge["motion._loadError"] = function() { return { error: "motion-bridge.jsx failed to load: " + e.message }; };
 }
