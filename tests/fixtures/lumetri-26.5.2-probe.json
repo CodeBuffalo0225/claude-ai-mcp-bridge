@@ -1,0 +1,787 @@
+{
+ "source": "Live read-only probe via color.probeLumetri, Premiere Pro 26.5.2, Lumetri Color on a graded clip, 2026-11-14. Values are that clip grade; names/types/order are what the registry resolves against.",
+ "premiereVersion": "26.5.2",
+ "lumetriCount": 1,
+ "props": [
+  {
+   "index": 0,
+   "name": "Blob",
+   "type": "string",
+   "blobLength": 1
+  },
+  {
+   "index": 1,
+   "name": "High Dynamic Range",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 2,
+   "name": "Basic Correction",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 3,
+   "name": "Active",
+   "type": "boolean",
+   "value": true
+  },
+  {
+   "index": 4,
+   "name": " ",
+   "type": "string",
+   "blobLength": 1
+  },
+  {
+   "index": 5,
+   "name": " ",
+   "type": "string",
+   "blobLength": 1
+  },
+  {
+   "index": 6,
+   "name": "Input LUT",
+   "type": "number",
+   "value": 0
+  },
+  {
+   "index": 7,
+   "name": "Input LUT",
+   "type": "number",
+   "value": 0
+  },
+  {
+   "index": 8,
+   "name": "HDR White",
+   "type": "number",
+   "value": 100
+  },
+  {
+   "index": 9,
+   "name": " ",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 10,
+   "name": " ",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 11,
+   "name": "Intensity",
+   "type": "number",
+   "value": 50
+  },
+  {
+   "index": 12,
+   "name": "Color",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 13,
+   "name": "White Balance",
+   "type": "number",
+   "value": 18374897589125431000
+  },
+  {
+   "index": 14,
+   "name": "Temperature",
+   "type": "number",
+   "value": 6
+  },
+  {
+   "index": 15,
+   "name": "Tint",
+   "type": "number",
+   "value": 5
+  },
+  {
+   "index": 16,
+   "name": "Saturation",
+   "type": "number",
+   "value": 100
+  },
+  {
+   "index": 17,
+   "name": "",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 18,
+   "name": "Light",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 19,
+   "name": "Exposure",
+   "type": "number",
+   "value": 0.1
+  },
+  {
+   "index": 20,
+   "name": "Contrast",
+   "type": "number",
+   "value": 10
+  },
+  {
+   "index": 21,
+   "name": "Highlights",
+   "type": "number",
+   "value": -30
+  },
+  {
+   "index": 22,
+   "name": "Shadows",
+   "type": "number",
+   "value": 12
+  },
+  {
+   "index": 23,
+   "name": "Whites",
+   "type": "number",
+   "value": -5
+  },
+  {
+   "index": 24,
+   "name": "Blacks",
+   "type": "number",
+   "value": -6
+  },
+  {
+   "index": 25,
+   "name": "HDR Specular",
+   "type": "number",
+   "value": 0
+  },
+  {
+   "index": 26,
+   "name": " ",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 27,
+   "name": " ",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 28,
+   "name": "",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 29,
+   "name": "",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 30,
+   "name": "Creative",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 31,
+   "name": "Active",
+   "type": "boolean",
+   "value": true
+  },
+  {
+   "index": 32,
+   "name": " ",
+   "type": "string",
+   "blobLength": 1
+  },
+  {
+   "index": 33,
+   "name": " ",
+   "type": "string",
+   "blobLength": 1
+  },
+  {
+   "index": 34,
+   "name": "Look",
+   "type": "number",
+   "value": 0
+  },
+  {
+   "index": 35,
+   "name": "Look",
+   "type": "number",
+   "value": 0
+  },
+  {
+   "index": 36,
+   "name": " ",
+   "type": "string",
+   "blobLength": 8
+  },
+  {
+   "index": 37,
+   "name": "Color Space",
+   "type": "number",
+   "value": 28
+  },
+  {
+   "index": 38,
+   "name": "Intensity",
+   "type": "number",
+   "value": 100
+  },
+  {
+   "index": 39,
+   "name": "Adjustments",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 40,
+   "name": "Faded Film",
+   "type": "number",
+   "value": 6
+  },
+  {
+   "index": 41,
+   "name": "Sharpen",
+   "type": "number",
+   "value": 8
+  },
+  {
+   "index": 42,
+   "name": "Vibrance",
+   "type": "number",
+   "value": 14
+  },
+  {
+   "index": 43,
+   "name": "Saturation",
+   "type": "number",
+   "value": 96
+  },
+  {
+   "index": 44,
+   "name": "",
+   "type": "string",
+   "blobLength": 0
+  },
+  {
+   "index": 45,
+   "name": "Tint Balance",
+   "type": "number",
+   "value": 0
+  },
+  {
+   "index": 46,
+   "name": "",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 47,
+   "name": "",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 48,
+   "name": "Curves",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 49,
+   "name": "Active",
+   "type": "boolean",
+   "value": true
+  },
+  {
+   "index": 50,
+   "name": "RGB Curves",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 51,
+   "name": "Active",
+   "type": "boolean",
+   "value": true
+  },
+  {
+   "index": 52,
+   "name": "HDR Range",
+   "type": "number",
+   "value": 100
+  },
+  {
+   "index": 53,
+   "name": " ",
+   "type": "string",
+   "blobLength": 0
+  },
+  {
+   "index": 54,
+   "name": "",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 55,
+   "name": "Hue Saturation Curves",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 56,
+   "name": "Active",
+   "type": "boolean",
+   "value": true
+  },
+  {
+   "index": 57,
+   "name": "Hue (vs Sat) Selector",
+   "type": "number",
+   "value": 18374686479671624000
+  },
+  {
+   "index": 58,
+   "name": "Hue vs Sat",
+   "type": "string",
+   "blobLength": 1
+  },
+  {
+   "index": 59,
+   "name": "Active",
+   "type": "boolean",
+   "value": true
+  },
+  {
+   "index": 60,
+   "name": "Hue (vs Hue) Selector",
+   "type": "number",
+   "value": 18374686479671624000
+  },
+  {
+   "index": 61,
+   "name": "Hue vs Hue",
+   "type": "string",
+   "blobLength": 1
+  },
+  {
+   "index": 62,
+   "name": "Active",
+   "type": "boolean",
+   "value": true
+  },
+  {
+   "index": 63,
+   "name": "Hue (vs Luma) Selector",
+   "type": "number",
+   "value": 18374686479671624000
+  },
+  {
+   "index": 64,
+   "name": "Hue vs Luma",
+   "type": "string",
+   "blobLength": 1
+  },
+  {
+   "index": 65,
+   "name": "Active",
+   "type": "boolean",
+   "value": true
+  },
+  {
+   "index": 66,
+   "name": "Luma (vs Sat) Selector",
+   "type": "number",
+   "value": 18374686479671624000
+  },
+  {
+   "index": 67,
+   "name": "Luma vs Sat",
+   "type": "string",
+   "blobLength": 1
+  },
+  {
+   "index": 68,
+   "name": "Active",
+   "type": "boolean",
+   "value": true
+  },
+  {
+   "index": 69,
+   "name": "Sat (vs Sat) Selector",
+   "type": "number",
+   "value": 18374686479671624000
+  },
+  {
+   "index": 70,
+   "name": "Sat vs Sat",
+   "type": "string",
+   "blobLength": 1
+  },
+  {
+   "index": 71,
+   "name": "",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 72,
+   "name": "",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 73,
+   "name": "Color Wheels & Match",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 74,
+   "name": "Active",
+   "type": "boolean",
+   "value": true
+  },
+  {
+   "index": 75,
+   "name": " ",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 76,
+   "name": "Face Detection",
+   "type": "boolean",
+   "value": true
+  },
+  {
+   "index": 77,
+   "name": " ",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 78,
+   "name": "HDR White",
+   "type": "number",
+   "value": 100
+  },
+  {
+   "index": 79,
+   "name": " ",
+   "type": "string",
+   "blobLength": 0
+  },
+  {
+   "index": 80,
+   "name": "",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 81,
+   "name": "HSL Secondary",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 82,
+   "name": "Active",
+   "type": "boolean",
+   "value": true
+  },
+  {
+   "index": 83,
+   "name": "Key",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 84,
+   "name": "Set color",
+   "type": "number",
+   "value": 18374686479671624000
+  },
+  {
+   "index": 85,
+   "name": "Add color",
+   "type": "number",
+   "value": 18374686479671624000
+  },
+  {
+   "index": 86,
+   "name": "Remove color",
+   "type": "number",
+   "value": 18374686479671624000
+  },
+  {
+   "index": 87,
+   "name": " ",
+   "type": "string",
+   "blobLength": 0
+  },
+  {
+   "index": 88,
+   "name": "Show Mask",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 89,
+   "name": " ",
+   "type": "number",
+   "value": 0
+  },
+  {
+   "index": 90,
+   "name": "Invert Mask",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 91,
+   "name": " ",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 92,
+   "name": " ",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 93,
+   "name": " ",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 94,
+   "name": "Refine",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 95,
+   "name": "Denoise",
+   "type": "number",
+   "value": 0
+  },
+  {
+   "index": 96,
+   "name": "Blur",
+   "type": "number",
+   "value": 0
+  },
+  {
+   "index": 97,
+   "name": "Blur",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 98,
+   "name": "Correction",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 99,
+   "name": " ",
+   "type": "string",
+   "blobLength": 0
+  },
+  {
+   "index": 100,
+   "name": " ",
+   "type": "string",
+   "blobLength": 0
+  },
+  {
+   "index": 101,
+   "name": "Temperature",
+   "type": "number",
+   "value": 0
+  },
+  {
+   "index": 102,
+   "name": "Tint",
+   "type": "number",
+   "value": 0
+  },
+  {
+   "index": 103,
+   "name": "Contrast",
+   "type": "number",
+   "value": 0
+  },
+  {
+   "index": 104,
+   "name": "Sharpen",
+   "type": "number",
+   "value": 0
+  },
+  {
+   "index": 105,
+   "name": "Saturation",
+   "type": "number",
+   "value": 100
+  },
+  {
+   "index": 106,
+   "name": "Saturation",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 107,
+   "name": "",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 108,
+   "name": "Vignette",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 109,
+   "name": "Active",
+   "type": "boolean",
+   "value": true
+  },
+  {
+   "index": 110,
+   "name": "Amount",
+   "type": "number",
+   "value": -0.6
+  },
+  {
+   "index": 111,
+   "name": "Midpoint",
+   "type": "number",
+   "value": 55
+  },
+  {
+   "index": 112,
+   "name": "Roundness",
+   "type": "number",
+   "value": 0
+  },
+  {
+   "index": 113,
+   "name": "Feather",
+   "type": "number",
+   "value": 65
+  },
+  {
+   "index": 114,
+   "name": "",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 115,
+   "name": "SpeedGrade Custom",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 116,
+   "name": "Active",
+   "type": "boolean",
+   "value": true
+  },
+  {
+   "index": 117,
+   "name": "unused",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 118,
+   "name": "unused",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 119,
+   "name": " ",
+   "type": "string",
+   "blobLength": 1
+  },
+  {
+   "index": 120,
+   "name": "",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 121,
+   "name": "Legacy Tone And Saturation",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 122,
+   "name": "Embedded LUTs",
+   "type": "string",
+   "blobLength": 1
+  },
+  {
+   "index": 123,
+   "name": "Media Embedded LUT type",
+   "type": "string",
+   "blobLength": 0
+  },
+  {
+   "index": 124,
+   "name": "Media Embedded Lut blob",
+   "type": "string",
+   "blobLength": 1
+  },
+  {
+   "index": 125,
+   "name": "SemanticAutoTone Progress",
+   "type": "number",
+   "value": -1
+  },
+  {
+   "index": 126,
+   "name": "Auto Tone Analytics Data",
+   "type": "string",
+   "blobLength": 203
+  },
+  {
+   "index": 127,
+   "name": " ",
+   "type": "boolean",
+   "value": false
+  },
+  {
+   "index": 128,
+   "name": "LUTAsset",
+   "type": "string",
+   "blobLength": 1
+  },
+  {
+   "index": 129,
+   "name": "LookAsset",
+   "type": "string",
+   "blobLength": 1
+  }
+ ]
+}

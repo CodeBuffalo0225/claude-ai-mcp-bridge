@@ -5,3 +5,4 @@ node_modules/
 config/secrets.*
 config/*.local.*
 Adobe files/
+logs/color/

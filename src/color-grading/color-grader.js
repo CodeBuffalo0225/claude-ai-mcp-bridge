@@ -309,13 +309,12 @@ class ColorGrader {
 
     logger.info(`Color matching source [${sourceTrack}:${sourceClip}] to reference [${referenceTrack}:${referenceClip}]`);
 
-    const result = await this.bridge.send('premiere', 'color.match', {
-      source: { trackIndex: sourceTrack, clipIndex: sourceClip },
-      reference: { trackIndex: referenceTrack, clipIndex: referenceClip },
-      useFaceDetection: matchFaces,
-    });
-
-    return { confidence: result.confidence || 85 };
+    // FIX 2026-11-14: there is no `color.match` JSX handler and Lumetri's
+    // "Apply Match" button is UI-only, yet this returned a fabricated
+    // `confidence: 85` fallback. Fail honestly and point at the measured
+    // matcher instead.
+    void matchFaces;
+    throw new Error('color_match is not scriptable (Lumetri Color Match is UI-only). Use color_match_shots: it measures both shots, matches balance/contrast and same-person skin, and verifies each step on re-rendered frames.');
   }
 
   async autoCorrect(params) {
@@ -361,13 +360,27 @@ class ColorGrader {
       }
     }
 
+    // FIX 2026-11-14: Lumetri Saturation (Basic and Creative) is ABSOLUTE
+    // with 100 = unchanged; presets store it as an offset. Sending the raw
+    // offset set Saturation = 10 → near grayscale (live-probed on 26.5.2).
+    for (const group of ['basic', 'creative']) {
+      if (scaled[group] && typeof scaled[group].saturation === 'number') {
+        scaled[group].saturation = 100 + scaled[group].saturation;
+      }
+    }
+
     if (preset.colorWheels) scaled.colorWheels = { ...preset.colorWheels };
     if (preset.curves) scaled.curves = { ...preset.curves };
+    // Carried through (not applied — no scriptable control) so the bridge
+    // reports it as skipped instead of it vanishing silently.
+    if (preset.hsl) scaled.hsl = { ...preset.hsl };
 
     if (preset.vignette) {
       scaled.vignette = {};
       for (const [key, value] of Object.entries(preset.vignette)) {
-        scaled.vignette[key] = typeof value === 'number' ? value * scale : value;
+        // Only Amount is a strength. Midpoint / Roundness / Feather are
+        // positions/shapes and must not shrink with preset intensity.
+        scaled.vignette[key] = typeof value === 'number' && key === 'amount' ? value * scale : value;
       }
     }
 
