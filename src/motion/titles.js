@@ -39,13 +39,24 @@ function shadowFilter(h, strength = 0.55) {
 const FONT = "'Helvetica Neue', 'Avenir Next', Helvetica, Arial, sans-serif";
 
 /** Render one line of title text. Returns the PNG path. */
-export async function renderTitle({ text, style = 'hero', width = 3840, height = 2160, outPath, color }) {
+/**
+ * @param y      vertical centre as a fraction of the frame (default: style's)
+ * @param scrim  soft feathered dark band behind the text for legibility over
+ *               busy footage (0 = off, else its peak opacity, e.g. 0.45)
+ */
+export async function renderTitle({ text, style = 'hero', width = 3840, height = 2160, outPath, color, y, scrim = 0 }) {
   const s = TITLE_STYLES[style];
   if (!s) throw new Error(`unknown title style ${style}`);
   const size = Math.round(height * s.size);
+  const cy = y ?? s.y;
   const t = s.upper ? String(text).toUpperCase() : String(text);
-  const svg = `<svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg"><defs>${shadowFilter(height)}</defs>
-    <text x="${width / 2}" y="${Math.round(height * s.y + size * 0.35)}" text-anchor="${s.anchor}" font-family="${FONT}" font-weight="${s.weight}" font-size="${size}" letter-spacing="${(s.tracking * size).toFixed(1)}" fill="${color || s.color}" filter="url(#soft)">${esc(t)}</text></svg>`;
+  // Scrim: a wide ellipse, heavily blurred so it has no visible edge.
+  const sc = scrim > 0
+    ? `<filter id="scrimBlur" x="-50%" y="-100%" width="200%" height="300%"><feGaussianBlur stdDeviation="${Math.round(size * 0.9)}"/></filter>
+       <ellipse cx="${width / 2}" cy="${Math.round(height * cy)}" rx="${Math.round(width * 0.36)}" ry="${Math.round(size * 1.1)}" fill="#000" fill-opacity="${scrim}" filter="url(#scrimBlur)"/>`
+    : '';
+  const svg = `<svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg"><defs>${shadowFilter(height)}</defs>${sc}
+    <text x="${width / 2}" y="${Math.round(height * cy + size * 0.35)}" text-anchor="${s.anchor}" font-family="${FONT}" font-weight="${s.weight}" font-size="${size}" letter-spacing="${(s.tracking * size).toFixed(1)}" fill="${color || s.color}" filter="url(#soft)">${esc(t)}</text></svg>`;
   return writeSvg(svg, outPath);
 }
 

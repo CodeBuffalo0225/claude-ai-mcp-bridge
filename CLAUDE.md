@@ -116,6 +116,27 @@ recommend,ops,actions}/`, handlers in `src/extendscript/premiere/color-bridge.js
 - Writes refuse anything not named `_WORKING_*`; snapshots + `actions.jsonl` in `logs/color/`.
   Test sequence left in the hunting-blind interview project: `_WORKING_color_skill_test` (safe to delete).
 
+## ✅ MOTION: TRANSITIONS, TEXT IN/OUT, SFX — BUILT 2026-11-17 (same branch)
+
+Skill: `.claude/skills/motion-designer/SKILL.md`. Code: `src/motion/`, handlers in
+`src/extendscript/premiere/motion-bridge.jsx` (loaded by premiere-bridge.jsx), 9 `motion_*`
+MCP tools in `src/mcp-servers/motion-tools.js`.
+
+- Transitions are KEYFRAMES on the clips (QE transitions hang/render white; the old
+  `edit.addTransition` lied with `applied:true` — now an honest error naming
+  `motion_transition_apply`). crossDissolve, blurDissolve, featheredWipe (overlap / A-B roll),
+  dipToBlack, zoomPush, whipPan (butt cut; zoom/whip get a synthesised whoosh on the cut).
+  Audio: equal-power crossfades/fades on Volume ▸ Level (linear, 1.0 = +15 dB).
+- Key times are MEDIA time (`seqT − start + inPoint`; stills start at 3600 s). New-gen
+  Gaussian/Directional Blur use `Amount`/`Angle`; Directional Angle 90 = horizontal.
+  Linear Wipe does not attach by script → Crop + Edge Feather.
+- Titles/lower thirds are rendered PNGs (feathered shadow, optional scrim) animated with
+  Opacity/Motion/Blur/Crop. Keep titles off faces (`y`).
+- Verify every transition on renders (`motion_verify_transition`) and the mix
+  (`motion_verify_audio`). Test sequence: `_WORKING_motion_test` (safe to delete).
+- Disk was full during the build (ENOSPC mid-session); frame exports also timed out while
+  Premiere recovered — preflight, then retry.
+
 ---
 
 ## ⚠️ BRIDGE BUGS — READ BEFORE TOUCHING ANYTHING (state as of 2026-05-21)

@@ -100,6 +100,8 @@ export function registerMotionTools(server, bridge) {
       inSec: z.number().positive().default(0.7),
       outSec: z.number().positive().default(0.5),
       trackIndex: z.number().int().min(1).optional(),
+      y: z.number().min(0.05).max(0.95).optional().describe('Vertical centre as a fraction of the frame — keep titles off faces'),
+      scrim: z.number().min(0).max(0.8).default(0.4).describe('Peak opacity of a soft feathered dark band behind the text (0 = none)'),
     },
     wrap(async (p) => ok(await wf.addTitle(p))));
 

@@ -151,11 +151,11 @@ export class MotionWorkflow {
   // ── text & graphics ──────────────────────────────────────────────────
 
   /** Render a title still, place it above the picture, animate it in and out. */
-  async addTitle({ sequenceName, text, style = 'hero', animation = 'blurIn', startSec, durationSec = 3, inSec = 0.7, outSec = 0.5, trackIndex, allowNonWorkingSequence = false }) {
+  async addTitle({ sequenceName, text, style = 'hero', animation = 'blurIn', startSec, durationSec = 3, inSec = 0.7, outSec = 0.5, trackIndex, y, scrim = 0.4, allowNonWorkingSequence = false }) {
     this.act.guardWorkingCopy(sequenceName, allowNonWorkingSequence);
     if (!TEXT_ANIMATIONS.includes(animation)) throw new Error(`unknown text animation "${animation}" — one of ${TEXT_ANIMATIONS.join(', ')}`);
     const seq = await this.act.listClips(sequenceName);
-    const png = await renderTitle({ text, style, width: seq.width, height: seq.height, outPath: this._asset(`title_${slug(text)}_${seq.width}x${seq.height}_${Date.now()}.png`) });
+    const png = await renderTitle({ text, style, width: seq.width, height: seq.height, y, scrim, outPath: this._asset(`title_${slug(text)}_${seq.width}x${seq.height}_${Date.now()}.png`) });
     const track = trackIndex ?? freeTrack(seq, 'video', startSec, startSec + durationSec, 1);
     const layer = await this._placeStill(sequenceName, png, track, startSec, durationSec);
     const anim = await this._animateLayer(sequenceName, layer, textRecipe(animation, { height: seq.height, inSec, outSec }), { fps: seq.fps, height: seq.height });

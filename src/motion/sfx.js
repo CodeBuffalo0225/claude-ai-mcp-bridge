@@ -33,7 +33,6 @@ export function synthWhoosh({ durationSec = 0.7, peakAt = 0.62, fLow = 250, fHig
   let maxAbs = 0;
   const mono = new Float32Array(n);
   for (let i = 0; i < n; i++) {
-    const t = i / n;
     // Frequency: exponential rise to the peak, then a quicker fall.
     const u = i <= peak ? i / peak : 1 - (i - peak) / (n - peak);
     const f = fLow * (fHigh / fLow) ** (u ** 1.4);
@@ -47,7 +46,6 @@ export function synthWhoosh({ durationSec = 0.7, peakAt = 0.62, fLow = 250, fHig
     const env = i <= peak ? Math.sin((Math.PI / 2) * (i / peak)) ** 2 : Math.exp(-5 * ((i - peak) / (n - peak)));
     mono[i] = y0 * env;
     maxAbs = Math.max(maxAbs, Math.abs(mono[i]));
-    void t;
   }
   for (let i = 0; i < n; i++) {
     const v = (mono[i] / (maxAbs || 1)) * amp;
